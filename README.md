@@ -23,6 +23,8 @@ Please read the [Official Concordium Documentation README](https://github.com/Co
 
 Please keep the structure and ordering of document content as identical to the English source as possible.
 
+Please create only one PR per language.
+
 
 ### File structure
 

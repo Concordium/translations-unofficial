@@ -138,7 +138,7 @@ module<contract-module-ru>` через вызов ``init`` транзакции,
 - Параметр принимающией функции.
 - Количество GTU для экземпляра.
 
-.. _contract-instance-actions:
+.. _contract-instance-actions-ru:
 
 Логирование событий
 ===================

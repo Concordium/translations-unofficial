@@ -2,35 +2,35 @@
 .. _build-schema:
 
 =======================
-Build a contract schema
+Построение схемы контракта
 =======================
 
-This guide will show you how to build a smart contract schema, how to export it
-to a file, and/or embed the schema into the smart contract module, all using
+Это руководство покажет вам, как построить схему смарт-контракта, как
+экспортировать ее в файл и/или встроить схему в модуль смарт-контракта, используя
 ``cargo-concordium``.
 
-Preparation
+Подготовка
 ===========
 
-First, ensure you have ``cargo-concordium`` installed and if not the guide
-:ref:`setup-tools` will help you.
+Во-первых, убедитесь, что у вас установлен ``cargo-concordium``, а если нет,
+то руководство :ref:`setup-tools` вам поможет.
 
-We also need the Rust source code of the smart contract you wish to build a
-schema for.
+Нам также понадобится исходный код смарт-контракта на Rust, для которого вы хотите
+построить схему.
 
-Setup the contract for a schema
+Настройка контракта для схемы
 ===============================
 
-In order to build a contract schema, we first have to prepare our smart
-contract for building the schema.
+Чтобы построить схему контракта, мы сначала должны подготовить наш смарт-контракт
+для построения схемы.
 
-We can choose which parts of our smart contract to included in the schema.
-The options are to include a schema for the contract state, and/or for each of
-the parameters of init and receive functions.
+Мы можем выбрать, какие части нашего смарт-контракта включить в схему.
+Эти параметры должны включать схему для состояния контракта и/или для каждого
+из параметров функций init и receive.
 
-Every type we want to include in the schema must implement the ``SchemaType``
-trait. This is already done for all base types and some other types (see `list of types implementing the SchemaType`_).
-For most other cases, it can also be achieved automatically, using
+Каждый тип, который мы хотим включить в схему, должен реализовывать свойство ``SchemaType``.
+Это уже сделано для всех базовых типов и некоторых других типов (см. `список типов, реализующих SchemaType`_).
+В большинстве других случаев это также можно сделать автоматически, используя 
 ``#[derive(SchemaType)]``::
 
    #[derive(SchemaType)]
@@ -38,20 +38,20 @@ For most other cases, it can also be achieved automatically, using
        ...
    }
 
-Implementing the ``SchemaType`` trait manually only requires specifying one
-function, which is a getter for a ``schema::Type``, which essentially describes
-how this type is represented as bytes and how to represent it.
+Реализация свойства ``SchemaType`` вручную требует указания только одной функции,
+которая является геттером для ``schema::Type``, которая по существу описывает,
+как этот тип представлен в байтах и как его необходимо представлять.
 
 .. todo::
 
    Create an example showing how to manually implement ``SchemaType`` and link
    to it from here.
 
-Including contract state
+Включение состояния контракта
 ------------------------
 
-To generate and include the schema for the contract state, we annotate the type
-with the ``#[contract_state(contract = ...)]`` macro::
+Чтобы сгенерировать и включить схему для состояния контракта, мы аннотируем тип
+с помощью макроса ``#[contract_state(contract = ...)]``::
 
    #[contract_state(contract = "my_contract")]
    #[derive(SchemaType)]
@@ -59,17 +59,17 @@ with the ``#[contract_state(contract = ...)]`` macro::
        ...
    }
 
-Or even simpler if the contract state is of a type that already implements ``SchemaType``, e.g., u32::
+Или еще проще, если состояние контракта имеет тип, который уже реализует ``SchemaType``, например u32::
 
    #[contract_state(contract = "my_contract")]
    type State = u32;
 
-Including function parameters
+Включение параметров функции
 -----------------------------
 
-To generate and include the schema for parameters for init  and
-receive functions, we set the optional ``parameter`` attribute for the
-``#[init(..)]``- and ``#[receive(..)]``-macro::
+Чтобы сгенерировать и включить схему параметров для функций init и receive,
+мы устанавливаем необязательный ``параметр`` атрибута для 
+``#[init(..)]``- и ``#[receive(..)]``-макросов::
 
    #[derive(SchemaType)]
    enum InitParameter { ... }
@@ -83,35 +83,34 @@ receive functions, we set the optional ``parameter`` attribute for the
    #[receive(contract = "my_contract", name = "my_receive", parameter = "ReceiveParameter")]
    fn contract_receive<...> (...){ ... }
 
-Building the schema
+Построение схемы
 ===================
 
-Now, we are ready to build the actual schema using ``cargo-concordium``, and we
-have the options to embed the schema and/or write the schema to a file.
+Теперь мы готовы построить актуальную схему с помощью ``cargo-concordium``, и
+у нас есть варианты встроить схему и/или записать схему в файл.
 
 .. seealso::
 
    For more on which to choose see
    :ref:`here<contract-schema-which-to-choose>`.
 
-Embedding the schema
+Встраивание схемы
 --------------------
 
-In order to embed the schema into the smart contract module, we add
-``--schema-embed`` to the build command
+Чтобы встроить схему в модуль смарт-контракта, мы добавляем 
+``--schema-embed`` к команде сборки
 
 .. code-block:: console
 
    $cargo concordium build --schema-embed
 
-If successful the output of the command will tell you the total size of the
-schema in bytes.
+В случае успеха вывод команды сообщит вам общий размер схемы в байтах.
 
-Outputting a schema file
+Вывод схемы в файл
 ------------------------
 
-To output the schema into a file, we can use the ``--schema-out=FILE``
-where ``FILE`` is a path of the file to create:
+Чтобы вывести схему в файл, мы можем использовать ``--schema-out=FILE``
+где ``FILE`` - это путь к создаваемому файлу:
 
 .. code-block:: console
 

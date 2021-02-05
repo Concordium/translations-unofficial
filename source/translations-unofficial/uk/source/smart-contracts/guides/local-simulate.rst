@@ -1,35 +1,30 @@
 .. _local-simulate:
 
 ===================================
-Locally simulate contract functions
+Локальне моделювання функцій контракту 
 ===================================
 
-This guide is about how to locally simulate an invocation of some init or
-receive function from a Wasm smart contract module in a given context and
-state.
-This simulation is useful for inspecting a smart contract and the outcome in
-specific scenarios.
+Це керівництво про те, як локально імітувати виклик деякої init-функції або receive-функції з модуля смарт-контракту Wasm в заданому контексті і стані.
+Це моделювання корисно для перевірки смарт-контракту та його результатів в конкретних сценаріях. 
 
 .. seealso::
 
    For a guide on automated unit tests, see :ref:`unit-test-contract`.
 
-Preparation
+Підготовка
 ===========
 
-Make sure you have ``cargo-concordium`` installed, if not follow the guide
-:ref:`setup-tools`.
-You will also need a smart contract module in Wasm to simulate.
+Переконайтеся, що у вас встановлений ``cargo-concordium``, якщо немає, дотримуйтесь керівництву :ref:`setup-tools`.
+Вам також знадобиться модуль смарт-контракту в Wasm для моделювання. 
 
 .. todo::
 
    Write the rest, when the schema stuff is in place.
 
-Simulating instantiation
+Моделювання створення об'єкту
 ========================
 
-To simulate the instantiation of a smart contract instance using
-``cargo-concordium``, run the following command:
+Щоб змоделювати створення екземпляра смарт-контракту за допомогою ``cargo-concordium``, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -40,10 +35,8 @@ To simulate the instantiation of a smart contract instance using
                                --parameter-bin parameter.bin \
                                --out-bin state.bin
 
-``init-context.json`` (used with the ``--context`` parameter) is a file that
-contains context information such as the current state of the chain, the
-sender of the transaction, and which account invoked this function.
-An example of this context could be:
+``init-context.json`` (використовується з параметром ``--context``) - це файл, який містить контекстну інформацію, таку як поточний стан ланцюжка, відправник транзакції і обліковий запис, що викликала цю функцію.
+Прикладом такого контексту може бути: 
 
 .. code-block:: json
 
@@ -64,11 +57,10 @@ An example of this context could be:
    For a reference of the context see :ref:`simulate-context`.
 
 
-Simulating updates
+Моделювання оновлень
 ==================
 
-To simulate an update to a contract smart contract instance using
-``cargo-concordium``, run:
+Щоб змоделювати оновлення примірника смарт-контракту контракту за допомогою ``cargo-concordium``, виконайте: 
 
 .. code-block:: console
 
@@ -81,11 +73,7 @@ To simulate an update to a contract smart contract instance using
                                  --state-bin state-in.bin \
                                  --out-bin state-out.bin
 
-``receive-context.json`` (used with the ``--context`` parameter) is a file that
-contains context information such as the current state of the chain, the
-sender of the transaction, which account invoked this function, and which
-account or address that sent the current message.
-An example of this context could be:
+``receive-context.json`` (використовується з параметром  ``--context``) - це файл, який містить контекстну інформацію, таку як поточний стан ланцюжка, відправник транзакції, обліковий запис, що викликала цю функцію, і обліковий запис або адреса, відправили поточне повідомлення. Прикладом такого контексту може бути: 
 
 .. code-block:: json
 

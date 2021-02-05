@@ -1,18 +1,16 @@
 .. _contract-module:
 
 ======================
-Smart contract modules
+Модулі смарт контрактів
 ======================
 
-Smart contracts are deployed on the chain in *smart contract modules*.
+Смарт-контракти розгортаються на ланцюжку в *модулях смарт-контрактів*. 
 
 .. note::
 
-   A smart contract module is often referred to simply as a *module*.
+Модуль смарт-контракту часто називають просто *модулем*. 
 
-A module can contain one or more smart contracts, allowing code to be shared
-among the contracts and can optionally contain :ref:`contract schemas
-<contract-schema>`.
+Модуль може містити один або кілька інтелектуальних контрактів, що дозволяє спільно використовувати код між контрактами, і може додатково містити :ref:`contract schemas<contract-schema>`.
 
 .. graphviz::
    :align: center
@@ -27,66 +25,50 @@ among the contracts and can optionally contain :ref:`contract schemas
        }
    }
 
-The module must be self-contained, and only have a restricted list of imports
-that allow for interaction with the chain.
-These are provided by the host environment and are available for the smart
-contract by importing a module named ``concordium``.
+Модуль повинен бути автономним і мати лише обмежений перелік імпорту, що дозволяє взаємодіяти з ланцюжком. 
+Вони надаються хост-середовищем і доступні для смарт-контракту шляхом імпорту модуля з іменем ``concordium``.
 
 .. seealso::
 
    Check out :ref:`host-functions` for a complete reference.
 
-On-chain language
+On-chain мова
 =================
 
-On the Concordium blockchain the smart contract language is a subset of `Web
-Assembly`_ (Wasm in short) which is designed to be a portable compilation
-target and to be run in sandboxed environments. This is useful because smart
-contracts will be run by bakers in the network who do not necessarily trust
-the code.
+У блокчейне Concordium мову смарт-контрактів є підмножина `Web Assembly`_ (скорочено Wasm), яка призначена для переносної компіляції і для запуску в ізольованому середовищі.
+Це корисно, тому що смарт-контракти будуть виконуватися Бейкер в мережі, які не обов'язково довіряють коду.
 
-Wasm is a low-level language and it is impractical to write by hand. Instead one
-can write smart contracts in a more high-level language which is then
-compiled to Wasm.
+Wasm - це мова низького рівня, тому писати на ньому непрактично. 
+Замість цього, можна писати смарт-контракти на мові більш високого рівня, який потім компілюється в Wasm. 
 
 .. _wasm-limitations:
 
-Limitations
+Обмеження
 -----------
 
 .. todo::
 
    Add other limitations, such as start sections...
 
-The blockchain environment is very particular in the sense that each node must
-be able to execute the contract in exactly the same way, using exactly the same
-amount of resources. Otherwise nodes would fail to reach consensus on the
-state of the chain. For this reason smart contracts need to be written in a restricted
-subset of Wasm.
+Середа блокчейна дуже специфічна в тому сенсі, що кожен вузол повинен мати можливість виконувати контракт точно таким же чином, використовуючи точно така ж кількість ресурсів. 
+В іншому випадку вузли не змогли б досягти консенсусу станом мережі. З цієї причини смарт-контракти повинні бути написані в обмеженому підмножині Wasm. 
 
-Floating point numbers
+Числа з плаваючою комою
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Although Wasm does have support for floating point numbers, a smart contract is
-disallowed to use them. The reason for this is that Wasm floating-point numbers
-can have a special ``NaN`` ("not a number") value whose treatment can result in nondeterminism.
+Хоча в Wasm є підтримка чисел з плаваючою комою, смарт-контракти не можуть їх використовувати. 
+Причина цього в тому, що числа з плаваючою комою Wasm можуть мати особливе ``NaN`` ("не число") значення, обробка якого може привести до недетермінізму.
 
-The restriction applies statically, meaning that smart contracts cannot contain
-floating point types, nor can they contain any instructions that involve floating
-point values.
+Обмеження застосовується статично, що означає, що смарт-контракти не можуть містити типи з плаваючою комою і не можуть містити ніяких інструкцій, які включають значення з плаваючою комою. 
 
-
-Deployment
+Розгортання
 ==========
 
-Deploying a module to the chain means submitting the module bytecode as a
-transaction to the Concordium network. If *valid* this transaction will be
-included in a block. This transaction, as every other transaction, has an
-associated cost. The cost is based on the size of the bytecode and is charged
-for both checking validity of the module and on-chain storage.
+Розгортання модуля в мережі означає відправку байт-коду модуля у вигляді транзакції в мережу Concordium. 
+Якщо транзакція *коректна*, вона буде включена в блок. Ця транзакція, як і будь-яка інша транзакція, має відповідну вартість. 
+Вартість залежить від розміру байт-коду і стягується як за перевірку достовірності модуля, так і за зберігання в мережі.
 
-The deployment itself does not execute
-smart contract. To execute, a user must first create an *instance* of a contract.
+Саме розгортання смарт-контракт не виконує. Для запуску смарт-контракту користувач спочатку повинен створити *об'єкт* контракту. 
 
 .. seealso::
 
@@ -100,31 +82,23 @@ smart contract. To execute, a user must first create an *instance* of a contract
 
 .. _contract-on-the-chain:
 
-Smart contract on the chain
+Смарт-контракт у мережі
 ===========================
 
-A smart contract on the chain is a collection of functions exported from a deployed
-module. The concrete mechanism used for this is the `Web Assembly`_ export
-section. A smart contract must export one function for initializing new
-instances and can export zero or more functions for updating the instance.
+Смарт-контракт в мережі - це набір функцій, експортованих з розгорнутого модуля. 
+Конкретним механізмом для цього, є розділ експорту `Web Assembly`_. 
+Смарт-контракт повинен експортувати одну функцію для ініціалізації нових екземплярів і може експортувати нуль або більше функцій для поновлення екземпляра.
 
-Since a smart contract module can export functions for multiple different smart
-contracts, we associate the functions using a naming scheme:
+Оскільки модуль смарт-контракту може експортувати функції для декількох різних смарт-контрактів, ми пов'язуємо функції, використовуючи схему іменування: 
 
-- ``init_<contract-name>``: The function for initializing a smart contract must
-  start with ``init_`` followed by a name of the smart contract. The contract
-  must consist only of ASCII alphanumeric or punctuation characters, and is not
-  allowed to contain the ``.`` symbol.
+- ``init_<contract-name>``: Функція для ініціалізації смарт-контракту повинна починатися з ``init_`` далі ім'я смарт-контракту. 
+  Контракт повинен складатися тільки з букв і цифр ASCII або розділових знаків і не може містити ``.`` символ.
 
-- ``<contract-name>.<receive-function-name>``: Functions for interacting with a
-  smart contract are prefixed with the contract name, followed by a ``.`` and a
-  name for the function. Same as for the init function, the contract name is not allowed
-  to contain the ``.`` symbol.
+- ``<contract-name>.<receive-function-name>``: Функції для взаємодії зі смарт-контрактом мають префікс з ім'ям контракту, за яким слідує символ ``.`` і далі ім'я функції. 
+  Як і для функції init, ім'я контракту не може містити ``.`` символ.
 
 .. note::
 
-   If you develop smart contracts using Rust and ``concordium-std``, the
-   procedural macros ``#[init(...)]`` and ``#[receive(...)]`` set up the
-   correct naming scheme.
+   Якщо ви розробляєте смарт-контракти з використанням Rust і ``concordium-std``, то процедурні макроси ``#[init(...)]`` та ``#[receive(...)]`` допоможуть налаштувати правильну схему іменування.
 
 .. _Web Assembly: https://webassembly.org/

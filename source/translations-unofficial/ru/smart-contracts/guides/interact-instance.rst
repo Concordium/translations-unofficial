@@ -1,64 +1,64 @@
 .. _interact-instance:
 
 =======================================
-Interact with a smart contract instance
+Взаимодействие с экземпляром смарт-контракта
 =======================================
 
-This guide will show you, how to interact with a smart contract instance, which
-means triggering a receive function that, possibly, updates the state of the
-instance.
+Это руководство покажет вам, как взаимодействовать с экземпляром смарт-контракта,
+что означает запуск receive-функциии, которая, возможно, обновляет состояние
+экземпляра.
 
-Preparation
+Подготовка
 ===========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a
-smart-contract instance on-chain to inspect.
+Убедитесь, что вы :ref:`running a node<run-a-node>`, используя последнюю версию :ref:`Concordium software<downloads>` и что у вас есть
+экземпляр смарт-контракта в сети для проверки.
 
 .. seealso::
    For how to deploy a smart contract module see :ref:`deploy-module` and for
    how to create an instance :ref:`initialize-contract`.
 
-Since interactions with a smart contract are transactions, you should also make
-sure to have ``concordium-client`` set up with an account with enough GTU to pay
-for the transactions.
+Поскольку взаимодействие со смарт-контрактом является транзакцией, вы также должны
+убедиться, что у ``concordium-client`` установлен аккаунт с достаточным количеством GTU для
+оплаты транзакций.
 
 .. note::
 
-   The cost of this transaction depends on the size of the parameters sent to
-   the receive function and the complexity of the function itself.
+   Стоимость этой транзакции зависит от размера параметров, отправляемых в
+   функцию приема, и сложности самой функции.
 
-Interaction
+Взаимодействие
 ===========
 
-To update an instance with address index ``0`` using the parameterless
-receive function ``my_receive`` while allowing up to 1000 energy to be used,
-run the following command:
+Чтобы обновить экземпляр с индексом адреса ``0`` с помощью 
+receive-функции ``my_receive` без параметров, позволяя использовать до 1000 NRG,
+выполните следующую команду:
 
 .. code-block:: console
 
    $concordium-client contract update 0 --func my_receive --energy 1000
 
-If successful, the output should be similar to the following:
+В случае успеха результат должен быть похож на:
 
 .. code-block:: console
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_receive'.
 
-Passing parameters in JSON format
+Передача параметров в JSON формате
 ---------------------------------
 
-A parameter in JSON format can be passed if a :ref:`smart contract schema
-<contract-schema>` is supplied, either as a file or embedded in the module.
-The schema is used to serialize the JSON into binary.
+Параметр в JSON формате может быть передан, если указана :ref:`smart contract schema
+<contract-schema>` поставляется либо в виде файла, либо встроен в модуль.
+Схема используемая для сериализации JSON в двоичный файл.
 
 .. seealso::
 
    :ref:`Read more about why and how to use smart contract schemas
    <contract-schema>`.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.json`` in JSON
-format, run the following command:
+Чтобы обновить экземпляр с индексом адреса ``0`` с помощью 
+receive-функции ``my_parameter_receive`` с файлом параметров ``my_parameter.json`` в JSON
+формате, выполните следующую команду:
 
 .. code-block:: console
 
@@ -66,14 +66,14 @@ format, run the following command:
             --energy 1000 \
             --parameter-json my_parameter.json
 
-If successful, the output should be similar to the following:
+В случае успеха результат должен быть похож на:
 
 .. code-block:: console
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_parameter_receive'.
 
-Otherwise, an error describing the problem is displayed.
-Common errors are described in the next section.
+В противном случае отображается ошибка с описанием проблемы.
+Общие ошибки описаны в следующем разделе.
 
 .. seealso::
 
@@ -82,8 +82,8 @@ Common errors are described in the next section.
 
 .. note::
 
-   If the parameter provided in JSON format does not conform to the type
-   specified in the schema, an error message will be displayed. For example:
+   Если параметр, предоставленный в JSON формате, не соответствует типу,
+   указанному в схеме, отобразится сообщение об ошибке. Например:
 
     .. code-block:: console
 
@@ -97,23 +97,24 @@ Common errors are described in the next section.
 
 .. note::
 
-   If a given module does not contain an embedded schema, it can be supplied
-   using the ``--schema /path/to/schema.bin`` parameter.
+   Если данный модуль не содержит встроенной схемы, его можно предоставить
+   с помощью параметра ``--schema /path/to/schema.bin``.
 
 .. note::
 
-   GTU can also be transferred to a contract during updates using the
-   ``--amount AMOUNT`` parameter.
+   GTU также можно перенести в контракт во время обновлений с помощью
+   параметра ``--amount AMOUNT``.
 
-Passing parameters in binary format
+Передача параметров в двоичном формате
 -----------------------------------
 
-When passing parameters in binary format, a
-:ref:`contract schema <contract-schema>` is not needed.
+При передаче параметров в двоичном формате
+:ref:`contract schema <contract-schema>` не требуется.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.bin`` in binary
-format, run the following command:
+
+Чтобы обновить экземпляр с индексом адреса ``0`` с помощью 
+receive-функции ``my_parameter_receive`` с файлом параметров ``my_parameter.bin`` в двоичном
+формате, выполните следующую команду:
 
 .. code-block:: console
 
@@ -121,7 +122,7 @@ format, run the following command:
             --energy 1000 \
             --parameter-bin my_parameter.bin
 
-If successful, the output should be similar to the following:
+В случае успеха результат должен быть похож на:
 
 .. code-block:: console
 

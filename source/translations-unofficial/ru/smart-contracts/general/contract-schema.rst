@@ -13,25 +13,26 @@
 .. _contract-schema:
 
 ======================
-Smart contract schemas
+Схемы смарт-контрактов
 ======================
 
-A smart contract schema is a description of how to represent bytes in a more
-structured representation. It can be used by external tools when displaying the
-state of a smart contract instance and for specifying parameters using a
-structured representation, such as JSON.
+Схема смарт-контракта - это описание того, как должны быть представлены байты 
+в более структурированном представлении. Эту схему могут использовать внешние
+инструменты при отображении состояния экземпляра смарт-контракта и для указания
+параметров с использованием структурированного представления, такого как JSON.
 
 .. seealso::
 
    For instructions on how to build the schema for a smart contract module in
    Rust, see :ref:`build-schema`.
 
-Why use a contract schema
+Зачем использовать схему контракта?
 =========================
 
-Data on the blockchain, such as the state of an instance and parameters passed
-to init and receive functions, is serialized as a sequence of bytes.
-The serialization is optimized for efficiency, rather than human readability.
+Данные в блокчейне, такие как состояние экземпляра и параметры, передаваемые
+функциям инициализации и принимающим функциям, сериализуются в виде
+последовательности байтов. Сериализация оптимизирована для повышения
+эффективности, а не предназначена для удобства чтения человеком.
 
 .. todo::
 
@@ -40,47 +41,46 @@ The serialization is optimized for efficiency, rather than human readability.
    can pass unserialized data into a function as long as they also provide a
    schema that spells out how to (de)serialize the data.
 
-Usually these bytes have structure and this structure is known to the smart
-contract as part of the contract functions, but outside of these functions it
-can be difficult to make sense of the bytes. This is especially the case when
-inspecting a complex state of a contract instance or when passing complex
-parameters to a smart contract function. In the latter case, the bytes should
-either be serialized from structured data or written manually.
+Обычно эти байты имеют структуру, и эта структура известна смарт-контракту
+как часть функций контракта. Но за пределами этих функций может быть трудно
+разобраться в байтах. Это особенно актуально при проверке сложного состояния
+экземпляра контракта или при передаче сложных параметров функции смарт-контракта.
+В последнем случае байты должны быть либо сериализованы из структурированных
+данных, либо записаны вручную.
 
-The solution for avoiding manual parsing of bytes is to capture this information
-in a *smart contract schema*, which describes how to make structure from the
-bytes, and can be used by external tools.
+Существует решение, позволяющее избежать ручного анализа байтов. Оно состоит в том,
+чтобы зафиксировать эту информацию в *схеме смарт-контракта*, которая описывает,
+как создавать структуру из байтов, и может использоваться внешними инструментами.
 
 .. note::
 
-   The ``concordium-client`` tool can use a schema to
+   Инструмент ``concordium-client`` может использовать схему для
    :ref:`serialize JSON parameters<init-passing-parameter-json>`
-   and to deserialize the state of contract instances to JSON.
+   и десериализация состояния экземпляров контракта на JSON.
 
-The schema is then either embedded into a smart contract module that is deployed
-to the chain, or is written to a file and passed around off-chain.
+Затем схема либо встраивается в модуль смарт-контракта, который развертывается
+в сети, либо записывается в файл и передается вне сети.
 
-Should you embed or write to a file?
+Стоит ли встраивать или записывать в файл?
 ====================================
 
-Whether a contract schema should be embedded or written to a file depends on
-your situation.
+Встраивать или записывать в файл схему контракта, зависит от вашей ситуации.
 
-Embedding the schema into the smart contract module distributes the schema
-together with the contract ensuring the correct schema is being used and also
-allows anyone to use it directly. The downside is that the smart contract module
-becomes bigger in size and therefore more expensive to deploy.
-But unless the smart contract uses very complex types for the state and
-parameters, the size of the schema is likely to be negligible compared to the
-size of the smart contract itself.
+Встраивание схемы в модуль смарт-контракта позволяет распространять схему вместе 
+с контрактом, обеспечивая использование правильной схемы, а также позволяет
+кому-либо использовать ее напрямую. Другой стороной является то, что модуль
+смарт-контракта становится больше по размеру и, следовательно, дороже в
+развертывании. Но если смарт-контракт не использует очень сложные типы
+для состояния и параметров, размер схемы, скорее всего, будет незначительным
+по сравнению с размером самого смарт-контракта.
 
-Having the schema in a separate file allows you to have the schema without
-paying for the extra bytes when deploying.
-The downside is that you instead have to distribute the schema file through some
-other channel and ensure that contract users are using the correct file with your
-smart contract.
+Наличие схемы в отдельном файле позволяет вам иметь схему без оплаты
+дополнительных байтов при развертывании. Другой стороной является то,
+что вместо этого вам нужно распространить файл схемы через какой-то другой
+канал и убедиться, что пользователи контракта используют правильный файл
+с вашим смарт-контрактом.
 
-The schema format
+Формат схемы
 =================
 
 .. todo::
@@ -89,17 +89,17 @@ The schema format
    or a specific schema supplied by Concordium. Then only talk about one or the other,
    or at least clearly separate the discussion of those.
 
-A schema can contain
+Схема может содержать
 
-- structure information for a smart contract module
-- description of smart-contract state
-- parameters for init and receive functions of a smart contract.
+- информация о структуре для модуля смарт-контракта
+- описание состояния смарт-контракта
+- параметры для функции инициализации и принимающей функции смарт-контракта
 
-Each of these descriptions is referred to as a *schema type*. Schema types are always
-optional to include in a schema.
+Каждое из этих описаний называется *тип схемы*. Типы схемы необязательно
+включать в схему.
 
-Currently the supported schema types are inspired by what is commonly used in
-the Rust programming language:
+В настоящее время поддерживаемые типы схем основаны на том, что обычно
+используется в языке программирования Rust:
 
 .. code-block:: rust
 
@@ -135,8 +135,8 @@ the Rust programming language:
    }
 
 
-Here, ``SizeLength`` describes the number of bytes used to describe the length
-of a variable length type, such as ``List``.
+Здесь , ``SizeLength`` описывает количество байтов, используемых для описания
+типа переменной длины, например ``List``.
 
 .. code-block:: rust
 
@@ -147,20 +147,19 @@ of a variable length type, such as ``List``.
        Eight,
    }
 
-For a reference on how a schema type is serialized into bytes, we refer the
-reader to the `implementation in Rust`_.
+Для информации о том, как тип схемы сериализуется в байты, вы можете ознакомиться
+в `реализации Rust `_.
 
 .. _contract-schema-which-to-choose:
 
-Embedding schemas on-chain
+Встраивание схем в сеть
 ==========================
 
-Schemas are embedded into smart contract modules using the `custom
-section`_ feature of Wasm modules.
-This allows Wasm modules to include a named section of bytes, which does not
-affect the semantics of running the Wasm module.
+Схемы встраиваются в модули смарт-контрактов с использованием функции `настраиваемых
+разделов`_ модулей Wasm. Это позволяет модулям Wasm включать именованный раздел байтов,
+что не влияет на семантику запуска модуля Wasm.
 
-All schemas are collected and added in one custom section named
+Все схемы собираются и добавляются в один настраиваемый раздел с именем
 ``concordium-schema-v1``.
-This collection is a list of pairs, containing the name of the contract encoded
-in UTF-8 and the contract schema bytes.
+Эта коллекция представляет собой список пар, содержащий имя контракта в кодировке 
+UTF-8 и байты схемы контракта.

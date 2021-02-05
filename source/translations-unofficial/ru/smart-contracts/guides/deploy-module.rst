@@ -86,9 +86,6 @@
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` как
 ``some_deployed_module``, выполните следующую команду:
 
-Modules can also be named using the ``name`` command.
-To name a deployed module with reference
-
 .. code-block:: console
 
    $concordium-client module name \

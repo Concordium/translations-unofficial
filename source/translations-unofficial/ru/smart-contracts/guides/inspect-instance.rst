@@ -1,34 +1,34 @@
 .. _inspect-instance:
 
 =================================
-Inspect a smart contract instance
+Проверка экземпляра смарт-контракта
 =================================
 
-This guide will show you how to inspect a smart contract instance.
-Inspecting an instance will show you its name, owner, module reference, balance,
-state and receive-functions:
+Это руководство покажет вам, как проверить экземпляр смарт-контракта.
+Проверка экземпляра покажет вам его имя, владельца, ссылку на модуль, баланс,
+состояние и функции приема:
 
-Preparation
+Подготовка
 ===========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a
-smart-contract instance on-chain to inspect.
+Убедитесь, что вы :ref:`running a node<run-a-node>` с использованием последней версии :ref:`Concordium software<downloads>` и что у вас есть
+экземпляр смарт-контракта в сети для проверки.
 
 .. seealso::
    For how to deploy a smart contract module see :ref:`deploy-module` and for
    how to create an instance :ref:`initialize-contract`.
 
-Inspection
+Проверка
 ==========
 
-To inspect, or show, information about a smart contract instance with the
-address index ``0``, run the following command:
+Чтобы проверить или показать информацию об экземпляре смарт-контракта с
+индексом адреса ``0``, выполните следующую команду:
 
 .. code-block:: console
 
    $concordium-client contract show 0
 
-The output should be similar to the following:
+Результат должен быть похож на:
 
 .. code-block:: console
 
@@ -50,16 +50,16 @@ The output should be similar to the following:
    For more information about contract instance addresses, see
    :ref:`references-on-chain`.
 
-The level of detail of an inspection depends on whether the ``show`` command has
-access to a :ref:`contract schema <contract-schema>`.
-If the schema is embedded, it will be used implicitly.
-Otherwise, a schema can be provided using ``--schema /path/to/schema.bin``
-parameter.
+Уровень детализации проверки зависит от того, имеет ли команда `show``
+доступ к :ref:`contract schema <contract-schema>`.
+Если схема встроена, она будет использоваться неявно.
+В противном случае схему можно предоставить с помощью ``--schema /path/to/schema.bin``
+параметра.
 
 .. note::
 
-   A schema file provided using the ``--schema`` parameter will take precedence
-   over an embedded schema.
+   Файл схемы, предоставленный с помощью параметра ``--schema``, будет иметь приоритет
+   над встроенной схемой.
 
 .. seealso::
 

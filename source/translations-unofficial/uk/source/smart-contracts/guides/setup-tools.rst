@@ -1,16 +1,16 @@
 .. _setup-tools:
 
-=============================
-Установка інструментів для розробки 
-=============================
+===================================
+Установка інструментів для розробки
+===================================
 
 Перш ніж ми зможемо почати розробку смарт-контрактів, нам потрібно налаштувати середовище.
 
 Rust і Cargo
-==============
+============
 
 По-перше, `install rustup`_, який встановить Rust_ і Cargo_ на вашу машину.
-Потім використовуйте ``rustup`` для установки Wasm, яка використовується для компіляції: 
+Потім використовуйте ``rustup`` для установки Wasm, яка використовується для компіляції:
 
 .. code-block:: console
 
@@ -20,7 +20,7 @@ Cargo Concordium
 ================
 
 Cargo Concordium це інструмент для розробки смарт-контрактів для блокчейна Concordium.
-Він може бути використаний для :ref:`compiling<compile-module>` і :ref:`testing<unit-test-contract>` смарт-контрактів, і включає такі функції, як :ref:`building contract schemas<build-schema>`. 
+Він може бути використаний для :ref:`compiling<compile-module>` і :ref:`testing<unit-test-contract>` смарт-контрактів, і включає такі функції, як :ref:`building contract schemas<build-schema>`.
 
 .. todo::
 
@@ -29,17 +29,17 @@ Cargo Concordium це інструмент для розробки смарт-к
 Cargo Concordium поставляється як частина пакета :ref:`Concordium software<downloads>`.
 Інструмент повинен бути доданий в PATH.
 
-Для опису того, як використовувати Cargo Concordium, виконайте: 
+Для опису того, як використовувати Cargo Concordium, виконайте:
 
 .. code-block:: console
 
    $cargo concordium --help
 
 Програмне забезпечення Concordium
-===================
+=================================
 
 Інструмент для розгортання та взаємодії зі смарт-контрактами :ref:`concordium-client<concordium_client>`.
-Він поширюється як частина пакету :ref:`Concordium software<downloads>`. 
+Він поширюється як частина пакету :ref:`Concordium software<downloads>`.
 
 .. note::
 

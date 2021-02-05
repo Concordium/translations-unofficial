@@ -1,7 +1,7 @@
 .. _contract-instances:
 
 ========================
-Smart contract instances
+Экземпляры смарт-контрактов
 ========================
 
 .. todo::
@@ -15,22 +15,19 @@ Smart contract instances
      be in Wasm or Rust or perhaps pseudocode.
    - Consider having a picture that explains the relationship between modules and instances.
 
-A **smart contract instance** is a smart contract module together with a
-specific state and an amount of GTU tokens.
-Multiple smart contract instances can be created from the same module.
-For example, for an :ref:`auction <auction>` contract, there could be multiple instances, each
-one dedicated to bidding for a specific item and with its own participants.
+**Экземпляр смарт-контракта** это модуль смарт-контракта вместе с конкретным состоянием 
+и количеством GTU токенов. Из одного модуля можно создать несколько экземпляров смарт-контрактов.
+Например, для контракта :ref:`auction <auction>` может быть несколько экземпляров,
+каждый из которых предназначен для ставок на конкретный товар и со своими участниками.
 
-Smart contract instances can be created from a deployed :ref:`smart contract
-module<contract-module>` via the ``init`` transaction which invokes the
-requested function in the smart contract module. This function can take a
-parameter.
-Its end result is required to be the initial smart contract state of the
-instance.
+Экземпляры смарт-контрактов могут быть созданы из развернутого :ref:`smart contract
+module<contract-module>` через вызов ``init`` транзакции, которая вызывает необходимую 
+функцию в модуле смарт-контракта. Эта функция может принимать параметр.
+Конечный результат должен являться начальным состоянием экземпляра смарт-контракта.
 
 .. note::
 
-   A smart contract instance is often just called an *instance*.
+   Экземпляр смарт-контракта часто называют просто *экземпляр*.
 
 .. graphviz::
    :align: center
@@ -64,89 +61,86 @@ instance.
        Boardgame:n -> Crowdfunding;
    }
 
-State of a smart contract instance
+Состояние экземпляра смарт-контракта
 ==================================
 
-The state of a smart contract instance consists of two parts, the user-defined
-state and the amount of GTU the contract holds, i.e., its *balance*. When
-referring to state we typically mean only the user-defined state. The reason for
-treating the GTU amount separately is that GTU can only be spent and
-received according to rules of the network, e.g., contracts cannot create
-or destroy GTU tokens.
+Состояние экземпляра смарт-контракта состоит из двух частей: определяемого
+пользователем состояния и количества GTU, которое удерживает контрактом, то есть
+его *баланса*. Когда мы говорим о состоянии, мы обычно имеем в виду только определяемое
+пользователем состояние. Причина, по которой количество GTU обрабатывается отдельно,
+заключается в том, что GTU можно тратить и получать только в соответствии с правилами
+сети, например, контракты не могут создавать или уничтожать токены GTU.
 
 .. _contract-instances-init-on-chain:
 
-Instantiating a smart contract on-chain
+Создание смарт-контракта в сети
 =======================================
 
-Every smart contract must contain a function for creating smart contract
-instances. Such a function is referred to as the *init function*.
+Каждый смарт-контракт должен содержать функцию для создания экземпляров смарт-контракта.
+Такая функция называется *функцией инициализации*.
 
-To create a smart contract instance, an account sends a special transaction with
-a reference to the deployed smart contract module and the name of the
-init function to use for instantiation.
+Чтобы создать экземпляр смарт-контракта, учетная запись отправляет специальную транзакцию
+со ссылкой на развернутый модуль смарт-контракта и именем функции init,
+которая будет использоваться для создания экземпляра.
 
-The transaction can also include an amount of GTU, which is added to the balance
-of the smart contract instance. A parameter to the function is supplied as part
-of the transaction in the form of an array of bytes.
+Транзакция также может включать количество GTU, которое добавляется к балансу экземпляра
+смарт-контракта. Параметр функции предоставляется как часть транзакции в виде массива байтов.
 
-To summarize, the transaction includes:
+Подводя итог, транзакция включает:
 
-- Reference to the smart contract module.
-- Name of the init function.
-- Parameter to the init function.
-- Amount of GTU for the instance.
+- Ссылку на модуль смарт-контракта.
+- Имя функции инициализации.
+- Параметр функции инициализации.
+- Количество GTU для экземпляра.
 
-The init function can signal that it does not wish to create a new instance
-with those parameters. If the init function accepts the parameters, it sets
-up the initial state of the instance and its balance. The instance is given an
-address on the chain and the account who sent the transaction becomes the owner
-of the instance. If the function rejects, no instance is created and only the
-transaction for attempting to create the instance is visible on-chain.
+Функция init может уведомить о том, что не желает создавать новый экземпляр с этими
+параметрами. Если функция init принимает параметры, она устанавливает начальное состояние
+экземпляра и его баланс. Экземпляру дается адрес в сети, и учетная запись, отправившая
+транзакцию, становится владельцем экземпляра. Если функция отклоняет параметры, экземпляр
+не создается, и в сети видна только транзакция для попытки создания экземпляра.
 
 .. seealso::
 
    See :ref:`initialize-contract` guide for how to initialize a
    contract in practice.
 
-Instance state
+Состояние экземпляра
 ==============
 
-Every smart contract instance holds its own state which is represented on-chain
-as an array of bytes. The instance uses functions provided by the host
-environment to read, write and resize the state.
+Каждый экземпляр смарт-контракта имеет собственное состояние, которое представлено в сети
+как массив байтов. Экземпляр использует функции, предоставляемые средой, для чтения,
+записи и изменения размера состояния.
 
 .. seealso::
 
    See :ref:`host-functions-state` for a reference of these functions.
 
-Smart contract state is limited in size. Currently the limit on smart contract
-state is 16KiB.
+Состояние смарт-контракта ограничено по размеру. В настоящее время ограничение на состояние
+смарт-контракта составляет 16KiB.
 
 .. seealso::
 
    Check out :ref:`resource-accounting` for more on this.
 
-Interacting with an instance
+Взаимодействие с экземпляром
 ============================
 
-A smart contract can expose zero or more functions for interacting with an
-instance, referred to as *receive functions*.
+Смарт-контракт может предоставлять ноль или более функций для взаимодействия с
+экземпляром, называемых *принимающие функции*.
 
-Just like with init functions, receive functions are triggered using
-transactions, which contain some amount of GTU for the contract and an argument
-to the function in the form of bytes.
+Как и в случае с функциями init, принимающие функции запускаются с помощью транзакций,
+которые содержат некоторое количество GTU для контракта и аргумент функции в виде байтов.
 
-To summarize, a transaction for smart-contract interaction includes:
+Подводя итог, транзакция для взаимодействия смарт-контракта включает в себя:
 
-- Address to smart contract instance.
-- Name of the receive function.
-- Parameter to the receive function.
-- Amount of GTU for the instance.
+- Адрес экземпляра смарт-контракта.
+- Имя принимающей функции.
+- Параметр принимающией функции.
+- Количество GTU для экземпляра.
 
 .. _contract-instance-actions:
 
-Logging events
+Логирование событий
 ==============
 
 .. todo::
@@ -154,65 +148,61 @@ Logging events
    Explain what events are and why they are useful.
    Rephrase/clarify "monitor for events".
 
-Events can be logged during the execution of smart contract functions. This is
-the case for both init and receive functions. The logs are designed for
-off-chain use, so that actors outside of the chain can monitor for events and
-react to them. Logs are not accessible to smart contracts, or any other actor on
-the chain. Events can be logged using a function supplied by the host
-environment.
+События могут регистрироваться во время выполнения функций смарт-контракта. Это касается
+как функций инициализации, так и принимающих функций. Журналы предназначены для использования
+вне сети, чтобы участники за пределами сети могли отслеживать события и реагировать на них.
+Журналы недоступны для смарт-контрактов или любого другого участника в сети. События могут
+регистрироваться с помощью функции, предоставляемой средой.
 
 .. seealso::
 
    See :ref:`host-functions-log` for the reference of this function.
 
-These event logs are retained by bakers and included in transaction summaries.
+Эти журналы событий сохраняются бейкерами и включаются в сводки транзакций.
 
-Logging an event has an associated cost, similar to the cost of writing to the
-contract's state. In most cases it would only make sense to log a few bytes to
-reduce cost.
+Регистрация события связана с расходами, аналогичными затратам на запись состояния контракта.
+В большинстве случаев для снижения затрат имеет смысл записать в журнал только несколько байтов.
 
 .. _action-descriptions:
 
-Action descriptions
+Описание действий
 ===================
 
-A receive function returns a *description of actions* to be executed by
-the host environment on the chain.
+Принимающая функция возвращает *описание действий*, которые должны выполняться средой в сети.
 
-The possible actions that a contract can produce are:
+Возможные действия, которые может произвести контракт:
 
-- **Accept** is a primitive action that always succeeds.
-- **Simple transfer** of GTU from the instance to the specified account.
-- **Send**: invoke receive function of the specified smart contract instance,
-  and optionally transfer some GTU from the sending instance to the receiving
-  instance.
+- **Принятие** примитивное действие, которое всегда выполняется успешно.
+- **Простой перенос** GTU с экземпляра на указанный аккаунт.
+- **Отправка**: вызов принимающей функции указанного экземпляра смарт-контракта и, при желании, 
+  передача некоторых GTU из экземпляра-отправителя в экземпляр-получатель.
 
-If an action fails to execute, the receive function is reverted, leaving
-the state and the balance of the instance unchanged. However,
+Если действие не выполняется, принимающия функция отменяется, оставляя состояние и баланс
+экземпляра без изменений. Однако,
 
-- the transaction that triggers the (unsuccessful) receive function is still added to the chain, and
-- the transaction cost, including the cost of executing the failed action,
-  is deducted from the sending account.
+- транзакция, которая запускает (неудачную) функцию получения, все еще добавляется в цепочку, и
+- стоимость транзакции, включая стоимость выполнения неудавшегося действия, вычитается 
+  из учетной записи отправителя.
 
-Processing multiple action descriptions
+Обработка нескольких действий
 ---------------------------------------
 
-You can chain action descriptions using the **and** combinator.
-An action-description sequence ``A`` **and** ``B``
+Вы можете описать несколько действий сети с использованием **and** комбинатора.
+Описание действия ``A`` **and** ``B``
 
-1) Executes ``A``.
-2) If ``A`` succeeds, executes ``B``.
-3) If ``B`` fails the whole action sequence fails (and the result of ``A`` is reverted).
+1) Выполняется ``A``.
+2) В случае успеха ``A``, выполняется ``B``.
+3) В случае неудачи ``B`` вся последовательность действий отклоняется (и результат ``A`` отменяется).
 
-Handling errors
+Обработка ошибок
 ---------------
 
-Use the **or** combinator to execute an action in case that a previous action fails.
-An action description ``A`` **or** ``B``
+Можно использовать комбинатор **or** для выполнения действия, если предыдущее действие не выполнилось.
+Описание действия ``A`` **or** ``B``
 
-1) Executes ``A``.
-2) If ``A`` succeeds, stops executing.
-3) If ``A`` fails, executes ``B``.
+1) Выполняется ``A``.
+2) В случае успеха ``A``, прекращает выполнение.
+3) В случае неудачи ``A``, выполняется ``B``.
 
 .. graphviz::
    :align: center
@@ -239,7 +229,7 @@ An action description ``A`` **or** ``B``
    See :ref:`host-functions-actions` for a reference of how to create the
    actions.
 
-The whole action tree is executed **atomically**, and either leads to updates
-to all the relevant instances and accounts, or, in case of rejection, to payment
-for execution, but no other changes. The account which sent the initiating
-transaction pays for the execution of the entire tree.
+Все дерево действий выполняется **атомарно**, и либо приводит к обновлению всех соответствующих
+экземпляров и учетных записей, либо, в случае отклонения выполнения, производится оплата за выполнение,
+но без других изменений. Учетная запись, отправившая инициирующую транзакцию, оплачивает
+выполнение всего дерева действий.

@@ -39,10 +39,8 @@ limitations we impose <wasm-limitations>`.
    See :ref:`contract-module` for more information about smart contract modules.
 
 Модуль смарт-контракта разрабатывается в Rust как библиотека, которая затем
-компилируется в Wasm.
-
-Чтобы получить правильный экспорт, атрибут `crate-type` должны быть установлен в
-``["cdylib", "rlib"]`` в файле манифест:
+компилируется в Wasm. Чтобы получить правильный экспорт, атрибут `crate-type`
+должны быть установлен в ``["cdylib", "rlib"]`` в файле манифест:
 
 .. code-block:: text
 
@@ -97,7 +95,7 @@ limitations we impose <wasm-limitations>`.
 
 - Тип функций:
 
-  * Функция инициализации должна иметь тип ``&impl HasInitContext -> InitResult<MyState>``
+  * init функция должна иметь тип ``&impl HasInitContext -> InitResult<MyState>``
     где ``MyState`` - это тип, реализующий ``Serialize`` признак.
   * receive функция должна принимать ``A: HasActions`` тип параметра,
     ``&impl HasReceiveContext`` и ``&mut MyState`` параметр, и возвращать

@@ -16,12 +16,12 @@ Concordium ID：开始使用该应用
 设置密码和生物识别
 ================================
 
-首次打开Concordium ID应用程序时，您会看到一个欢迎流程界面，该流程将帮助您设置密码和生物特征认证，创建一个 :ref:`glossary-initial-account`，它还将引导您完成操作。得到一个 :ref:`glossary-identity`。初始帐户是一种特殊类型的帐户，在创建身份后由 :ref:`glossary-identity-provider`提交到链上。您可以使用初始帐户进行的交易与使用常规帐户进行的交易相同，但是身份服务商将知道初始帐户的所有者。创建您的身份后，您将可以自己在链上提交帐户，身份服务商将不知道这些帐户。您可以在身份和帐户 :ref:`Identities
+首次打开Concordium ID应用程序时，您会看到一个欢迎流程界面，该流程将帮助您设置密码和生物特征认证，创建一个 :ref:`glossary-initial-account` ，它还将引导您完成操作。得到一个 :ref:`glossary-identity` 。初始帐户是一种特殊类型的帐户，在创建身份后由 :ref:`glossary-identity-provider`提交到链上。您可以使用初始帐户进行的交易与使用常规帐户进行的交易相同，但是身份服务商将知道初始帐户的所有者。创建您的身份后，您将可以自己在链上提交帐户，身份服务商将不知道这些帐户。您可以在身份和帐户 :ref:`Identities
 and accounts<reference-id-accounts>`页面上详细了解帐户。
 
 这是打开Concordium ID时遇到的第一个界面。描述您必须经历此过程才能开始。
 
-如果您准备好继续，可以按**Yes, let’s go!** 下一个屏幕将要求您输入六位数的密码。如果您希望使用包含字母的完整密码，也可以在此处选择使用。
+如果您准备好继续，可以按 **Yes, let’s go!** 下一个屏幕将要求您输入六位数的密码。如果您希望使用包含字母的完整密码，也可以在此处选择使用。
 
 .. image:: images/concordium-id/int1.png
       :width: 32%

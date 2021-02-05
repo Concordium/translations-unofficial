@@ -50,7 +50,7 @@
    For more information about contract instance addresses, see
    :ref:`references-on-chain`.
 
-Уровень детализации проверки зависит от того, имеет ли команда `show``
+Уровень детализации проверки зависит от того, имеет ли команда ``show``
 доступ к :ref:`contract schema <contract-schema>`.
 Если схема встроена, она будет использоваться неявно.
 В противном случае схему можно предоставить с помощью ``--schema /path/to/schema.bin``

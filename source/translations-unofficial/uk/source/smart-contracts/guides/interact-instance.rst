@@ -1,64 +1,53 @@
 .. _interact-instance:
 
 =======================================
-Interact with a smart contract instance
+Взаємодія з об'єктом смарт-контракту
 =======================================
 
-This guide will show you, how to interact with a smart contract instance, which
-means triggering a receive function that, possibly, updates the state of the
-instance.
+Це керівництво покаже вам, як взаємодіяти з об'єктом смарт-контракту, що означає запуск receive-функції, яка, можливо, оновлює стан об'єкту. 
 
-Preparation
+Підготовка
 ===========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a
-smart-contract instance on-chain to inspect.
+Переконайтеся, що ви :ref:`running a node<run-a-node>`, використовуючи останню версію :ref:`Concordium software<downloads>` і що у вас є об'єкт смарт-контракту в мережі для перевірки. 
 
 .. seealso::
    For how to deploy a smart contract module see :ref:`deploy-module` and for
    how to create an instance :ref:`initialize-contract`.
 
-Since interactions with a smart contract are transactions, you should also make
-sure to have ``concordium-client`` set up with an account with enough GTU to pay
-for the transactions.
+Оскільки взаємодія зі смарт-контрактом є транзакцією, ви також повинні переконатися, що у ``concordium-client`` встановлено аккаунт з достатньою кількістю GTU для оплати транзакцій. 
 
 .. note::
 
-   The cost of this transaction depends on the size of the parameters sent to
-   the receive function and the complexity of the function itself.
+   Вартість цієї транзакції залежить від розміру параметрів, що відправляються в функцію прийому, і складності самої функції. 
 
-Interaction
+Взаємодія
 ===========
 
-To update an instance with address index ``0`` using the parameterless
-receive function ``my_receive`` while allowing up to 1000 energy to be used,
-run the following command:
+Щоб оновити екземпляр з індексом адреси ``0`` за допомогою receive-функції ``my_receive`` без параметрів, дозволяючи використовувати до 1000 NRG, виконайте наступну команду: 
 
 .. code-block:: console
 
    $concordium-client contract update 0 --func my_receive --energy 1000
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. code-block:: console
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_receive'.
 
-Passing parameters in JSON format
+Передача параметрів в JSON форматі
 ---------------------------------
 
-A parameter in JSON format can be passed if a :ref:`smart contract schema
-<contract-schema>` is supplied, either as a file or embedded in the module.
-The schema is used to serialize the JSON into binary.
+Параметр в JSON форматі може бути переданий, якщо вказана :ref:`smart contract schema<contract-schema>` поставляється або у вигляді файлу, або вбудований в модуль.
+Схема використовувана для сериализации JSON в двійковий файл. 
 
 .. seealso::
 
    :ref:`Read more about why and how to use smart contract schemas
    <contract-schema>`.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.json`` in JSON
-format, run the following command:
+Щоб оновити екземпляр з індексом адреси ``0`` за допомогою receive-функції ``my_parameter_receive`` з файлом параметрів ``my_parameter.json`` в JSON форматі, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -66,14 +55,14 @@ format, run the following command:
             --energy 1000 \
             --parameter-json my_parameter.json
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на:
 
 .. code-block:: console
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_parameter_receive'.
 
-Otherwise, an error describing the problem is displayed.
-Common errors are described in the next section.
+В іншому випадку відображається помилка з описом проблеми.
+Загальні помилки описані в наступному розділі. 
 
 .. seealso::
 
@@ -82,8 +71,7 @@ Common errors are described in the next section.
 
 .. note::
 
-   If the parameter provided in JSON format does not conform to the type
-   specified in the schema, an error message will be displayed. For example:
+   Якщо параметр, який було надано JSON форматі, не відповідає типу, зазначеному в схемі, відобразиться повідомлення про помилку. Наприклад: 
 
     .. code-block:: console
 
@@ -97,23 +85,18 @@ Common errors are described in the next section.
 
 .. note::
 
-   If a given module does not contain an embedded schema, it can be supplied
-   using the ``--schema /path/to/schema.bin`` parameter.
+   Якщо даний модуль не містить вбудованої схеми, його можна надати за допомогою параметра ``--schema /path/to/schema.bin``.
 
 .. note::
 
-   GTU can also be transferred to a contract during updates using the
-   ``--amount AMOUNT`` parameter.
+   GTU також можна перенести в контракт під час оновлень за допомогою параметра ``--amount AMOUNT``.
 
-Passing parameters in binary format
+Передача параметрів в бінарному форматі
 -----------------------------------
 
-When passing parameters in binary format, a
-:ref:`contract schema <contract-schema>` is not needed.
+При передачі параметрів в бінарному форматі :ref:`contract schema <contract-schema>` не потрібна.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.bin`` in binary
-format, run the following command:
+Щоб оновити екземпляр з індексом адреси ``0`` за допомогою receive-функції ``my_parameter_receive`` з файлом параметрів ``my_parameter.bin`` в бінарному форматі, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -121,7 +104,7 @@ format, run the following command:
             --energy 1000 \
             --parameter-bin my_parameter.bin
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на:
 
 .. code-block:: console
 

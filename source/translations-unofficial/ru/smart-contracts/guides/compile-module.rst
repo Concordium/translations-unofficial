@@ -5,38 +5,38 @@
 .. _compile-module:
 
 ====================================
-Compile a Rust smart contract module
+Компилирование Rust модуля смарт-контракта
 ====================================
 
-This guide will show you how to compile smart contract module written in Rust to
-a Wasm module.
+Это руководство покажет вам, как скомпилировать модуль смарт-контракта,
+написанный на Rust, в модуль Wasm.
 
-Preparation
+Подготовка
 ===========
 
-Make sure to have Rust and Cargo installed and the ``wasm32-unknown-unknown``
-target, together with ``cargo-concordium`` and the Rust source code for a smart
-contract module, you wish to compile.
+Убедитесь, что установлены Rust и Cargo, а также ``wasm32-unknown-unknown``,
+вместе с ``cargo-concordium`` и исходным кодом Rust для модуля смарт-контракта,
+который вы хотите скомпилировать.
 
 .. seealso::
 
    For instructions on how to install the developer tools see
    :ref:`setup-tools`.
 
-Compiling to Wasm
+Компиляция в Wasm
 =================
 
-To help building smart contract modules and to take advantage of features
-such as :ref:`contract schemas <contract-schema>`, we recommend using the
-``cargo-concordium`` tool for building Rust_ smart contracts.
+Чтобы помочь в создании модулей смарт-контрактов и воспользоваться преимуществами
+таких функций, как :ref:`contract schemas <contract-schema>`, мы рекомендуем
+использовать инструмент ``cargo-concordium`` для создания смарт-контрактов Rust_.
 
-In order to build a smart contract, run:
+Для того чтобы собрать смарт-контракт, запустите:
 
 .. code-block:: console
 
    $cargo concordium build
 
-This uses Cargo_ for building, but runs further optimizations on the result.
+Это использует Cargo_ для сборки, но запускает дальнейшую оптимизацию результата.
 
 .. seealso::
 
@@ -45,64 +45,64 @@ This uses Cargo_ for building, but runs further optimizations on the result.
 
 .. note::
 
-   It is also possible to compile using Cargo_ directly by running:
+   Также можно скомпилировать с помощью Cargo_ напрямую, запустив:
 
    .. code-block:: console
 
       $cargo build --target=wasm32-unknown-unknown [--release]
 
-   Note that even with ``--release`` set, the produced Wasm module includes
-   debug information.
+   Обратите внимание, что даже с ``--release`` созданный модуль Wasm включает
+   в себя отладочную информацию.
 
-Removing host information from build
+Удаление информации о хосте из сборки
 ====================================
 
-The compiled Wasm module can contain information from the host machine building
-the binary; information such as the absolute path of the ``.cargo`` directory.
+Скомпилированный модуль Wasm может содержать информацию от хост-машины, создающей
+двоичный файл; такую информацию, как абсолютный путь к каталогу ``.cargo``.
 
-For most people this is not sensitive information, but it is important to be
-aware of it.
+Для большинства людей это не секретная информация, но вы должны знать об этом
+моменте.
 
-On Linux the paths can be inspected by running:
+В Linux можно проверить, запустив:
 
 .. code-block:: console
 
    strings contract.wasm | grep /home/
 
-.. rubric:: The solution
+.. rubric:: Решение
 
-The ideal solution would be to remove this path entirely, but that is
-unfortunately not a trivial task in general.
+Идеальным решением было бы полностью удалить этот путь, но это, к сожалению,
+не тривиальная задача в целом.
 
-It is possible to work around the issue by using the ``--remap-path-prefix``
-flag when compiling the contract.
-On Unix-like systems the flag can be passed directly to the ``cargo concordium``
-invocation using the ``RUSTFLAGS`` environment variable:
+Эту проблему можно обойти, используя флаг ``--remap-path-prefix``
+при компиляции контракта.
+В Unix-подобных системах флаг может быть передан непосредственно
+``cargo concordium`` с помощью переменной окружения ``RUSTFLAGS``:
 
 .. code-block:: console
 
    $RUSTFLAGS="--remap-path-prefix=$HOME=" cargo concordium build
 
-Which will replace the users home path with the empty string. Other paths could
-be mapped in a similar way. In general using ``--remap-path-prefix=from=to``
-will map ``from`` to ``to`` at the beginning of any embedded path.
+Это заменит домашний путь пользователя пустой строкой. Другие пути могли
+быть отображено аналогичным образом. Обычно используется ``--remap-path-prefix=from=to`` 
+будет отображать ``from`` к ``to`` в начале любого встроенного пути.
 
-The flag can also be set permanently in the ``.cargo/config`` file in your
-crate, under the build section:
+Флаг также может быть постоянно установлен в файле ``.cargo/config``,
+в разделе build:
 
 .. code-block:: toml
 
    [build]
    rustflags = ["--remap-path-prefix=/home/<user>="]
 
-where `<user>` should be replaced with the user building the wasm module.
+где `<user>` должен быть заменен пользователем, создающим модуль wasm.
 
-Caveats
+Предостережения
 -------
 
-The above will likely not fix the issue if the ``rust-src`` component is
-installed for the Rust toolchain. This component is needed by some Rust tools
-such as the rust-analyzer_.
+Приведенное выше, скорее всего, не устранит проблему, если компонент ``rust-src``
+установлен для Rust набора инструментов. Этот компонент требуется некоторым
+инструментам Rust, таким как rust-анализатор.
 
 .. seealso::
 

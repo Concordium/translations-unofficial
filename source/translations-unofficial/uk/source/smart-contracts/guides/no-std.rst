@@ -1,60 +1,52 @@
 .. _no-std:
 
 ======================
-Build using ``no_std``
+Збірка з використанням ``no_std``
 ======================
 
-This guide shows how to enable ``no_std`` for your rust smart contract,
-potentially reducing the size of the resulting Wasm module by several kilobytes.
+У цьому керівництві показано, як включити ``no_std`` для вашого смарт-контракту rust, потенційно зменшивши розмір отриманого модуля Wasm на кілька кілобайт. 
 
-Preparation
+Підготовка
 ===========
 
-Compiling ``concordium-std`` without the ``std`` feature requires using the rust
-nightly toolchain, which can be installed using ``rustup``:
+Компіляція ``concordium-std`` без ``std`` вимагає використання набору rust інструментів nightly toolchain, який можна встановити за допомогою ``rustup``: 
 
 .. code-block:: console
 
    $rustup toolchain install nightly
 
-Setting up the module for ``no_std``
+Налаштування модуля для ``no_std``
 ====================================
 
-The ``concordium-std`` library exposes a ``std`` feature, which enables the use
-of the rust standard library.
-This feature is enabled by default.
+Бібліотека ``concordium-std`` надає ``std``, який дозволяє використовувати стандартну бібліотеку rust.
+Ця функція включена за замовчуванням.
 
-To disable it, one must simply disable default features for the
-``concordium-std`` in the dependencies of your module.
+Щоб відключити її, потрібно просто відключити функції за замовчуванням для ``concordium-std`` в залежностях вашого модуля. 
 
 .. code-block:: rust
 
    [dependencies]
    concordium-std = { version: "=0.2", default-features = false }
 
-To be able to toggle between with and without std, also add a ``std`` to your
-own module, which enables the ``std`` feature of ``concordium-std``:
+Щоб мати можливість перемикатися між std і без std, також додайте ``std`` в свій власний модуль, який включає функцію ``std`` в ``concordium-std``: 
 
 .. code-block:: rust
 
    [features]
    std = ["concordium-std/std"]
 
-This is the setup of the smart contract examples, where ``std`` for each
-smart contract module is enabled by default.
+Це приклад налаштування смарт-контрактів, де ``std`` для кожного модуля смарт-контракту включений за замовчуванням.
 
-Building the module
+Збірка модуля
 ===================
 
-In order to use the nightly toolchain, add ``+nightly`` right after
-``cargo``:
+Щоб використовувати набір інструментів nightly toolchain, додайте ``+nightly`` відразу після ``cargo``: 
 
 .. code-block:: console
 
    $cargo +nightly concordium build
 
-If you want to disable the default features of your own smart contract module,
-you can pass extra arguments for ``cargo``:
+Якщо ви хочете відключити функції за замовчуванням вашого власного модуля смарт-контракту, ви можете передати додаткові аргументи для ``cargo``: 
 
 .. code-block:: console
 

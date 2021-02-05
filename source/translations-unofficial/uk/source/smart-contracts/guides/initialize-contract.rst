@@ -1,36 +1,27 @@
 .. _initialize-contract:
 
 ====================================
-Initialize a smart contract instance
+Ініціалізація об'єкта смарт-контракту 
 ====================================
 
-This guide will show you how to initialize a smart contract from a deployed
-smart contract module with parameters in JSON or binary format.
-Additionally, it will show how to name an instance.
+Це керівництво покаже вам, як форматувати смарт-контракт з розгорнутого модуля смарт-контракту з параметрами в форматі JSON або довічним форматі. 
+Крім того, він покаже, як назвати екземпляр. 
 
-Preparation
+Підготовка
 ===========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a smart
-contract :ref:`deployed <deploy-module>` in some module on-chain.
+Переконайтеся, що ви :ref:`running a node<run-a-node>`, використовуючи останню версію :ref:`Concordium software<downloads>` і що у вас є смарт-контракт :ref:`deployed <deploy-module>` в якомусь модулі мережі.
 
-Since initializing a smart contract is a transaction, you should also make sure
-to have ``concordium-client`` set up with an account with enough GTU to pay for
-the transaction.
+Оскільки ініціалізація смарт-контракту - це транзакція, ви також повинні переконатися, що у ``concordium-client`` є аккаунт з достатньою кількістю GTU для оплати транзакції. 
 
 .. note::
 
-   The cost of this transaction depends on the size of the parameters sent to
-   the init function and the complexity of the function itself.
+   Вартість цієї транзакції залежить від розміру параметрів, що відправляються в init-функцію, і складності самої функції. 
 
-Initialization
+Ініціалізація 
 ==============
 
-To initialize an instance of the parameterless smart contract ``my_contract``
-from a deployed module with reference
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` while
-allowing up to 1000 NRG to be used, run the
-following command:
+Для ініціалізації примірника смарт-контракту ``my_contract`` без параметрів з розгорнутого модуля з посиланням ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` дозволяючи використовувати до 1000 NRG, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -40,7 +31,7 @@ following command:
             --contract my_contract \
             --energy 1000
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. todo::
 
@@ -51,8 +42,7 @@ If successful, the output should be similar to the following:
 
    Contract successfully initialized with address: {"index":0,"subindex":0}
 
-Seeing this message means that a new on-chain contract instance has been created
-with the address shown.
+Це повідомлення означає, що був створений новий об'єкт контракту в мережі з вказаною адресою.
 
 .. seealso::
 
@@ -67,12 +57,11 @@ with the address shown.
 
 .. _init-passing-parameter-json:
 
-Passing parameters in JSON format
+Передача параметрів в JSON форматі 
 ---------------------------------
 
-A parameter in JSON format can be passed if a :ref:`smart contract schema
-<contract-schema>` is supplied, either as a file or embedded in the module.
-The schema is used to serialize the JSON into binary.
+Параметр в JSON форматі може бути переданий, якщо вказана :ref:`smart contract schema<contract-schema>` або у вигляді файлу, або вбудована в модуль.
+Схема використовується для сериализации JSON в бінарний файл. 
 
 .. seealso::
 
@@ -80,10 +69,7 @@ The schema is used to serialize the JSON into binary.
 
    :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin>`.
 
-To initialize an instance of the contract ``my_parameter_contract`` from the
-module with reference
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` with a
-parameter file ``my_parameter.json`` in JSON format, run the following command:
+Для ініціалізації примірника смарт-контракту ``my_parameter_contract`` з з модуля з посиланням ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` з файлом параметрів ``my_parameter.json`` в JSON форматі, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -93,19 +79,19 @@ parameter file ``my_parameter.json`` in JSON format, run the following command:
             --energy 1000 \
             --parameter-json my_parameter.json
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. code-block:: console
 
    Contract successfully initialized with address: {"index":0,"subindex":0}
 
-Otherwise, an error describing the problem is displayed.
-Common errors are described in the next section.
+В іншому випадку відображається помилка з описом проблеми.
+Загальні помилки описані в наступному розділі. 
 
 .. note::
 
-   If the parameter provided in JSON format does not conform to the type
-   specified in the schema, an error message will be displayed. For example:
+   Якщо параметр, наданий у форматі JSON, не відповідає типу, зазначеному в схемі, відобразиться повідомлення про помилку.
+   Наприклад: 
 
     .. code-block:: console
 
@@ -119,27 +105,20 @@ Common errors are described in the next section.
 
 .. note::
 
-   If a given module does not contain an embedded schema, it can be supplied
-   using the ``--schema /path/to/schema.bin`` parameter.
+   Якщо даний модуль не містить вбудованої схеми, його можна надати за допомогою параметра ``--schema /path/to/schema.bin``. 
 
 .. note::
 
-   GTU can also be transferred to a contract instance during initialization
-   using the ``--amount AMOUNT`` parameter.
-
+   GTU також може бути переданий примірнику контракту під час ініціалізації за допомогою параметра ``--amount AMOUNT``. 
 
 .. _init-passing-parameter-bin:
 
-Passing parameters in binary format
+Передача параметрів в бінарному форматі 
 -----------------------------------
 
-When passing parameters in binary format, a :ref:`contract schema
-<contract-schema>` is not needed.
+При передачі параметрів в бінарному форматі :ref:`contract schema<contract-schema>` не потребується.
 
-To initialize an instance of the contract ``my_parameter_contract`` from the
-module with reference
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` with the
-parameter file ``my_parameter.bin`` in binary format, run the following command:
+Для ініціалізації примірника смарт-контракту ``my_parameter_contract`` з модуля з посиланням ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` з файлом параметрів ``my_parameter.bin`` в бінарному форматі, виконайте наступну команду: 
 
 .. code-block:: console
 
@@ -150,7 +129,7 @@ parameter file ``my_parameter.bin`` in binary format, run the following command:
             --parameter-bin my_parameter.bin
 
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. code-block:: console
 
@@ -163,24 +142,19 @@ If successful, the output should be similar to the following:
 
 .. _naming-an-instance:
 
-Naming a contract instance
+Іменування об'єкту контракту
 ==========================
 
-A contract instance can be given a local alias, or *name*, which makes
-referencing it easier.
-The name is only stored locally by ``concordium-client``, and is not visible
-on-chain.
+Примірнику контракту можна привласнити локальний псевдонім або *ім'я*, що спростить звернення до нього. Ім'я зберігається тільки локально в ``concordium-client`` і не відображається в мережі. 
 
 .. seealso::
 
    For an explanation of how and where the names and other local settings are
    stored, see :ref:`local-settings`.
 
-To add a name during initialization, the ``--name`` parameter is used.
+Щоб додати ім'я під час ініціалізації, використовується параметр ``--name``.
 
-Here, we are initializing the contract ``my_contract`` from the deployed module
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` and naming
-it ``my_named_contract``:
+Тут ми инициализируем контракт ``my_contract`` з розгорнутого модуля ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` і називаємо його ``my_named_contract``: 
 
 .. code-block:: console
 
@@ -191,21 +165,19 @@ it ``my_named_contract``:
             --name my_named_contract
 
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. code-block:: console
 
    Contract successfully initialized with address: {"index":0,"subindex":0} (my_named_contract).
 
-Contract instances can also be named using the ``name`` command.
-To name an instance with the address index ``0`` as ``my_named_contract``, run
-the following command:
+Об'єкти контрактів також можуть бути названі за допомогою команди ``name``. Щоб назвати екземпляр з індексом адреси ``0`` як ``my_named_contract``, виконайте наступну команду: 
 
 .. code-block:: console
 
    $concordium-client contract name 0 --name my_named_contract
 
-If successful, the output should be similar to the following:
+У разі успіху результат повинен бути схожий на: 
 
 .. code-block:: console
 

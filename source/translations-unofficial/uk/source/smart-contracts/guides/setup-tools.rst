@@ -1,18 +1,16 @@
 .. _setup-tools:
 
 =============================
-Install tools for development
+Установка інструментів для розробки 
 =============================
 
-Before we can start developing smart contracts, we need to setup the
-environment.
+Перш ніж ми зможемо почати розробку смарт-контрактів, нам потрібно налаштувати середовище.
 
-Rust and Cargo
+Rust і Cargo
 ==============
 
-First, `install rustup`_, which will install both Rust_ and Cargo_ on your
-machine.
-Then use ``rustup`` to install the Wasm target, which is used for compilation:
+По-перше, `install rustup`_, який встановить Rust_ і Cargo_ на вашу машину.
+Потім використовуйте ``rustup`` для установки Wasm, яка використовується для компіляції: 
 
 .. code-block:: console
 
@@ -21,36 +19,31 @@ Then use ``rustup`` to install the Wasm target, which is used for compilation:
 Cargo Concordium
 ================
 
-Cargo Concordium is the tool for developing smart contracts for the Concordium
-blockchain.
-It can be used for :ref:`compiling<compile-module>` and
-:ref:`testing<unit-test-contract>` smart contracts, and enables features such as
-:ref:`building contract schemas<build-schema>`.
+Cargo Concordium це інструмент для розробки смарт-контрактів для блокчейна Concordium.
+Він може бути використаний для :ref:`compiling<compile-module>` і :ref:`testing<unit-test-contract>` смарт-контрактів, і включає такі функції, як :ref:`building contract schemas<build-schema>`. 
 
 .. todo::
 
    Add links for testing and schemas.
 
-Cargo Concordium is distributed as part of the :ref:`Concordium software<downloads>` package.
-The tool should be placed in your PATH.
+Cargo Concordium поставляється як частина пакета :ref:`Concordium software<downloads>`.
+Інструмент повинен бути доданий в PATH.
 
-For a description of how to use the Cargo Concordium run:
+Для опису того, як використовувати Cargo Concordium, виконайте: 
 
 .. code-block:: console
 
    $cargo concordium --help
 
-Concordium software
+Програмне забезпечення Concordium
 ===================
 
-The tool to deploy and interact with smart contracts is
-:ref:`concordium-client<concordium_client>`. It is distributed as part of the
-:ref:`Concordium software<downloads>` package.
+Інструмент для розгортання та взаємодії зі смарт-контрактами :ref:`concordium-client<concordium_client>`.
+Він поширюється як частина пакету :ref:`Concordium software<downloads>`. 
 
 .. note::
 
-   To deploy smart contract modules and interact with the chain, make sure
-   that you are :ref:`running a node<run-a-node>`.
+   Щоб розгорнути модулі смарт-контрактів і взаємодіяти з мережею, переконайтеся, що ви :ref:`running a node<run-a-node>`.
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/

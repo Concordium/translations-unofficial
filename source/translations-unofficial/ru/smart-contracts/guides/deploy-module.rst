@@ -1,33 +1,33 @@
 .. _deploy-module:
 
 ==============================
-Deploy a smart contract module
+Развертывание модуля смарт-контрактов
 ==============================
 
-This guide will show you how to deploy a smart contract module *on-chain* and
-how to name it.
+Это руководство покажет вам, как развернуть модуль смарт-контракта *в сети* и
+как его назвать.
 
-Preparation
+Подготовка
 ===========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and
-that you have a :ref:`smart-contract module<setup-tools>` ready to be deployed.
+Убедитесь, что вы :ref:`running a node<run-a-node>` используете последнюю версию :ref:`Concordium software<downloads>` и
+что у вас есть :ref:`smart-contract module<setup-tools>`, готовый к развертыванию.
 
-Since deploying a smart contract module is done in the form of a transaction,
-you will also need to have ``concordium-client`` setup with an account with
-enough GTU to pay for the transaction.
+Поскольку развертывание модуля смарт-контракта осуществляется в форме транзакции,
+вам также потребуется настроить ``concordium-client`` с аккаунтом с
+достаточным количеством GTU для оплаты транзакции.
 
 .. note::
 
-   The cost of the transaction is dependent on the size of the smart contract
-   module. ``concordium-client`` shows the cost and asks for confirmation
-   before it executes any transaction.
+   Стоимость транзакции зависит от размера модуля смарт-контракта. 
+   ``concordium-client`` показывает стоимость и запрашивает подтверждение
+   перед выполнением какой-либо транзакции.
 
-Deployment
+Развертывание
 ==========
 
-To deploy a smart contract module ``my_module.wasm`` using the account
-with name account-name, run the following command:
+Для развертывания модуля смарт-контракта ``my_module.wasm``, используйте аккаунт
+с именем account-name, выполнив следующую команду:
 
 .. code-block:: console
 
@@ -35,16 +35,17 @@ with name account-name, run the following command:
 
 .. note::
 
-   The --sender option can be omitted if the account "default" is to be used. For brevity, we will do so in the following.
+   Параметр --sender можно опустить, если используется учетная запись "по умолчанию".
+   Для краткости мы сделаем это ниже.
 
-If successful, the output should be similar to the following:
+В случае успеха вывод должен быть похож на:
 
 .. code-block:: console
 
    Module successfully deployed with reference: 'd121f262f3d34b9737faa5ded2135cf0b994c9c32fe90d7f11fae7cd31441e86'.
 
-Make note of the module reference as it is used when creating smart contract
-instances.
+Обратите внимание на ссылку на модуль, так как она используется при создании экземпляров
+смарт-контрактов.
 
 .. seealso::
 
@@ -55,36 +56,38 @@ instances.
 
 .. _naming-a-module:
 
-Naming a module
+Именование модуля
 ===============
 
-A module can be given a local alias, or *name*, which makes referencing it
-easier.
-The name is only stored locally by ``concordium-client``, and is not
-visible on-chain.
+Модулю может быть присвоен локальный псевдоним или *имя*, что упрощает обращение
+к нему.
+Имя хранится только локально в ``concordium-client``, и не отображается в сети.
 
 .. seealso::
 
    For an explanation of how and where the names and other local settings are
    stored, see :ref:`local-settings`.
 
-To add a name during deployment, the ``--name`` parameter is used.
-Here, we are naming the module ``my_deployed_module``:
+Чтобы добавить имя во время развертывания, используется параметр ``--name``.
+Здесь мы называем модуль ``my_deployed_module``:
 
 .. code-block:: console
 
    $concordium-client module deploy my_module.wasm --name my_deployed_module
 
-If successful, the output should be similar to the following:
+В случае успеха вывод должен быть похож на:
 
 .. code-block:: console
 
    Module successfully deployed with reference: '9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2' (my_deployed_module).
 
+Модули также могут быть названы с помощью команды ``name``.
+Для именования развернутого моделя через ссылку
+``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` как
+``some_deployed_module``, выполните следующую команду:
+
 Modules can also be named using the ``name`` command.
 To name a deployed module with reference
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` as
-``some_deployed_module``, run the following command:
 
 .. code-block:: console
 
@@ -92,7 +95,7 @@ To name a deployed module with reference
              9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2 \
              --name some_deployed_module
 
-The output should be similar to the following:
+Результат должен быть похож на:
 
 .. code-block:: console
 

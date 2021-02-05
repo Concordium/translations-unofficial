@@ -15,20 +15,15 @@
 .. _writing-smart-contracts:
 
 ==================================
-Developing smart contracts in Rust
+Розробка смарт-контрактів в Rust
 ==================================
 
-On the concordium blockchain smart contracts are deployed as Wasm modules, but
-Wasm is designed primarily as a compilation target and is not convenient to
-write by hand.
-Instead we can write our smart contracts in the Rust_ programming language, which
-has good support for compiling to Wasm.
+У concordium блокчейне смарт-контракти розгорнуті як модулі Wasm, але Wasm спроектований в першу чергу як мета компіляції і його незручно писати вручну. 
+Замість цього ми можемо написати наші смарт-контракти на мові програмування Rust_, який добре підтримує компіляцію в Wasm. 
 
-Smart contracts do not have to be written in Rust.
-This is simply the first SDK we provide.
-Manually written Wasm, or Wasm compiled from C, C++, AssemblyScript_, and
-others, is equally valid on the chain, as long as it adheres to the :ref:`Wasm
-limitations we impose <wasm-limitations>`.
+Смарт-контракти не обов'язково писати на Rust. 
+Це просто перший SDK, який ми надаємо. 
+Написаний вручну Wasm або Wasm, скомпільований з C, C ++, AssemblyScript_, і інших, однаково дійсний мережі, поки він відповідає :ref:`Wasm limitations we impose <wasm-limitations>`.
 
 .. seealso::
 
@@ -39,10 +34,8 @@ limitations we impose <wasm-limitations>`.
 
    See :ref:`contract-module` for more information about smart contract modules.
 
-A smart contract module is developed in Rust as a library crate, which is then
-compiled to Wasm.
-To obtain correct exports, the `crate-type` attribute must be set to
-``["cdylib", "rlib"]`` in the manifest file:
+Модуль смарт-контракту розробляється в Rust як бібліотека, яка потім компілюється в Wasm.
+Щоб отримати правильний експорт, атрибут `crate-type` повинні бути встановлений в ``["cdylib", "rlib"]`` у файлі маніфест: 
 
 .. code-block:: text
 
@@ -51,17 +44,14 @@ To obtain correct exports, the `crate-type` attribute must be set to
    crate-type = ["cdylib", "rlib"]
    ...
 
-Writing a smart contract using ``concordium_std``
+Написання смарт-контракту з використанням ``concordium_std``
 =================================================
 
-It is recommended to use the ``concordium_std`` crate, which provides a
-more Rust-like experience for developing smart contract modules and calling
-host functions.
+Рекомендується використовувати ``concordium_std``, який забезпечує більш схожий на Rust інтерфейс для розробки модулів смарт-контрактів і виконання функцій хоста.
 
-The crate enables writing init and receive functions as simple Rust
-functions annotated with ``#[init(...)]`` and ``#[receive(...)]``, respectively.
+Це дозволяє писати функції init і receive як прості функції Rust, помічені символами ``#[init(...)]`` та ``#[receive(...)]``, відповідно.
 
-Here is an example of a smart contract that implements a counter:
+Ось приклад смарт-контракту, що реалізує лічильник: 
 
 .. code-block:: rust
 
@@ -87,7 +77,7 @@ Here is an example of a smart contract that implements a counter:
        Ok(A::accept())
    }
 
-There are a number of things to notice:
+Слід зазначити кілька моментів: 
 
 .. todo::
 
@@ -95,31 +85,20 @@ There are a number of things to notice:
    - These requirements should be part of a specification that is written up somewhere,
      i.e., not just as part of this example.
 
-- The type of the functions:
+- Тип функцій:
+  * init функція повинна мати тип ``&impl HasInitContext -> InitResult<MyState>`` де ``MyState`` - це тип, який реалізує ``Serialize`` ознака. 
+  * receive функція повинна приймати ``A: HasActions`` тип параметра, ``&impl HasReceiveContext`` і ``&mut MyState`` параметр, і повертати ``ReceiveResult<A>``. 
 
-  * An init function must be of type ``&impl HasInitContext -> InitResult<MyState>``
-    where ``MyState`` is a type that implements the ``Serialize`` trait.
-  * A receive function must take a ``A: HasActions`` type parameter,
-    a ``&impl HasReceiveContext`` and a ``&mut MyState`` parameter, and return
-    a ``ReceiveResult<A>``.
+- Анотація ``#[init(contract = "counter")]`` зазначає функцію, до якої вона застосовується, як функцію ініціалізації зазначеного контракту ``counter``. 
+  Конкретно це означає, що за лаштунками цей макрос генерує електроенергію, що експортується функцію з необхідною підписом і ім'ям ``init_counter``. 
 
-- The annotation ``#[init(contract = "counter")]`` marks the function it is
-  applied to as the init function of the contract named ``counter``.
-  Concretely, this means that behind the scenes this macro generates an exported
-  function with the required signature and name ``init_counter``.
-
-- ``#[receive(contract = "counter", name = "increment")]`` deserializes and
-  supplies the state to be manipulated directly.
-  Behind the scenes this annotation also generates an exported function with name
-  ``counter.increment`` that has the required signature, and does all of the
-  boilerplate of deserializing the state into the required type ``State``.
+- ``#[receive(contract = "counter", name = "increment")]`` десеріалізує і надає стан, яким можна керувати безпосередньо. 
+  За лаштунками ця інструкція також генерує електроенергію, що експортується функцію з ім'ям ``counter.increment``, які мають необхідну підпис, і виконує всі стандартні дії по десеріалізациі стану в необхідний тип ``State``. 
 
 .. note::
 
-   Note that deserialization is not without cost, and in some cases the
-   user might want more fine-grained control over the use of host functions.
-   For such use cases the annotations support a ``low_level`` option, which has
-   less overhead, but requires more from the user.
+   Зверніть увагу, що десеріалізацію не обходиться без витрат, і в деяких випадках користувачеві може знадобитися більш детальний контроль над використанням функцій хоста. 
+   Для таких випадків використання анотації підтримують ``low_level`` варіант, який вимагає менше накладних витрат, але вимагає більшого від користувача.
 
 .. todo::
 
@@ -127,22 +106,18 @@ There are a number of things to notice:
    - Introduce the concept of host functions before using them in the note above
 
 
-Serializable state and parameters
+Серіалізовані стан і параметри 
 ---------------------------------
 
 .. todo:: Clarify what it means that the state is exposed similarly to ``File``;
    preferably, without referring to ``File``.
 
-On-chain, the state of an instance is represented as a byte array and exposed
-in a similar interface as the ``File`` interface of the Rust standard library.
+У ланцюжку стан екземпляра представляється у вигляді масиву байтів і відображається в інтерфейсі, аналогічному інтерфейсу ``File`` стандартної бібліотеки Rust.
 
-This can be done using the ``Serialize`` trait which contains (de-)serialization
-functions.
+Це можна зробити за допомогою ``Serialize`` трейта, який містить функції (де-) сериализации.
 
-The ``concordium_std`` crate includes this trait and implementations for
-most types in the Rust standard library.
-It also includes macros for deriving the trait for user-defined structs and
-enums.
+У комплект ``concordium_std`` включений цей трейта, а також реалізації для більшості типів стандартної бібліотеки Rust. 
+Він також включає макроси для отримання ознаки для визначених користувачем структур і перерахувань. 
 
 .. code-block:: rust
 
@@ -153,28 +128,23 @@ enums.
        ...
    }
 
-The same is necessary for parameters to init and receive functions.
+Те ж саме необхідно для параметрів для init і receive функцій.
 
 .. note::
 
-   Strictly speaking we only need to deserialize bytes to our parameter type,
-   but it is convenient to be able to serialize types when writing unit tests.
+   Строго кажучи, нам потрібно тільки десеріалізовать байти в наш тип параметра, але зручно мати можливість серіалізовать типи при написанні модульних тестів. 
 
 .. _working-with-parameters:
 
-Working with parameters
+Робота з параметрами 
 -----------------------
 
-Parameters to the init and receive functions are, like the instance
-state, represented as byte arrays.
-While the byte arrays can be used directly, they can also be deserialized into
-structured data.
+Параметри функцій ініціалізації і прийому, а також стан екземпляра, представлені у вигляді байтових масивів. 
+Хоча байтові масиви можна використовувати безпосередньо, їх також можна десеріалізовать в структуровані дані.
 
-The simplest way to deserialize a parameter is through the `get()`_ function of
-the `Get`_ trait.
+Найпростіший спосіб десеріалізациі параметра через використання функції `get()`_ властивості `Get`_ .
 
-As an example, see the following contract in which the parameter
-``ReceiveParameter`` is deserialized on the highlighted line:
+Як приклад подивіться на наступний контракт, в якому параметр ``ReceiveParameter`` десеріалізуется в виділеному рядку: 
 
 .. code-block:: rust
    :emphasize-lines: 24
@@ -209,11 +179,9 @@ As an example, see the following contract in which the parameter
        Ok(A::accept())
    }
 
-The receive function above is inefficient in that it deserializes the
-``value`` even when it is not needed, i.e., when ``should_add`` is ``false``.
+Вищезазначена receive функція неефективна в тому сенсі, що вона десеріалізует ``value``, навіть коли це не потрібно, то є коли ``should_add`` це ``false`` 
 
-To get more control, and in this case, more efficiency, we can deserialize the
-parameter using the `Read`_ trait:
+Щоб отримати більший контроль і, в даному випадку, більшу ефективність, ми можемо десеріалізовать параметр за допомогою властивості `Read`_: 
 
 .. code-block:: rust
    :emphasize-lines: 7, 10
@@ -233,23 +201,16 @@ parameter using the `Read`_ trait:
        Ok(A::accept())
    }
 
-Notice that the ``value`` is only deserialized if ``should_add`` is
-``true``.
-While the gain in efficiency is minimal in this example, it could have an
-substantial impact for more complex examples.
+Зверніть увагу, що ``value`` десеріалізуется тільки в тому випадку, якщо ``should_add`` це ``true``. 
+Хоча в цьому прикладі виграш в ефективності мінімальний, він може зробити істотний вплив на більш складні приклади. 
 
-
-Building a smart contract module with ``cargo-concordium``
+Створення модуля смарт-контрактів з ``cargo-concordium``
 ==========================================================
 
-The Rust compiler has good support for compiling to Wasm using the
-``wasm32-unknown-unknown`` target.
-However, even when compiling with ``--release`` the resulting build includes
-large sections of debug information in custom sections, which are not useful for
-smart contracts on-chain.
+Компілятор Rust добре підтримує компіляцію в Wasm з використанням ``wasm32-unknown-unknown``. 
+Однак навіть при компіляції з ``--release`` результуюча збірка включає великі розділи налагоджувальної інформації, які не приносять користі для смарт-контрактів в мережі.
 
-To optimize the build and allow for new features such as embedding schemas, we
-recommend using ``cargo-concordium`` to build smart contracts.
+Щоб оптимізувати збірку і врахувати нові функції, такі як вбудовування схем, ми рекомендуємо використовувати ``cargo-concordium`` для створення смарт-контрактів. 
 
 .. seealso::
 
@@ -257,16 +218,16 @@ recommend using ``cargo-concordium`` to build smart contracts.
    :ref:`compile-module`.
 
 
-Testing smart contracts
+Тестування смарт-контрактів 
 =======================
 
-Unit tests with stubs
+Unit тести з заглушками
 ---------------------
 
-Simulate contract calls
+Моделювання виклику контракту 
 -----------------------
 
-Best practices
+Найкращі практики
 ==============
 
 Don't panic
@@ -276,20 +237,15 @@ Don't panic
 
    Use trap instead.
 
-Avoid creating black holes
+Уникайте появи чорних дір 
 --------------------------
 
-A smart contract is not required to use the amount of GTU send to it, and by
-default a smart contract does not define any behavior for emptying the balance
-of an instance, in case someone were to send some GTU.
-These GTU would then be forever *lost*, and there would be no way to recover
-them.
+Смарт-контракт не зобов'язаний використовувати кількість відправлених йому GTU, і за замовчуванням смарт-контракт не визначає ніякого поведінки для спустошення балансу примірника, якщо хтось мав відправити йому якесь GTU.
+Ці ГТУ були б тоді назавжди втрачені, і не було б ніякого способу відновити їх.
 
-Therefore it is good practice for smart contracts that are not dealing with GTU,
-to ensure the sent amount of GTU is zero and reject any invocations which are
-not.
+Тому гарною практикою для смарт-контрактів, які не мають справи з GTU, є забезпечення того, щоб відправлена сума GTU дорівнювала нулю, і відхилення будь-яких викликів, які не є такими. 
 
-Move heavy calculations off-chain
+Переміщення важких обчислень поза мережею
 ---------------------------------
 
 

@@ -1,15 +1,13 @@
 .. _unit-test-contract:
 
 ============================
-Unit test a contract in Rust
+Модульне тестування контракту в Rust 
 ============================
 
-This guide will show you how to write unit tests for a smart contract written in
-Rust.
-For testing a smart contract Wasm module, see :ref:`local-simulate`.
+Це керівництво покаже вам, як писати модульні тести для смарт-контракту, написаного на Rust.
+Для тестування модуля Wasm смарт-контракту дивіться :ref:`local-simulate`.
 
-A smart contract in Rust is written as a library and we can unit test it like a
-library by annotating functions with a ``#[test]`` attribute.
+Смарт-контракт в Rust написаний як бібліотека, і ми можемо модульно тестувати його як бібліотеку, анотуючи функції атрибутом ``#[test]``.
 
 .. code-block:: rust
 
@@ -26,32 +24,24 @@ library by annotating functions with a ``#[test]`` attribute.
         fn another_test() { ... }
     }
 
-Running the test can be done using ``cargo``:
+Запуск тесту можна виконати за допомогою ``cargo``:
 
 .. code-block:: console
 
    $cargo test
 
-By default, this command compiles the contract and tests to machine code for
-your local target (most likely ``x86_64``), and runs them.
-This kind of testing can be useful in initial development and for testing
-functional correctness.
-For comprehensive testing, it is important to involve the target platform, i.e.,
-`Wasm32`.
-There are a number of subtle differences between platforms, which can change the
-behaviour of a contract.
-One difference is regarding the size of pointers, where `Wasm32` uses four bytes
-as opposed to eight, which is common for most platforms.
+За замовчуванням ця команда компілює контракт і тести в машинний код для вашого локального цільового об'єкта (швидше за все ``x86_64``) і запускає їх.
+Цей вид тестування може бути корисний в початковій розробці і для перевірки функціональної коректності.
+Для комплексного тестування важливо задіяти цільову платформу, тобто `Wasm32`.
+Існує ряд тонких відмінностей між платформами, які можуть змінити поведінку контракту.
+Одна з відмінностей стосується розміру покажчиків, де `Wasm32` використовує чотири байти, а не вісім, що є загальним для більшості платформ. 
 
-Writing unit tests
+Написання модульних тестів 
 ==================
 
-Unit tests typically follow a three-part structure in which you: set up some
-state, run some unit of code, and make assertions about the state and output of
-the code.
+Модульні тести зазвичай мають трехчастную структуру, в якій ви: встановлюєте деякий стан, запускаєте деяку одиницю коду і робите твердження про стані і виведення коду. 
 
-If the contract functions are written using ``#[init(..)]`` or
-``#[receive(..)]``, we can test these functions directly in the unit test.
+Якщо функції контрактів написані з використанням ``#[init(..)]`` або ``#[receive(..)]``, ми можемо протестувати ці функції безпосередньо в модульному тесті. 
 
 .. code-block:: rust
 
@@ -72,8 +62,7 @@ If the contract functions are written using ``#[init(..)]`` or
       state: &mut State,
    ) -> ReceiveResult<A> { ... }
 
-Testing stubs for the function arguments can be found in a submodule of
-``concordium-std`` called ``test_infrastructure``.
+Тестові заглушки для аргументів функції можна знайти в саб-модулі ``concordium-std`` під назвою ``test_infrastructure``. 
 
 .. seealso::
 
@@ -84,24 +73,19 @@ Testing stubs for the function arguments can be found in a submodule of
 
    Show more of how to write the unit test
 
-Running tests in Wasm
+Запуск тестів в Wasm 
 =====================
 
-Compiling the tests to native machine code is sufficient for most cases, but it
-is also possible to compile the tests to Wasm and run them using the exact
-interpreter that is used by the nodes.
-This makes the test environment closer to the run environment on-chain and could
-in some cases catch more bugs.
+Компіляція тестів в власний машинний код достатня для більшості випадків, але також можна скомпілювати тести в Wasm і запустити їх за допомогою точного інтерпретатора, що використовується вузлами.
+Це робить тестову середу ближче до середовища запуску по ланцюжку і в деяких випадках може відловити більше помилок.
 
-The development tool ``cargo-concordium`` includes a test runner for Wasm, which
-uses the same Wasm-interpreter as the one shipped in the Concordium nodes.
+Інструмент розробки ``cargo-concordium`` включає в себе тестовий запуск для Wasm, який використовує той же Wasm-інтерпретатор, що і поставляється в вузлах Concordium. 
 
 .. seealso::
 
    For a guide of how to install ``cargo-concordium``, see :ref:`setup-tools`.
 
-The unit test have to be annotated with ``#[concordium_test]`` instead of
-``#[test]``, and we use ``#[concordium_cfg_test]`` instead of ``#[cfg(test)]``:
+Модульний тест повинен бути анотований з ``#[concordium_test]`` замість ``#[test]``, і ми використовуємо ``#[concordium_cfg_test]`` замість ``#[cfg(test)]``: 
 
 .. code-block:: rust
 
@@ -118,33 +102,24 @@ The unit test have to be annotated with ``#[concordium_test]`` instead of
        fn another_test() { ... }
    }
 
-The ``#[concordium_test]`` macro sets up our tests to be run in Wasm, when
-``concordium-std`` is compiled with the ``wasm-test`` feature, and otherwise
-falls back to behave just like ``#[test]``, meaning it is still possible to run
-unit tests targeting native code using ``cargo test``.
+Макрос ``#[concordium_test]`` налаштовує наші тести для запуску в Wasm, коли ``concordium-std`` скомпільовано з функцією ``wasm-test``, і в іншому випадку повертається до поведінки як ``#[test]``, що означає, що все ще можна запустити модульні тести, націлені на нативний код, використовуючи ``cargo test``.
 
-Similarly the macro ``#[concordium_cfg_test]`` includes our module when build
-``concordium-std`` with ``wasm-test`` otherwise behaves like ``#[test]``,
-allowing us to control when to include tests in the build.
+Аналогічно макрос ``#[concordium_cfg_test]`` включає наш модуль при складанні ``concordium-std`` з ``wasm-test`` в іншому випадку поводиться як ``#[test]``, дозволяючи нам контролювати, коли включати тести в збірку.
 
-Tests can now be build and run using:
+Тепер тести можна створювати і запускати, використовуючи: 
 
 .. code-block:: console
 
    $cargo concordium test
 
-This command compiles the tests for Wasm with the ``wasm-test`` feature enabled
-for ``concordium-std`` and uses the test runner from ``cargo-concordium``.
+Ця команда компілює тести для Wasm з активним з'єднанням ``wasm-test`` для ``concordium-std`` і використовує засіб запуску тестів з ``cargo-concordium``. 
 
 .. warning::
 
-   Error messages from ``panic!``, and therefore also the different variations
-   of ``assert!``, are *not* shown when compiling to Wasm.
+   Повідомлення про помилки від ``panic!``, а, отже, і різні варіанти ``assert!``, не відображаються при компіляції в Wasm.
 
-   Instead use ``fail!`` and the ``claim!`` variants to do assertions when
-   testing, as these reports back the error messages to the test runner *before*
-   failing the test.
-   Both are part of ``concordium-std``.
+   Замість цього використовуйте ``fail!`` і ``claim!`` варіанти виконання тверджень при тестуванні, так як вони повертають повідомлення про помилки виконавцю тесту *перед* провалом тесту.
+   Вони обидва є частиною ``concordium-std``. 
 
 .. todo::
 

@@ -54,7 +54,7 @@
 
    For more information about module references, see :ref:`references-on-chain`.
 
-.. _naming-a-module:
+.. _naming-a-module-ru:
 
 Именование модуля
 =================

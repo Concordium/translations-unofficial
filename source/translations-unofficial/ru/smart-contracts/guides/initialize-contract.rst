@@ -65,7 +65,7 @@
    Using module references directly can be inconvenient; to name them, see
    :ref:`naming-a-module`.
 
-.. _init-passing-parameter-json:
+.. _init-passing-parameter-json-ru:
 
 Передача параметров в JSON формате
 ----------------------------------
@@ -128,7 +128,7 @@
    с помощью параметра ``--amount AMOUNT``.
 
 
-.. _init-passing-parameter-bin:
+.. _init-passing-parameter-bin-ru:
 
 Передача параметров в двоичном формате
 --------------------------------------
@@ -161,7 +161,7 @@
    For information on how to work with parameters in smart contracts, see
    :ref:`working-with-parameters`.
 
-.. _naming-an-instance:
+.. _naming-an-instance-ru:
 
 Именование экземпляра контракта
 ===============================

@@ -48,7 +48,7 @@ Wasm - это язык низкого уровня, поэтому писать 
 можно писать смарт-контракты на языке более высокого уровня, который затем
 компилируется в Wasm.
 
-.. _wasm-limitations:
+.. _wasm-limitations-ru:
 
 Ограничения
 -----------
@@ -89,13 +89,13 @@ Concordium. Если транзакция *корректна*, она буде�
 
    See :ref:`contract-instances-ru` for more information.
 
-.. _smart-contracts-on-chain:
+.. _smart-contracts-on-chain-ru:
 
-.. _smart-contracts-on-the-chain:
+.. _smart-contracts-on-the-chain-ru:
 
-.. _contract-on-chain:
+.. _contract-on-chain-ru:
 
-.. _contract-on-the-chain:
+.. _contract-on-the-chain-ru:
 
 Смарт-контракт в сети
 =====================

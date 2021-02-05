@@ -1,4 +1,4 @@
-.. _inspect-instance:
+.. _inspect-instance-ru:
 
 ===================================
 Проверка экземпляра смарт-контракта
@@ -15,8 +15,8 @@
 экземпляр смарт-контракта в сети для проверки.
 
 .. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module` and for
-   how to create an instance :ref:`initialize-contract`.
+   For how to deploy a smart contract module see :ref:`deploy-module-ru` and for
+   how to create an instance :ref:`initialize-contract-ru`.
 
 Проверка
 ========
@@ -51,7 +51,7 @@
    :ref:`references-on-chain`.
 
 Уровень детализации проверки зависит от того, имеет ли команда ``show``
-доступ к :ref:`contract schema <contract-schema>`.
+доступ к :ref:`contract schema <contract-schema-ru>`.
 Если схема встроена, она будет использоваться неявно.
 В противном случае схему можно предоставить с помощью ``--schema /path/to/schema.bin``
 параметра.
@@ -63,4 +63,4 @@
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>`.
+   :ref:`Read more about why and how to use smart contract schemas <contract-schema-ru>`.

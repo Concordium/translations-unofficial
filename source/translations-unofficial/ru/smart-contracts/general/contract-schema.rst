@@ -10,7 +10,7 @@
 .. _`custom section`: https://webassembly.github.io/spec/core/appendix/custom.html
 .. _`implementation in Rust`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
 
-.. _contract-schema:
+.. _contract-schema-ru:
 
 ======================
 Схемы смарт-контрактов
@@ -24,7 +24,7 @@
 .. seealso::
 
    For instructions on how to build the schema for a smart contract module in
-   Rust, see :ref:`build-schema`.
+   Rust, see :ref:`build-schema-ru`.
 
 Зачем использовать схему контракта?
 ===================================
@@ -150,7 +150,7 @@
 Для информации о том, как тип схемы сериализуется в байты, вы можете ознакомиться
 в `implementation in Rust`_.
 
-.. _contract-schema-which-to-choose:
+.. _contract-schema-which-to-choose-ru:
 
 Встраивание схем в сеть
 =======================

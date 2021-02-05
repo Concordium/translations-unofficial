@@ -2,7 +2,7 @@
 .. _Cargo: https://doc.rust-lang.org/cargo/
 .. _rust-analyzer: https://github.com/rust-analyzer/rust-analyzer
 
-.. _compile-module:
+.. _compile-module-ru:
 
 ==========================================
 Компилирование Rust модуля смарт-контракта
@@ -21,13 +21,13 @@
 .. seealso::
 
    For instructions on how to install the developer tools see
-   :ref:`setup-tools`.
+   :ref:`setup-tools-ru`.
 
 Компиляция в Wasm
 =================
 
 Чтобы помочь в создании модулей смарт-контрактов и воспользоваться преимуществами
-таких функций, как :ref:`contract schemas <contract-schema>`, мы рекомендуем
+таких функций, как :ref:`contract schemas <contract-schema-ru>`, мы рекомендуем
 использовать инструмент ``cargo-concordium`` для создания смарт-контрактов Rust_.
 
 Для того чтобы собрать смарт-контракт, запустите:
@@ -41,7 +41,7 @@
 .. seealso::
 
    For building the schema for a smart contract module, some :ref:`further
-   preparation is required <build-schema>`.
+   preparation is required <build-schema-ru>`.
 
 .. note::
 

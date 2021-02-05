@@ -1,6 +1,6 @@
 .. highlight:: toml
 
-.. _setup-contract:
+.. _setup-contract-ru:
 
 =================================
 Настройка проекта смарт-контракта

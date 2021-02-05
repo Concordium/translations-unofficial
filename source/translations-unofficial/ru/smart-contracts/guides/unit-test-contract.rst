@@ -1,4 +1,4 @@
-.. _unit-test-contract:
+.. _unit-test-contract-ru:
 
 =======================================
 Модульное тестирование контракта в Rust
@@ -6,7 +6,7 @@
 
 Это руководство покажет вам, как писать модульные тесты для смарт-контракта,
 написанного на Rust.
-Для тестирования модуля Wasm смарт-контракта см. :ref:`local-simulate`.
+Для тестирования модуля Wasm смарт-контракта см. :ref:`local-simulate-ru`.
 
 Смарт-контракт в Rust написан как библиотека, и мы можем модульно тестировать
 его как библиотеку, аннотируя функции атрибутом ``#[test]``.
@@ -98,7 +98,7 @@
 
 .. seealso::
 
-   For a guide of how to install ``cargo-concordium``, see :ref:`setup-tools`.
+   For a guide of how to install ``cargo-concordium``, see :ref:`setup-tools-ru`.
 
 Модульный тест должен быть аннотирован с ``#[concordium_test]`` вместо
 ``#[test]``, и мы используем ``#[concordium_cfg_test]`` вместо ``#[cfg(test)]``:

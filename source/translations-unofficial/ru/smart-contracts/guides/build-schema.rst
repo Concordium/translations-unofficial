@@ -1,5 +1,5 @@
 .. _list of types implementing the SchemaType: https://docs.rs/concordium-contracts-common/latest/concordium_contracts_common/schema/trait.SchemaType.html#foreign-impls
-.. _build-schema:
+.. _build-schema-ru:
 
 ==========================
 Построение схемы контракта
@@ -13,7 +13,7 @@
 ==========
 
 Во-первых, убедитесь, что у вас установлен ``cargo-concordium``, а если нет,
-то руководство :ref:`setup-tools` вам поможет.
+то руководство :ref:`setup-tools-ru` вам поможет.
 
 Нам также понадобится исходный код смарт-контракта на Rust, для которого вы хотите
 построить схему.
@@ -92,7 +92,7 @@
 .. seealso::
 
    For more on which to choose see
-   :ref:`here<contract-schema-which-to-choose>`.
+   :ref:`here<contract-schema-which-to-choose-ru>`.
 
 Встраивание схемы
 -----------------

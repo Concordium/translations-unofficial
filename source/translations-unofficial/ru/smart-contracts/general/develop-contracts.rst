@@ -12,7 +12,7 @@
         - Don't panic
         - Avoid heavy calculations
 
-.. _writing-smart-contracts:
+.. _writing-smart-contracts-ru:
 
 ==================================
 Разработка смарт-контрактов в Rust
@@ -36,7 +36,7 @@ limitations we impose <wasm-limitations>`.
 
 .. seealso::
 
-   See :ref:`contract-module` for more information about smart contract modules.
+   See :ref:`contract-module-ru` for more information about smart contract modules.
 
 Модуль смарт-контракта разрабатывается в Rust как библиотека, которая затем
 компилируется в Wasm. Чтобы получить правильный экспорт, атрибут `crate-type`
@@ -250,7 +250,7 @@ limitations we impose <wasm-limitations>`.
 .. seealso::
 
    For instructions on how to build using ``cargo-concordium`` see
-   :ref:`compile-module`.
+   :ref:`compile-module-ru`.
 
 
 Тестирование смарт-контрактов

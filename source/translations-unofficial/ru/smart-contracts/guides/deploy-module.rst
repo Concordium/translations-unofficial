@@ -1,4 +1,4 @@
-.. _deploy-module:
+.. _deploy-module-ru:
 
 =====================================
 Развертывание модуля смарт-контрактов
@@ -11,7 +11,7 @@
 ===========
 
 Убедитесь, что вы :ref:`running a node<run-a-node>` используете последнюю версию :ref:`Concordium software<downloads>` и
-что у вас есть :ref:`smart-contract module<setup-tools>`, готовый к развертыванию.
+что у вас есть :ref:`smart-contract module<setup-tools-ru>`, готовый к развертыванию.
 
 Поскольку развертывание модуля смарт-контракта осуществляется в форме транзакции,
 вам также потребуется настроить ``concordium-client`` с аккаунтом с
@@ -50,7 +50,7 @@
 .. seealso::
 
    For a guide on how to initialize smart contracts from a deployed module see
-   :ref:`initialize-contract`.
+   :ref:`initialize-contract-ru`.
 
    For more information about module references, see :ref:`references-on-chain`.
 

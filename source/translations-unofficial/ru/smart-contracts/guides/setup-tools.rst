@@ -1,4 +1,4 @@
-.. _setup-tools:
+.. _setup-tools-ru:
 
 =====================================
 Установка инструментов для разработки
@@ -23,9 +23,9 @@ Cargo Concordium
 
 Cargo Concordium это инструмент для разработки смарт-контрактов для блокчейна
 Concordium.
-Он может быть использован для :ref:`compiling<compile-module>` и
-:ref:`testing<unit-test-contract>` смарт-контрактов, и включает такие функции,
-как :ref:`building contract schemas<build-schema>`.
+Он может быть использован для :ref:`compiling<compile-module-ru>` и
+:ref:`testing<unit-test-contract-ru>` смарт-контрактов, и включает такие функции,
+как :ref:`building contract schemas<build-schema-ru>`.
 
 .. todo::
 

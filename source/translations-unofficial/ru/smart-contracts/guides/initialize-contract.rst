@@ -1,4 +1,4 @@
-.. _initialize-contract:
+.. _initialize-contract-ru:
 
 ========================================
 Инициализация экземпляра смарт-контракта
@@ -12,7 +12,7 @@
 ===========
 
 Убедитесь, что вы :ref:`running a node<run-a-node>`, используя последнюю версию :ref:`Concordium software<downloads>` и что у вас есть
-смарт-контракт :ref:`deployed <deploy-module>` в каком-то модуле сети.
+смарт-контракт :ref:`deployed <deploy-module-ru>` в каком-то модуле сети.
 
 Поскольку инициализация смарт-контракта - это транзакция, вы также должны убедиться,
 что у ``concordium-client`` есть аккаунт с достаточным количеством GTU для оплаты
@@ -57,7 +57,7 @@
 .. seealso::
 
    To get a deeper understanding of contract initialization, see
-   :ref:`contract-instances-init-on-chain`.
+   :ref:`contract-instances-init-on-chain-ru`.
 
    For more information about module references and instance addresses,
    see :ref:`references-on-chain`.
@@ -71,12 +71,12 @@
 ----------------------------------
 
 Параметр в JSON формате может быть передан, если указана :ref:`smart contract schema
-<contract-schema>` либо в виде файла, либо встроена в модуль.
+<contract-schema-ru>` либо в виде файла, либо встроена в модуль.
 Схема используется для сериализации JSON в двоичный файл.
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>`.
+   :ref:`Read more about why and how to use smart contract schemas <contract-schema-ru>`.
 
    :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin>`.
 
@@ -134,7 +134,7 @@
 --------------------------------------
 
 При передаче параметров в двоичном формате :ref:`contract schema
-<contract-schema>` не требуется.
+<contract-schema-ru>` не требуется.
 
 Для инициализации экземпляра смарт-контракта ``my_parameter_contract`` из
 из модуля со ссылкой

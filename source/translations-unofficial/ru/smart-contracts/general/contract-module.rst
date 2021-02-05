@@ -1,4 +1,4 @@
-.. _contract-module:
+.. _contract-module-ru:
 
 =======================
 Модули смарт-контрактов
@@ -12,7 +12,7 @@
 
 Модуль может содержать один или несколько смарт-контрактов, позволяющих
 совместно использовать код между контрактами, и может дополнительно
-содержать:ref:`contract schemas <contract-schema>`.
+содержать:ref:`contract schemas <contract-schema-ru>`.
 
 .. graphviz::
    :align: center
@@ -87,7 +87,7 @@ Concordium. Если транзакция *корректна*, она буде�
 
 .. seealso::
 
-   See :ref:`contract-instances` for more information.
+   See :ref:`contract-instances-ru` for more information.
 
 .. _smart-contracts-on-chain:
 

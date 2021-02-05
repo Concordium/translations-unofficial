@@ -4,7 +4,7 @@
     - What are the use cases
     - What are not the use cases
 
-.. _introduction:
+.. _introduction-ru:
 
 ==========================
 Введение в смарт-контракты
@@ -85,6 +85,6 @@ Concordium, и используемый для определенного пов
 ==============================
 
 Смарт-контракт сначала развертывается в сети как часть :ref:`contract
-module <contract-module>`. После этого смарт-контракт может быть *инициализирован*
-для получения :ref:`smart contract instance <contract-instances>`. Наконец, экземпляр
+module <contract-module-ru>`. После этого смарт-контракт может быть *инициализирован*
+для получения :ref:`smart contract instance <contract-instances-ru>`. Наконец, экземпляр
 смарт-контракта может многократно обновляться в соответствии со своей собственной логикой.

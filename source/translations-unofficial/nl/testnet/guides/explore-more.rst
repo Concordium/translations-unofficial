@@ -4,7 +4,7 @@
 .. _testnet-explore-more:
 
 =======================================
-Concordium ID: Explore the *More* page
+Concordium ID: Verken de *More* pagina
 =======================================
 
 .. contents::
@@ -13,20 +13,20 @@ Concordium ID: Explore the *More* page
 
 Export
 ======
-Using the Concordium ID app it is possible to export your accounts and identities. To get started, browse to the *More* page.
-Depending on whether you are using the Android or iOS version of the app, the *More* page will look slightly different.
-On Android you will see three menu items: *Address Book*, *Export* and *Import*. On iOS you will only see *Address Book* and *Export*.
-This is because the Import feature works in two different ways depending on the platform, but we will get back to that.
+Als je de Concordium ID app gebruikt is het mogelijk om je identiteiten en accounts te exporteren. Om hiermee te starten browse je naar de *More* pagina.
+Afhankelijk of je Android of iOS gebruik zal de **More* pagina er iets anders uit zien. Op Android zie je drie menu items: 
+*Address Book*, *Export* and *Import*. Op iOS zie je alleen *Address Book* and *Export*.
+Dit komt doordat de export functie op twee manieren werken afhankelijk welk platform je gebruikt, maar daar komen we nog op terug.
 
 .. image:: images/concordium-id/exp1.png
       :width: 32%
 .. image:: images/concordium-id/exp2.png
       :width: 32%
 
-To start an export, press the **Export** option. Doing that will take you to a new page, that briefly explains what an export means.
-We recommend reading this carefully. Pressing **Continue** will take you to a page on which you will be asked to enter a password for
-your export file. After entering it twice, you can **Continue**. As a last step, you will be prompted by either iOS or Android on what
-you want to do with your exported file, using the layover from the phone’s operating system.
+Om een export te starten klik je op de **Export** optie. Hierdoor kom je uit op een nieuwe pagina waar in het kort een uitleg wordt gegeven 
+wat een export betekent. We adviseren dit goed door te lezen. Druk op **Continue** zodat je naar de volgende pagina wordt gebracht waar vervolgens
+gevraagd wordt om een wachtwoord te geven voor het export bestand. Nadat je het wachtwoord twee keer hebt ingegeven klik je op **Continue**. Als
+laatste stap wordt gevraagd door Android zelf (en ook door iOS) wat je wil gaan doen met het geexporteerde bestand.
 
 .. image:: images/concordium-id/exp3.png
       :width: 32%
@@ -36,14 +36,14 @@ you want to do with your exported file, using the layover from the phone’s ope
 
 Import
 ======
-As mentioned in the previous section, the import feature works slightly differently on iOS and Android. On Android you press
-the *Import* option on the *More* page, which will let you browse to the file you want to import. Depending on your phone and
-Android version, this might look different specific to the operating system. On iOS you have to browse to the file from outside
-Concordium ID, and then press it and choose the *Share option*. This will let you choose Concordium ID as the app to handle the file.
+Zoals beschreven in de vorige sectie werkt de import iets anders tussen iOS en Android. Op Android apparaten vind je de *Import* optie onder 
+de *More* pagina, waar je vervolgens kunt browsen naar het bestand dat je wilt importeren. Afhankelijk van je telefoon en Android versie kan het 
+er net iets anders uit zien. Op iOS zul je moeten browser naar het bestand buiten de Concordium ID app om. Zoek het bestand en klik *Share* optie. 
+Vervolgens kun je dan het bestand delen met Concordium ID en de app zal dit dan verder afhandelen.
 
-Having opened the file on either platform, you will first be asked to enter the password chosen on export. After pressing **Continue**
-you will have to verify yourself with the passcode or the biometrics chosen, when you set up the app. Finally you will get a list
-of the *Accounts*, *Identities* and the *Address Book* entries you have imported.
+Nadat het bestand is geopend op één van de platformen wordt er eerst gevraagd om het gekozen wachtwoord in te voeren dat bij exporteren is gebruikt.
+Na het drukken op **Continue** moet je deze stap nog verifieren door de pincode of biometric te gebruiken waarmee de app is ingesteld. Als laatste
+krijg je een lijst van alle *Accounts*, *Identiteiten* en het *Adresboek* te zien dat is geimporteerd.
 
 .. image:: images/concordium-id/imp1.png
       :width: 32%
@@ -51,21 +51,21 @@ of the *Accounts*, *Identities* and the *Address Book* entries you have imported
       :width: 32%
 
 
-Address Book
+Adresboek
 ============
-As the name suggests, the *Address Book* is a place to keep account addresses. If you browse to the *Address Book* you will see that
-the addresses of your own accounts are already stored there. Besides seeing your own addresses, you can also add more entries to
-the *Address Book*, either by pressing the **QR code symbol**, or pressing the **plus sign** in the upper right corner. By doing that you
-can enter a new recipient address and give it a nickname in your *Address Book*. The entries in your address book can of course be
-searched, when you make a transfer.
+Zoals de naam het al aangeeft is het adresboek een plek waar je alle account adressen kunt bewaren. Als je in het adresboek gaat kijken
+zul je zien dat je eigen accounts er al in zijn opgeslagen. Naast dat je je eigen adressen ziet kun je ook andere adressen toevoegen.
+Dit kan door te klikken op het **QR code symb0ol** of door te klikken op het **plus teken** rechtsboven in het scherm. Door dit te doen
+kun je een nieuw adres toe voegen en hier vervolgens een bijnaam voor geven in het adresboek. Je kunt natuurlijk ook zoeken naar adressen 
+in het adresboek als je een transactie gaat verrichten.
 
 .. image:: images/concordium-id/add1.png
       :width: 32%
 .. image:: images/concordium-id/add2.png
       :width: 32%
 
-Support & Feedback
+Hulp & Feedback
 ==================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Als je tegen problemen aanloopt of suggesties hebt kun je je vragen 
+of feedback posten in `Discord`_, of contact opnemen via testnet@concordium.com.

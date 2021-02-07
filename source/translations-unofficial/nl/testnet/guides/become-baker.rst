@@ -22,7 +22,7 @@ Door onderstaande sectie te lezen zul je het volgende leren:
 
 Het proces om een baker te worden kan als volgt samengevat worden:
 
-#. Verkrijg een account en wat GTU's
+#. Verkrijg een account en GTU's
 #. Verkrijg een set baker sleutels
 #. Registreer de baker sleutels met het account
 #. Start de node met de baker sleutels
@@ -53,7 +53,7 @@ Baker keys
 ----------
 
 Een baker heeft een set cryptografische sleutels genoemd *baker keys*. De node gebruikt
-deze sleutels om blokken te ondertekenen die worden 'gebakken'. Voordat er blokken ondertekent 
+deze sleutels om blokken te ondertekenen die worden 'gebakken'. Voordat er blokken ondertekend 
 kunnen worden van specifieke baker moet de node voorzien zijn van een set 'baker keys'.
 
 Baker account
@@ -61,8 +61,8 @@ Baker account
 
 Elk account kan een set 'baker keys' gebruiken om een baker te registreren.
 
-Elke keer als een baker een geldige blok ondertekent die vervolgens wordt opgenomen in 
-de chain krijgt het account ndat hiermee wordt geassocieerd na een tijdje een beloning.
+Elke keer als een baker een geldige blok ondertekend die vervolgens wordt opgenomen in 
+op de blockchain krijgt het account dat hiermee wordt geassocieerd na een tijdje een beloning.
 
 
 Stake and lotterij
@@ -78,9 +78,9 @@ niet worden verplaatst of verzonden worden totdat de baker deze heeft vrijgegeve
    dan kan dit bedrag evengoed worden gebruikt om te staken.
 
 Voordat een baker gekozen wordt om een blok te bakken moet de baker deelnemen in een loterij waarbij de kans
-om gekozen te worden ongeveer proportioneel gelijk is aan het 'staked' bedrag.
+om gekozen te worden ongeveer proportioneel gelijk is aan het 'staked' bedrag tov de totale stake.
 
-Hetzelfde 'staked' bedrag wordt gebruikt om te berekenen of de baker mee mag doen in set van bakers (finalization
+Hetzelfde stake bedrag wordt gebruikt om te berekenen of de baker mee mag doen in set van bakers (finalization
 committee) of niet. See Finalization_.
 
 .. _epochs-and-slots:

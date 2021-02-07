@@ -17,7 +17,7 @@ Concordium ID: Installeer de app
 Door deze handleiding te lezen en de stappen te volgen in de *Concordium* ID secties krijg je een overzicht van basis functionaliteit van deze app.
 Als je nog nooit gebruik hebt gemaakt van de Concordium ID of een soort gelijkwaardige app dan is dit een goede plek om te beginnen.
 
-De ConcordiumID app is beschikbaar voor Android en iOS telefoons. Afhankelijk welk 
+De ConcordiumID app is beschikbaar voor Android en iOS telefoons. Afhankelijk welk
 platform je gebruikt zul je kleine verschillen merken.
 
 Installeren op Android
@@ -46,5 +46,5 @@ Om de Concordium ID app te installeren op iOS is het nodig om eerst de Apple’s
 Hulp & Feedback
 ==================
 
-Als je tegen problemen aanloopt of suggesties hebt kun je je vragen 
+Als je tegen problemen aanloopt of suggesties hebt kun je je vragen
 of feedback posten in `Discord`_, of contact opnemen via testnet@concordium.com.

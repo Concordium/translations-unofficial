@@ -204,7 +204,6 @@ op een iets andere getailleerde manier zien.
   en de baker stake die erbij hoort. (loterij power)
   De loterij power zal de bepalende factor zijn hoe groot de kans is dat een baker de loterij
   kan winnen en een block kan 'bakken'
- 
 
   .. code-block:: console
 
@@ -357,12 +356,12 @@ is op te vragen met het commando ``concordium-client``:
    +-----------------------------------------------+-----------------------------------------------+-------------------------------------------+
    | Beloningen die wel (of niet) automatisch      |                                               |                                           |
    | restaked worden                               | ✓                                             |                                           |
-   +-----------------------------------------------+------------------------------------------ ----+-------------------------------------------+
+   +-----------------------------------------------+-----------------------------------------------+-------------------------------------------+
    | Als er automatisch gerestaked worden, dan     |                                               | ✓                                         |
    | heeft dit effect op de loterij power          |                                               |                                           |
    +-----------------------------------------------+-----------------------------------------------+-------------------------------------------+
 
-Als een baker is geregistreerd zal deze automatisch de beloningen restaken maar zoals 
+Als een baker is geregistreerd zal deze automatisch de beloningen restaken maar zoals
 aangegeven hierboven kan dit gewijzigd worden met de parameter ``--no-restake`` achter
 het commando ``baker add`` zoals hieronder is weergegeven:
 

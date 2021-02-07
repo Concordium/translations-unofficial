@@ -19,7 +19,7 @@ Een pincode of biometrie instellen
 
 Als je de Concordium ID app opent voor de eerste keer zul je een wizard te zien krijgen die je helpt
 om een pincode en/of biometrie authenticatie in te stellen. Maak een :ref:`glossary-initial-account`,
-en het zal vervolgens ook laten zien hoe je een :ref:`glossary-identity` kunt instellen. Een 'initial account' 
+en het zal vervolgens ook laten zien hoe je een :ref:`glossary-identity` kunt instellen. Een 'initial account'
 is een speciaal type account dat naar de blockchain wordt geschreven door de :ref:`glossary-identity-provider`
 nadat een identiteit wordt aangemaakt.
 Je kunt dezelfde transacties uitvoeren vanaf een 'inital acocunt' als van een regulier account, maar de eigenaar

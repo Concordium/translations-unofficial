@@ -14,7 +14,7 @@ Concordium ID: Verken de *More* pagina
 Export
 ======
 Als je de Concordium ID app gebruikt is het mogelijk om je identiteiten en accounts te exporteren. Om hiermee te starten browse je naar de *More* pagina.
-Afhankelijk of je Android of iOS gebruik zal de **More* pagina er iets anders uit zien. Op Android zie je drie menu items:
+Afhankelijk of je Android of iOS gebruik zal de *More* pagina er iets anders uit zien. Op Android zie je drie menu items:
 *Address Book*, *Export* and *Import*. Op iOS zie je alleen *Address Book* and *Export*.
 Dit komt doordat de export functie op twee manieren werken afhankelijk welk platform je gebruikt, maar daar komen we nog op terug.
 

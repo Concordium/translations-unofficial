@@ -13,7 +13,7 @@ Concordium ID: Start met accounts and transacties
 Voordat je begint met deze handleiding moet je de aanvraag voor je account en identiteit hebben afgerond zoals omschreven in :ref:`het vorige hoofdstuk<testnet-get-started>`.
 
 Maak een nieuw account
-====================
+======================
 Voordat we uitleggen hoe het precies werkt met accounts, balans en transacties creeën we eerst een tweede account.
 We starten door eerst naar de *Accounts* pagina te gaan. Rechtsboven staat als het goed is een **plus teken**.
 Druk op dit plus teken om verder te gaan. Op het volgende scherm wordt gevraagd welke naam je dit account wil geven.

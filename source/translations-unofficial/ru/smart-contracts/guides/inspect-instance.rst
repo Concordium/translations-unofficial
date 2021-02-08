@@ -11,8 +11,8 @@
 Подготовка
 ==========
 
-Убедитесь, что вы :ref:`running a node<run-a-node>` с использованием последней версии :ref:`Concordium software<downloads>` и что у вас есть
-экземпляр смарт-контракта в сети для проверки.
+Убедитесь, что вы :ref:`запустили ноду <run-a-node>`, используя последнюю версию :ref:`программного обеспечения Concordium <downloads>` и
+что у вас есть экземпляр смарт-контракта в сети для проверки.
 
 .. seealso::
    For how to deploy a smart contract module see :ref:`deploy-module-ru` and for
@@ -51,7 +51,7 @@
    :ref:`references-on-chain`.
 
 Уровень детализации проверки зависит от того, имеет ли команда ``show``
-доступ к :ref:`contract schema <contract-schema-ru>`.
+доступ к :ref:`схеме смарт-контракта <contract-schema-ru>`.
 Если схема встроена, она будет использоваться неявно.
 В противном случае схему можно предоставить с помощью ``--schema /path/to/schema.bin``
 параметра.

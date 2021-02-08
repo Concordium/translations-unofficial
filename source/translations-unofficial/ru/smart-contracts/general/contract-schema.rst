@@ -55,7 +55,7 @@ init-функциям и receive-функциям, сериализуются в
 .. note::
 
    Инструмент ``concordium-client`` может использовать схему для
-   :ref:`serialize JSON parameters<init-passing-parameter-json>`
+   :ref:`сериализации параметров в JSON формате<init-passing-parameter-json-ru>`
    и десериализация состояния экземпляров контракта в JSON.
 
 Затем схема либо внедряется в модуль смарт-контракта, который развертывается

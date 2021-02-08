@@ -10,7 +10,7 @@
 Rust и Cargo
 ============
 
-Во-первых, `install rustup`_, который установит Rust_ и Cargo_ на вашу
+Во-первых, `установите rustup`_, который установит Rust_ и Cargo_ на вашу
 машину.
 Затем используйте ``rustup`` для установки Wasm, которая используется для компиляции:
 
@@ -21,17 +21,17 @@ Rust и Cargo
 Cargo Concordium
 ================
 
-Cargo Concordium это инструмент для разработки смарт-контрактов для блокчейна
+Cargo Concordium - это инструмент для разработки смарт-контрактов для блокчейна
 Concordium.
-Он может быть использован для :ref:`compiling<compile-module-ru>` и
-:ref:`testing<unit-test-contract-ru>` смарт-контрактов, и включает такие функции,
-как :ref:`building contract schemas<build-schema-ru>`.
+Он может быть использован для :ref:`компиляции <compile-module-ru>` и
+:ref:`тестирования <unit-test-contract-ru>` смарт-контрактов, и включает такие функции,
+как :ref:`построение схемы контракта<build-schema-ru>`.
 
 .. todo::
 
    Add links for testing and schemas.
 
-Cargo Concordium поставляется как часть пакета :ref:`Concordium software<downloads>`.
+Cargo Concordium поставляется как часть пакета :ref:`программного обеспечения Concordium <downloads>`.
 Инструмент должен быть помещен в ваш PATH.
 
 Для описания того, как использовать Cargo Concordium, выполните:
@@ -44,8 +44,8 @@ Cargo Concordium поставляется как часть пакета :ref:`C
 ==================================
 
 Инструмент для развертывания и взаимодействия со смарт-контрактами
-:ref:`concordium-client<concordium_client>`. Он распространяется как
-часть пакета :ref:`Concordium software<downloads>`.
+:ref:`concordium-клиент <concordium_client>`. Он распространяется как
+часть пакета :ref:`программного обеспечения Concordium<downloads>`.
 
 .. note::
 

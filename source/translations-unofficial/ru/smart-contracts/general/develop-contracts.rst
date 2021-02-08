@@ -31,12 +31,12 @@
 
 .. seealso::
 
-   For more information on the functions described below, see the concordium_std_
-   API for writing smart contracts on the Concordium blockchain in Rust.
+   Для получения дополнительной информации о функциях, описанных ниже, см. concordium_std_
+   API для написания смарт-контрактов на блокчейне Concordium в Rust.
 
 .. seealso::
 
-   See :ref:`contract-module-ru` for more information about smart contract modules.
+   См. :ref:`contract-module-ru` для дополнительной информации о модулях смарт-контрактов.
 
 Модуль смарт-контракта разрабатывается в Rust как библиотека, которая затем
 компилируется в Wasm. Чтобы получить правильный экспорт, атрибут `crate-type`
@@ -89,9 +89,9 @@
 
 .. todo::
 
-   - Write up the requirements in an easier to read way (e.g., split up paragraphs into sub-bullets).
-   - These requirements should be part of a specification that is written up somewhere,
-     i.e., not just as part of this example.
+   - Составить требования в удобной для чтения форме (например, разделять абзацы на подпункты).
+   - Эти требования должны быть частью спецификации, которая где-то написана,
+     т.е. не только как часть этого примера.
 
 - Тип функций:
 
@@ -122,15 +122,16 @@
 
 .. todo::
 
-   - Describe low-level
-   - Introduce the concept of host functions before using them in the note above
-
+   - Описать low-уровень
+   - Ознакомить с концепцией функций хоста перед их использованием в примечании выше
 
 Сериализуемое состояние и параметры
 -----------------------------------
 
-.. todo:: Clarify what it means that the state is exposed similarly to ``File``;
-   preferably, without referring to ``File``.
+.. todo::
+
+   Уточнить, что означает, когда состояние отображается аналогично ``File``;
+   желательно без ссылки на ``File``.
 
 В сети состояние экземпляра представляется в виде массива байтов и отображается
 в интерфейсе, аналогичном интерфейсу ``File`` стандартной библиотеки Rust.
@@ -249,7 +250,7 @@
 
 .. seealso::
 
-   For instructions on how to build using ``cargo-concordium`` see
+   Инструкцию по сборке с использованием ``cargo-concordium`` см.
    :ref:`compile-module-ru`.
 
 
@@ -270,7 +271,7 @@ Unit тесты с заглушками
 
 .. todo::
 
-   Use trap instead.
+   Вместо этого использовать обработку.
 
 Избегайте появления черных дыр
 ------------------------------

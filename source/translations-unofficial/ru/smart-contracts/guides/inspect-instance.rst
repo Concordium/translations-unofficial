@@ -6,7 +6,7 @@
 
 Это руководство покажет вам, как проверить экземпляр смарт-контракта.
 Проверка экземпляра покажет вам его имя, владельца, ссылку на модуль, баланс,
-состояние и функции приема:
+состояние и функции приема.
 
 Подготовка
 ==========
@@ -15,8 +15,8 @@
 что у вас есть экземпляр смарт-контракта в сети для проверки.
 
 .. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module-ru` and for
-   how to create an instance :ref:`initialize-contract-ru`.
+   Чтобы узнать, как развернуть модуль смарт-контракта, см. :ref:`deploy-module-ru` и
+   как создать экземпляр :ref:`initialize-contract-ru`.
 
 Проверка
 ========
@@ -47,7 +47,7 @@
 
 .. seealso::
 
-   For more information about contract instance addresses, see
+   Для получения дополнительной информации об адресах экземпляра контракта см.
    :ref:`references-on-chain`.
 
 Уровень детализации проверки зависит от того, имеет ли команда ``show``
@@ -63,4 +63,4 @@
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema-ru>`.
+   :ref:`Узнайте больше о том, почему и как использовать схемы смарт-контрактов <contract-schema-ru>`.

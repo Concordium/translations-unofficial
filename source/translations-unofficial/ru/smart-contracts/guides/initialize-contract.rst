@@ -5,8 +5,8 @@
 ========================================
 
 Это руководство покажет вам, как инициализировать смарт-контракт из развернутого
-модуля смарт-контракта с параметрами в формате JSON или двоичном формате.
-Кроме того, он покажет, как именовать экземпляр.
+модуля смарт-контракта с параметрами в JSON формате или двоичном формате.
+Кроме того, он покажет, как именовать экземпляр смарт-контракт.
 
 Подготовка
 ===========
@@ -28,7 +28,7 @@
 
 Для инициализации экземпляра смарт-контракта ``my_contract`` без параметров
 из развернутого модуля со ссылкой
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` позволяя
+``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2``, позволяя
 использовать до 1000 NRG, выполните
 следующую команду:
 
@@ -44,8 +44,8 @@
 
 .. todo::
 
-   Update address format to ``<i, s>`` from ``{"index": i, "subindex": s}``
-   (throughout the documentation).
+   Обновить формат адреса до ``<i, s>`` из ``{"index": i, "subindex": s}``
+   (по всей документации).
 
 .. code-block:: console
 
@@ -56,14 +56,14 @@
 
 .. seealso::
 
-   To get a deeper understanding of contract initialization, see
+   Чтобы получить более полное представление об инициализации контракта, см.
    :ref:`contract-instances-init-on-chain-ru`.
 
-   For more information about module references and instance addresses,
-   see :ref:`references-on-chain`.
+   Для получения дополнительной информации о ссылках на модули и адресах экземпляров,
+   см. :ref:`references-on-chain`.
 
-   Using module references directly can be inconvenient; to name them, see
-   :ref:`naming-a-module`.
+   Использование ссылок на модули напрямую может быть неудобным; по их именованию,
+   см. :ref:`naming-a-module`.
 
 .. _init-passing-parameter-json-ru:
 
@@ -76,11 +76,11 @@
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema-ru>`.
+   :ref:`Подробнее о том, зачем и как использовать схемы смарт-контрактов <contract-schema-ru>`.
 
-   :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin>`.
+   :ref:`Параметры также можно передавать в двоичном формате <init-passing-parameter-bin>`.
 
-Для инициализации экземпляра смарт-контракта ``my_parameter_contract`` из
+Для инициализации экземпляра смарт-контракта ``my_parameter_contract``
 из модуля со ссылкой
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` с
 файлом параметров ``my_parameter.json`` в JSON формате, выполните следующую команду:
@@ -104,7 +104,7 @@
 
 .. note::
 
-   Если параметр, предоставленный в формате JSON, не соответствует типу,
+   Если параметр, предоставленный в JSON формате, не соответствует типу,
    указанному в схеме, отобразится сообщение об ошибке. Например:
 
     .. code-block:: console
@@ -119,7 +119,7 @@
 
 .. note::
 
-   Если данный модуль не содержит встроенной схемы, его можно предоставить
+   Если данный модуль не содержит встроенной схемы, это может быть предоставлено
    с помощью параметра``--schema /path/to/schema.bin``.
 
 .. note::
@@ -136,7 +136,7 @@
 При передаче параметров в двоичном формате :ref:`схема смарт-контракта
 <contract-schema-ru>` не требуется.
 
-Для инициализации экземпляра смарт-контракта ``my_parameter_contract`` из
+Для инициализации экземпляра смарт-контракта ``my_parameter_contract``
 из модуля со ссылкой
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` с
 файлом параметров ``my_parameter.bin`` в двоичном формате, выполните следующую команду:
@@ -158,7 +158,7 @@
 
 .. seealso::
 
-   For information on how to work with parameters in smart contracts, see
+   Для получения информации о том, как работать с параметрами в смарт-контрактах, см.
    :ref:`working-with-parameters`.
 
 .. _naming-an-instance-ru:
@@ -172,8 +172,8 @@
 
 .. seealso::
 
-   For an explanation of how and where the names and other local settings are
-   stored, see :ref:`local-settings`.
+   Для объяснения того, как и где хранятся имена и другие локальные
+   настройки, см. :ref:`local-settings`.
 
 Чтобы добавить имя во время инициализации, используется параметр ``--name``.
 
@@ -212,7 +212,7 @@
 
 .. seealso::
 
-   For more information about contract instance addresses, see
+   Для получения дополнительной информации об адресах экземпляра контракта см.
    :ref:`references-on-chain`.
 
 .. _parameter_cursor():

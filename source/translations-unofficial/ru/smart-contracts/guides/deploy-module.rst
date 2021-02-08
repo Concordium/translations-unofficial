@@ -49,10 +49,10 @@
 
 .. seealso::
 
-   For a guide on how to initialize smart contracts from a deployed module see
+   Руководство по инициализации смарт-контрактов из развернутого модуля см. в разделе
    :ref:`initialize-contract-ru`.
 
-   For more information about module references, see :ref:`references-on-chain`.
+   Дополнительные сведения о ссылках на модули см. в разделе :ref:`references-on-chain`.
 
 .. _naming-a-module-ru:
 
@@ -65,8 +65,8 @@
 
 .. seealso::
 
-   For an explanation of how and where the names and other local settings are
-   stored, see :ref:`local-settings`.
+   Для объяснения того, как и где хранятся имена и другие локальные настройки,
+   см. раздел :ref:`local-settings`.
 
 Чтобы добавить имя во время развертывания, используется параметр ``--name``.
 Здесь мы называем модуль ``my_deployed_module``:

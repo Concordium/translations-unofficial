@@ -1,17 +1,17 @@
 .. _contract-module:
 
 ======================
-Smart contract modules
+Ang Smart contract modules
 ======================
 
-Smart contracts are deployed on the chain in *smart contract modules*.
+Ang mga Smart contracts ay naka-deploy sa chain ng * smart contract modules *
 
-.. note::
+.. tandaan::
 
-   A smart contract module is often referred to simply as a *module*.
+   Ang isang smart contract module ay madalas na tinutukoy bilang isang * module *.
 
-A module can contain one or more smart contracts, allowing code to be shared
-among the contracts and can optionally contain :ref:`contract schemas
+Ang isang module ay maaaring maglaman ng isa o higit pang mga smart contracts, pinapayagan  na maibahagi ang code sa  mga kabilang sa kontrata at 
+maaaring opsyonal na maglaman ng: ref: `mga contract schema 
 <contract-schema>`.
 
 .. graphviz::
@@ -27,70 +27,70 @@ among the contracts and can optionally contain :ref:`contract schemas
        }
    }
 
-The module must be self-contained, and only have a restricted list of imports
-that allow for interaction with the chain.
-These are provided by the host environment and are available for the smart
-contract by importing a module named ``concordium``.
+Ang module ay dapat na may sarili, at mayroon lamang isang pinaghihigpitang listahan ng mga pag-importsna 
+nagbibigay-daan para sa pakikipag-interact sa chain.
+Ang mga ito ay ibinibigay ng host environment at magagamit para sa smart contract sa pamamagitan ng pag-import ng isang 
+module na pinangalanang "concordium".
 
-.. seealso::
+.. tingnan::
 
    Check out :ref:`host-functions` for a complete reference.
 
 On-chain language
 =================
 
-On the Concordium blockchain the smart contract language is a subset of `Web
-Assembly`_ (Wasm in short) which is designed to be a portable compilation
-target and to be run in sandboxed environments. This is useful because smart
-contracts will be run by bakers in the network who do not necessarily trust
-the code.
+Sa Concordium blockchain ang smart contract language ay isang subset ng Web 
+Assembly`_ ( Wasm) na idinisenyo upang maging isang portable compilation 
+target at patatakbuhin sa mga sandboxed environments. Kapaki-pakinabang ito sapagkat ang smart 
+contracts ay pinapatakbo ng mga baker sa network na hindi kinakailangang 
+magtiwala sa code.
 
-Wasm is a low-level language and it is impractical to write by hand. Instead one
-can write smart contracts in a more high-level language which is then
-compiled to Wasm.
+Ang Wasm ay isang low-level-language at hindi praktikal na isulat sa pamamagitan ng kamay. Sa halip ay maaaring isulat ang isang smart contracts 
+sa isang more high-level language na 
+kino-compile sa Wasm.
 
-.. _wasm-limitations:
+.. _mga-limitasyon-wasm:
 
-Limitations
+Limitasyon
 -----------
 
-.. todo::
+.. mgagagawin::
 
-   Add other limitations, such as start sections...
+   Magdagdag ng iba pang mga limitasyon, tulad ng mga seksyon ng pagsisimula ...
 
-The blockchain environment is very particular in the sense that each node must
-be able to execute the contract in exactly the same way, using exactly the same
-amount of resources. Otherwise nodes would fail to reach consensus on the
-state of the chain. For this reason smart contracts need to be written in a restricted
-subset of Wasm.
+Ang blockchain environment ay napaka partikular sa kahulugan na ang bawat node ay dapat
+maipatupad ang contract sa eksaktong parehong paraan, gamit ang parehong dami nang pinagkukunan.
+Kung hindi man ay bigo itong maabot ang pinagkasunduang estado ng chain. Sa kadahilanang ang smart 
+contracts ay kailangang isulat sa isang 
+pinaghihigpitang subset ng Wasm.
 
 Floating point numbers
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Although Wasm does have support for floating point numbers, a smart contract is
-disallowed to use them. The reason for this is that Wasm floating-point numbers
-can have a special ``NaN`` ("not a number") value whose treatment can result in nondeterminism.
+Bagaman mayroong suporta si Wasm para sa mga floating point numbers, ang smart contract ay hindi 
+pinapayagang gamitin ang mga ito. Ang dahilan nito ay ang Wasm floating-point numbers ay maaaring magkaroon ng isang espesyal na "NaN" 
+("hindi isang numero") na value na nagre-resulta sa nondeterminism.
 
-The restriction applies statically, meaning that smart contracts cannot contain
-floating point types, nor can they contain any instructions that involve floating
-point values.
+Ang paghihigpit ay nalalapat statiscally, nangangahulugang hindi naglalaman ang mga smart contracts ng mga uri ng mga floating points, 
+at hindi rin sila maaaring maglaman ng anumang mga tagubilin na nasasangkot ang 
+floating point values.
 
 
 Deployment
 ==========
 
-Deploying a module to the chain means submitting the module bytecode as a
-transaction to the Concordium network. If *valid* this transaction will be
-included in a block. This transaction, as every other transaction, has an
-associated cost. The cost is based on the size of the bytecode and is charged
-for both checking validity of the module and on-chain storage.
+Ang pag-dedeploy ng isang module sa chain ay nangangahulugang pagsusumite ng module bytecode bilang isang 
+transaksyon sa network ng Concordium. Kung * wasto * ang transaksyong ito isinasama ito sa 
+isang block.. Ang transaksyong ito, tulad ng bawat iba pang transaksyon, ay mayroong nauugnay na gastos. 
+Ang gastos ay batay sa laki ng bytecode at magkakaroon nang charge para sa parehong 
+pag-check ng bisa ng module at on-chain storage.
 
-The deployment itself does not execute
-smart contract. To execute, a user must first create an *instance* of a contract.
+Ang pag-deploy mismo ay hindi nag e-execute
+nang smart contract. Upang ma execute, ang isang user ay dapat munang lumikha ng isang * instance * ng contract.
 
-.. seealso::
+.. tingnandin::
 
-   See :ref:`contract-instances` for more information.
+   Tingnan :ref:`contract-instances` para sa karagdagang impormasyon.
 
 .. _smart-contracts-on-chain:
 
@@ -103,28 +103,28 @@ smart contract. To execute, a user must first create an *instance* of a contract
 Smart contract on the chain
 ===========================
 
-A smart contract on the chain is a collection of functions exported from a deployed
-module. The concrete mechanism used for this is the `Web Assembly`_ export
-section. A smart contract must export one function for initializing new
-instances and can export zero or more functions for updating the instance.
+Ang isang smart contract sa chain ay isang koleksyon ng mga functions na na e-export mula sa isang na-deploy na 
+module. Ang konkretong mekanismo na ginamit para dito ay ang `Web Assembly`_ export 
+seksyon.. Ang isang smart contract ay dapat na mag-export ng isang functio para sa pagsisimula 
+ng mga bagong instances at maaaring mag-export ng zero o higit pang mga functions para sa pag-update ng instance..
 
-Since a smart contract module can export functions for multiple different smart
-contracts, we associate the functions using a naming scheme:
+Dahil ang isang module ng smart contract ay maaaring mag-export ng mga functions para sa magkakaibang mga smart contracts,
+naiuugnay namin ang mga functions gamit ang naming scheme:
 
-- ``init_<contract-name>``: The function for initializing a smart contract must
-  start with ``init_`` followed by a name of the smart contract. The contract
-  must consist only of ASCII alphanumeric or punctuation characters, and is not
-  allowed to contain the ``.`` symbol.
+- ``init_<contract-name>``: Ang function para sa pagsisimula ng isang smart contract  ay dapat magsimula sa "init_" 
+   na sinusundan ng isang pangalan ng smart contract. Ang contract ay dapat na binubuo lamang ng ASCII alphanumeric o 
+   bantas na mga character, at hindi pinapayagan na maglaman ng 
+   "." simbolo.
 
-- ``<contract-name>.<receive-function-name>``: Functions for interacting with a
-  smart contract are prefixed with the contract name, followed by a ``.`` and a
-  name for the function. Same as for the init function, the contract name is not allowed
-  to contain the ``.`` symbol.
+- ``<contract-name>.<receive-function-name>``: Ang mga functions para sa pakikipag-ugnay sa isang 
+smart contract ay pauna sa pangalan ng contract, na sinusundan ng isang "." 
+At pangalan para sa function. Kapareho sa init function, hindi pinapayagan ang pangalan ng 
+kontrata na maglaman ng simbolong "."
 
-.. note::
+.. tandaan::
 
-   If you develop smart contracts using Rust and ``concordium-std``, the
-   procedural macros ``#[init(...)]`` and ``#[receive(...)]`` set up the
-   correct naming scheme.
+   Kung gagawa ka ng smart contracts gamit ang Rust at "concordium-std", ang 
+   pamaraan macros ``#[init(...)]`` and ``# [receive(...)`` 
+   i-set up ang tamang scheme ng pagbibigay ng pangalan.
 
 .. _Web Assembly: https://webassembly.org/

@@ -110,14 +110,9 @@ gerek olmayabileceği gibi daha fazla işlevi dışa aktarmasıda gerekebilir.
 Bir akıllı sözleşme modülü birden fazla farklı akıllı sözleşme için işlevleri dışa aktarabildiğinden,
 işlevleri bir isimlendirme şeması kullanarak birbirleri ile ilişkilendiririz:
 
-- ``init_<contract-name>``: Bir akıllı sözleşmeyi başlatma işlevi, ``init_`` ile başlamalı 
-ve ardından akıllı sözleşmenin bir adı gelmelidir. Sözleşme yalnızca 
-ASCII alfasayısal karakterlerden veya noktalama işaretlerinden oluşmalıdır ve 
-``.`` Sembolünü içermesine izin verilmez.
+- ``init_<contract-name>``: Bir akıllı sözleşmeyi başlatma işlevi, ``init_`` ile başlamalı ve ardından akıllı sözleşmenin bir adı gelmelidir. Sözleşme yalnızca ASCII alfasayısal karakterlerden veya noktalama işaretlerinden oluşmalıdır ve ``.`` Sembolünü içermesine izin verilmez.
 
-- ``<contract-name>.<receive-function-name>``: Akıllı bir sözleşmeyle etkileşimde bulunacak 
-fonksiyon isminin önüne sözleşme adı gelmeli, ve aralarinda ``.`` sembolu bulunmalıdır.  
-Init fonksiyonların da oldugu gibi, sözleşme adının ``.`` sembolünü içermesine izin verilmez. 
+- ``<contract-name>.<receive-function-name>``: Akıllı bir sözleşmeyle etkileşimde bulunacak fonksiyon isminin önüne sözleşme adı gelmeli, ve aralarinda ``.`` sembolu bulunmalıdır. Init fonksiyonların da oldugu gibi, sözleşme adının ``.`` sembolünü içermesine izin verilmez.
 
 .. note::
 

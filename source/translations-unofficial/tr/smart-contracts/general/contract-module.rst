@@ -68,7 +68,7 @@ Kayan nokta sayıları
 Wasm'ın kayan nokta sayılarını desteklemesine rağmen, akıllı bir sözleşmenin
 bunları kullanmasına izin verilmez. Bunun nedeni, Wasm kayan noktalı sayıların
 özel bir ``NaN`` ("not a number")(Sayi olmayan bir değer) değerine sahip olabilmesidir
- ve bu değerin işlenmesi belirsizlikle sonuçlanabilir.
+ve bu değerin işlenmesi belirsizlikle sonuçlanabilir.
 
 Kısıtlama statik olarak uygulanır, yani akıllı sözleşmeler kayan nokta türleri
 içeremez veya kayan nokta değerleri içeren herhangi bir talimat içeremez.

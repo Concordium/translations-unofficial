@@ -134,7 +134,7 @@ GTU ve bayt biçiminde işleve yönelik bir argüman içeren işlemler kullanıl
 - Akıllı sözleşme örneğinin adresi.
 - Alma fonksiyonunun adı.
 - Alma fonksiyonu parametresi.
-- Örnek için GTU miktarı. 
+- Örnek için GTU miktarı.
 
 .. _contract-instance-actions:
 

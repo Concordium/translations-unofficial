@@ -74,7 +74,7 @@ alınabilmesidir, örneğin, sözleşmeler GTU jetonları yaratamaz veya yok ede
 .. _contract-instances-init-on-chain:
 
 Zincir üzerinde akıllı sözleşme örneği oluşturmak
-=======================================
+=======================================================
 
 Her akıllı sözleşme, akıllı sözleşme örnekleri oluşturmak için bir fonksiyon içermelidir.
 Bu fonksiyonlara *init fonksiyonu* denir.

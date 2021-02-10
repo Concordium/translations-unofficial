@@ -307,7 +307,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
    | baker dapat dibuang                       |                                         |                                         |
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
 
-   .. catatan::
+.. catatan::
 
    Di testnet, ``bakerCooldownEpochs`` awalnya disetel ke 168 epoch. Nilai
    ini dapat diperiksa sebagai berikut:
@@ -327,7 +327,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
    jangka pendek. Secara khusus, untuk membatalkan pendaftaran seorang baker atau untuk memodifikasi stake
    jumlah yang Anda perlukan untuk memiliki beberapa GTU yang tidak dipertaruhkan untuk menutupi biaya
    transaksi.
-   
+
 Re-stake Penghasilan
 ----------------------
 

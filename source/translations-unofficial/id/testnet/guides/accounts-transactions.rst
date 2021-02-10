@@ -1,6 +1,6 @@
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _guide-account-transactions:
+.. _panduan-transaksi-akun:
 
 ================================================
 Concordium ID: Memulai dengan akun dan transaksi

@@ -28,12 +28,12 @@ Proses menjadi baker dapat diringkas dalam langkah-langkah berikut:
 #. Daftarkan kunci baker dengan akun tersebut.
 #. Mulailah node dengan kunci baker.
 
-Setelah menyelesaikan langkah-langkah ini, node baker akan memanggang blok. Jika blok dipanggang
+Setelah menyelesaikan langkah-langkah ini, node baker akan baking blok. Jika blok dipanggang
 ditambahkan ke rantai, baker node akan menerima hadiah.
 
 .. catatan::
 
-   Pada bagian ini kita akan menggunakan nama ``bakerAccount`` sebagai nama 
+   Pada bagian ini kita akan menggunakan nama ``bakerAccount`` sebagai nama
    akun yang akan digunakan untuk mendaftar dan mengelola baker.
 
 Definisi
@@ -53,7 +53,7 @@ Kunci Baker
 -----------
 
 Setiap baker memiliki satu set kunci kriptografi yang disebut *kunci baker*. Node menggunakan
-kunci ini untuk menandatangani blok yang dipanggang. Untuk memanggang blok ditandatangani oleh 
+kunci ini untuk menandatangani blok yang dipanggang. Untuk baking blok ditandatangani oleh
 Baker tertentu simpul harus berjalan dengan set kunci baker dimuat.
 
 Akun Baker
@@ -80,7 +80,7 @@ tidak bisa dipindahkan atau ditransfer sampai dirilis oleh baker.
    Jika akun memiliki jumlah yang ditransfer dengan jadwal rilis,
    jumlah tersebut dapat dipertaruhkan meskipun belum dirilis.
 
-Agar dipilih untuk memanggang blok, baker harus berpartisipasi dalam sebuah
+Agar dipilih untuk baking blok, baker harus berpartisipasi dalam sebuah
 *lotere* di mana kemungkinan mendapatkan tiket menang kira-kira
 sebanding dengan jumlah yang dipertaruhkan.
 
@@ -90,9 +90,9 @@ komite atau tidak. Lihat Finalisasi_.
 .. _epochs-and-slots:
 
 Epochs and slot
-----------------
+---------------
 
-Di blockchain Concordium, waktu dibagi menjadi * slot *. Slot punya waktu
+Di blockchain Concordium, waktu dibagi menjadi *slot*. Slot punya waktu
 durasi tetap di blok Genesis. Pada cabang tertentu, setiap slot dapat memiliki
 kebanyakan satu blok, tetapi beberapa blok di cabang yang berbeda dapat diproduksi di
 slot yang sama.
@@ -101,13 +101,13 @@ slot yang sama.
 
    Mari tambahkan gambar.
 
-Saat mempertimbangkan imbalan dan konsep terkait memanggang lainnya, kami menggunakan
+Saat mempertimbangkan imbalan dan konsep terkait baking lainnya, kami menggunakan
 konsep sebuah *epoch* sebagai satuan waktu yang mendefinisikan suatu periode di mana himpunan
 dari baker dan satke saat ini sudah diperbaiki. Epoch memiliki durasi waktu tetap di
 Blok Genesis. Di testnet, epoch memiliki durasi **1 jam**.
 
-Mulai baking
-============
+Memulai baking
+==============
 
 Mengelola akun
 -----------------
@@ -135,12 +135,12 @@ Membuat kunci untuk baker dan mendaftarkannya
 .. catatan::
 
    Untuk proses ini, akun perlu memiliki beberapa GTU, jadi pastikan untuk meminta
-  pemberian 100 GTU untuk akun di aplikasi seluler.
+   pemberian 100 GTU untuk akun di aplikasi seluler.
 
-Setiap akun memiliki baker ID unik yang digunakan saat mendaftarkan pembuat roti. ID
+Setiap akun memiliki baker ID unik yang digunakan saat mendaftarkan baker. ID
 ini harus disediakan oleh jaringan dan saat ini tidak dapat dihitung . ID
 ini harus diberikan di dalam file kunci baker ke node sehingga dapat menggunakan
-kunci baker untuk membuat blok. ``Concordium-client`` bidang ini akan terisi secara 
+kunci baker untuk membuat blok. ``Concordium-client`` bidang ini akan terisi secara
 otomatis saat melakukan operasi berikut.
 
 Untuk membuat satu set kunci baru, jalankan:
@@ -178,7 +178,7 @@ pertama harus mematikan node yang sedang berjalan (baik dengan menekan
 
 Setelah menempatkan file di direktori yang sesuai (sudah dilakukan di
 perintah sebelumnya saat menentukan file output), mulai node lagi menggunakan
-``concordium-node``. Node secara otomatis akan mulai memanggang saat baker
+``concordium-node``. Node secara otomatis akan mulai baking saat baker
 disertakan dalam baker untuk epoch saat ini.
 
 Perubahan ini akan dijalankan
@@ -200,24 +200,24 @@ transaksi untuk menambahkan baker sudah termasuk dalam satu blok.
    Jika transaksi untuk menambahkan baker dimasukkan dalam blok selama epoch `E`,
    baker akan dianggap sebagai bagian dari panitia baking saat epoch
    `E + 2` dimulai.
-
+   
 Mengelola baker
 ==================
 
 Memeriksa status baker dan kekuatan loterenya
 ------------------------------------------------------
 
-Untuk melihat apakah node sedang memanggang, Anda dapat memeriksa berbagai sumber yang
+Untuk melihat apakah node sedang baking, Anda dapat memeriksa berbagai sumber yang
 menawarkan tingkat presisi yang berbeda dalam informasi yang ditampilkan.
 
 - Dalam `network dashboard <http://dashboard.testnet.concordium.com>`_, node
   anda akan menunjukkan ID baker di kolom ``baker``.
-- Menggunakan ``concordium-client`` Anda dapat memeriksa daftar pembuat roti saat ini
-  dan jumlah stake relatif yang mereka pegang, yaitu kekuatan lotre mereka. 
+- Menggunakan ``concordium-client`` Anda dapat memeriksa daftar baker saat ini
+  dan jumlah stake relatif yang mereka pegang, yaitu kekuatan lotre mereka.
   kekuatan lotere akan menentukan seberapa besar kemungkinan sebuah baker akan memenangkan
   lotere dan membuat blok.
-
-  .. code-block:: console
+  
+   .. code-block:: console
 
      $concordium-client consensus show-parameters --include-bakers
      Election nonce:      07fe0e6c73d1fff4ec8ea910ffd42eb58d5a8ecd58d9f871d8f7c71e60faf0b0
@@ -229,7 +229,7 @@ menawarkan tingkat presisi yang berbeda dalam informasi yang ditampilkan.
          34: 4p2n8QQn5akq3XqAAJt2a5CsnGhDvUon6HExd2szrfkZCTD4FX   <0.0001
          ...
 
-- Menggunakan `` concordium-client`` Anda dapat memeriksa bahwa akun tersebut telah
+- Menggunakan ``concordium-client`` Anda dapat memeriksa bahwa akun tersebut telah
   mendaftarkan baker dan jumlah saat ini yang dipertaruhkan oleh baker itu.
 
   .. code-block:: console
@@ -242,7 +242,7 @@ menawarkan tingkat presisi yang berbeda dalam informasi yang ditampilkan.
       - Restake earnings: yes
      ...
 
-- Jika jumlah taruhannya cukup besar dan ada simpul yang berjalan dengan kunci
+- Jika jumlah stakenya cukup besar dan ada simpul yang berjalan dengan kunci
   baker dimuat, baker itu akhirnya akan menghasilkan blok dan Anda bisa melihatnya
   di dompet seluler Anda bahwa hadiah baking diterima oleh akun,
   seperti yang terlihat pada gambar ini:
@@ -263,21 +263,21 @@ Untuk memperbarui stake baker jalankan
 Memodifikasi jumlah yang distake mengubah kemungkinan bahwa sebuah baker akan terpilih
 untuk bake blok.
 
-Ketika sebuah baker **menambahkan stake untuk pertama kalinya atau meningkatkan taruhannya**, perubahan 
+Ketika sebuah baker **menambahkan stake untuk pertama kalinya atau meningkatkan stakenya**, perubahan
 itu dijalankan pada rantai dan menjadi terlihat segera setelah transaksi
 termasuk dalam blok (dapat dilihat melalui ``concordium-client account show
 bakerAccount``)  dan berlaku 2 periode setelah itu.
 
-.. table:: Timeline: meningkatkan stake
+.. table:: linimasa: meningkatkan stake
 
-   +----------------------------------------+-----------------------------------------+----------------+
-   |                                        | Saat transaksi termasuk dalam satu blok |Setelah 2 epoch |
-   +========================================+=========================================+================+
-   |Perubahan terlihat dengan menanyakan node| ✓                                      |                |
-   +----------------------------------------+-----------------------------------------+----------------+
-   | Baker menggunakan stake baru           |                                         | ✓              |
-   +----------------------------------------+-----------------------------------------+----------------+
-
+   +-------------------------------------------+-----------------------------------------+----------------+
+   |                                           | Saat transaksi termasuk dalam satu blok |Setelah 2 epoch |
+   +===========================================+=========================================+================+
+   | Perubahan terlihat dengan menanyakan node | ✓                                       |                |
+   +-------------------------------------------+-----------------------------------------+----------------+
+   | Baker menggunakan stake baru              |                                         |  ✓             |
+   +-------------------------------------------+-----------------------------------------+----------------+
+   
 ketika sebuah baker **menurunkan jumlah stake**, perubahan akan membutuhkan *2 +
 bakerCooldownEpochs* epochs untuk diterapkan. Perubahan menjadi terlihat di
 rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan melalui
@@ -294,20 +294,20 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
 
    ...
 
-.. table:: Timeline: mengurangi stake
+.. table:: linimasa: mengurangi stake
 
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                        | Saat transaksi termasuk dalam satu blok |setelah *2 + bakerCooldownEpochs* epochs|
-   +========================================+=========================================+========================================+
-   |Perubahan terlihat dengan menanyakan node| ✓                                      |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker menggunakan stake baru           |                                         | ✓                                      |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Stake dapat di kurangi lagi atau       | ✗                                       | ✓                                      |
-   | baker bisa dibuang                     |                                         |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-
-.. catatan::
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   |                                           | Saat transaksi termasuk dalam satu blok | setelah *2 + bakerCooldownEpochs* epoch |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | Perubahan terlihat dengan menanyakan node | ✓                                       |                                         |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | Baker menggunakan stake baru              |                                         |  ✓                                      |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | Stake dapat di kurangi lagi atau          | ✗                                       |  ✓                                      |
+   | baker dapat dibuang                       |                                         |                                         |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   
+   .. catatan::
 
    Di testnet, ``bakerCooldownEpochs`` awalnya disetel ke 168 epoch. Nilai
    ini dapat diperiksa sebagai berikut:
@@ -327,8 +327,8 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
    jangka pendek. Secara khusus, untuk membatalkan pendaftaran seorang baker atau untuk memodifikasi stake
    jumlah yang Anda perlukan untuk memiliki beberapa GTU yang tidak dipertaruhkan untuk menutupi biaya
    transaksi.
-
-Mengembalikan pendapatan
+   
+Re-stake Penghasilan
 ----------------------
 
 Saat berpartisipasi sebagai baker di jaringan dan baking balok, akun
@@ -360,21 +360,21 @@ using ``concordium-client``:
 
    ...
 
-.. table:: Timeline: memperbarui restake
+.. table:: linimasa: memperbarui restake
 
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   |                                               | Saat transaksi termasuk dalam satu blok |2 epochs setelah menerima hadiah|
-   +===============================================+=========================================+===============================+
-   | Perubahan terlihat dengan menanyakan node     | ✓                                       |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | Penghasilan [tidak] akan dikembalikan         | ✓                                       |                               |
-   | secara otomatis                               |                                         |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | jika restaking otomatis, stake yang           |                                         | ✓                             |
-   | diperoleh mempengaruhi kekuatan lotere        |                                         |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-
-Ketika baker terdaftar, secara otomatis akan mempertaruhkan kembali pendapatannya, tetapi sebagai
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   |                                           | Saat transaksi termasuk dalam satu blok | setelah *2 + bakerCooldownEpochs* epoch |
+   +===========================================+=========================================+=========================================+
+   | Perubahan terlihat dengan menanyakan node | ✓                                       |                                         |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | Penghasilan [tidak] akan di Re-stake      | ✓                                       |                                         |
+   | secara otomatis                           |                                         |                                         |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | jika restaking otomatis, stake yang       |                                         | ✓                                       |
+   | diperoleh mempengaruhi kekuatan lotere    |                                         |                                         |
+   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   
+Ketika baker terdaftar, secara otomatis akan me re-stake kembali pendapatannya, tetapi sebagai
 disebutkan di atas, ini dapat diubah dengan memberikan tanda ``--no-restake`` ke
 perintah ``baker add`` seperti yang ditunjukkan di sini:
 
@@ -390,12 +390,12 @@ komite* yang *menyelesaikan* blok ketika jumlah anggota yang cukup besar
 panitia telah menerima blok tersebut dan menyetujui hasilnya. Blok baru
 harus memiliki blok yang diselesaikan sebagai leluhur untuk memastikan integritas
 rantai. Untuk informasi lebih lanjut tentang proses ini, lihat
-dibagian :ref:`finalization <glossary-finalization>`.
+dibagian :ref:`finalisasi <glossary-finalization>`.
 
-Panitia finalisasi dibentuk oleh baker yang memiliki jumlah stake 
+Panitia finalisasi dibentuk oleh baker yang memiliki jumlah stake
 tertentu. Ini secara khusus menyiratkan bahwa untuk berpartisipasi dalam
 panitia finalisasi Anda mungkin harus mengubah jumlah yang distake
-untuk mencapai ambang tersebut. Di testnet, jumlah taruhan yang dibutuhkan untuk berpartisipasi
+untuk mencapai ambang tersebut. Di testnet, jumlah stake yang dibutuhkan untuk berpartisipasi
 dalam panitia finalisasi adalah **0,1% dari total GTU yang ada**.
 
 Berpartisipasi dalam panitia finalisasi menghasilkan hadiah di setiap blok yang
@@ -432,15 +432,15 @@ dengan ``concordium-client`` seperti biasa:
 
    ...
 
-.. table:: Timeline: Menghapus baker
+.. table:: linimasa: Menghapus baker
 
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                            | Saat transaksi termasuk dalam satu blok |setelah *2 + bakerCooldownEpochs* epochs|
-   +============================================+=========================================+========================================+
-   | Perubahan terlihat dengan menanyakan node  | ✓                                       |                                        |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker dikeluarkan dari panitia baking      |                                         | ✓                                      |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
+   +--------------------------------------------+-----------------------------------------+-----------------------------------------+
+   |                                            | Saat transaksi termasuk dalam satu blok | setelah *2 + bakerCooldownEpochs* epoch |
+   +============================================+=========================================+=========================================+
+   | Perubahan terlihat dengan menanyakan node  | ✓                                       |                                         |
+   +--------------------------------------------+-----------------------------------------+-----------------------------------------+
+   | Baker dikeluarkan dari panitia baking      |                                         | ✓                                       |
+   +--------------------------------------------+-----------------------------------------+-----------------------------------------+
 
 .. peringatan::
 

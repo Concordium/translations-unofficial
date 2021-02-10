@@ -40,7 +40,7 @@ Upgrade dari Open Testnet versi sebelumnya
 
 Untuk meningkatkan ke software Concordium saat ini, untuk Open Testnet 4:
 
--  Ikuti langkah-langkah di atas untuk :ref:`download<downloads>`software concordium
+-  Ikuti langkah-langkah di atas untuk :ref:`download<downloads>` software concordium
    terbaru.
 
 -  Jalankan ``concordium-node-reset-data`` yang dapat dieksekusi dari arsip

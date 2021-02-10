@@ -112,7 +112,7 @@ Bergantung pada penyedia identitas yang Anda pilih, tata letak kartu identitas m
 Contoh Akun 1 dipegang oleh identitas Contoh Identitas. Akun yang dibuat selama proses ini akan ditandai dengan *(Awal)*
 di aplikasi, jadi Anda tahu akun mana yang merupakan akun awal yang dikirimkan ke rantai oleh penyedia identitas.
 
-Dengan menekan **Selesai** Anda akan dibawa ke *layar Akun*. Pada layar ini Anda akan dapat melihat akun inisial Anda yang baru 
+Dengan menekan **Selesai** Anda akan dibawa ke *layar Akun*. Pada layar ini Anda akan dapat melihat akun inisial Anda yang baru
 dibuat. Ini mungkin menampilkan *ikon Menunggu Keputusan*, yang berarti penyedia identitas masih bekerja untuk mengirimkan dan membuat file
 akun dan identitas awal. Anda juga dapat menavigasi ke *layar Identitas* dengan mengklik **Identities** di bagian bawah
 layar. Di layar ini Anda dapat melihat identitas yang baru Anda buat, yang mungkin juga masih menunggu keputusan penyedia identitas

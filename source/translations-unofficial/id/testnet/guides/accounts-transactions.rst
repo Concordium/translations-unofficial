@@ -105,10 +105,10 @@ dikenakan biaya, dan tergantung pada jenis transaksinya, biayanya mungkin berbed
 .. image:: images/concordium-id/acc18.png
       :width: 32%
 
-.. _move-an-amount-to-the-shielded-balance:
+.. _memindahkan-sejumlah-saldo-ke-saldo-terlindung:
 
-Pindahkan saldo ke saldo yang terlindung
-========================================
+Memindahkan sejumlah saldo ke saldo terlindung
+==============================================
 Jika kita kembali ke layar *Akun*, sekarang kita dapat melihat bahwa 10 GTU telah ditransfer ke *Saldo* dari *Contoh Akun 1*. Seperti yang mungkin telah
 anda perhatikan sebelumnya, akun juga memiliki :ref:`glossary-shielded-balance`. Singkatnya, saldo terlindung adalah untuk menjaga jumlah GTU yang terlindung
 (terenkripsi) di akun. Mari kita coba menambahkan beberapa GTU terlindung ke *Contoh Akun 2* kami. Mulailah dengan menekan area **Shielded Balance** di kartu akun.

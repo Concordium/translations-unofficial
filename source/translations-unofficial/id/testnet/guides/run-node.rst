@@ -35,15 +35,14 @@ Sebelum menjalankan node Concordium, Anda harus melakukan
 
 2. Unduh dan ekstrak software :ref:`concordium-node-and-client-download`.
 
-
 Upgrade dari Open Testnet versi sebelumnya
 ===========================================
 
 Untuk meningkatkan ke software Concordium saat ini, untuk Open Testnet 4:
 
--  Ikuti langkah-langkah di atas untuk :ref:`download <downloads>`software concordium
+-  Ikuti langkah-langkah di atas untuk :ref:`download<downloads>`software concordium
    terbaru.
-   
+
 -  Jalankan ``concordium-node-reset-data`` yang dapat dieksekusi dari arsip
    unzip.
 
@@ -70,7 +69,7 @@ Untuk meningkatkan ke software Concordium saat ini, untuk Open Testnet 4:
 Menjalankan Node
 ================
 
-Untuk mulai menjalankan klien yang akan bergabung dengan Open Testnet ikuti 
+Untuk mulai menjalankan klien yang akan bergabung dengan Open Testnet ikuti
 Langkah ini:
 
 1. Buka ``concordium-node`` yang dapat dieksekusi dari arsip yang telah di unzip.
@@ -137,7 +136,7 @@ Jaringan Concordium. dan akan dapat mengirim transaksi dan,
 
 Namun Anda juga dapat membuat node Anda menjadi peserta jaringan yang lebih baik
 dengan mengaktifkan koneksi masuk. Secara default, ``concordium-node`` mendengarkan
-di port ``8888`` untuk koneksi masuk. Tergantung pada jaringan 
+di port ``8888`` untuk koneksi masuk. Tergantung pada jaringan
 dan konfigurasi platform Anda juga perlu meneruskan port eksternal
 ke ``8888`` di router Anda, buka di firewall, atau keduanya. Itu
 rincian bagaimana ini dilakukan akan tergantung pada konfigurasi Anda.

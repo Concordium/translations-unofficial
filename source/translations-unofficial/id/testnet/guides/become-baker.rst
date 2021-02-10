@@ -6,7 +6,7 @@
 .. _become-a-baker:
 
 ==================================
-Menjadi Baker (buat balok)
+Menjadi Baker (membuat blok)
 ==================================
 
 .. contents::

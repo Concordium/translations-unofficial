@@ -41,7 +41,7 @@ Persyaratan penginstalan: iOS 13 atau yang lebih baru.
 Menginstal aplikasi Concordium ID di iOS memerlukan penginstalan aplikasi TestFlight Apple, yang digunakan untuk mendistribusikan aplikasi iOS versi beta.
 
 1. Instal `TestFlight`_ melalui App Store.
-2. Bergabunglah dengan `program beta TestFlight`_ kami melalui iPhone Anda (bekerja paling baik jika Anda mengklik tautan langsung di iPhone Anda), dan ikuti langkah-langkah yang ditunjukkan di sana, untuk menambahkan Concordium ID ke TestFlight.
+2. Bergabunglah dengan `TestFlight beta program`_ kami melalui iPhone Anda (bekerja paling baik jika Anda mengklik tautan langsung di iPhone Anda), dan ikuti langkah-langkah yang ditunjukkan di sana, untuk menambahkan Concordium ID ke TestFlight.
 3. Buka aplikasi TestFlight di iPhone Anda dan instal Concordium ID.
 
 

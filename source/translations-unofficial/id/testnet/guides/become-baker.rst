@@ -200,7 +200,7 @@ transaksi untuk menambahkan baker sudah termasuk dalam satu blok.
    Jika transaksi untuk menambahkan baker dimasukkan dalam blok selama epoch `E`,
    baker akan dianggap sebagai bagian dari panitia baking saat epoch
    `E + 2` dimulai.
-   
+
 Mengelola baker
 ==================
 
@@ -216,7 +216,7 @@ menawarkan tingkat presisi yang berbeda dalam informasi yang ditampilkan.
   dan jumlah stake relatif yang mereka pegang, yaitu kekuatan lotre mereka.
   kekuatan lotere akan menentukan seberapa besar kemungkinan sebuah baker akan memenangkan
   lotere dan membuat blok.
-  
+
    .. code-block:: console
 
      $concordium-client consensus show-parameters --include-bakers
@@ -277,7 +277,7 @@ bakerAccount``)  dan berlaku 2 periode setelah itu.
    +-------------------------------------------+-----------------------------------------+----------------+
    | Baker menggunakan stake baru              |                                         |  ✓             |
    +-------------------------------------------+-----------------------------------------+----------------+
-   
+
 ketika sebuah baker **menurunkan jumlah stake**, perubahan akan membutuhkan *2 +
 bakerCooldownEpochs* epochs untuk diterapkan. Perubahan menjadi terlihat di
 rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan melalui
@@ -298,7 +298,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
 
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
    |                                           | Saat transaksi termasuk dalam satu blok | setelah *2 + bakerCooldownEpochs* epoch |
-   +-------------------------------------------+-----------------------------------------+-----------------------------------------+
+   +===========================================+=========================================+=========================================+
    | Perubahan terlihat dengan menanyakan node | ✓                                       |                                         |
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
    | Baker menggunakan stake baru              |                                         |  ✓                                      |
@@ -306,7 +306,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
    | Stake dapat di kurangi lagi atau          | ✗                                       |  ✓                                      |
    | baker dapat dibuang                       |                                         |                                         |
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
-   
+
    .. catatan::
 
    Di testnet, ``bakerCooldownEpochs`` awalnya disetel ke 168 epoch. Nilai
@@ -373,7 +373,7 @@ using ``concordium-client``:
    | jika restaking otomatis, stake yang       |                                         | ✓                                       |
    | diperoleh mempengaruhi kekuatan lotere    |                                         |                                         |
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
-   
+
 Ketika baker terdaftar, secara otomatis akan me re-stake kembali pendapatannya, tetapi sebagai
 disebutkan di atas, ini dapat diubah dengan memberikan tanda ``--no-restake`` ke
 perintah ``baker add`` seperti yang ditunjukkan di sini:

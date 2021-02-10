@@ -131,10 +131,10 @@ GTU ve bayt biçiminde işleve yönelik bir argüman içeren işlemler kullanıl
 
 Özetlemek gerekirse, akıllı sözleşme etkileşimi için bir işlem şunları içerir::
 
-- Akıllı sözleşme örneğinin adresi..
+- Akıllı sözleşme örneğinin adresi.
 - Alma fonksiyonunun adı.
 - Alma fonksiyonu parametresi.
-- Örnek için GTU miktarı.
+- Örnek için GTU miktarı. 
 
 .. _contract-instance-actions:
 
@@ -206,8 +206,7 @@ Hataları işleme
 
 .. graphviz::
    :align: center
-   :caption: Alice'e ve ardından Bob'a aktarmaya çalışan bir eylem açıklaması örneği,
-   bunlardan herhangi biri başarısız olursa, bunun yerine Charlie'ye aktarmayı deneyecektir.
+   :caption: Alice'e ve ardından Bob'a aktarmaya çalışan bir eylem açıklaması örneği,bunlardan herhangi biri başarısız olursa, bunun yerine Charlie'ye aktarmayı deneyecektir.
 
    digraph G {
        node [color=transparent]

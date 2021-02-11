@@ -10,7 +10,7 @@ kurmamız gerekiyor.
 Rust ve Cargo
 ==============
 
-İlk olarak, hem Rust_ hem de Cargo_'yu makinenize kuracak olan `rustup`_ ‘ı kurun.
+İlk olarak, hem Rust_ hem de Cargo_'yu makinenize kuracak olan `install rustup`_ ‘ı kurun.
 Ardından, derleme için kullanılan Wasm hedefini kurmak için ``rustup`` kullanın:
 
 .. code-block:: console

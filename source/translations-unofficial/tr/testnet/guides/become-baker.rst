@@ -65,7 +65,7 @@ Hesap, GTU bakiyesinin bir kısmını *fırıncı hissesine* (*baker stake*) yat
 .. note::
 
    Eğer bir hesap zamanlanmış serbest bırakma ile aktarılmış bir tutara sahipse bu miktar henüz serbest bırakılmamış olsa bile stake edilebilir.
-   
+
 Bir blok pişirmek için seçilecek bir fırıncının, kazanma olasılığı kabaca anlatmak gerekirse stake edilmiş tutarla orantılı olarak değişmektedir.
 
 Aynı stake tutarı bulunan bloğun zincire dahil edilmesiyle ilgili sonladırmanın başarılı olması yada olmaması hesaplarında da kullanılır. Detaylarını görmek için See Finalization_.
@@ -107,7 +107,7 @@ Fırıncı (Baker) için anatar oluşturma ve kayıt ettirme
 .. note::
 
    Bu süreci yürütebilmeniz için hesapta GTU bulunması gerekmektedir. Kullanacağınız mobil uygulamadan 100 GTU talep ettiğinizden emin olun.
-   
+
 Her hesabın fırıncısını kayıt ederken kullanılan benzersiz bir fırıncı kimliği vardır. Bu kimlik, ağ tarafından sağlanmalıdır ve şu anda önceden hesaplanması mümkün değildir. Bu kimlik, blokları oluşturmak için blokları oluşturmak üzere baker keys dosyası içinde düğüme verilemlidir. Aşağıdaki işlemleri gerçekleştirirken ``concordium-client`` bu alanı otomatik olarak dolduracaktır.
 
 Yeni bir anahtar seti oluşturmak için şu komutu çalıştırın:
@@ -154,7 +154,6 @@ Yapılan bu değişiklik hemen uygulanacak ve sonrasında fırıncı ekleme işl
 .. note::
 
   Eğer fırıncı dahil etme işlemini **E** döneminde yaptıysanız komiteye dahil edilmesi **E+2** dönemi başlangıcında devreye alınacaktır.
-  
 
 Fırıncıyı yönetmek
 ==================
@@ -261,7 +260,7 @@ Fırıncının **stake edilmiş tutarını düşürdüğünüzde** bu değişimi
 .. warning::
 
    `Tanımlar`_ bölümünde açıklandığı üzere , stake edilmiş tutarlar *kilitlidir*, transfer edilemez, ödeme için kullanıalamaz ve buna benzer işlemler yapılamaz. Bunu hesaba katarak kısa vadede ihtiyaç duymayacağız bir tutarı stake etmelisiniz. Özellikle bir fırıncı kaydını silmek veya stake edilen tutarı değiştirmek için bu işlemin maliyetini karşılayacak serbest GTU'lara sahip olmanız gerektiğini unutmayın.
-   
+
 Kazançları yeniden düzenlemek
 -----------------------------
 Ağa ve bloklara fırıncı hesabıyla dahil olduğunuzda her pişirilen blok için fırıncı hesabı bir ödül kazanır. Bu ödüller varsayılan olarak bahis tutarına (Staked Amount) otomatik olarak eklenir.
@@ -299,7 +298,7 @@ Kazanılan ödülleri re-stake etmek veya etmemeye yönelik yapılan değişikli
    | bahis ve piyango şansının değişmesi           |                                         |                               |
    +-----------------------------------------------+-----------------------------------------+-------------------------------+
 
-Fırıncı düğüm üzerinden ağa kayıt edildiğinde kazancını otomatik olarak yeniden yatıracaktır, ancak yukarıda belirtildiği gibi değiştirilebileceği gibi aşağıda gösterilen ``--no-restake`` argümanının 
+Fırıncı düğüm üzerinden ağa kayıt edildiğinde kazancını otomatik olarak yeniden yatıracaktır, ancak yukarıda belirtildiği gibi değiştirilebileceği gibi aşağıda gösterilen ``--no-restake`` argümanının
 ``baker add`` komutuna eklenmesiyle de değiştirilebilir :
 
 .. code-block:: console
@@ -308,7 +307,7 @@ Fırıncı düğüm üzerinden ağa kayıt edildiğinde kazancını otomatik ola
 
 Kesinleştirme
 -------------
-Kesinleştirme, *kesinleştirme komitesindeki* düğümler tarafından gerçekleştirilen ve yeterli sayıdaki komite üyesinin bloğu alıp sonucu üzerinde anlaştığında bşr bloğu *sonuçlandıran* oylama süresidir. Daha yeni bloklar zincirin bütünlüğünü 
+Kesinleştirme, *kesinleştirme komitesindeki* düğümler tarafından gerçekleştirilen ve yeterli sayıdaki komite üyesinin bloğu alıp sonucu üzerinde anlaştığında bşr bloğu *sonuçlandıran* oylama süresidir. Daha yeni bloklar zincirin bütünlüğünü
 sağlamak için mevcut bir bloğa atanmış olmalıdır. Bu işlem hakkında daha fazla bilgi edinmek için şuraya bakın : :ref:`finalization<glossary-finalization>`.
 
 Kesinleştirme komitesi, belli bir miktar hisseye sahip fırıncılar tarafından oluşturulur. Bu, özellikle kesinleştirme komitesine katılmak için bahsi geçen eşiğe ulaşabilmeniz için bahis tutarınızı (staked amount) değiştirmeniz gerekeceği anlamına gelir.
@@ -353,7 +352,6 @@ ve siz hesap bilgilerinizi sorgulayarak bu değişikliğin ne zaman geçerli ola
 .. warning::
 
    Stake edilmiş tutarı azatlma ve fırıncı hesabını silme işlemi eş zamanlı olarak yapılamaz. Stake edilen tutarın yansıtılma dönemi boyunca fırıncı hesabı silinemez veya tersi de mümkün değildir.
-   
 
 Destek ve Geri Bildirim
 =======================

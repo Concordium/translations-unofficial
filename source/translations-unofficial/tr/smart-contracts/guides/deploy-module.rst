@@ -11,7 +11,7 @@ Bu klavuz zincir üzerindeki (*on-chain*) bir akıllı sözleşmeyi nasıl dağ�
 :ref:`Concordium<downloads>` yazılımının son versiyonu ile :ref:`çalışan bir düğümün (node)<run-a-node>`
 ve dağıtıma hazır bir :ref:`akıllı sözleşme modülün<setup-tools>` olduğundan emin olunuz.
 
-Bir akıllı sözleşme dağıtımı, bir tür "işlem (transaction)" olması sebebiyle,
+Bir akıllı sözleşme dağıtımı, bir tür "işlem (transaction)" olması sebebiyle, 
 bu işlemi yapmayı ödeyebilecek miktarda GTU'ya sahip bir hesap ile ``concordium-client`` 
 kurulmuş olmalıdır.
 
@@ -24,8 +24,7 @@ kurulmuş olmalıdır.
 Dağıtım
 ========
 
-Bir hesap ismi  kullanarak akıllı sözleşme modülü ``my_module.wasm`` dağıtmak için 
-aşağıdaki komut çalıştırılır:
+Bir hesap ismi  kullanarak akıllı sözleşme modülü ``my_module.wasm`` dağıtmak için aşağıdaki komut çalıştırılır:
 
 .. code-block:: console
 
@@ -79,9 +78,8 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
 
    Module successfully deployed with reference: '9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2' (my_deployed_module).
 
-Modüller ayrıca ``name`` komutu kullanılarak da isimlendirilebilinir.
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı 
-modülü ``some_deployed_module`` olarak isimlendirmek için aşağıdaki komut çalıştırılır:
+Modüller ayrıca ``name`` komutu kullanılarak da isimlendirilebilinir. 
+``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı modülü ``some_deployed_module`` olarak isimlendirmek için aşağıdaki komut çalıştırılır:
 
 .. code-block:: console
 

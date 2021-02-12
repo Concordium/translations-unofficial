@@ -6,7 +6,7 @@ Akıllı sözleşme örneğini inceleyin
 
 Bu kılavuz size akıllı bir sözleşme örneğini nasıl inceleyeceğinizi gösterecektir.
 Bir örneği incelemek size adını, sahibini, modül referansını, dengesini, durumunu
-ve alma işlevlerini gösterecektir::
+ve alma işlevlerini gösterecektir.
 
 Hazırlık
 ===========

@@ -11,8 +11,7 @@ Kütüphane sonrasında Rust kullanarak Wasm'a derlenir
 ``wasm32-unknown-unknown`` ve, sadece bir Rust kütüphanesi olduğu sürece, bağımlılık yönetimi için
 Cargo_ kullanılabilir.
 
-Yeni bir akıllı sözleşme projesi kurma, bir proje klasörü yaratılarak başlar. Terminal üzerinde 
-bu proje klasörünün içine girilir ve aşağıdaki komut çalıştırılır:
+Yeni bir akıllı sözleşme projesi kurma, bir proje klasörü yaratılarak başlar. Terminal üzerinde bu proje klasörünün içine girilir ve aşağıdaki komut çalıştırılır:
 
 .. code-block:: console
 
@@ -35,9 +34,7 @@ Bu adımda gerekli olan ``concordium-std`` eklenecektir.
 Bu, Rust dilinde kısa ve etkili bir akıllı sözleşmenin yazılabilmesi için gerekli olan
 prosedürel makro ve fonksiyonları içermektedir.
 
-Kütüphane, ``Cargo.toml`` dosyası açılarak  ``[dependencies]`` alanının içine 
-``concordium-std = "*"`` (tercihen, `*` yerine`concordium-std`_ son versiyonu yazılmalıdır) 
-satırı eklenerek tanımlanır::
+Kütüphane, ``Cargo.toml`` dosyası açılarak  ``[dependencies]`` alanının içine ``concordium-std = "*"`` (tercihen, `*` yerine`concordium-std`_ son versiyonu yazılmalıdır) satırı eklenerek tanımlanır::
 
    [dependencies]
    concordium-std = "0.4"

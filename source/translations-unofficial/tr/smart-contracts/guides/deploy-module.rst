@@ -3,8 +3,7 @@
 ======================================
 Bir akıllı sözleşme modulünü dağıtmak
 ======================================
-Bu klavuz zincir üzerindeki (*on-chain*) bir akıllı sözleşmeyi nasıl dağıtacağınızı ve 
-nasıl isimlendireceğinizi gösterecektir.
+Bu klavuz zincir üzerindeki (*on-chain*) bir akıllı sözleşmeyi nasıl dağıtacağınızı ve nasıl isimlendireceğinizi gösterecektir.
 
 Ön Hazırlık
 ============
@@ -13,7 +12,7 @@ nasıl isimlendireceğinizi gösterecektir.
 ve dağıtıma hazır bir :ref:`akıllı sözleşme modülün<setup-tools>` olduğundan emin olunuz.
 
 Bir akıllı sözleşme dağıtımı, bir tür "işlem (transaction)" olması sebebiyle,
-bu işlemi yapmayı ödeyebilecek miktarda GTU'ya sahip bir hesap ile ``concordium-client``  
+bu işlemi yapmayı ödeyebilecek miktarda GTU'ya sahip bir hesap ile ``concordium-client`` 
 kurulmuş olmalıdır.
 
 .. note::

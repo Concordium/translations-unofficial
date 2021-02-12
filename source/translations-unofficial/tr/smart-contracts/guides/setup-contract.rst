@@ -18,8 +18,7 @@ bu proje klasörünün içine girilir ve aşağıdaki komut çalıştırılır:
 
    $cargo init --lib
 
-Bu komut, varsayılan Rust proje kütüphanelerini yeni birkaç dosya ve klasör oluşturarak 
-kuracak.
+Bu komut, varsayılan Rust proje kütüphanelerini yeni birkaç dosya ve klasör oluşturarak kuracak.
 Terminalde bulunula klasör kontrol edildiğinde bir ``Cargo.toml`` dosyası ve bir ``src``
 klasörü ve bazı gizli dosyalar olduğu görülecektir.
 
@@ -37,7 +36,7 @@ Bu, Rust dilinde kısa ve etkili bir akıllı sözleşmenin yazılabilmesi için
 prosedürel makro ve fonksiyonları içermektedir.
 
 Kütüphane, ``Cargo.toml`` dosyası açılarak  ``[dependencies]`` alanının içine 
-``concordium-std = "*"`` (tercihen, `*` yerine`concordium-std`_ son versiyonu yazılmalıdır)
+``concordium-std = "*"`` (tercihen, `*` yerine`concordium-std`_ son versiyonu yazılmalıdır) 
 satırı eklenerek tanımlanır::
 
    [dependencies]
@@ -49,7 +48,7 @@ Kütüphanenin tüm dökümantasyonuna docs.rs_ linkinden ulaşılabilinir.
 
    Eğer bu kütüphanenin değiştirilmiş bir versiyonu kullanılmak istenirse, ``concordium-std``
    kopyalanamalı ve ``Cargo.toml`` dosyasına, yukarıda belirtilen satır yerine, 
-   aşağıdaki satır eklenmelidir.::
+   aşağıdaki satır eklenmelidir.:: 
 
       [dependencies]
       concordium-std = { path = "./path/to/concordium-std" }

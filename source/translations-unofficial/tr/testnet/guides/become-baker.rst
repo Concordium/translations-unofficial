@@ -68,7 +68,7 @@ Hesap, GTU bakiyesinin bir kısmını *fırıncı hissesine* (*baker stake*) yat
 
 Bir blok pişirmek için seçilecek bir fırıncının, kazanma olasılığı kabaca anlatmak gerekirse stake edilmiş tutarla orantılı olarak değişmektedir.
 
-Aynı stake tutarı bulunan bloğun zincire dahil edilmesiyle ilgili sonladırmanın başarılı olması yada olmaması hesaplarında da kullanılır. Detaylarını görmek için See Finalization_.
+Aynı stake tutarı bulunan bloğun zincire dahil edilmesiyle ilgili sonladırmanın başarılı olması yada olmaması hesaplarında da kullanılır. Detaylarını görmek için See Kesinleştirme_.
 
 .. _epochs-and-slots:
 

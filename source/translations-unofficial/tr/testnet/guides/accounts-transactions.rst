@@ -2,9 +2,9 @@
 
 .. _guide-account-transactions:
 
-============================================
-Concordium ID: Hesaplar ve İşlemler Hakkında
-============================================
+===========================================
+Concordium ID:Hesaplar ve İşlemler Hakkında
+===========================================
 
 .. contents::
    :local:

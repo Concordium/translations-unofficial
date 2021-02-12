@@ -43,9 +43,7 @@ Kütüphanenin tüm dökümantasyonuna docs.rs_ linkinden ulaşılabilinir.
 
 .. note::
 
-   Eğer bu kütüphanenin değiştirilmiş bir versiyonu kullanılmak istenirse, ``concordium-std``
-   kopyalanamalı ve ``Cargo.toml`` dosyasına, yukarıda belirtilen satır yerine, 
-   aşağıdaki satır eklenmelidir.:: 
+   Eğer bu kütüphanenin değiştirilmiş bir versiyonu kullanılmak istenirse, ``concordium-std`` kopyalanamalı ve ``Cargo.toml`` dosyasına, yukarıda belirtilen satır yerine, aşağıdaki satır eklenmelidir.::
 
       [dependencies]
       concordium-std = { path = "./path/to/concordium-std" }

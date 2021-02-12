@@ -12,7 +12,7 @@ Node çalıştırmak
    :backlinks: none
 
 Rehberin bu bölümünde, bilgisayarınızda nasıl bir düğüm (node) kurabileceğinizi, bu düğümü Concordium ağına nasıl dahil edeceğinizi öğreneceksiniz. Bu bilgisayarınızda çalışan düğümün Concordium ağındaki diğer düğümlerden nasıl bloklar ve işlemler alıp ağa yayarak çalışabileceğini tanımlamak anlamına gelir.
- 
+
 Bu kılavuzda anlatılanları tamamladığınızda şunları yapabileceksiniz:
 
 -  Bir Concordium düğümü çalıştırmak
@@ -32,7 +32,7 @@ Bir Concordium düğümü çalıştırmadan önce yapmanız gerekenler :
 
 2. :ref:`concordium-node-and-client-download` yazılımını bilgisayarınıza indirin ve arşivden çıkartın.
 
-Open Testnet'in önceki sürümünden yükseltim yapmak 
+Open Testnet'in önceki sürümünden yükseltim yapmak
 ==================================================
 
 Open Testnet 4 için mevcut en güncel Concordium yazılına yükseltim:
@@ -42,7 +42,7 @@ Open Testnet 4 için mevcut en güncel Concordium yazılına yükseltim:
 -  Arşivden çıkarttığınız dosyalar içerisinden ``concordium-node-reset-data`` komutunu çalıştırın.
 
    -  *Mac* kullanıyorsanız : Aracı ilk kez açtığınızda ``concordium-node-reset-data`` dosyasına sağ tıklayın ve **Open**'ı seçin. Bunu yaptığınızda karşınıza bunun tanınmayan bir geliştirici tarafından oluşturulan bir yazılım olduğu mesajı gelecektir yeniden **Open**'a basın.
-   
+
    -  *Windows* kullanıyorsanız : Aracı ilk kez açtığınızda ``concordium-node-reset-data`` dosyasına çift tıklayın. Bunu yaptığınızda karşınıza yazılımın tanınmayan bir geliştirici tarafından oluşturulduğu mesajı gelecektir.
       **More info** (Daha fazla bilgi) seçeneğine tıkladıktan sonra → **Run anyway** (Çalıştırmaya devam et) seçeneğiyle devam edin.
 
@@ -52,7 +52,7 @@ Open Testnet 4 için mevcut en güncel Concordium yazılına yükseltim:
 
    Önceki sürümler için yaratılan hesaplar Open Testnet'in güncel sürümünde artık geçerli değildir. Bu nedenle eğer daha önceki sürümde bilgisayarınızda saklanmış hesaplar varsa bu adımda *Y* seçeneğiyle devam ederek tüm hesap anahtarlarını silmenizi tavsiye ederiz.
 
-   
+
 .. _running-a-node:
 
 Düğüm çalıştırmak
@@ -67,7 +67,7 @@ Bilgisayarınız üzerinde bir düğüm çalıştırarak Open Testnet'e dahil et
 - *Windows* kullanıyorsanız : Aracı ilk kez açmak için ``concordium-node`` dosyasına çift tıklayın. Bunu yaptığınızda karşınıza yazılımın tanınmayan bir geliştirici tarafından oluşturulduğu mesajı gelecektir. **More info** (Daha fazla bilgi) seçeneğine tıkladıktan sonra → **Run anyway** (Çalıştırmaya devam et) seçeneğiyle devam edin.
 
 
--  Düğümünüzü *yeniden başlatmanız* gerekirse 
+-  Düğümünüzü *yeniden başlatmanız* gerekirse
    ``--no-block-state-import`` seçeneğini kullanabilirsiniz. Bu seçeneği kullandığınızda düğümünüz Concordium zincirinden sadece aktif olmadığı süreçte oluşan güncellemeleri alacak ve sıfırdan tüm veriyi indirmesi gerekmeyecektir. Bu sayede düğümü yeniden başlatma süresini hızlandırabilirsiniz.
 
 2. Düğümünüze bir isim verin. Bu isim herkese açık gösterge panelinde görüntülenecetir.
@@ -110,7 +110,7 @@ Düğüm dört bağlantı noktasını dinler. Dinlenecek bağlantı noktaları d
 -  8082, ara yazılım tarafından (middleware) kullanılan port, bu portu ayarlamak için komut satırında ``--listen-middleware-port`` argümanı kullanılabilir.
 -  10000, gRPC portu, bu portu ayarlamak için komut satırında ``--listen-grpc-port`` argümanı kullanılabilir.
 
-Docker üzerinde bu port eşleştirmelerini değiştirmek istediğinizde düğüm durdurulmalı (:ref:`stop-a-node`), sıfırlanmalı ve yeniden başlatılmaldır. 
+Docker üzerinde bu port eşleştirmelerini değiştirmek istediğinizde düğüm durdurulmalı (:ref:`stop-a-node`), sıfırlanmalı ve yeniden başlatılmaldır.
 Konteyneri sıfırlamak için ``concordium-node-reset-data`` veya terminal ekranında ``docker rm concordium-client`` komutlarını kullanabilirsiniz.
 
 Güvenlik duvarınızı yalnızca 8888 (peer-to-peer bağlantı portu) portundan genel bağlantılara izin verecek şekilde yapılandırmanızı *şiddetle tavsiye ederiz*. Diğer portlara erişimi olan bir başkası düğğümünüzün kontrolünü ele geçirebilir, üzerindeki hesaplara ve düğümde kayıtlı bilgilerinize ulaşabilir.

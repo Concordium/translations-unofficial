@@ -132,7 +132,7 @@ kodda yapılacak değişiklik açıklamaları aşağıda belirtilmiştir:
 
 (Komutun sonunda gördüğünüz çıktı dosyasının adı ise ``baker-credentials.json``) olarak sabit kalmalıdır.
 
-``--no-restake`` bayrağı kullanmak sizi oluşacak ödülleri otomatik olarak fırıncının stake edilmiş tutarına eklemekten korur. Bu davranışın detayları şu bölümde açıklanmıştır : `Restaking the earnings`_.
+``--no-restake`` bayrağı kullanmak sizi oluşacak ödülleri otomatik olarak fırıncının stake edilmiş tutarına eklemekten korur. Bu davranışın detayları şu bölümde açıklanmıştır : `Kazançları yeniden düzenlemek`_.
 
 Fırıncı anahtarları ile düğümünüzü çalıştırabilmek için şu anda çalışan düğümünüzü durdurmanız gerekir. (Bunu çalışır durumdaki terminal ekranında ``Ctrl + C`` komutu girerek veya ``concordium-node-stop`` komutunu kullanarak yapabilirsiniz.
 

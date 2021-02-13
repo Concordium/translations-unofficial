@@ -4,18 +4,18 @@
 Akıllı sözleşme örneğini başlatma
 ====================================
 
-Bu kılavuz, dağıtımı yapılmış bir akıllı sözleşme üzerinden JSON veya binary (2li sistem) 
+Bu kılavuz, dağıtımı yapılmış bir akıllı sözleşme üzerinden JSON veya binary (2li sistem)
 formatında yeni bir akıllı sözleşmenin nasıl başlatıcağını gösterecektir.
 Ek olarak, bu sözleşme örneğinin isimlendirilmesi de gösterilecektir.
 
 Ön hazırlık
 ============
 
-:ref:`Concordium<downloads>` yazılımının son versiyonu ile :ref:`çalışan bir düğümün (node)<run-a-node>` ve 
+:ref:`Concordium<downloads>` yazılımının son versiyonu ile :ref:`çalışan bir düğümün (node)<run-a-node>` ve
 zincir üzerinde :ref:`dağıtılmış bir akıllı sözleşme modülün <deploy-module>` olduğundan emin olunuz.
 
 Bir akıllı sözleşme başlatılması, bir tür “işlem (transaction)” olması sebebiyle,
-bu işlemi yapmayı ödeyebilecek miktarda GTU’ya sahip bir hesap ile 
+bu işlemi yapmayı ödeyebilecek miktarda GTU’ya sahip bir hesap ile
 ``concordium-client`` kullanılmalıdır.
 
 .. note::
@@ -26,8 +26,8 @@ bu işlemi yapmayı ödeyebilecek miktarda GTU’ya sahip bir hesap ile
 Başlatma
 =========
 
-1000'e kadar NRG'nin kullanılmasına izin veren ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` 
-referans numaralı dağıtılmış bir modülden parametresiz akıllı sözleşmenin bir örneğini ``my_contract`` 
+1000'e kadar NRG'nin kullanılmasına izin veren ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2``
+referans numaralı dağıtılmış bir modülden parametresiz akıllı sözleşmenin bir örneğini ``my_contract``
 başlatmak için aşağıdaki komut çalıştırılır:
 
 .. code-block:: console
@@ -49,7 +49,7 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
 
    Contract successfully initialized with address: {"index":0,"subindex":0}
 
-Bu mesaj, zincir üzerinde yeni bir sözleşme örneğinin gösterilen adres ile 
+Bu mesaj, zincir üzerinde yeni bir sözleşme örneğinin gösterilen adres ile
 başarılı bir şekilde yaratıldığı anlamına gelmektedir.
 
 .. seealso::
@@ -68,7 +68,7 @@ başarılı bir şekilde yaratıldığı anlamına gelmektedir.
 Parametreleri JSON formatında kullanma
 ----------------------------------------
 
-JSON formatındaki bir parametre, bir dosya olarak veya modüle gömülü olarak bir 
+JSON formatındaki bir parametre, bir dosya olarak veya modüle gömülü olarak bir
 :ref:`akıllı sözleşme şeması<contract-schema>` sağlanırsa iletilebilir.
 Şema aynı zamanda JSON'ı ikili formata dönüştürmek için de kullanılır.
 
@@ -79,7 +79,7 @@ JSON formatındaki bir parametre, bir dosya olarak veya modüle gömülü olarak
    :ref:`Parametreleri ikili (binary) formatında kullanma<init-passing-parameter-bin>`.
 
 JSON formatında ``my_parameter.json`` parametre dosyası ve
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı 
+``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı
 modülden ``my_parameter_contract`` isimli bir sözleşme örneği oluşturmak için
 aşağıdaki komut çalıştırılır:
 
@@ -117,12 +117,12 @@ Sıklıkla karşılaşılan hata mesajları bir sonraki bölümde gösterilmekte
 
 .. note::
 
-   Eğer verilen modül gömülü bir şema içermiyorsa, ``--schema /path/to/schema.bin`` parametresi 
+   Eğer verilen modül gömülü bir şema içermiyorsa, ``--schema /path/to/schema.bin`` parametresi
    kullanılarak şema sağlanabilir.
 
 .. note::
 
-   Bir sözleşme örneğinin başlatılması sırasında, GTU'lar ``--amount AMOUNT`` parametresi 
+   Bir sözleşme örneğinin başlatılması sırasında, GTU'lar ``--amount AMOUNT`` parametresi
    kullanılarak transfer edilebilir.
 
 
@@ -134,8 +134,8 @@ Parametreleri ikili (binary) formatında kullanma
 Parametreler ikili (binary) formatında kullanıldığı zaman, bir :ref:`sözleşme şemasına
 <contract-schema>` ihtiyaç yoktur.
 
-İkili (binary) formatında ``my_parameter.bin`` parametre dosyası ve 
-``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı 
+İkili (binary) formatında ``my_parameter.bin`` parametre dosyası ve
+``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı
 modülden ``my_parameter_contract`` isimli bir sözleşme örneği oluşturmak için
 aşağıdaki komut çalıştırılır::
 
@@ -164,7 +164,7 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
 Bir sözleşme örneğinin isimlendirilmesi
 ========================================
 
-Bir sözleşme örneği, referans vermeyi kolaylaştırmak amacıyla bir takma ad veya gerçek bir *ad*  
+Bir sözleşme örneği, referans vermeyi kolaylaştırmak amacıyla bir takma ad veya gerçek bir *ad*
 ile isimlendirilebilinir. Bu isim sadece yerel (local) olarak ``concordium-client`` tarafından
 saklanır ve zincir üzerinde görünür değildir.
 
@@ -175,8 +175,8 @@ saklanır ve zincir üzerinde görünür değildir.
 
 Başlama sırasında isimlendirmek için, ``--name`` parametresi kullanılır.
 
-Burada, ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans 
-numaralı modülden oluşturulmuş  
+Burada, ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans
+numaralı modülden oluşturulmuş
 ``my_contract`` sözleşmesi başlatılıyor, ve ``my_named_contract`` olarak isimlendiriliyor:
 
 .. code-block:: console

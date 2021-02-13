@@ -1,10 +1,10 @@
 .. _`Network Dashboard`: https://dashboard.testnet.concordium.com/
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _menjalankan-node:
+.. _jalankan-node:
 
 ================
-Menjalankan Node
+Jalankan Node
 ================
 
 .. contents::

@@ -83,7 +83,7 @@ Fonksiyon argümanları için test saplamaları, ``test_infrastructure`` adı ve
    Show more of how to write the unit test
 
 Wasm'da testleri çalıştırma
-=====================
+=============================
 
 Testlerin yerel makine koduna derlenmesi çoğu durumda yeterlidir, ancak testleri
 Wasm olarak derlemek ve düğümler tarafından kullanılan yorumlayıcıyı kullanarak
@@ -99,7 +99,7 @@ Bu çalıştırıcı Concordium düğümlerinde de bulunan Wasm yorumlayıcısı
    ``cargo-concordium`` un nasıl kurulacağına dair :ref:`setup-tools` kılavuzu'na bakabilirsiniz.
 
 Birim testi, ``#[test]`` yerine ``#[concordium_test]`` ile yapılmalıdır ve ``#[cfg(test)]``
-yerine ``#[concordium_cfg_test]`` kullanılmasını önermekteyiz::
+yerine ``#[concordium_cfg_test]`` kullanılmasını önermekteyiz:
 
 .. code-block:: rust
 

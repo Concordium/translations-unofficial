@@ -31,7 +31,7 @@ Proses menjadi baker dapat diringkas dalam langkah-langkah berikut:
 Setelah menyelesaikan langkah-langkah ini, node baker akan baking blok. Jika blok dipanggang
 ditambahkan ke rantai, baker node akan menerima hadiah.
 
-.. catatan::
+.. note::
 
    Pada bagian ini kita akan menggunakan nama ``bakerAccount`` sebagai nama
    akun yang akan digunakan untuk mendaftar dan mengelola baker.
@@ -75,7 +75,7 @@ Akun tersebut dapat mempertaruhkan sebagian dari saldo GTU-nya ke dalam *baker s
 dapat secara manual melepaskan semua atau sebagian dari jumlah yang dipertaruhkan. Jumlah yang dipertaruhkan
 tidak bisa dipindahkan atau ditransfer sampai dirilis oleh baker.
 
-.. catatan::
+.. note::
 
    Jika akun memiliki jumlah yang ditransfer dengan jadwal rilis,
    jumlah tersebut dapat dipertaruhkan meskipun belum dirilis.
@@ -132,7 +132,7 @@ kunci penandatanganan transaksi dan kunci transfer terenkripsi.
 Membuat kunci untuk baker dan mendaftarkannya
 ---------------------------------------------
 
-.. catatan::
+.. note::
 
    Untuk proses ini, akun perlu memiliki beberapa GTU, jadi pastikan untuk meminta
    pemberian 100 GTU untuk akun di aplikasi seluler.
@@ -195,7 +195,7 @@ transaksi untuk menambahkan baker sudah termasuk dalam satu blok.
    | Baker termasuk dalam panitia baking       |                                         | ✓               |
    +-------------------------------------------+-----------------------------------------+-----------------+
 
-.. catatan::
+.. note::
 
    Jika transaksi untuk menambahkan baker dimasukkan dalam blok selama epoch `E`,
    baker akan dianggap sebagai bagian dari panitia baking saat epoch
@@ -307,7 +307,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
    | baker dapat dibuang                       |                                         |                                         |
    +-------------------------------------------+-----------------------------------------+-----------------------------------------+
 
-.. catatan::
+.. note::
 
    Di testnet, ``bakerCooldownEpochs`` awalnya disetel ke 168 epoch. Nilai
    ini dapat diperiksa sebagai berikut:
@@ -442,7 +442,7 @@ dengan ``concordium-client`` seperti biasa:
    | Baker dikeluarkan dari panitia baking      |                                         | ✓                                       |
    +--------------------------------------------+-----------------------------------------+-----------------------------------------+
 
-.. peringatan::
+.. warning::
 
    Mengurangi jumlah yang distake dan mengeluarkan baker tidak dapat dilakukan
    serentak. Selama periode cooldown yang dihasilkan dengan mengurangi jumlah

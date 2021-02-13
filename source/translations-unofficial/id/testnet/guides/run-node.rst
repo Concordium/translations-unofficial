@@ -1,7 +1,7 @@
 .. _`Network Dashboard`: https://dashboard.testnet.concordium.com/
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _run-a-node:
+.. _menjalankan-node:
 
 ================
 Menjalankan Node
@@ -64,7 +64,7 @@ Untuk meningkatkan ke software Concordium saat ini, untuk Open Testnet 4:
    sebelumnya kami sarankan memasukkan **y** yang akan menghapus semua kunci
    akun.
 
-.. _running-a-node:
+.. _menjalankan-node:
 
 Menjalankan Node
 ================
@@ -163,7 +163,7 @@ izinkan koneksi publik pada port 8888 (port jaringan peer-to-peer
 ). Seseorang dengan akses ke port lain mungkin dapat mengambil
 kontrol dari node Anda atau akun yang telah Anda simpan di node.
 
-.. _stop-a-node:
+.. _menghentikan-node:
 
 Menghentikan node
 =================
@@ -187,4 +187,3 @@ mengambil informasi tentang program yang sedang berjalan di sistem.
 Anda dapat mengirim log, informasi sistem, pertanyaan, dan umpan balik Anda ke
 testnet@concordium.com. Anda juga dapat menghubungi di `Discord`_ kami, atau
 lihat :ref: `halaman pemecahan masalah <troubleshooting-and-known-issues>`
-

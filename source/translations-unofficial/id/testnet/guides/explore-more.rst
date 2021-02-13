@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-explore-more:
+.. _testnet-jelajahi-lebih lanjut:
 
 =========================================
 Concordium ID: Jelajahi halaman *Lainnya*

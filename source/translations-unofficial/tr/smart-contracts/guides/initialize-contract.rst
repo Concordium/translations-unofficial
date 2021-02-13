@@ -194,8 +194,8 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
 
    Contract successfully initialized with address: {"index":0,"subindex":0} (my_named_contract).
 
-Sözleşme örneği ayrıca ``name`` komutu kullanılarak da isimlendirilebilinir. 
-``0`` adres dizinli bir sözleşme örneğini ``my_named_contract`` olarak isimlendirmek için,
+Sözleşme örneği ayrıca ``name`` komutu kullanılarak da isimlendirilebilinir. ``0`` adres dizinli 
+bir sözleşme örneğini ``my_named_contract`` olarak isimlendirmek için,
 aşağıdaki komut çalıştırılır:
 
 .. code-block:: console

@@ -319,7 +319,7 @@ rantai segera setelah transaksi dimasukkan dalam blok, dapat dikonsultasikan mel
               "bakerCooldownEpochs": 168
       ...
 
-.. peringatan::
+.. warning::
 
    Seperti disebutkan di bagian `Definisi`_, jumlah yang dipertaruhkan *dikunci*,
    yaitu tidak dapat ditransfer atau digunakan untuk pembayaran. Anda harus mengambil ini

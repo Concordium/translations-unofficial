@@ -13,26 +13,6 @@ Testnet
    guides/run-node
    guides/become-baker
 
-.. toctree::
-   :maxdepth: 1
-   :caption: References
-
-   references/concordium-client
-   references/id-accounts
-   references/manage-accounts
-   references/transactions
-   references/query-node
-
-.. toctree::
-   :maxdepth: 1
-   :caption: See Also
-
-   see-also/downloads
-   see-also/troubleshooting
-   see-also/glossary
-   see-also/release-notes
-   see-also/third-party-licenses
-
 Support & Feedback
 ==================
 

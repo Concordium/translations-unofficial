@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-get-started:
+.. _testnet-memulai:
 
 ===============================
 Concordium ID: Memulai aplikasi

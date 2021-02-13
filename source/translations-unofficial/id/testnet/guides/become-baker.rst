@@ -3,7 +3,7 @@
 .. _node-dashboard: http://localhost:8099
 .. _Discord: https://discord.com/invite/xWmQ5tp
 
-.. _become-a-baker:
+.. _menjadi-baker:
 
 ==================================
 Menjadi Baker (membuat blok)
@@ -87,9 +87,9 @@ sebanding dengan jumlah yang dipertaruhkan.
 Stake yang sama digunakan saat menghitung apakah seorang baker termasuk dalam finalisasi
 komite atau tidak. Lihat Finalisasi_.
 
-.. _epochs-and-slots:
+.. _epochs-dan-slot:
 
-Epochs and slot
+Epochs dan slot
 ---------------
 
 Di blockchain Concordium, waktu dibagi menjadi *slot*. Slot punya waktu

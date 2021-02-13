@@ -237,3 +237,5 @@ linkcheck_request_headers = {
         "Accept-Encoding": "utf-8",
     }
 }
+
+extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']

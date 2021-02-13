@@ -29,14 +29,14 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc4.png
       :width: 32%
 
-如果确实按了 **“显示帐户属性”**  按钮，则将转到下一页。您可以勾选要显示的属性，然后按 **提交帐户** 。在此页面或上一页中按 **“提交帐户”** ，将带您进入最终帐户创建页面，该页面将为您提供简短概述并告诉您该帐户已提交。
+如果确实按了 **“显示帐户属性”**  按钮，则将转到下一页。您可以勾选要显示的属性，然后按 **"提交帐户"** 。在此页面或上一页中按 **“提交帐户”** ，将带您进入最终帐户创建页面，该页面将为您提供简短概述并告诉您该帐户已提交。
 
 .. image:: images/concordium-id/acc5.png
       :width: 32%
 .. image:: images/concordium-id/acc6.png
       :width: 32%
 
-通过单击 **确定，谢谢您** 在提交概述中，您将返回到帐户页面。您可能会发现您的新帐户仍处于待处理状态，因为这可能需要几分钟才能最终确定。如果您尚未尝试这样做，则可以尝试按其中一张帐户卡上的向下箭头，以查看它会折叠到该卡上。这展示了两个新的信息： *可支配(at disposal)* 和 *已抵押(staked)* 。 **“可支配”** 字段将告诉您在给定的时刻有多少可用的帐户余额，以及您可以在 :ref:`managing accounts<managing_accounts>` 页面上详细了解的抵押金额。
+通过单击 **"确定，谢谢您"** 在提交概述中，您将返回到帐户页面。您可能会发现您的新帐户仍处于待处理状态，因为这可能需要几分钟才能最终确定。如果您尚未尝试这样做，则可以尝试按其中一张帐户卡上的向下箭头，以查看它会折叠到该卡上。这展示了两个新的信息： *可支配(at disposal)* 和 *已抵押(staked)* 。 **“可支配”** 字段将告诉您在给定的时刻有多少可用的帐户余额，以及您可以在 :ref:`managing accounts<managing_accounts>` 页面上详细了解的抵押金额。
 
 .. image:: images/concordium-id/acc7.png
       :width: 32%
@@ -46,7 +46,7 @@ Concordium ID：开始使用帐户和交易
 
 进行交易
 ====================
-接下来，尝试按新创建帐户的 **“余额”** 区域。在此界面上，您可以看到帐户的当前余额，并且在这一点上，您还可以在测试网(Testnet)中请求100GTU。对于100 GTU的请求是Testnet的功能. 而在Testnet 4中，它将实际上将2000 GTU转移到该帐户，即使该按钮显示为100GTU。 测试网中，每个新帐户仅仅可以获取一次GTU。按下它，您会注意到交易创建了。一会后，2000 GTU将会被添加到您的帐户中。
+接下来，我们尝试点击新创建帐户的 **“余额”** 。在此界面上，您可以看到帐户的当前余额，并且在这里，您还可以在测试网(Testnet)中请求100GTU。请求获取100 GTU是Testnet的(水龙头)功能. 而在Testnet 4中，它将实际上将2000 GTU转移到该帐户，即使该按钮显示为100GTU。 测试网中，每个新帐户仅仅可以获取一次GTU。点击下它，您可以看到交易被创建了。一会后，2000 GTU将会被添加到您的帐户中。
 
 .. image:: images/concordium-id/acc9.png
       :width: 32%
@@ -60,7 +60,7 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc12.png
       :width: 32%
 
-确定金额后，我们现在将选择收款人。为此，请按 **“选择收款人(Recipient)”** 或 **“屏蔽(shielded)数量(shield amount)”** 按钮。在此页面上，您可以在通讯簿中搜索收款人，也可以通过扫描接收帐户的 QR码 来添加收款人。正如您在界面截图中所看到的，我们仅保存了一个收款人，即 *示例帐户1* 。然后，我们可以选择 **Shield an amount** ，但稍后我们会再讨论。在此示例中，我们将选择 *示例帐户1* 作为我们的收款人。
+确定金额后，我们现在将选择收款人。为此，请按 **“选择收款人(Recipient)”** 或 **“屏蔽数额(shield amount)”** 按钮。在此页面上，您可以在通讯簿中搜索收款人，也可以通过扫描接收帐户的 QR码 来添加收款人。正如您在界面截图中所看到的，我们仅保存了一个收款人，即 *示例帐户1* 。然后，我们可以选择 **Shield an amount** ，但稍后我们会再讨论。在此示例中，我们将选择 *示例帐户1* 作为我们的收款人。
 
 .. image:: images/concordium-id/acc13.png
       :width: 32%
@@ -74,7 +74,7 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc16.png
       :width: 32%
 
-现在，我们可以看到 **“示例帐户2 ”** 的 **“转帐(Transfers)”** 日志显示已扣除了该金额，再加上一笔费用。所有交易都将收取费用，并且根据交易类型的不同，费用可能会有所不同。点击交易将使您看到更多它的详细信息。
+现在，我们可以看到 **“示例帐户2 ”** 的 **“转帐(Transfers)”** 日志显示已扣除了该金额和一笔费用。所有交易都将收取费用，并且根据交易类型的不同，费用可能会有所不同。点击交易将使您看到更多它的详细信息。
 
 .. image:: images/concordium-id/acc17.png
       :width: 32%
@@ -85,7 +85,7 @@ Concordium ID：开始使用帐户和交易
 
 将金额移动到 *被保护的余额(shielded balance)*
 ========================================
-如果返回到 **“帐户”** 界面，现在可以看到 10 GTU 已转移到 **示例帐户1** 的余额中。您可能已经注意到，这些帐户还具有： :ref:`glossary-shielded-balance` 。简而言之，屏蔽(shielded)余额用于在帐户上持有GTU的屏蔽(shielded)（加密的）金额。现在让我们尝试在 **“示例帐户2 ”** 中添加一些受屏蔽(shielded)的GTU 。首先按下帐户卡的 **“屏蔽(shielded)余额(Shielded Balance)”** 。
+如果返回到 **“帐户”** 界面，现在可以看到 10 GTU 已转移到 **示例帐户1** 的余额中。您可能已经注意到，这些帐户还具有： :ref:`glossary-shielded-balance` 。简而言之，屏蔽(shielded)余额用于在帐户上持有GTU的屏蔽(shielded)（加密的）金额。现在让我们尝试在 **“示例帐户2 ”** 中添加一些受屏蔽(shielded)的GTU 。首先按下帐户卡的 **被保护的余额(Shielded Balance)** 。
 
 .. image:: images/concordium-id/acc19.png
       :width: 32%
@@ -131,6 +131,7 @@ Concordium ID：开始使用帐户和交易
 
 
 现在，如果您返回到 **“帐户”** 界面，您应该能够看到收款账户的 **“受保护的余额”** 中的金额旁边出现了一个小盾牌。这表明在的 **被保护的余额(Shielded Balance)** 上有新接收到的被屏蔽(shielded)的交易。尝试点击 **被保护的余额(Shielded Balance)** ，请注意，您必须输入密码或使用生物识别技术才能进入界面。发生这种情况是因为您需要先解密收到的被屏蔽(shielded)交易，然后才能看到交易中的金额。
+
 .. image:: images/concordium-id/acc31.png
       :width: 32%
 .. image:: images/concordium-id/acc32.png
@@ -138,14 +139,14 @@ Concordium ID：开始使用帐户和交易
 
 揭开(Unshield)金额
 ==================
-解密后，现在我们在 **被保护的余额(Shielded Balance)** 和 **“帐户”** 界面上的帐户卡上可以看到该金额了。现在，如果我们想将一些 GTU 从屏蔽(shielded)余额转移到常规余额，该怎么办？让我们尝试通过 *取消屏蔽(Unshielding)* 金额的操作将 2 GTU移至常规余额 。为此，请点击 **被保护的余额(Shielded Balance)** 中的 **“发送”** 按钮。输入2作为金额，然后按 **选择收款人** 或 **“取消屏蔽(Unshield)金额”** . **选择取消屏蔽(Unshield)金额** 。
+解密后，现在我们在 **被保护的余额(Shielded Balance)** 和 **“帐户”** 界面上的帐户卡上可以看到该金额了。现在，如果我们想将一些 GTU 从屏蔽(shielded)余额转移到常规余额，该怎么办？让我们尝试通过 *取消屏蔽(Unshielding)* 金额的操作将 2 GTU移至常规余额 。为此，请点击 **被保护的余额(Shielded Balance)** 中的 **“发送”** 按钮。输入2作为金额，然后按 **选择收款人** 或 **选择取消屏蔽(Unshield)金额** 。
 
 .. image:: images/concordium-id/acc33.png
       :width: 32%
 .. image:: images/concordium-id/acc34.png
       :width: 32%
 
-接下来，我们就像完成其他交易一样完成交易，然后尝试跳转到帐户的常规余额以查看 *Unshielded* 金额。如果交易已经在链上完成，您现在应该可以看到常规余额中已显示 **未屏蔽(Unshielded)金额** 。请注意，即使您刚刚取消屏蔽(Unshielded)的金额是2 ，而这里它并不是2 GTU。这是因为进行任何事务（包括取消屏蔽(unshielding)）的费用将从负责该交易的帐户的常规余额中扣除。
+接下来，我们就像完成其他交易一样完成交易，然后尝试跳转到帐户的常规余额以查看 *Unshielded* 金额。如果交易已经在链上完成，您现在应该可以看到常规余额中已显示 **未屏蔽(Unshielded)金额** 。请注意，虽然您刚刚取消屏蔽(Unshielded)的金额是2GTU，但这里它并不是2 GTU。这是因为进行任何事务（包括取消屏蔽(unshielding)）的费用将从负责该交易的帐户的常规余额中扣除。
 
 .. image:: images/concordium-id/acc35.png
       :width: 32%
@@ -161,9 +162,9 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc38.png
       :width: 32%
 
-了解*release schedule*
+了解 *Release schedule* 
 ==========================
-在Concordium区块链上可以进行这样的一种交易，该类交易的转账金额需要随着时间流逝而逐步释放(收款人只能使用已经释放的部分), 这称为*带计划*的 *转账*。现在我们将不讨论如何进行这样的转账，因为它不能从concordium ID完成，但是让我们看看release schedule是怎样工作的。如果您收到一笔包含release schedule的转帐，则可以按余额界面右上角的 **汉堡菜单( burger menu)** ，这里你可以点击 **Release schedule** ，然后您将进入一个界面，其中显示此转账将包含 *释放多少 GTU* 以及 *何时释放* 的信息。如果您想了解更多有关如何进行带"Release Schedule"的转账，您可以看一下: :ref:`concordium_client` 和 :ref:`transactions` 页面。
+在Concordium区块链上可以进行这样的一种交易，该类交易的转账金额需要随着时间流逝而逐步释放(收款人只能使用已经释放的部分), 这称为 *带计划* 的 *转账*。现在我们将不讨论如何进行这样的转账，因为它不能从concordium ID完成，但是让我们看看release schedule是怎样工作的。如果您收到一笔包含release schedule的转帐，则可以按余额界面右上角的 **汉堡菜单( burger menu)** ，这里你可以点击 **Release schedule** ，然后您将进入一个界面，其中显示着此转账将包含 *释放多少 GTU* 以及 *何时释放* 的信息。如果您想了解更多有关如何进行带"Release Schedule"的转账，您可以看一下: :ref:`concordium_client` 和 :ref:`transactions` 页面。
 
 .. image:: images/concordium-id/rel1.png
       :width: 32%

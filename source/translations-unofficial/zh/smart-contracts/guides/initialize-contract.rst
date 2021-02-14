@@ -85,7 +85,7 @@
 
    如果以JSON格式提供的参数不符合schema中指定的类型，则将显示错误消息。例如：
 
-.. code-block:: console
+       .. code-block:: console
 
        Error: Could not decode parameters from file 'my_parameter.json' as JSON:
        Expected value of type "UInt64", but got: "hello".
@@ -111,7 +111,7 @@
 
 当以二进制格式传递参数时，就不需要合约schema :ref:`contract schema <contract-schema>` 。
 
-要使用二进制格式的参数文件 ``my_parameter.bin`` 来初始化 *模块(引用编号: ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2``) * 中的 *合约 ``my_parameter_contract`` * 的实例，请运行以下命令： 
+要使用二进制格式的参数文件 ``my_parameter.bin`` 来初始化 *模块(引用编号: ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` )* 中的 *合约 ``my_parameter_contract`` * 的实例，请运行以下命令： 
 
 .. code-block:: console
 

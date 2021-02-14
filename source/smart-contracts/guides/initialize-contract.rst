@@ -57,7 +57,7 @@ with the address shown.
 .. seealso::
 
    To get a deeper understanding of contract initialization, see
-   :ref:`contract-instances-init-on-chain`.
+   :ref:`contract-instances-init-on-chain0`.
 
    For more information about module references and instance addresses,
    see :ref:`references-on-chain`.

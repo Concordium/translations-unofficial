@@ -75,7 +75,7 @@ treating the GTU amount separately is that GTU can only be spent and
 received according to rules of the network, e.g., contracts cannot create
 or destroy GTU tokens.
 
-.. _contract-instances-init-on-chain:
+.. _contract-instances-init-on-chain0:
 
 Instantiating a smart contract on-chain
 =======================================

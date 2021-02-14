@@ -72,8 +72,8 @@ and accounts<reference-id-accounts>` 页面上了解有关帐户的更多信息�
 
 按 **继续身份提供商**, 您将被带到一个页面，在这页面里您必须在身份提供商之间进行选择。身份提供者是一个外部实体，它将在返回要在链上使用的身份对象之前，验证您的身份。目前，您可以选择以下选项：
 
-* *Notabene Development，它会授予你一个未经真实身份认证的测试身份,
-* *Notabene，通过它可以验证您的真实身份。
+* *Notabene Development* ，它会授予你一个未经真实身份认证的测试身份,
+* *Notabene* ，通过它可以验证您的真实身份。
 
 .. image:: images/concordium-id/int8.png
       :width: 32%

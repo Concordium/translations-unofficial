@@ -119,5 +119,4 @@
 
 可以使用该 ``concordium-node-retrieve-logs`` 工具检索节点的日志信息 。这会将日志从运行中的映像容器中保存到文件。此外，如果获得许可，它将检索有关系统上当前正在运行的程序的信息。
 
-您可以将日志、操作系统信息、问题和反馈发送到 testnet@concordium.com。您也可以与我们的  `Discord`_ 联系，或查看我们的问题排查页面 :ref:`troubleshooting page<troubleshooting-and-known-issues>` 
-
+您可以将日志、操作系统信息、问题和反馈发送到 testnet@concordium.com。您也可以与我们的  `Discord`_ 联系，或查看我们的问题排查页面 :ref:`troubleshooting page<troubleshooting-and-known-issues>`

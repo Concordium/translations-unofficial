@@ -84,7 +84,7 @@ Concordium ID：开始使用帐户和交易
 .. _move-an-amount-to-the-shielded-balance:
 
 将金额移动到 *被保护的余额(shielded balance)*
-========================================
+================================================
 如果返回到 **“帐户”** 界面，现在可以看到 10 GTU 已转移到 **示例帐户1** 的余额中。您可能已经注意到，这些帐户还具有： :ref:`glossary-shielded-balance` 。简而言之，屏蔽(shielded)余额用于在帐户上持有GTU的屏蔽(shielded)（加密的）金额。现在让我们尝试在 **“示例帐户2 ”** 中添加一些受屏蔽(shielded)的GTU 。首先按下帐户卡的 **被保护的余额(Shielded Balance)** 。
 
 .. image:: images/concordium-id/acc19.png
@@ -162,7 +162,7 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc38.png
       :width: 32%
 
-了解 *Release schedule* 
+了解 *Release schedule*
 ==========================
 在Concordium区块链上可以进行这样的一种交易，该类交易的转账金额需要随着时间流逝而逐步释放(收款人只能使用已经释放的部分), 这称为 *带计划* 的 *转账*。现在我们将不讨论如何进行这样的转账，因为它不能从concordium ID完成，但是让我们看看release schedule是怎样工作的。如果您收到一笔包含release schedule的转帐，则可以按余额界面右上角的 **汉堡菜单( burger menu)** ，这里你可以点击 **Release schedule** ，然后您将进入一个界面，其中显示着此转账将包含 *释放多少 GTU* 以及 *何时释放* 的信息。如果您想了解更多有关如何进行带"Release Schedule"的转账，您可以看一下: :ref:`concordium_client` 和 :ref:`transactions` 页面。
 

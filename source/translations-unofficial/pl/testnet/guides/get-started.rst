@@ -13,7 +13,7 @@ Concordium ID: Zaczynaj z aplikacją
 
 Przed wykonaniem tego przewodnika powinieneś był skończyć instalacja Concordium ID, tak jak opisane w :ref:`the poprzedni rozdział<testnet-get-the-app>`.
 
-Ustaw kod dostępu i dane biometryczne
+Skonfiguruj passcode i dane biometryczne
 ================================
 
 Kiedy otwierasz the Concordium ID app po raz pierwszy, zostaniesz powitany przez przepływ
@@ -29,7 +29,7 @@ Pierwszy ekran Spotkacie się podczas otwierania Concordium ID jest ten. To będ
 aby rozpocząć, musisz przejść przez ten proces.
 
 Jeśli chcesz kontynuować, możesz nacisnąć **Tak, chodźmy!** następny ekran poprosi Cię o wejście
-sześciocyfrowy kod dostępu. Jeśli wolisz używać pełnego hasła zawierającego litery, również możesz zdecyduj się to zrobić tutaj.
+sześciocyfrowy passcode. Jeśli wolisz używać pełnego hasła zawierającego litery, również możesz zdecyduj się to zrobić tutaj.
 
 .. image:: images/concordium-id/int1.png
       :width: 32%

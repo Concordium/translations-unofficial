@@ -145,7 +145,7 @@ To summarize, a transaction for smart-contract interaction includes:
 - Parameter to the receive function.
 - Amount of GTU for the instance.
 
-.. _contract-instance-actions:
+.. _contract-instance-actions0:
 
 Logging events
 ==============

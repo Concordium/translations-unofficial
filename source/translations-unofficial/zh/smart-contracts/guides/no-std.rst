@@ -17,7 +17,7 @@
    $rustup toolchain install nightly
 
 
-设置用于 ``no_std``
+创建 ``no_std`` 合约模块
 ====================================
 
 该 ``concordium-std`` 库提供了 ``std`` 功能，该功能让我们使用 rust 标准库。此功能是默认启用的。

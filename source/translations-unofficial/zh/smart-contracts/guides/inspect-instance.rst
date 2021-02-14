@@ -1,24 +1,25 @@
+
 .. _inspect-instance:
 
 =================================
 检查智能合约实例
 =================================
 
-本指南将向您展示如何检查智能合约实例。检查实例将向您显示其名称，所有者，模块引用，余额，状态和接收功能：
+本指南将向您展示如何检查智能合约实例。检查实例将向您显示其名称，所有者，模块引用(module reference)，余额，状态和revieve函数：
 
-制备
+准备
 ===========
 
-确保您正在使用最新的 :ref:`Concordium software<downloads>` 运行一个节点 :ref:`running a node<run-a-node>`，并且要在链上检查智能合约实例。
+确保您正在使用最新的 :ref:`Concordium software<downloads>` 运行一个节点 :ref:`running a node<run-a-node>` ，并且要在链上检查智能合约实例。
 
-.. 另
-   请参阅：有关如何部署智能合约模块的信息，请参见：部署模块，以及
-   如何创建实例的初始化协议。
+.. 另::
+   有关如何部署智能合约模块，请参见：:ref:`deploy-module` 和
+   如何创建实例: :ref:`initialize-contract` .
 
 检查
 ==========
 
-要检查或显示有关具有地址索引的智能合约实例的信息0，请运行以下命令：
+检查或显示地址索引序号为 ``0`` 的智能合约实例的相关信息，运行以下命令：
 
 .. code-block:: console
 
@@ -41,18 +42,15 @@
     - receive_one
     - receive_two
 
-.. 另
-
-   请参见
-   ：有关合同实例地址的更多信息，请参阅 :ref:`references-on-chain` 。
+.. 另::
+   有关合约实例地址的更多信息，请参阅 :ref:`references-on-chain` 。
 
 
-检查的详细程度取决于 ``show`` 命令是否可以访问 :ref:`contract schema <contract-schema>` 。如果架构是嵌入式的，则将隐式使用它。否则，可以使用 ``--schema /path/to/schema.bin``  参数提供架构。
+合约检查的细腻程度取决于 ``show`` 命令是否可以访问 :ref:`contract schema <contract-schema>` 。如果schema是嵌入式的，它将被隐式使用。否则，可以通过 ``--schema /path/to/schema.bin``  参数指定schema文件路径。
 
 .. 注意::
 
-   使用 ``--schema`` 参数提供的模式文件将优先于嵌入式模式。
+   使用 ``--schema`` 参数提供的schema文件将优先于嵌入式schema。
 
-.. 另::
-
+.. 另参阅::
    :ref:`Read more about why and how to use smart contract schemas <contract-schema>` .

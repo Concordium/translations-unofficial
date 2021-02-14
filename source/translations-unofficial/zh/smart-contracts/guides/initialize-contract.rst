@@ -16,7 +16,7 @@
 .. 注意::
 
    此交易的成本取决于发送给init函数的参数的大小以及函数本身的复杂性。
-   
+
 初始化
 ==============
 
@@ -100,7 +100,7 @@
    如果给定的模块不包含嵌入式schema，则可以使用 ``--schema /path/to/schema.bin`` 参数提供它。
 
 .. 注意::
-  
+
    GTU也可以在初始化合约实例时使用 ``--amount AMOUNT`` 参数转移到合同实例。
 
 
@@ -111,7 +111,7 @@
 
 当以二进制格式传递参数时，就不需要合约schema :ref:`contract schema <contract-schema>` 。
 
-要使用二进制格式的参数文件 ``my_parameter.bin`` 来初始化 *模块(引用编号:9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2)中的合约my_parameter_contract* 的实例，请运行以下命令： 
+要使用二进制格式的参数文件 ``my_parameter.bin`` 来初始化 *模块(引用编号:9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2)中的合约my_parameter_contract* 的实例，请运行以下命令：
 
 .. code-block:: console
 

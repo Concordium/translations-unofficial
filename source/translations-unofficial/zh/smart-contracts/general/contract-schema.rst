@@ -8,7 +8,7 @@
 ..
 
 .. _`custom section`: https://webassembly.github.io/spec/core/appendix/custom.html
-.. _`implementation in Rust`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
+.. _`Rust中的实现`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
 
 .. _contract-schema:
 
@@ -41,7 +41,7 @@
    然后，该schema要么嵌入到部署到链的智能合约模块中，要么写入到文件并在链外传递。
 
 那schema应该嵌入到模块中还是写到文件中呢？
-====================================
+============================================
 
 合约schema应该嵌入还是写入文件取决于您的情况。
 
@@ -118,7 +118,5 @@ schema可以包含
 将schema嵌入到链上
 ==========================
 
-使用Wasm模块的 `自定义节`_ 特性将schema嵌入到智能合约模块中。这允许Wasm模块包含一个命名的字节段，这不会影响运行Wasm模块的语义。
+使用Wasm模块的 `custom section`_ 特性将schema嵌入到智能合约模块中。这允许Wasm模块包含一个命名的字节段，这不会影响运行Wasm模块的语义。
 所有schema都被收集并添加到一个名为 ``concordium-schema-v1`` 的自定义部分中。这个集合是一个对的列表，包含用UTF-8编码的契约名称和契约schema字节。
-
-

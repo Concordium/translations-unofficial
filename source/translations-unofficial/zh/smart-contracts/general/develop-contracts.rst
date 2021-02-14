@@ -92,7 +92,7 @@ crate可将init和receive函数编写为简单的Rust函数，分别使用 ``#[i
   applied to as the init function of the contract named ``counter``.
   Concretely, this means that behind the scenes this macro generates an exported
   function with the required signature and name ``init_counter``.
-  
+
 
 - ``#[receive(contract = "counter", name = "increment")]`` deserializes and
   supplies the state to be manipulated directly.
@@ -102,7 +102,7 @@ crate可将init和receive函数编写为简单的Rust函数，分别使用 ``#[i
 
 .. note::
 
-   请注意，反序列化并不是没有代价的，在某些情况下用户可能希望对主机函数的使用进行更细粒度的控制。对于这样的场景，注解支持一个　``low_level`` 的选项，它有较少的开销，但是需要用户提供更多的资源。 
+   请注意，反序列化并不是没有代价的，在某些情况下用户可能希望对主机函数的使用进行更细粒度的控制。对于这样的场景，注解支持一个　``low_level`` 的选项，它有较少的开销，但是需要用户提供更多的资源。
 
 .. todo::
 

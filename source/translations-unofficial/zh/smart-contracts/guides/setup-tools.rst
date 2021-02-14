@@ -9,7 +9,7 @@
 Rust和Cargo
 ==============
 
-首先， `安装 rustup`_, 它将在您的计算机上同时安装 Rust_ 和 Cargo_ 。然后使用rustup来安装用于编译环节的Wasm：
+首先， `安装 rustup`_ , 它将在您的计算机上同时安装 Rust_ 和 Cargo_ 。然后使用rustup来安装用于编译环节的Wasm：
 
 .. code-block:: console
 
@@ -43,5 +43,5 @@ Concordium 软件
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/
-.. _install rustup: https://rustup.rs/
+.. _安装 rustup: https://rustup.rs/
 .. _crates.io: https://crates.io/

@@ -113,7 +113,7 @@
    编译为Wasm时，不会显示 panic！的错误消息，以及 assert！的不同变体。
 
    相反，我们得在合约的单元测试中使用 ``fail!`` 和 ``claim!`` 来做断言，因为它们会在测试失败退出前将错误信息报告给测试运行器。 ``fail!`` 和 ``claim!`` 都内置在 ``concordium-std`` 中。
-   
+
 .. todo::
 
     Use link concordium-std: docs.rs/concordium-std when crate is published.

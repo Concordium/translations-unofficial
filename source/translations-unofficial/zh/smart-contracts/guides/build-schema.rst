@@ -38,9 +38,9 @@
    从这里开始。
 
 将合约状态(state)包含在schema中
-------------------------
+--------------------------------
 
-为了将合同状态(state)包含在schema中，我们用 ``#[contract_state(contract = ...)]`` 宏注释类型： 
+为了将合同状态(state)包含在schema中，我们用 ``#[contract_state(contract = ...)]`` 宏注释类型：
   ::
 
    #[contract_state(contract = "my_contract")]
@@ -49,7 +49,7 @@
        ...
    }
 
-如果合约状态(state)是已经实现了SchemaType的类型，如u32，则更简单： 
+如果合约状态(state)是已经实现了SchemaType的类型，如u32，则更简单：
   ::
 
    #[contract_state(contract = "my_contract")]

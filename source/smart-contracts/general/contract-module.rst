@@ -90,7 +90,7 @@ smart contract. To execute, a user must first create an *instance* of a contract
 
 .. seealso::
 
-   See :ref:`contract-instances0` for more information.
+   See :ref:`contract-instances` for more information.
 
 .. _smart-contracts-on-chain:
 

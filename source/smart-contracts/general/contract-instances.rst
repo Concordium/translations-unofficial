@@ -1,5 +1,4 @@
-.. _contract-instances0:
-
+.. _contract-instances:
 
 ========================
 Smart contract instances
@@ -75,7 +74,7 @@ treating the GTU amount separately is that GTU can only be spent and
 received according to rules of the network, e.g., contracts cannot create
 or destroy GTU tokens.
 
-.. _contract-instances-init-on-chain0:
+.. _contract-instances-init-on-chain:
 
 Instantiating a smart contract on-chain
 =======================================
@@ -145,7 +144,7 @@ To summarize, a transaction for smart-contract interaction includes:
 - Parameter to the receive function.
 - Amount of GTU for the instance.
 
-.. _contract-instance-actions0:
+.. _contract-instance-actions:
 
 Logging events
 ==============
@@ -172,7 +171,7 @@ Logging an event has an associated cost, similar to the cost of writing to the
 contract's state. In most cases it would only make sense to log a few bytes to
 reduce cost.
 
-.. _action-descriptions0:
+.. _action-descriptions:
 
 Action descriptions
 ===================

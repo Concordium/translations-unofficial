@@ -2,26 +2,26 @@
 .. _build-schema:
 
 =======================
-建立合约模式
+构建合约schema
 =======================
 
-本指南将向您展示如何使用构建智能合约模式，如何将其导出到文件 和 / 或将模式嵌入到智能合约模块中 ``cargo-concordium``。
+本指南将向您展示如何构建智能合约schema，如何将其导出到文件 和 将schema嵌入到智能合约模块中, 全程都只需使用 ``cargo-concordium`` 就可以。
 
-制备
+准备工作
 ===========
 
-首先，请确保您已 ``cargo-concordium`` 安装，如果没有，安装指南 :ref:`setup-tools`  将为您提供帮助。
+首先，请确保您已安装 ``cargo-concordium`` ，如果没有，请参考安装指南 :ref:`setup-tools` 。
 
-我们还需要您希望为其构建架构的智能合约的 Rust 源代码。
+我们还需要您准备好需要构建schema的智能合约的 Rust 源代码。
 
-为架构设置合同
+创建智能合约
 ===============================
 
-为了构建合同模式，我们首先必须准备用于构建模式的智能合同。
+为了构建schema，我们首先得准备好智能合约。
 
-我们可以选择将智能合约的哪些部分包括在架构中。选项包括 合同状态 和 /或初始化和接收函数的每个参数的模式。
+我们可以决定将智能合约的哪些部分包括在schema中，可以是 合约的state(状态) 和(/或)init(初始化)函数和recieve(接收)函数的每个参数。
 
-我们要包含在模式中的每种类型都必须实现 ``SchemaType`` 特征。对于所有基本类型和某些其他类型，已经完成了此操作（请参阅 `list of types implementing the SchemaType`_）。对于大多数其他情况，也可以使用 ``#[derive(SchemaType)]`` 以下方法自动实现 ：
+包含在schema中的每种类型都必须实现 ``SchemaType`` 特征(trait)。所有基本类型和某些其他类型都已经实现了``SchemaType`` 特征(trait)（请参阅 `list of types implementing the SchemaType`_ ），而对于其他(自定义)的类型，则可以使用 ``#[derive(SchemaType)]`` 以下方法自动实现：
 
 ``#[derive(SchemaType)]``::
 
@@ -30,17 +30,18 @@
        ...
    }
 
- ``SchemaType`` 手动实现特征仅需要指定一个函数，该函数是 a 的获取器 ``schema::Type`` ，它实质上描述了如何将这种类型表示为字节以及如何表示它。
+手动实现 ``SchemaType`` 特征仅需要指定一个函数，该函数就是 ``schema::Type`` 的getter函数，它描述了如何将这种类型序列化成字节以及如何表示它。
 
-.. 去做：：
+.. todo：：
 
    创建一个示例来展示如何手动实现 ``SchemaType`` 和链接
    从这里开始。
 
-包括合同状态
+将合约状态(state)包含在schema中
 ------------------------
 
-为了生成并包括合同状态的模式，我们用 ``#[contract_state(contract = ...)]`` 宏注释类型： ::
+为了将合同状态(state)包含在schema中，我们用 ``#[contract_state(contract = ...)]`` 宏注释类型： 
+  ::
 
    #[contract_state(contract = "my_contract")]
    #[derive(SchemaType)]
@@ -48,15 +49,16 @@
        ...
    }
 
-如果合同状态是已经实现的类型，甚至更简单SchemaType，例如u32： ::
+如果合约状态(state)是已经实现了SchemaType的类型，如u32，则更简单： 
+  ::
 
    #[contract_state(contract = "my_contract")]
    type State = u32;
 
-包括功能参数
+将函数入参出参包含在schema中
 -----------------------------
 
-要生成并包含用于初始化和接收函数的参数的模式，我们为 ``#[init(..)]`` -和 ``#[receive(..)]`` -宏设置了可选的 ``parameter`` 属性： ::
+要生成并包含用于初始化(init)函数和接收(recieve)函数的参数的schema，我们为 ``#[init(..)]`` 和 ``#[receive(..)]`` 宏 设置了可选的 ``parameter`` 属性： ::
 
    #[derive(SchemaType)]
    enum InitParameter { ... }
@@ -71,31 +73,30 @@
    fn contract_receive<...> (...){ ... }
 
 
-建立架构
+构建schema
 ===================
 
-现在，我们准备使用来构建实际的模式 ``cargo-concordium`` ，并且可以选择嵌入模式和/或将模式写入文件。
+现在，我们准备使用 ``cargo-concordium`` 来构建实际的schema，并且可以选择嵌入schema和/或将schema写入文件。
 
 .. 另::
 
-   有关更多选择的信息，请参见
-   :ref:`here<contract-schema-which-to-choose>`.
+   有关更多选择的信息，请参见 :ref:`here<contract-schema-which-to-choose>` .
 
-嵌入架构
+将schema嵌入module中
 --------------------
 
-为了将模式嵌入到智能合约模块中，我们 ``--schema-embed`` 在build命令中添加 了
+为了将schema嵌入到智能合约模块(module)中，我们 ``--schema-embed`` 在build命令中添加了
 
 .. code-block:: console
 
    $cargo concordium build --schema-embed
 
-如果成功，命令的输出将告诉您模式的总大小（以字节为单位）。
+如果成功，命令的输出将告诉您schema的总大小（以字节为单位）。
 
-输出模式文件
+输出schema文件
 ------------------------
 
-要将模式输出到文件中，我们可以使用 ``--schema-out=FILE`` where  ``FILE`` 是要创建的文件路径：
+要将schema输出到文件中，我们可以使用 ``--schema-out=FILE`` where  ``FILE`` 是要创建的文件路径：
 
 .. code-block:: console
 

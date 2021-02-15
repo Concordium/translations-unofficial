@@ -18,7 +18,7 @@ kullanarak bir düğüm çalıştırıyor oldugunuzdan emin olun. Bu şekilde zi
 
 .. seealso::
    Bir akıllı sözleşme modülünün nasıl dağıtılacağı için :ref:`deploy-moduletr`
-   dokumanina ve bir örneğin nasıl oluşturulacağı :ref:`initialize-contract` dokumanina bakınız.
+   dokumanina ve bir örneğin nasıl oluşturulacağı :ref:`initialize-contracttr` dokumanina bakınız.
 
 Sözleşmeyi inceleme
 ====================

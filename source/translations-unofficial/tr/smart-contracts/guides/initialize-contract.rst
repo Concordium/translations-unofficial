@@ -63,7 +63,7 @@ başarılı bir şekilde yaratıldığı anlamına gelmektedir.
    Modül referansları kullanmak zahmetlı olabilmektedir. Modül referanslarını daha basit isimler
    ile kullanabilmek için :ref:`naming-a-moduletr` dokümanına bakabilirsiniz.
 
-.. _init-passing-parameter-json:
+.. _init-passing-parameter-jsontr:
 
 Parametreleri JSON formatında kullanma
 ----------------------------------------

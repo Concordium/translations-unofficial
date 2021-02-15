@@ -17,7 +17,7 @@ Akıllı sözleşme örnekleri
 
 Bir **akıllı sözleşme örneği**, belirli bir durum ve bir miktar GTU ile birlikte akıllı bir
 sözleşme modülüdür.Aynı modülden birden fazla akıllı sözleşme örneği oluşturulabilir.
-Örneğin, bir :ref:`auction <auction>` sözleşmesi için, her biri belirli bir öğe için
+Örneğin, bir :ref:`auction <auctiontr>` sözleşmesi için, her biri belirli bir öğe için
 ve kendi katılımcıları ile teklif vermeye adanmış birden çok örnek olabilir.
 
 

@@ -21,7 +21,7 @@ birlikte, derlemeye çalıştığınızdan emin olun.
 .. seealso::
 
    Geliştirici araçlarının nasıl kurulacağına ilişkin talimatlar için
-   bkz :ref:`setup-tools`.
+   bkz :ref:`setup-toolstr`.
 
 Wasm'a Derleme
 =================

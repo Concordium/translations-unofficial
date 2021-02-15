@@ -1,4 +1,4 @@
-.. _local-simulate:
+.. _local-simulatetr:
 
 =======================================
 Sözleşme işlevlerinin yerel simülasyonu

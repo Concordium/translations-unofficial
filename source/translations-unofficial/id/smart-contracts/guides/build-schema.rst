@@ -29,7 +29,7 @@ Opsinya adalah menyertakan skema untuk status kontrak, dan/atau untuk setiap
 parameter init dan fungsi terima.
 
 Setiap jenis yang ingin kita sertakan dalam skema harus mengimplementasikan sifat ``SchemaType``.
-Ini sudah dilakukan untuk semua tipe dasar dan beberapa tipe lainnya (lihat `daftar tipe yang menerapkan SchemaType`_).
+Ini sudah dilakukan untuk semua tipe dasar dan beberapa tipe lainnya (lihat `list of types implementing the SchemaType`_).
 Untuk sebagian besar kasus lainnya, ini juga dapat dicapai secara otomatis, menggunakan
 ``#[derive(SchemaType)]``::
 

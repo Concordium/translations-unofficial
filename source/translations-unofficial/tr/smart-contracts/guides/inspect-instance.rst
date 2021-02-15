@@ -52,7 +52,7 @@ incelemek veya göstermek için aşağıdaki komutu çalıştırın:
    Sözleşme örneği adresleri hakkında daha fazla bilgi için
    :ref:`references-on-chain` dokümanına bakabilirsiniz..
 
-Bir incelemenin ayrıntı düzeyi, ``show`` komutunun  :ref:`contract schema <contract-schema>`
+Bir incelemenin ayrıntı düzeyi, ``show`` komutunun  :ref:`contract schema <contract-schematr>`
 erişimine sahip olup olmadığına bağlıdır. Eger şema gömülü bir şema ise, dolaylı olarak
 kullanılacaktır. Aksi takdirde, ``--schema /path/to/schema.bin`` parametresi kullanılarak
 bir şema sağlanabilir.
@@ -65,4 +65,4 @@ bir şema sağlanabilir.
 
 .. seealso::
 
-   :ref:`Akıllı sözleşme şemalarının neden ve nasıl kullanılacağı hakkında daha fazla bilgi edinin <contract-schema>`.
+   :ref:`Akıllı sözleşme şemalarının neden ve nasıl kullanılacağı hakkında daha fazla bilgi edinin <contract-schematr>`.

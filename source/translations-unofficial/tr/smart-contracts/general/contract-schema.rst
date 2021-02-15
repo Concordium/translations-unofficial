@@ -144,7 +144,7 @@ tanımlamak için kullanılacak bayt miktarını açıklar.
 Bir şema türünün bayt olarak nasıl serileştirildiğine ilişkin daha fazla bilgi
 için, `implementation in Rust`’ı okumanızı öneririz.
 
-.. _contract-schema-which-to-choose:
+.. _contract-schema-which-to-choosetr:
 
 Zincir üzerine şemaları gömme
 =================================

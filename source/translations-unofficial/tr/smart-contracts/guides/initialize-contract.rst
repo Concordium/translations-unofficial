@@ -159,7 +159,7 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
    Akıllı sözleşmelerde parametreleri kullanımıyla ilgili daha fazla bilgi için
    :ref:`working-with-parameterstr` dokümanına bakabilirsiniz.
 
-.. _naming-an-instance:
+.. _naming-an-instancetr:
 
 Bir sözleşme örneğinin isimlendirilmesi
 ========================================

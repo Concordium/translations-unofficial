@@ -22,7 +22,7 @@ ve kendi katılımcıları ile teklif vermeye adanmış birden çok örnek olabi
 
 
 Akıllı sözleşme örnekleri, akıllı sözleşme modülünde istenen işlevi çağıran ``init``
-işlemi aracılığıyla yüklenmiş bir :ref:`smart contract module<contract-module>` nden
+işlemi aracılığıyla yüklenmiş bir :ref:`smart contract module<contract-moduletr>` nden
 oluşturulabilir. Bu fonksiyon bir parametre alabilir.
 Nihai sonucun, örneğin, ilk akıllı sözleşme durumunda olması gerekir.
 

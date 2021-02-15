@@ -61,7 +61,7 @@ başarılı bir şekilde yaratıldığı anlamına gelmektedir.
    :ref:`references-on-chain` dokümanına bakabilirsiniz.
 
    Modül referansları kullanmak zahmetlı olabilmektedir. Modül referanslarını daha basit isimler
-   ile kullanabilmek için :ref:`naming-a-module` dokümanına bakabilirsiniz.
+   ile kullanabilmek için :ref:`naming-a-moduletr` dokümanına bakabilirsiniz.
 
 .. _init-passing-parameter-json:
 

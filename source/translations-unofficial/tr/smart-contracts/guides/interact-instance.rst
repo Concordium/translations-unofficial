@@ -131,7 +131,7 @@ Eğer komut başarılı olursa, çıktı aşağıdakine benzer olmalıdır:
 .. seealso::
 
    Akıllı sözleşmelerde parametrelerle nasıl çalışılacağı hakkında bilgi için bkz
-   :ref:`working-with-parameters`.
+   :ref:`working-with-parameterstr`.
 
 .. _parameter_cursor():
    https://docs.rs/concordium-std/latest/concordium_std/trait.HasInitContext.html#tymethod.parameter_cursor

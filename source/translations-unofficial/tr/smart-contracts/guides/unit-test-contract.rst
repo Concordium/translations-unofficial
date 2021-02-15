@@ -1,4 +1,4 @@
-.. _unit-test-contract:
+.. _unit-test-contracttr:
 
 ==============================================
 Rust'ta bir sözleşme için birim testi yapma

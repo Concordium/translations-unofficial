@@ -88,7 +88,7 @@ kullanıcı önce bir kontrat *örneğini* oluşturmalıdır.
 
 .. seealso::
 
-   Daha fazla bilgi için bkz :ref:`contract-instances`.
+   Daha fazla bilgi için bkz :ref:`contract-instancestr`.
 
 .. _smart-contracts-on-chain:
 

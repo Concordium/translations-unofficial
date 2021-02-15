@@ -77,6 +77,6 @@ gerçek verileri gizleyen şifreleme veya taahhütler gibi türetilmiş kavramla
 Akıllı bir sözleşmenin yaşam döngüsü
 =====================================
 
-Akıllı bir sözleşme ilk olarak zincire :ref:`Contract Module <contract-module>`’un parçası olarak yüklenir.
+Akıllı bir sözleşme ilk olarak zincire :ref:`Contract Module <contract-moduletr>`’un parçası olarak yüklenir.
 Bundan sonra akıllı sözleşme, :ref:`smart contract instance <contract-instancestr>`  sağlayarak *başlatılır*.
 Son olarak, akıllı bir sözleşme örneği, kendi iş akışına göre tekrar tekrar güncellenebil

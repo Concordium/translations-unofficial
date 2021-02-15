@@ -1,4 +1,4 @@
-.. _contract-module:
+.. _contract-moduletr:
 
 ==========================
 Akıllı sözleşme modülleri

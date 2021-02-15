@@ -104,7 +104,7 @@
    GTU也可以在初始化合约实例时使用 ``--amount AMOUNT`` 参数转移到合同实例。
 
 
-.. _init-passing-parameter-bin:
+.. _init-passing-parameter-bin-zh:
 
 以二进制格式传递参数
 -----------------------------------

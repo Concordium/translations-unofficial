@@ -1,4 +1,4 @@
-.. _local-simulate:
+.. _local-simulate-zh:
 
 ===================================
 本地模拟合约功能
@@ -8,12 +8,12 @@
 
 .. 也可以看看：：
 
-   有关自动单元测试的指南，请参阅： :ref:`unit-test-contract`.
+   有关自动单元测试的指南，请参阅： :ref:`unit-test-contract-zh`.
 
 准备
 ===========
 
-   请自行确保已安装 ``cargo-concordium`` ,如果你并没有按照 :ref:`setup-tools` 文档做的话。另外您还需要准备一个Wasm智能合约模块(module)。
+   请自行确保已安装 ``cargo-concordium`` ,如果你并没有按照 :ref:`setup-tools-zh` 文档做的话。另外您还需要准备一个Wasm智能合约模块(module)。
 
 .. todo::
 

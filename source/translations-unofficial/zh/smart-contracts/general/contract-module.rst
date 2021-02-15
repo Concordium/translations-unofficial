@@ -1,4 +1,4 @@
-.. _contract-module:
+.. _contract-module-zh:
 
 ======================
 智能合约模块
@@ -10,7 +10,7 @@
 
    一个智能合同模块通常只是简单地称为 *模块* .
 
-一个模块可以包含一个或多个智能合约，从而允许代码在合约之间共享，并且可以选择包含 :ref:`contract schemas <contract-schema>` .
+一个模块可以包含一个或多个智能合约，从而允许代码在合约之间共享，并且可以选择包含 :ref:`contract schemas <contract-schema-zh>` .
 
 .. graphviz::
    :align: center
@@ -38,7 +38,7 @@
 
 Wasm是一种低级语言，用手写是不切实际的。相反，人们可以用更高级的语言编写智能合约，然后编译成Wasm。
 
-.. _wasm-limitations:
+.. _wasm-limitations-zh:
 
 Limitations
 -----------
@@ -66,15 +66,15 @@ Limitations
 
 .. seealso::
 
-   See :ref:`contract-instances` for more information.
+   See :ref:`contract-instances-zh` for more information.
 
-.. _smart-contracts-on-chain:
+.. _smart-contracts-on-chain-zh:
 
-.. _smart-contracts-on-the-chain:
+.. _smart-contracts-on-the-chain-zh:
 
-.. _contract-on-chain:
+.. _contract-on-chain-zh:
 
-.. _contract-on-the-chain:
+.. _contract-on-the-chain-zh:
 
 链上的智能合约
 ===========================

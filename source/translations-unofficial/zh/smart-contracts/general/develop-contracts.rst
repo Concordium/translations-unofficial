@@ -12,7 +12,7 @@
         - Don't panic
         - Avoid heavy calculations
 
-.. _writing-smart-contracts:
+.. _writing-smart-contracts-zh:
 
 ==================================
 用Rust开发智能合约
@@ -20,7 +20,7 @@
 
 在concordium区块链上，智能合约部署为Wasm模块，但Wasm是合约的编译后的指令，不方便手工编写。相反，我们可以用 Rust_ 编程语言编写智能合约，它能很好的支持编译成Wasm。
 
-智能合约不必用Rust写。这只是我们提供的第一个SDK。手动编写的WASM，或者从C、C++、AssemblyScript等中编译的WASM，在链上同样有效，只要它遵循 :REF: `WASM限制，我们强加<wasm-limitations>` .
+智能合约不必用Rust写。这只是我们提供的第一个SDK。手动编写的WASM，或者从C、C++、AssemblyScript_ 等中编译的WASM，在链上同样有效，只要它遵循 :ref:`Wasm limitations we impose <wasm-limitations-zh>` .
 
 .. seealso::
 
@@ -137,7 +137,7 @@ Serializable state and parameters
 
    严格来说，我们只需要将字节反序列化为我们的参数类型，但是在编写单元测试时能够序列化类型很方便。
 
-.. _working-with-parameters:
+.. _working-with-parameters-zh:
 
 Working with parameters
 -----------------------
@@ -214,7 +214,7 @@ Rust编译器很好地支持使用 ``wasm32-unknown-unknown`` 目标编译到Was
 
 .. seealso::
 
-   关于使用 ``cargo-concordium`` 构建的说明请参考 :ref:`compile-module`
+   关于使用 ``cargo-concordium`` 构建的说明请参考 :ref:`compile-module-zh`
 
 测试智能合约
 =======================

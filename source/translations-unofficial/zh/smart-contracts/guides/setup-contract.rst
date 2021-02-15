@@ -1,6 +1,6 @@
 .. highlight:: toml
 
-.. _setup-contract:
+.. _setup-contract-zh:
 
 ===================================
 创建一个智能合约工程

@@ -2,7 +2,7 @@
 .. _Cargo: https://doc.rust-lang.org/cargo/
 .. _rust-analyzer: https://github.com/rust-analyzer/rust-analyzer
 
-.. _compile-module:
+.. _compile-module-zh:
 
 ====================================
 编译Rust智能合约模块
@@ -17,12 +17,12 @@
 
 .. 也可以看看：：
 
-   有关如何安装开发人员工具的说明，请参见 :ref:`setup-tools`
+   有关如何安装开发人员工具的说明，请参见 :ref:`setup-tools-zh`
 
 编译为Wasm
 =================
 
-为了帮助构建智能合约模块并利用 :ref:`contract schemas <contract-schema>` 之类的功能，我们建议使用该 ``cargo-concordium``  工具来构建Rust智能合约。
+为了帮助构建智能合约模块并利用 :ref:`contract schemas <contract-schema-zh>` 之类的功能，我们建议使用该 ``cargo-concordium``  工具来构建Rust智能合约。
 
 为了建立智能合约，请运行：
 
@@ -34,7 +34,7 @@
 
 .. 也可以看看：：
 
-   为了构建智能合约模块的架构，请参考 :ref:`further preparation is required <build-schema>` .
+   为了构建智能合约模块的架构，请参考 :ref:`further preparation is required <build-schema-zh>` .
 
 .. 注意::
 

@@ -4,7 +4,7 @@
     - What are the use cases
     - What are not the use cases
 
-.. _introduction:
+.. _introduction-zh:
 
 ===============================
 智能合约的介绍
@@ -18,7 +18,7 @@
 
 智能合约可以减少对第三方所需的信任，在某些情况下消除了对受信任第三方的需求，在其他情况下降低了第三方的能力，从而减少了第三方所需的信任。由于智能合约的执行是完全透明的，任何有权访问节点的人都可以通过这种方式进行验证，因此它们对于确保各方之间的协议非常有用。
 
-.. _auction:
+.. _auction-zh:
 
 智能合约用于拍卖的案例
 ------------------------------
@@ -36,4 +36,4 @@
 智能合约的生命周期
 ==============================
 
-智能合约首先作为 :ref:`contract module<contract module>` 的一部分部署到链中。然后，可以初始化智能合约以生成 :ref:`smart contract instance<contract instances>` 。最后，智能合约实例可以根据其自身的逻辑进行重复更新。
+智能合约首先作为 :ref:`contract module<contract-module-zh>` 的一部分部署到链中。然后，可以初始化智能合约以生成 :ref:`smart contract instance<contract-instances-zh>` 。最后，智能合约实例可以根据其自身的逻辑进行重复更新。

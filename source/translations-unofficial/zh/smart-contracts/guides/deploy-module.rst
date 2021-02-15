@@ -1,4 +1,4 @@
-.. _deploy-module:
+.. _deploy-module-zh:
 
 ==============================
 部署智能合约模块(module)
@@ -9,7 +9,7 @@
 准备
 ===========
 
-确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并且准备好需要部署的 :ref:`smart-contract module<setup-tools>` 。
+确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并且准备好需要部署的 :ref:`smart-contract module<setup-tools-zh>` 。
 
 由于部署智能合约模块是以交易的形式完成的，因此您还需要使用 ``concordium-client`` 设置一个具有足够GTU的帐户来支付交易费用。
 
@@ -39,12 +39,12 @@
 记下这个模块参考号(module reference),创建智能合约实例时需要使用它。
 
 .. 请参阅
-   ：有关如何从已部署的模块初始化智能合约的指南，请参见：:ref:`initialize-contract` .
+   ：有关如何从已部署的模块初始化智能合约的指南，请参见：:ref:`initialize-contract-zh` .
 
    有关模块引用的更多信息，请参见 :ref:`references-on-chain` .
 
 
-.. _naming-a-module:
+.. _naming-a-module-zh:
 
 给合约模块命名
 ===============

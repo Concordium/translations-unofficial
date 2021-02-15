@@ -1,10 +1,10 @@
-.. _unit-test-contract:
+.. _unit-test-contract-zh:
 
 ============================
 对Rust合约进行单元测试
 ============================
 
-本指南将向您展示如何为用Rust编写的智能合约编写单元测试。有关测试智能合约Wasm模块的信息，请参阅: :ref:`local-simulate` 。
+本指南将向您展示如何为用Rust编写的智能合约编写单元测试。有关测试智能合约Wasm模块的信息，请参阅: :ref:`local-simulate-zh` 。
 
 用Rust写的智能合约是一个Rust库，我们可以通过为合约函数注释 #[test] 属性，从而能像库一样对其进行单元测试。
 
@@ -77,7 +77,7 @@
 
 .. 另::
 
-   有关如何安装 ``congo -concordium`` 的指南，请参阅 :ref:`setup-tools` 。
+   有关如何安装 ``congo -concordium`` 的指南，请参阅 :ref:`setup-tools-zh` 。
 
 单元测试必须使用 ``#[concordium_test]``代替 ``#[test]``，并且我们使用 ``#[concordium_cfg_test]`` 代替 ``#[cfg(test)]`` ：
 

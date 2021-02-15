@@ -1,5 +1,5 @@
 
-.. _inspect-instance:
+.. _inspect-instance-zh:
 
 =================================
 检查智能合约实例
@@ -13,8 +13,8 @@
 确保您正在使用最新的 :ref:`Concordium software<downloads>` 运行一个节点 :ref:`running a node<run-a-node>` ，并且要在链上检查智能合约实例。
 
 .. 另::
-   有关如何部署智能合约模块，请参见：:ref:`deploy-module` 和
-   如何创建实例: :ref:`initialize-contract` .
+   有关如何部署智能合约模块，请参见：:ref:`deploy-module-zh` 和
+   如何创建实例: :ref:`initialize-contract-zh` .
 
 检查
 ==========
@@ -46,11 +46,11 @@
    有关合约实例地址的更多信息，请参阅 :ref:`references-on-chain` 。
 
 
-合约检查的细腻程度取决于 ``show`` 命令是否可以访问 :ref:`contract schema <contract-schema>` 。如果schema是嵌入式的，它将被隐式使用。否则，可以通过 ``--schema /path/to/schema.bin``  参数指定schema文件路径。
+合约检查的细腻程度取决于 ``show`` 命令是否可以访问 :ref:`contract schema <contract-schema-zh>` 。如果schema是嵌入式的，它将被隐式使用。否则，可以通过 ``--schema /path/to/schema.bin``  参数指定schema文件路径。
 
 .. 注意::
 
    使用 ``--schema`` 参数提供的schema文件将优先于嵌入式schema。
 
 .. 另参阅::
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>` .
+   :ref:`Read more about why and how to use smart contract schemas <contract-schema-zh>` .

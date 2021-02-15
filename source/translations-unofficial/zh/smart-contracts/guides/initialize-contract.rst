@@ -1,4 +1,4 @@
-.. _initialize-contract:
+.. _initialize-contract-zh:
 
 ====================================
 初始化智能合约实例
@@ -9,7 +9,7 @@
 准备
 ===========
 
-确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并确保您在部署了一个智能合约模块 :ref:`deployed <deploy-module>` 。
+确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并确保您在部署了一个智能合约模块 :ref:`deployed <deploy-module-zh>` 。
 
 由于初始化智能合约是一项交易，因此您还应确保已通过 ``concordium-client`` 建立一个具有足够 GTU 的账户来支付交易费用。
 
@@ -44,24 +44,24 @@
 看到此输出，即意味着已使用上述显示的地址创建了一个新的链上合约实例。
 
 .. 另请参阅：
-   想更深入地了解合约初始化，请参见：:ref:`contract-instances-init-on-chain` .
+   想更深入地了解合约初始化，请参见：:ref:`contract-instances-init-on-chain-zh` .
 
    有关模块引用和实例地址的更多信息，请参见 :ref:`references-on-chain` .
 
    直接使用模块引用可能很不方便，如要为它们命名，请参阅：:ref:`naming-a-module` .
 
-.. _init-passing-parameter-json:
+.. _init-passing-parameter-json-zh:
 
 传递JSON格式的参数
 ---------------------------------
 
-如果提供了 :ref:`smart contract schema <contract-schema>` (无论是schema文件还是schema嵌入在模块中)，则可以传递JSON格式的参数。该schema可用于将JSON序列化为二进制。
+如果提供了 :ref:`smart contract schema <contract-schema-zh>` (无论是schema文件还是schema嵌入在模块中)，则可以传递JSON格式的参数。该schema可用于将JSON序列化为二进制。
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>`.
+   :ref:`Read more about why and how to use smart contract schemas <contract-schema-zh>`.
 
-   :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin>`.
+   :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin-zh>`.
 
 要使用JSON格式的参数文件 ``my_parameter.json`` 初始化 *模块(引用号: ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` )* 的合约 ``my_parameter_contract`` 的实例，请运行以下命令：
 
@@ -109,7 +109,7 @@
 以二进制格式传递参数
 -----------------------------------
 
-当以二进制格式传递参数时，就不需要合约schema :ref:`contract schema <contract-schema>` 。
+当以二进制格式传递参数时，就不需要合约schema :ref:`contract schema <contract-schema-zh>` 。
 
 要使用二进制格式的参数文件 ``my_parameter.bin`` 来初始化 *模块(引用编号:9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2)中的合约my_parameter_contract* 的实例，请运行以下命令：
 
@@ -133,7 +133,7 @@
    请参见
    ：有关如何在智能合约中使用参数的信息，请参阅 :ref:`working-with-parameters` .
 
-.. _naming-an-instance:
+.. _naming-an-instance-zh:
 
 命名合约实例
 ==========================

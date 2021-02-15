@@ -1,5 +1,5 @@
 
-.. _interact-instance:
+.. _interact-instance-zh:
 
 =======================================
 与智能合约实例互动
@@ -13,8 +13,8 @@
 确保您正在使用最新的Concordium 软件  :ref:`Concordium software<downloads>`  运行一个节点 :ref:`running a node<run-a-node>` ，你在链上有一个智能合约实例要检查。
 
 .. 也可以看看：：
-   有关如何部署智能合约模块的信息，请参见：:ref:`deploy-module`  。
-   如何创建实例：:ref:`initialize-contract`.
+   有关如何部署智能合约模块的信息，请参见：:ref:`deploy-module-zh`  。
+   如何创建实例：:ref:`initialize-contract-zh`.
 
 由于与智能合约的交互是交易，因此您还应确保concordium客户端  ``concordium-client``  设置了一个具有足够GTU的帐户来支付交易费用。
 
@@ -40,12 +40,12 @@
 以JSON格式传递参数
 ---------------------------------
 
-如果提供了 :ref:`smart contract schema <contract-schema>` 作为文件或嵌入在模块中，则可以传递 JSON格式的参数。该模式用于将 JSON序列化为二进制。
+如果提供了 :ref:`smart contract schema <contract-schema-zh>` 作为文件或嵌入在模块中，则可以传递 JSON格式的参数。该模式用于将 JSON序列化为二进制。
 
 .. 也可以看看：：
 
    :ref:`Read more about why and how to use smart contract schemas
-   <contract-schema>`.
+   <contract-schema-zh>`.
 
 要 0 使用 ``my_parameter_receive`` 具有 ``my_parameter.json`` 格式参数文件的 receive 函数 ，通过地址索引更新实例，请运行以下命令：
 
@@ -91,7 +91,7 @@
 以二进制格式传递参数
 -----------------------------------
 
-当以二进制格式传递参数时， 不需要 :ref:`contract schema <contract-schema>`。
+当以二进制格式传递参数时， 不需要 :ref:`contract schema <contract-schema-zh>`。
 
 要 0 使用 ``my_parameter_receive`` 带有 ``my_parameter.bin`` 二进制格式的参数文件的接收函数 ，通过地址索引更新实例，请运行以下命令：
 

@@ -1,4 +1,4 @@
-.. _contract-instances:
+.. _contract-instances-zh:
 
 
 ========================
@@ -12,13 +12,13 @@
   - 决定我们是否应该有一个具体的代码示例，以及它是否应该处于Wasm、Rust或伪代码中。
   - 考虑用一幅图来解释模块和实例之间的关系。
 
-**智能合约实例** 本质是保存着特定状态和GTU令牌量的智能合约模块。我们可以基于同一模块创建多个智能合约实例。例如，对于 :ref:`auction<auction>` 合同，可以有多个实例，每个实例都专门用于对特定项目进行投标，并有各自的参与者。
+**智能合约实例** 本质是保存着特定状态和GTU令牌量的智能合约模块。我们可以基于同一模块创建多个智能合约实例。例如，对于 :ref:`auction<auction-zh>` 合同，可以有多个实例，每个实例都专门用于对特定项目进行投标，并有各自的参与者。
 
-可以通过调用智能合约模块中请求的函数的 *init* 交易部署的 :ref:`Smart contract module<contract module>` 创建智能合约实例。此函数可以接受一个参数。它的最终结果必须是实例的初始智能合约状态。
+我们将智能合约模块(module)部署后，通过一笔 *init* 交易调用对应的函数，从而创建智能合约实例。此函数可以接受参数，它的最终结果必须是智能合约实例的初始状态。
 
 .. note::
 
-   智能合约实例通常简称为*实例*。
+   智能合约实例通常简称为 *实例* 。
 
 .. graphviz::
    :align: center
@@ -57,7 +57,7 @@
 
 智能合约实例的状态由两部分组成，用户定义的状态和合约持有的GTU数量，即其余额。当提到状态时，我们通常只指用户定义的状态，而没包括GTU金额的原因是，GTU只能根据网络规则使用和接收，例如，智能合约不能创建或销毁GTU令牌。
 
-.. _contract-instances-init-on-chain:
+.. _contract-instances-init-on-chain-zh:
 
 实例化一个链上合约
 =======================================
@@ -79,7 +79,7 @@ init函数也可以表明它不希望使用这些参数创建新实例。如果i
 
 .. seealso::
 
-   See :ref:`initialize-contract` guide for how to initialize a
+   See :ref:`initialize-contract-zh` guide for how to initialize a
    contract in practice.
 
 合约实例的状态
@@ -111,7 +111,7 @@ init函数也可以表明它不希望使用这些参数创建新实例。如果i
 - receive函数的参数
 - 实例的GTU数量
 
-.. _contract-instance-actions:
+.. _contract-instance-actions-zh:
 
 日志记录事件
 ==============
@@ -131,7 +131,7 @@ init函数也可以表明它不希望使用这些参数创建新实例。如果i
 
 记录事件有一个相关的成本，类似于写入合约状态的成本。在大多数情况下，只有记录几个字节才能降低成本。
 
-.. _action-descriptions:
+.. _action-descriptions-zh:
 
 操作描述
 ===================

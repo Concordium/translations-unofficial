@@ -1,5 +1,5 @@
 .. _list of types implementing the SchemaType: https://docs.rs/concordium-contracts-common/latest/concordium_contracts_common/schema/trait.SchemaType.html#foreign-impls
-.. _build-schema:
+.. _build-schema-zh:
 
 =======================
 构建合约schema
@@ -10,7 +10,7 @@
 准备工作
 ===========
 
-首先，请确保您已安装 ``cargo-concordium`` ，如果没有，请参考安装指南 :ref:`setup-tools` 。
+首先，请确保您已安装 ``cargo-concordium`` ，如果没有，请参考安装指南 :ref:`setup-tools-zh` 。
 
 我们还需要您准备好需要构建schema的智能合约的 Rust 源代码。
 
@@ -80,7 +80,7 @@
 
 .. 另::
 
-   有关更多选择的信息，请参见 :ref:`here<contract-schema-which-to-choose>` .
+   有关更多选择的信息，请参见 :ref:`here<contract-schema-which-to-choose-zh>` .
 
 将schema嵌入module中
 --------------------

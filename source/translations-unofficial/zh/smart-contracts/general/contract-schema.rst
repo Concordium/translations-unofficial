@@ -10,7 +10,7 @@
 .. _`custom section`: https://webassembly.github.io/spec/core/appendix/custom.html
 .. _`Rust中的实现`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
 
-.. _contract-schema:
+.. _contract-schema-zh:
 
 ======================
 合约 schemas
@@ -19,7 +19,7 @@
 智能合约schema描述了如何以更结构化的呈现方式来表示字节。当显示智能合约实例的状态时，外部工具可以通过它从而使用结构化格式（如JSON）指定所有参数。
 
 .. seealso::
-   有关如何为中的智能合约模块构建架构的说明，请参阅：ref:`buildschema`。
+   有关如何为中的智能合约模块构建架构的说明，请参阅：ref:`build-schema-zh`。
 
 为何使用合约schema
 =========================
@@ -36,7 +36,7 @@
 
 .. 注意::
 
-  ``concordium client`` 工具可以使用schema：ref:`serializejson parameters<init passing parameter JSON>` 并将契约实例的状态反序列化为JSON。
+  ``concordium client`` 工具可以使用schema：ref:`serializejson parameters<init-passing-parameter-json-zh>` 并将契约实例的状态反序列化为JSON。
 
    然后，该schema要么嵌入到部署到链的智能合约模块中，要么写入到文件并在链外传递。
 
@@ -113,7 +113,7 @@ schema可以包含
 
 有关如何将schema类型序列化为字节的参考，请参阅 `Rust中的实现`_ 。
 
-.. _contract-schema-which-to-choose:
+.. _contract-schema-which-to-choose-zh:
 
 将schema嵌入到链上
 ==========================

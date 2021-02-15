@@ -13,7 +13,7 @@ Hazırlık
 ===========
 
 Öncelikle, ``cargo-concordium`` kurulu olduğundan emin olun. Kurulu değilse
-:ref:`setup-tools` dokümanı size yardımcı olacaktır.
+:ref:`setup-toolstr` dokümanı size yardımcı olacaktır.
 
 Ayrica şema oluşturmak istediğiniz akıllı sözleşmenin Rust kaynak koduna
 da ihtiyacınız olacaktır.

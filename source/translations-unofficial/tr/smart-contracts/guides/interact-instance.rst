@@ -1,4 +1,4 @@
-.. _interact-instance:
+.. _interact-instancetr:
 
 =============================================
 Akıllı sözleşme örneği ile etkileşim kurun

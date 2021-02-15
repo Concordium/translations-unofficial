@@ -2,7 +2,7 @@
 .. _Cargo: https://doc.rust-lang.org/cargo/
 .. _rust-analyzer: https://github.com/rust-analyzer/rust-analyzer
 
-.. _compile-module:
+.. _compile-moduletr:
 
 ========================================
 Rust akıllı sözleşme modülünü derleyin

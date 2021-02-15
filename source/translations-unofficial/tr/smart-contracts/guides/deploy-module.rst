@@ -44,7 +44,7 @@ not edilmelidir.
 .. seealso::
 
    Dağıtımı yapılmış bir modülden akıllı sözleşmeler başlatabilmek için
-   :ref:`initialize-contract` dokümanı incelenmelidir.
+   :ref:`initialize-contracttr` dokümanı incelenmelidir.
 
    Modül referansları hakkında daha fazla bilgi almak için :ref:`references-on-chain` dokümanı incelenmelidir.
 

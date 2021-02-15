@@ -216,7 +216,7 @@ Blockchain Concordium memungkinkan untuk membuat sebuah transaksi pengiriman yan
 tapi mari kita lihat bagaimana cara melihat jadwal rilis, Jika Anda menerima transfer dengan jadwal rilis, Anda dapat menekan
 **menu burger** di pojok kanan atas layar saldo. sekarang anda dapat menekan tombol **Jadwal rilis(Release schedule)**, dan dengan menekannya Anda
 akan dibawa ke layar yang berisi informasi tentang kapan dan berapa banyak GTU yang akan dirilis. Jika Anda ingin mempelajari lebih lanjut tentang cara
-melakukannya, Anda dapat melihat halaman :ref:`concordium_client` dan :ref:`transaction`.
+melakukannya, Anda dapat melihat halaman :ref:`concordium_client` dan :ref:`transactions`.
 
 .. image:: images/concordium-id/rel1.png
       :width: 32%

@@ -132,7 +132,7 @@ Parametreleri ikili (binary) formatında kullanma
 -------------------------------------------------
 
 Parametreler ikili (binary) formatında kullanıldığı zaman, bir :ref:`sözleşme şemasına
-<contract-schema>` ihtiyaç yoktur.
+<contract-schematr>` ihtiyaç yoktur.
 
 İkili (binary) formatında ``my_parameter.bin`` parametre dosyası ve
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı

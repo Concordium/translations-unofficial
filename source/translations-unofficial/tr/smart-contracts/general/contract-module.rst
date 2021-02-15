@@ -11,7 +11,7 @@ Akıllı sözleşmeler, zincirde *akıllı sözleşme modüllerine* yüklenir.
    Akıllı sözleşme modülü genellikle sadece *modül* olarak isimlendirilir.
 
 Bir modül, kodun sözleşmeler arasında paylaşılmasına izin veren bir veya daha fazla akıllı sözleşme içerebilir
-ve isteğe bağlı olarak şunları içerebilir :ref:`contract schemas<contract-schema>`
+ve isteğe bağlı olarak şunları içerebilir :ref:`contract schemas<contract-schematr>`
 
 
 .. graphviz::

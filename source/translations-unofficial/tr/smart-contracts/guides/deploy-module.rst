@@ -1,4 +1,4 @@
-.. _deploy-module:
+.. _deploy-moduletr:
 
 ======================================
 Bir akıllı sözleşme modulünü dağıtmak

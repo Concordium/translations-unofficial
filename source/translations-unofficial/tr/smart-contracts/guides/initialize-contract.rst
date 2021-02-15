@@ -55,7 +55,7 @@ başarılı bir şekilde yaratıldığı anlamına gelmektedir.
 .. seealso::
 
    Sözleşme başlatmayı daha iyi anlayabilmek için
-   :ref:`contract-instances-init-on-chain` dokümanına bakabilirsiniz.
+   :ref:`contract-instances-init-on-chaintr` dokümanına bakabilirsiniz.
 
    Modül referansları ve örnek adresler hakkında daha fazla bilgi için,
    :ref:`references-on-chain` dokümanına bakabilirsiniz.

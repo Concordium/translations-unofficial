@@ -17,7 +17,7 @@ Bu simülasyon, akıllı bir sözleşmeyi incelemek ve belirli bir senaryonun
 Hazırlık
 ========
 
-Kılavuza uymadıysanız, öncelikle `cargo-concordium`` un kurulu olduğundan emin olun. :ref:`setup-tools`. Simüle etmek için Wasm'da akıllı bir sözleşme modülüne de ihtiyacınız olacaktır.
+Kılavuza uymadıysanız, öncelikle `cargo-concordium`` un kurulu olduğundan emin olun. :ref:`setup-toolstr`. Simüle etmek için Wasm'da akıllı bir sözleşme modülüne de ihtiyacınız olacaktır.
 
 .. todo::
 

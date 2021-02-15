@@ -34,7 +34,7 @@
 
 避免手动解析字节的解决方案是在智能合约schema中提取此信息，该schema描述如何从字节生成结构，并如何供外部工具使用。
 
-.. 注意::
+.. note::
 
   ``concordium client`` 工具可以使用schema：ref:`serializejson parameters<init-passing-parameter-json-zh>` 并将契约实例的状态反序列化为JSON。
 

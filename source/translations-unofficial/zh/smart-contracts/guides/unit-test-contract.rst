@@ -75,7 +75,7 @@
 
 开发工具 ``cargo-concordium`` 包括一个用于编译成Wasm的测试运行程序，它使用与Concordium节点中附带的Wasm解释相同的Wasm解释程序。
 
-.. 另::
+.. seealso::
 
    有关如何安装 ``congo -concordium`` 的指南，请参阅 :ref:`setup-tools-zh` 。
 
@@ -108,7 +108,7 @@
 
 该命令行会通过 ``wasm-test`` 功能( ``concordium-std`` 已启用)将单元测试编译成Wasm, 并使用 ``cargo-concordium`` 的单元测试执行器。
 
-.. 警告::
+.. warning::
 
    编译为Wasm时，不会显示 panic！的错误消息，以及 assert！的不同变体。
 

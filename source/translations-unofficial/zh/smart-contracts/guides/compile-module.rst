@@ -36,7 +36,7 @@
 
    为了构建智能合约模块的架构，请参考 :ref:`further preparation is required <build-schema-zh>` .
 
-.. 注意::
+.. note::
 
    也可以通过运行以下命令直接使用Cargo进行编译：
 
@@ -86,7 +86,7 @@
 
 如果我们为Rust工具链安装了 ``rust-src`` 组件，则以上内容可能无法解决该问题。但一些Rust工具（例如 rust-analyzer_ ）的确需要此组件。
 
-.. 另::
+.. seealso::
 
    一个关于 ``--remap-path-prefix`` 和 ``rust-src`` 问题的报告：
    https://github.com/rust-lang/rust/issues/73167

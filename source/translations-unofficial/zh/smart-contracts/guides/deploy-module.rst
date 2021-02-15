@@ -13,7 +13,7 @@
 
 由于部署智能合约模块是以交易的形式完成的，因此您还需要使用 ``concordium-client`` 设置一个具有足够GTU的帐户来支付交易费用。
 
-.. 注意::
+.. note::
 
    交易成本取决于智能合约模块的大小。 concordium-client 会显示费用并在执行任何交易之前要求你确认。
 
@@ -26,7 +26,7 @@
 
    $concordium-client module deploy my_module.wasm --sender account_name
 
-.. 注意::
+.. note::
 
    如果要使用帐户 “default” ，则可以省略 --sender 选项。为简便起见，我们将在下面进行说明。
 

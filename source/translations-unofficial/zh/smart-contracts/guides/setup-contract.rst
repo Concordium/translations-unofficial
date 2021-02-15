@@ -33,7 +33,7 @@ Rust中的智能合约被编写为普通的Rust库crate, 然后通过设置Rust�
 
 这个crate的文档可在 docs.rs_ 上找到。
 
-.. 注意::
+.. note::
 
    如果您想使用此crate的修改版，则必须通过将以下内容添加到 ``Cargo.toml`` 来克隆这个依赖 ``concordium-std`` 的库，并令依赖指向此目录:
 

@@ -78,7 +78,7 @@
 
 现在，我们准备使用 ``cargo-concordium`` 来构建实际的schema，并且可以选择嵌入schema和/或将schema写入文件。
 
-.. 另::
+.. seealso::
 
    有关更多选择的信息，请参见 :ref:`here<contract-schema-which-to-choose-zh>` .
 

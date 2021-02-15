@@ -96,7 +96,7 @@ Bu çalıştırıcı Concordium düğümlerinde de bulunan Wasm yorumlayıcısı
 
 .. seealso::
 
-   ``cargo-concordium`` un nasıl kurulacağına dair :ref:`setup-tools` kılavuzu'na bakabilirsiniz.
+   ``cargo-concordium`` un nasıl kurulacağına dair :ref:`setup-toolstr` kılavuzu'na bakabilirsiniz.
 
 Birim testi, ``#[test]`` yerine ``#[concordium_test]`` ile yapılmalıdır ve ``#[cfg(test)]``
 yerine ``#[concordium_cfg_test]`` kullanılmasını önermekteyiz:

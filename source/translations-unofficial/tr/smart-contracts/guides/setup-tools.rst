@@ -22,7 +22,7 @@ Cargo Concordium
 
 Cargo Concordium, Concordium blok zinciri için akıllı sözleşmeler geliştirmek
 aracıdır.
-Akıllı sözleşmeleri :ref:`derleme<compile-moduletr>`,  :ref:`test etme<unit-test-contract>`
+Akıllı sözleşmeleri :ref:`derleme<compile-moduletr>`,  :ref:`test etme<unit-test-contracttr>`
 ve :ref:`sözleşme şemalarını yapılandırma <build-schematr>` gibi özellikleri aktif etmek
 için kullanılabilir..
 

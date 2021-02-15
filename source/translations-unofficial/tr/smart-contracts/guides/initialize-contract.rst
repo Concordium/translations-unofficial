@@ -1,4 +1,4 @@
-.. _initialize-contract:
+.. _initialize-contracttr:
 
 ====================================
 Akıllı sözleşme örneğini başlatma

@@ -157,7 +157,7 @@ Aynı durum, başlatma (init) parametreleri ve alma fonksiyonlari için de gerek
    Açıkçası, baytları sadece parametre tipimize göre serileştirmemiz gerekir,
    ancak birim testlerini yazarken türleri serileştirebilmek uygun olacaktır.
 
-.. _working-with-parameters:
+.. _working-with-parameterstr:
 
 Parametrelerle çalışmak
 ------------------------

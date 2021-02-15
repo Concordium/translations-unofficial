@@ -100,7 +100,7 @@ yaratmaya yönelik işlem zincir üzerinde görünür.
 
 .. seealso::
 
-   Bir sözleşmenin nasıl başlatılacağı için :ref:`initialize-contract` kılavuzuna bakın..
+   Bir sözleşmenin nasıl başlatılacağı için :ref:`initialize-contracttr` kılavuzuna bakın..
 
 Örnek durumu
 ==============

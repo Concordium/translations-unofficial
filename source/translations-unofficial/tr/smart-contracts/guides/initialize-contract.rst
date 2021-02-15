@@ -12,7 +12,7 @@ Ek olarak, bu sözleşme örneğinin isimlendirilmesi de gösterilecektir.
 ============
 
 :ref:`Concordium<downloads>` yazılımının son versiyonu ile :ref:`çalışan bir düğümün (node)<run-a-node>` ve
-zincir üzerinde :ref:`dağıtılmış bir akıllı sözleşme modülün <deploy-module>` olduğundan emin olunuz.
+zincir üzerinde :ref:`dağıtılmış bir akıllı sözleşme modülün <deploy-moduletr>` olduğundan emin olunuz.
 
 Bir akıllı sözleşme başlatılması, bir tür “işlem (transaction)” olması sebebiyle,
 bu işlemi yapmayı ödeyebilecek miktarda GTU’ya sahip bir hesap ile

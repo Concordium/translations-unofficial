@@ -155,8 +155,8 @@ pembaca ke`implementation in Rust`_.
 Menyematkan skema secara on-chain
 =================================
 
-Skema disematkan ke dalam modul smart contract menggunakan fitur `costum
-section`_ dari modul Wasm.
+Skema disematkan ke dalam modul smart contract menggunakan fitur `costum section`_
+dari modul Wasm.
 Ini memungkinkan modul Wasm menyertakan bagian bernama dari byte, yang
 tidak mempengaruhi semantik menjalankan modul Wasm.
 

@@ -6,7 +6,7 @@ Unit menguji kontrak di Rust
 
 Panduan ini akan menunjukkan kepada Anda cara menulis pengujian unit untuk kontrak pintar yang ditulis dalam
 Rust.
-Untuk menguji modul Wasm smart contract, lihat :ref:`simulasi lokal dari fungsi kontrak<local-simulate-id`.
+Untuk menguji modul Wasm smart contract, lihat :ref:`simulasi lokal dari fungsi kontrak<local-simulate-id>`.
 
 Smart contract di Rust ditulis sebagai library dan kita dapat mengujinya seperti library
 dengan menganotasi fungsi dengan atribut ``#[test]``.

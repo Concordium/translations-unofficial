@@ -31,7 +31,7 @@ Akıllı sözleşmeler, üçüncü şahıslara duyulan güven miktarını azalta
 çünkü Akıllı sözleşmeler tamamen şeffaf bir şekilde yürütüldüğünden, bir düğüme erişimi olan herkesin doğrulayabileceği
 şekilde, taraflar arasında anlaşmayı sağlamak için çok yararlı olabilirler
 
-.. _auction:
+.. _auctiontr:
 
 Açık artırma akıllı sözleşme örneği
 -----------------------------------

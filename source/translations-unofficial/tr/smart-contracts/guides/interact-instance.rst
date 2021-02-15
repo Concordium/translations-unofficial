@@ -16,7 +16,7 @@ kullanarak bir düğüm çalıştırıyor oldugunuzdan emin olun. Bu şekilde zi
 üzerinde bir akıllı sözleşme örneğini inceleyebilirsiniz.
 
 .. seealso::
-   Akıllı sözleşme modülünün nasıl dağıtılacağı için bkz :ref:`deploy-module`
+   Akıllı sözleşme modülünün nasıl dağıtılacağı için bkz :ref:`deploy-moduletr`
    dokumanına ve bir örneğin nasıl oluşturulacağı için dokumanına bkz: :ref:`initialize-contract`.
 
 Akıllı sözleşmeyle etkileşimler ağ üzerine bir işlem olduğundan, işlemlerin

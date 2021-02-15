@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-explore-more:
+.. _testnet-explore-more-zh:
 
 =======================================
 Concordium ID：浏览“更多”页面

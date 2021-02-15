@@ -10,7 +10,7 @@
 准备
 ===========
 
-确保您正在使用最新的Concordium 软件  :ref:`Concordium software<downloads>`  运行一个节点 :ref:`running a node<run-a-node>` ，你在链上有一个智能合约实例要检查。
+确保您正在使用最新的Concordium 软件  :ref:`Concordium software<downloads>`  运行一个节点 :ref:`running a node<run-a-node-zh>` ，你在链上有一个智能合约实例要检查。
 
 .. 也可以看看：：
    有关如何部署智能合约模块的信息，请参见：:ref:`deploy-module-zh`  。

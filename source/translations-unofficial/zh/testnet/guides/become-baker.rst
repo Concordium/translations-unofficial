@@ -3,7 +3,7 @@
 .. _node-dashboard: http://localhost:8099
 .. _Discord: https://discord.com/invite/xWmQ5tp
 
-.. _become-a-baker:
+.. _become-a-baker-zh:
 
 ==================================
 成为baker（创建块）
@@ -71,7 +71,7 @@ Stake and lottery
 
 在计算和决定某个Baker是否可以进入Finalization Committee中时，同样需要质押代币。请参阅 **Finalization** 。
 
-.. _epochs-and-slots:
+.. _epochs-and-slots-zh:
 
 Epochs and slots
 ----------------
@@ -117,7 +117,7 @@ Epochs and slots
 
   $concordium-client baker generate-keys <keys-file>.json
 
-这里您可以为密钥文件选择一个任意名称。要在网络中注册密钥，您需要运行节点 :ref:`running a node <running-a-node>` 并发送一笔 ``baker add`` 交易到网络：
+这里您可以为密钥文件选择一个任意名称。要在网络中注册密钥，您需要运行节点 :ref:`running a node <running-a-node-zh>` 并发送一笔 ``baker add`` 交易到网络：
 
 .. code-block:: console
 

@@ -9,7 +9,7 @@
 准备
 ===========
 
-确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并确保您在部署了一个智能合约模块 :ref:`deployed <deploy-module-zh>` 。
+确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node-zh>` ，并确保您在部署了一个智能合约模块 :ref:`deployed <deploy-module-zh>` 。
 
 由于初始化智能合约是一项交易，因此您还应确保已通过 ``concordium-client`` 建立一个具有足够 GTU 的账户来支付交易费用。
 

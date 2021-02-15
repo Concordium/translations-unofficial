@@ -9,7 +9,7 @@
 准备
 ===========
 
-确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node>` ，并且准备好需要部署的 :ref:`smart-contract module<setup-tools-zh>` 。
+确保您正在使用最新的 :ref:`Concordium software<downloads>` 下载并运行节点 :ref:`running a node<run-a-node-zh>` ，并且准备好需要部署的 :ref:`smart-contract module<setup-tools-zh>` 。
 
 由于部署智能合约模块是以交易的形式完成的，因此您还需要使用 ``concordium-client`` 设置一个具有足够GTU的帐户来支付交易费用。
 

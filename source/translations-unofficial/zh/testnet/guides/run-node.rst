@@ -1,7 +1,7 @@
 .. _`Network Dashboard`: https://dashboard.testnet.concordium.com/
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _run-a-node:
+.. _run-a-node-zh:
 
 ==========
 运行节点
@@ -50,7 +50,7 @@
 
    为先前版本创建的帐户在Open Testnet 3上不再有效, 因此，如果您存储了先前版本的帐户，我们建议输入y，这将删除所有帐户密钥。
 
-.. _running-a-node:
+.. _running-a-node-zh:
 
 运行节点
 ==============
@@ -88,7 +88,7 @@
 启用入站连接
 ============================
 
-如果在防火墙后或家庭路由器后运行节点，则可能只能连接到其他节点，但其他节点将无法启动与该节点的连接。不过这样您的节点也是可以完全参与到Concordium网络中，能够发送交易，而且如果配置成 :ref:`if so configured<become-a-baker>` 的话，也可以进行烘烤(bake)和终结确认(finalize)交易。
+如果在防火墙后或家庭路由器后运行节点，则可能只能连接到其他节点，但其他节点将无法启动与该节点的连接。不过这样您的节点也是可以完全参与到Concordium网络中，能够发送交易，而且如果配置成 :ref:`if so configured<become-a-baker-zh>` 的话，也可以进行烘烤(bake)和终结确认(finalize)交易。
 
 但是，如果通过启用入站连接，则您还可以使节点成为更好的网络参与者。默认情况下， ``concordium-node`` 在端口上侦听 ``8888`` 入站连接。根据您的网络和平台配置，您可能需要将外部端口转发到 ``8888`` 路由器上，或者在防火墙中打开它，或者同时使用这两者。具体操作方式取决于您的配置。
 
@@ -101,11 +101,11 @@
 -  8082，中间件使用的端口，可以使用 ``--listen-middleware-port``
 -  10000，gRPC端口，可以使用 ``--listen-grpc-port``
 
-在docker容器更改上方的端口映射时，必须停止（ :ref:`stop-a-node` ），重置后重新启动。如果要重置容器，请在终端执行 ``concordium-node-reset-data`` 或 ``docker rm concordium-client`` 在终端中运行。
+在docker容器更改上方的端口映射时，必须停止（ :ref:`stop-a-node-zh` ），重置后重新启动。如果要重置容器，请在终端执行 ``concordium-node-reset-data`` 或 ``docker rm concordium-client`` 在终端中运行。
 
 我们强烈建议您的防火墙应该被配置为只允许在端口8888的公共连接（对等网络的网络端口），因为有权访问其他端口的人可能可以控制(攻击)您的节点或您在该节点上保存的帐户。
 
-.. _stop-a-node:
+.. _stop-a-node-zh:
 
 停止节点
 =================

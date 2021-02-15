@@ -81,7 +81,7 @@ Concordium ID：开始使用帐户和交易
 .. image:: images/concordium-id/acc18.png
       :width: 32%
 
-.. _move-an-amount-to-the-shielded-balance:
+.. _move-an-amount-to-the-shielded-balance-zh:
 
 将金额移动到 *被保护的余额(shielded balance)*
 ================================================

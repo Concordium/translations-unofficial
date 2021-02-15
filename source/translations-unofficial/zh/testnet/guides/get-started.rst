@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-get-started:
+.. _testnet-get-started-zh:
 
 =======================================
 Concordium ID：开始使用该应用
@@ -11,12 +11,12 @@ Concordium ID：开始使用该应用
    :local:
    :backlinks: none
 
-在按照本指南进行操作之前，您应该已经完成​​Concordium ID的安装，如 上一章<testnet-get-the-app> 中所述  。
+在按照本指南进行操作之前，您应该已经完成​​Concordium ID的安装，如 上一章<testnet-get-the-app-zh> 中所述  。
 
 设置密码和生物识别
 ================================
 
-首次打开Concordium ID应用程序时，您会进入一个流程，该流程将帮助您设置密码和生物特征认证、创建一个 :ref:`glossary-initial-account` 、它还将引导您获取一个： :ref:`glossary-identity` 。初始帐户是一种特殊类型的帐户，在创建身份后由  :ref:`the previous chapter<testnet-get-the-app>` 提交给链。您使用初始帐户进行的交易与使用常规帐户进行的交易相同，但是身份提供者是知道初始帐户的所有者的。创建您的身份后，您将可以自己向该链提交帐户，身份提供者将不知道这些新的帐户。您可以在 :ref:`Identities
+首次打开Concordium ID应用程序时，您会进入一个流程，该流程将帮助您设置密码和生物特征认证、创建一个 :ref:`glossary-initial-account` 、它还将引导您获取一个： :ref:`glossary-identity` 。初始帐户是一种特殊类型的帐户，在创建身份后由  :ref:`the previous chapter<testnet-get-the-app-zh>` 提交给链。您使用初始帐户进行的交易与使用常规帐户进行的交易相同，但是身份提供者是知道初始帐户的所有者的。创建您的身份后，您将可以自己向该链提交帐户，身份提供者将不知道这些新的帐户。您可以在 :ref:`Identities
 and accounts<reference-id-accounts>` 页面上了解有关帐户的更多信息。
 
 打开Concordium ID时遇到的第一个屏幕是下面这个屏幕。它会简单说明您必须经历此过程才能开始。

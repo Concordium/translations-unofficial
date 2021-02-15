@@ -39,7 +39,7 @@ Concordium 软件
 
 .. note::
 
-   要部署智能合约模块并与链进行交互，请确保您正在 :ref:`运行一个节点<run-a-node>`.
+   要部署智能合约模块并与链进行交互，请确保您正在 :ref:`running a node<run-a-node-zh>`.
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/

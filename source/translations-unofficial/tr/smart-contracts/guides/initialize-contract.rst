@@ -69,12 +69,12 @@ Parametreleri JSON formatında kullanma
 ----------------------------------------
 
 JSON formatındaki bir parametre, bir dosya olarak veya modüle gömülü olarak bir
-:ref:`akıllı sözleşme şeması<contract-schema>` sağlanırsa iletilebilir.
+:ref:`akıllı sözleşme şeması<contract-schematr>` sağlanırsa iletilebilir.
 Şema aynı zamanda JSON'ı ikili formata dönüştürmek için de kullanılır.
 
 .. seealso::
 
-   :ref:`Akıllı sözleşme şemasının nasıl ve neden kullanıldığı hakkında daha fazla bilgi <contract-schema>`.
+   :ref:`Akıllı sözleşme şemasının nasıl ve neden kullanıldığı hakkında daha fazla bilgi <contract-schematr>`.
 
    :ref:`Parametreleri ikili (binary) formatında kullanma<init-passing-parameter-bin>`.
 

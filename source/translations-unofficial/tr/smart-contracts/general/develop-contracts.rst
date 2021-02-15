@@ -26,7 +26,7 @@ sahip olan Rust_ programlama dilinde yazabiliriz.
 
 Akıllı sözleşmelerin sadece Rust ile yazılmasına gerek yoktur. Sunduğumuz ilk SDK'dır.
 Manuel olarak yazılmış Wasm veya C, C ++, AssemblyScript_ ve diğer diller ile
-derlenen Wasm, zincirde eşit derecede geçerlidir :ref:`Wasm limitations we impose <wasm-limitations>`.
+derlenen Wasm, zincirde eşit derecede geçerlidir :ref:`Wasm limitations we impose <wasm-limitationstr>`.
 
 
 .. seealso::

@@ -157,7 +157,7 @@ Eğer yukarıdaki işlem başarılı sonuçlanırsa, çıktı aşağıdaki gibi 
 .. seealso::
 
    Akıllı sözleşmelerde parametreleri kullanımıyla ilgili daha fazla bilgi için
-   :ref:`working-with-parameters` dokümanına bakabilirsiniz.
+   :ref:`working-with-parameterstr` dokümanına bakabilirsiniz.
 
 .. _naming-an-instance:
 

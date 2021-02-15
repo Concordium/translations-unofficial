@@ -24,7 +24,7 @@
 
 .. seealso::
 
-   有关下面描述的函数的更多信息，请参阅concordium_std_ 用于在Rust中的Concordium区块链上编写智能合约的API。
+   有关下面描述的函数的更多信息，请参阅 concordium_std_ 用于在Rust中的Concordium区块链上编写智能合约的API。
 
 .. seealso::
 

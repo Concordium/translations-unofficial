@@ -76,7 +76,7 @@ JSON formatındaki bir parametre, bir dosya olarak veya modüle gömülü olarak
 
    :ref:`Akıllı sözleşme şemasının nasıl ve neden kullanıldığı hakkında daha fazla bilgi <contract-schematr>`.
 
-   :ref:`Parametreleri ikili (binary) formatında kullanma<init-passing-parameter-bin>`.
+   :ref:`Parametreleri ikili (binary) formatında kullanma<init-passing-parameter-bintr>`.
 
 JSON formatında ``my_parameter.json`` parametre dosyası ve
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` referans numaralı
@@ -126,7 +126,7 @@ Sıklıkla karşılaşılan hata mesajları bir sonraki bölümde gösterilmekte
    kullanılarak transfer edilebilir.
 
 
-.. _init-passing-parameter-bin:
+.. _init-passing-parameter-bintr:
 
 Parametreleri ikili (binary) formatında kullanma
 -------------------------------------------------

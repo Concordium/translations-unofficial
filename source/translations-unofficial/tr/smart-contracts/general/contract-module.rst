@@ -90,13 +90,13 @@ kullanıcı önce bir kontrat *örneğini* oluşturmalıdır.
 
    Daha fazla bilgi için bkz :ref:`contract-instancestr`.
 
-.. _smart-contracts-on-chain:
+.. _smart-contracts-on-chaintr:
 
-.. _smart-contracts-on-the-chain:
+.. _smart-contracts-on-the-chaintr:
 
-.. _contract-on-chain:
+.. _contract-on-chaintr:
 
-.. _contract-on-the-chain:
+.. _contract-on-the-chaintr:
 
 Zincir üzerindeki akıllı sözleşmeler
 ======================================

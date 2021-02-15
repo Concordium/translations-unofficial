@@ -136,7 +136,7 @@ GTU ve bayt biçiminde işleve yönelik bir argüman içeren işlemler kullanıl
 - Alma fonksiyonu parametresi.
 - Örnek için GTU miktarı.
 
-.. _contract-instance-actions:
+.. _contract-instance-actionstr:
 
 Olayları günlüğe kaydetme
 ============================

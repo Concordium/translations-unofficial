@@ -23,7 +23,7 @@ belirlemek için harici araçlar tarafından kullanılabilir.
 
 .. seealso::
 
-   Rust dilinde akıllı bir sözleşme modülü için şemanın nasıl oluşturulacağına ilişkin talimatlar için bkz :ref:`build-schema`.
+   Rust dilinde akıllı bir sözleşme modülü için şemanın nasıl oluşturulacağına ilişkin talimatlar için bkz :ref:`build-schematr`.
 
 Neden bir sözleşme şeması kullanmalı?
 ===========================================

@@ -1,118 +1,139 @@
-.. _list of types implementing the SchemaType: https://docs.rs/concordium-contracts-common/latest/concordium_contracts_common/schema/trait.SchemaType.html#foreign-impls
-.. _build-schema:
+.. _interact-instance:
 
-=============================
-Bir sözleşme şeması oluşturma
-=============================
+=============================================
+Akıllı sözleşme örneği ile etkileşim kurun
+=============================================
 
-Bu kılavuz, ``cargo-concordium`` kullanarak akıllı sözleşme şemasının nasıl
-oluşturulacağını, dosyaya nasıl aktarılacağını ve / veya şemanın akıllı sözleşme
-modülüne nasıl yerleştirileceğini gösterecektir.
+Bu kılavuz size akıllı bir sözleşme örneğiyle nasıl etkileşimde bulunacağınızı
+gösterecektir; bu etkileşim; örneğin durumunu güncelleyen bir alma işlevinin
+tetiklenmesi anlamına gelir.
 
 Hazırlık
 ===========
 
-Öncelikle, ``cargo-concordium`` kurulu olduğundan emin olun. Kurulu değilse
-:ref:`setup-tools` dokümanı size yardımcı olacaktır.
+:ref:`Concordium software<downloads>`  ile :ref:`running a node<run-a-node>`
+kullanarak bir düğüm çalıştırıyor oldugunuzdan emin olun. Bu şekilde zincir
+üzerinde bir akıllı sözleşme örneğini inceleyebilirsiniz.
 
-Ayrica şema oluşturmak istediğiniz akıllı sözleşmenin Rust kaynak koduna
-da ihtiyacınız olacaktır.
+.. seealso::
+   Akıllı sözleşme modülünün nasıl dağıtılacağı için bkz :ref:`deploy-module`
+   dokumanına ve bir örneğin nasıl oluşturulacağı için dokumanına bkz: :ref:`initialize-contract`.
 
-Bir şema için gerekli sözleşmeyi ayarlayın
-===========================================
+Akıllı sözleşmeyle etkileşimler ağ üzerine bir işlem olduğundan, işlemlerin
+ücretini ödeyebilmek için yeterli GTU'ya sahip bir hesapla ``concordium-client``
+kurulduğundan emin olmalısınız.
 
-Bir sözleşme şeması oluşturmak için önce akıllı sözleşmemizi hazırlamalıyız.
+.. note::
 
-Akıllı sözleşmemizin hangi kısımlarının şemaya dahil edileceğini seçebiliriz.
-Sözleşme durumu şeması ve / veya başlatma (init) ve alma fonksiyonlarinin her
-bir parametresini seçenek olarak ekleyebiliriz.
+   Bu işlemin maliyeti, alma işlevine gönderilen parametrelerin boyutuna ve
+   fonksiyonun kendisinin karmaşıklığına bağlıdır.
 
-Şemaya dahil etmek istediğimiz her tür, ``SchemaType`` özelliğini uygulamalıdır.
-Bu, tüm temel türler ve diğer bazı türler için zaten yapılmıştır (bkz. `list of
-types implementing the SchemaType`_). çoğu durumda, ``#[derive(SchemaType)]``
-kullanılarak otomatik olarak da elde edilebilir. ::
+Etkileşim
+===========
 
-   #[derive(SchemaType)]
-   struct SomeType {
-       ...
-   }
+Parametresiz alma işlevi olan ``my_receive`` kullanarak, adres indeksi ``0``
+olan bir örneği güncellemek için aşağıdaki komutu çalıştırın. Bu komut 1000
+enerji kullanacaktir:
 
-``SchemaType`` özelliğini manuel olarak uygulamak, yalnızca bu türün bayt olarak
-nasıl temsil edildiğini ve nasıl temsil edileceğini açıklayan bir ``schema::Type``
-için alıcı olan bir fonksiyonun belirtilmesini gerektirmektedir.
+.. code-block:: console
 
-.. todo::
+   $concordium-client contract update 0 --func my_receive --energy 1000
 
-   Create an example showing how to manually implement ``SchemaType`` and link
-   to it from here.
+Komut başarılı olursa, çıktı aşağıdakine benzer olmalıdır:
 
-Sözleşme durumu dahil etme
-----------------------------
+.. code-block:: console
 
-Sözleşme durumu için şema üretmek ve dahil etmek için kullanacağımız
-``#[contract_state(contract = ...)]`` makrosunu şu şekilde kullanabiliriz::
+   Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_receive'.
 
-   #[contract_state(contract = "my_contract")]
-   #[derive(SchemaType)]
-   struct MyState {
-       ...
-   }
+Parametreleri JSON biçiminde aktarma
+---------------------------------------
 
-Veya daha basit olarak; eğer sözleşme durumu zaten ``SchemaType`` uygulayan
-bir türde ise, u32 kullanılabilir::
-
-   #[contract_state(contract = "my_contract")]
-   type State = u32;
-
-Fonksiyon parametreleri dahil etme
--------------------------------------
-
-Başlangıç (init) ve alma fonksiyonlarının parametreleri ile şema üretmek ve dahil
-etmek için; ``#[init(..)]`` - ve ``#[receive(..)]``-macro için isteğe bağlı
-``parameter`` özniteliğini ayarlıyoruz.::
-
-   #[derive(SchemaType)]
-   enum InitParameter { ... }
-
-   #[derive(SchemaType)]
-   enum ReceiveParameter { ... }
-
-   #[init(contract = "my_contract", parameter = "InitParameter")]
-   fn contract_init<...> (...){ ... }
-
-   #[receive(contract = "my_contract", name = "my_receive", parameter = "ReceiveParameter")]
-   fn contract_receive<...> (...){ ... }
-
-Şema oluşturmak
-===================
-
-Şimdi, `` cargo-concordium '' kullanarak gerçek şemayı oluşturmaya hazırız bu
-aşamada şemayı yerleştirme ve / veya şemayı bir dosyaya yazma seçeneklerimiz de var.
+Eger :ref:`smart contract schema <contract-schematr>` is saglanir ise, parametre
+JSON formatı içerisinde; bir dosya yada gömülü olarak geçilebilir. Şema, JSON
+objesini ikili (binary) olarak serileştirmek için kullanılır.
 
 .. seealso::
 
-   Bu konuda daha fazla bilgi almak için bkz.
-   :ref:`here<contract-schema-which-to-choose>`.
+   :ref:`Akıllı sözleşme şemalarının neden ve nasıl kullanılacağı hakkında daha
+   fazla bilgi edinmek için <contract-schematr>`.
 
-Şemayı yerleştirme (Embedding)
---------------------------------
-
-Şemayı akıllı sözleşme modülüne yerleştirmek için build komutuna
-``--schema-embed`` ekliyoruz.
+``my_parameter_receive`` alma fonksiyonunu kullanarak JSON formatında bir
+parametre dosyası ``my_parameter.json`` ile adres indeksi `` 0 '' olan bir örneği
+güncellemek için, aşağıdaki komutu çalıştırın:
 
 .. code-block:: console
 
-   $cargo concordium build --schema-embed
+   $concordium-client contract update 0 --func my_parameter_receive \
+            --energy 1000 \
+            --parameter-json my_parameter.json
 
-Eğer işlem başarılı olursa, komutun çıktısı size şemanın bayt cinsinden
-toplam boyutunu söyleyecektir.
-
-Bir şema dosyası çıktı alma
-------------------------------
-
-Şemayı dosyaya çıkarmak için, ``--schema-out=FILE``  parametresini
-kullanabiliriz; burada ``FILE``, oluşturulacak dosyanın PATH’i ve ismi olacaktir.:
+Komut başarılı olursa, çıktı aşağıdakine benzer olmalıdır:
 
 .. code-block:: console
 
-   $cargo concordium build --schema-out="/some/path/schema.bin"
+   Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_parameter_receive'.
+
+Aksi takdirde, sorunu açıklayan bir hata görüntülenir.
+Yaygın hatalar sonraki bölümde açıklanmaktadır.
+
+.. seealso::
+
+   Sözleşme örneği adresleri hakkında daha fazla bilgi için, bakınız
+   :ref:`references-on-chain`.
+
+.. note::
+
+   JSON biçiminde sağlanan parametre şemada belirtilen türe uymuyorsa, bir hata
+   mesajı görüntülenecektir. Örneğin:
+
+    .. code-block:: console
+
+       Error: Could not decode parameters from file 'my_parameter.json' as JSON:
+       Expected value of type "UInt64", but got: "hello".
+       In field 'first_field'.
+       In {
+           "first_field": "hello",
+           "second_field": 42
+       }.
+
+.. note::
+
+   Belirli bir modül gömülü bir şema içermiyorsa, ``--schema /path/to/schema.bin``
+   parametresi kullanılarak şema sağlanabilir.
+
+.. note::
+
+   GTU, güncellemeler sırasında ``--amount AMOUNT`` parametresi kullanılarak
+   bir sözleşmeye de aktarılabilir.
+
+Parametreleri ikili (binary) biçimde aktarma.
+----------------------------------------------
+
+Parametreleri ikili(binary) biçimde iletirken, :ref:`contract schema <contract-schematr>`
+gerekli değildir.
+
+``my_parameter_receive`` alma fonksiyonunu kullanarak ``my_parameter.bin``
+parametre dosyası ile ikili formatta adres indeksi ``0`` olan bir örneği güncellemek
+için, aşağıdaki komutu çalıştırın:
+
+.. code-block:: console
+
+   $concordium-client contract update 0 --func my_parameter_receive \
+            --energy 1000 \
+            --parameter-bin my_parameter.bin
+
+Eğer komut başarılı olursa, çıktı aşağıdakine benzer olmalıdır:
+
+.. code-block:: console
+
+   Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_parameter_receive'.
+
+.. seealso::
+
+   Akıllı sözleşmelerde parametrelerle nasıl çalışılacağı hakkında bilgi için bkz
+   :ref:`working-with-parameters`.
+
+.. _parameter_cursor():
+   https://docs.rs/concordium-std/latest/concordium_std/trait.HasInitContext.html#tymethod.parameter_cursor
+.. _get(): https://docs.rs/concordium-std/latest/concordium_std/trait.Get.html#tymethod.get
+.. _read(): https://docs.rs/concordium-std/latest/concordium_std/trait.Read.html#method.read_u8

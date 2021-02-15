@@ -52,7 +52,7 @@ nasıl yapı yapılacağını açıklayan ve harici araçlar tarafından kullan�
 .. note::
 
    ``concordium-client`` uygulaması sözleşme örneklerinin durumunu JSON'a serileştirmek
-   için bir şema kullanabilir :ref:`serialize JSON parameters<init-passing-parameter-json>`
+   için bir şema kullanabilir :ref:`serialize JSON parameters<init-passing-parameter-jsontr>`
 
 Şema daha sonra zincire yerleştirilen bir akıllı sözleşme modülüne yerleştirilir
 veya bir dosyaya yazılır ve zincir dışına aktarılır.

@@ -1,6 +1,6 @@
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _guide-account-transactions:
+.. _guide-account-transactions-zh:
 
 =========================================================
 Concordium ID：开始使用帐户和交易

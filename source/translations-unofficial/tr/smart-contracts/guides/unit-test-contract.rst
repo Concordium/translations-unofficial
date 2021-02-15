@@ -6,7 +6,7 @@ Rust'ta bir sözleşme için birim testi yapma
 
 Bu kılavuz size Rust'ta yazılmış akıllı bir sözleşme için birim testlerinin
 nasıl yazılacağını gösterecektir.
-Akıllı sözleşme Wasm modülünü test etmek için bkz :ref:`local-simulate`.
+Akıllı sözleşme Wasm modülünü test etmek için bkz :ref:`local-simulatetr`.
 
 Rust'ta akıllı sözleşme bir kütüphane olarak yazılır ve ``#[test]`` özelliğiyle
 işlevlere açıklama ekleyerek onu bir kütüphane gibi test edebiliriz.

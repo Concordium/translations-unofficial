@@ -80,8 +80,8 @@ Skema ini digunakan untuk membuat JSON menjadi biner.
 
    :ref:`Parameter juga dapat dikirimkan dalam format biner <init-passing-parameter-bin>`.
 
-Untuk menginisialisasi instance sebuah kontrak ``my_parameter_contract`` dari
-modul dengan referensi
+Untuk menginisialisasi instance sebuah kontrak ``my_parameter_contract``
+dari modul dengan referensi
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` dengan sebuah
 file parameter ``my_parameter.json``di format JSON, jalankan perintah berikut:
 
@@ -136,8 +136,8 @@ Meneruskan parameter dalam format biner
 Saat meneruskan parameter dalam format biner, sebuah :ref:`skema kontrak
 <contract-schema-id>` tidak diperlukan.
 
-Untuk menginisialisasi instance sebuah kontrak ``my_parameter_contract`` dari
-modul dengan referensi
+Untuk menginisialisasi instance sebuah kontrak ``my_parameter_contract``
+dari modul dengan referensi
 ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` dengan sebuah
 file parameter ``my_parameter.json``di format JSON, jalankan perintah berikut:
 

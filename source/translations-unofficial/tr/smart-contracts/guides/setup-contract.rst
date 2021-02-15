@@ -1,6 +1,6 @@
 .. highlight:: toml
 
-.. _setup-contract:
+.. _setup-contracttr:
 
 ===================================
 Bir akıllı sözleşme projesi kurma

@@ -17,7 +17,7 @@ kullanarak bir düğüm çalıştırıyor oldugunuzdan emin olun. Bu şekilde zi
 
 .. seealso::
    Akıllı sözleşme modülünün nasıl dağıtılacağı için bkz :ref:`deploy-moduletr`
-   dokumanına ve bir örneğin nasıl oluşturulacağı için dokumanına bkz: :ref:`initialize-contract`.
+   dokumanına ve bir örneğin nasıl oluşturulacağı için dokumanına bkz: :ref:`initialize-contracttr`.
 
 Akıllı sözleşmeyle etkileşimler ağ üzerine bir işlem olduğundan, işlemlerin
 ücretini ödeyebilmek için yeterli GTU'ya sahip bir hesapla ``concordium-client``

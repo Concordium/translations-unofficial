@@ -34,10 +34,10 @@ The documentation is split into four categories
    :maxdepth: 1
    :caption: General
 
-   general/introductiontr
-   general/contract-moduletr
-   general/contract-instancestr
-   general/contract-schematr
+   general/introduction
+   general/contract-module
+   general/contract-instances
+   general/contract-schema
    general/resource-accounting
    general/develop-contracts
 
@@ -51,22 +51,22 @@ The documentation is split into four categories
    :maxdepth: 1
    :caption: Contract development guides
 
-   guides/setup-toolstr
-   guides/setup-contracttr
-   guides/compile-moduletr
-   guides/unit-test-contracttr
-   guides/local-simulatetr
-   guides/build-schematr
-   guides/no-stdtr
+   guides/setup-tools
+   guides/setup-contract
+   guides/compile-module
+   guides/unit-test-contract
+   guides/local-simulate
+   guides/build-schema
+   guides/no-std
 
 .. toctree::
    :maxdepth: 1
    :caption: On-chain guides
 
    guides/deploy-moduletr
-   guides/initialize-contracttr
-   guides/interact-instancetr
-   guides/inspect-instancetr
+   guides/initialize-contract
+   guides/interact-instance
+   guides/inspect-instance
 
 .. toctree::
    :maxdepth: 1

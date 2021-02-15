@@ -173,7 +173,7 @@ bagian `Re-stake penghasilan`_.
 
 Untuk memulai node dengan kunci baker ini dan mulai memproduksi blok. pertama,
 anda harus mematikan node yang sedang berjalan (baik dengan menekan
-``Ctrl + C`` di terminal tempat node berjalan atau eksekusi menggunakan 
+``Ctrl + C`` di terminal tempat node berjalan atau eksekusi menggunakan
 ``concordium-node-stop``).
 
 Setelah menempatkan file di direktori yang sesuai (sudah dilakukan di

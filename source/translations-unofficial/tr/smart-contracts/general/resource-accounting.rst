@@ -1,5 +1,5 @@
 
-.. _resource-accounting:
+.. _resource-accountingtr:
 
 ===================
 Resource accounting

@@ -163,7 +163,7 @@ Bir olayın günlüğe kaydedilmesinin, sözleşmenin durumuna yazma maliyetine 
 bir maliyeti vardır. Çoğu durumda, maliyeti düşürmek için yalnızca birkaç bayt
 kaydetmek mantıklı olacaktır..
 
-.. _action-descriptions:
+.. _action-descriptionstr:
 
 Eylem açıklamaları
 ===================

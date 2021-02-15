@@ -52,7 +52,7 @@ Untuk mendapatkan ekspor yang benar, atribut `crate-type` harus disetel ke
    ...
 
 Menulis smart contract menggunakan ``concordium_std``
-===================================================
+======================================================
 
 Direkomendasikan untuk menggunakan kotak ``concordium_std``, yang menyediakan
 lebih banyak pengalaman Rust-like untuk mengembangkan modul smart contract dan memanggil
@@ -212,7 +212,7 @@ Sebagai contoh, lihat kontrak berikut di mana parameter
 Fungsi terima di atas tidak efisien dalam hal deserialisasi
 ``value`` bahkan ketika tidak diperlukan, yaitu, ketika ``should_add`` adalah ``false``.
 
-Untuk mendapatkan lebih banyak kendali, dan dalam hal ini, lebih efisien, kitda dapat 
+Untuk mendapatkan lebih banyak kendali, dan dalam hal ini, lebih efisien, kitda dapat
 deserialisasi parameter menggunakan sifat `Read`_:
 
 .. code-block:: rust

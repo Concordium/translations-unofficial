@@ -85,15 +85,15 @@
 
    如果以JSON格式提供的参数不符合schema中指定的类型，则将显示错误消息。例如：
 
-       .. code-block:: console
+.. code-block:: console
 
-       Error: Could not decode parameters from file 'my_parameter.json' as JSON:
-       Expected value of type "UInt64", but got: "hello".
-       In field 'first_field'.
-       In {
-           "first_field": "hello",
-           "second_field": 42
-       }.
+   Error: Could not decode parameters from file 'my_parameter.json' as JSON:
+   Expected value of type "UInt64", but got: "hello".
+   In field 'first_field'.
+   In {
+       "first_field": "hello",
+       "second_field": 42
+   }.
 
 .. note::
 

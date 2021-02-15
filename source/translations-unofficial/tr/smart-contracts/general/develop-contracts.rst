@@ -36,7 +36,7 @@ derlenen Wasm, zincirde eşit derecede geçerlidir :ref:`Wasm limitations we imp
 
 .. seealso::
 
-   Akıllı sözleşme modülleri hakkında daha fazla bilgi için bkz :ref:`contract-module`.
+   Akıllı sözleşme modülleri hakkında daha fazla bilgi için bkz :ref:`contract-moduletr`.
 
    Rust'ta bir kütüphane olarak akıllı bir sözleşme modülü geliştirilir ve daha sonra Wasm'da derlenir.
    Doğru dışa aktarımları elde etmek için Manifest dosyasındaki `crate-type` özelliği

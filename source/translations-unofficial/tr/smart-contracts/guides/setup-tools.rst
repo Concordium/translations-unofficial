@@ -1,4 +1,4 @@
-.. _setup-tools:
+.. _setup-toolstr:
 
 =========================================
 Geliştirme için gerekli araçlar yükleme

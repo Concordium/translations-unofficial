@@ -54,5 +54,5 @@ paket :ref:`Concordium software<downloads>`.
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/
-.. _install rustup: https://rustup.rs/
+.. _instal rustup: https://rustup.rs/
 .. _crates.io: https://crates.io/

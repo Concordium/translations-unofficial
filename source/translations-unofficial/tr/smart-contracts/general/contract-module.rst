@@ -48,7 +48,7 @@ Wasm düşük seviyeli bir dildir ve elle yazmak pratik değildir. Bunun yerine,
 daha yüksek seviyeli bir dilde akıllı sözleşmeler yazılabilir ve bunlar daha
 sonra Wasm'a derlenebilir.
 
-.. _wasm-limitations:
+.. _wasm-limitationstr:
 
 Limitler
 -----------

@@ -48,7 +48,7 @@ not edilmelidir.
 
    Modül referansları hakkında daha fazla bilgi almak için :ref:`references-on-chain` dokümanı incelenmelidir.
 
-.. _naming-a-module:
+.. _naming-a-moduletr:
 
 Bir modülün isimlendirilmesi
 =============================

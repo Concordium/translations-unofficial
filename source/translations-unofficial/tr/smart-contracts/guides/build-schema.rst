@@ -92,7 +92,7 @@ aşamada şemayı yerleştirme ve / veya şemayı bir dosyaya yazma seçenekleri
 .. seealso::
 
    Bu konuda daha fazla bilgi almak için bkz.
-   :ref:`here<contract-schema-which-to-choose>`.
+   :ref:`here<contract-schema-which-to-choosetr>`.
 
 Şemayı yerleştirme (Embedding)
 --------------------------------

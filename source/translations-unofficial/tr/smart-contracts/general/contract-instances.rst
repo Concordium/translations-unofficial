@@ -1,4 +1,4 @@
-.. _contract-instances:
+.. _contract-instancestr:
 
 ==========================
 Akıllı sözleşme örnekleri

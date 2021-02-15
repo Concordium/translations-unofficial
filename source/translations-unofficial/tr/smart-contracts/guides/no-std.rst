@@ -1,4 +1,4 @@
-.. _no-std:
+.. _no-stdtr:
 
 ======================================
 ``no_std`` kullanarak yapılandırma

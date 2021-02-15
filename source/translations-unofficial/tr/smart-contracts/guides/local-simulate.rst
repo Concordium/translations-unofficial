@@ -12,7 +12,7 @@ Bu simülasyon, akıllı bir sözleşmeyi incelemek ve belirli bir senaryonun
 
 .. seealso::
 
-   Otomatik birim testleriyle ilgili kılavuz için :ref:`unit-test-contract`.
+   Otomatik birim testleriyle ilgili kılavuz için :ref:`unit-test-contracttr`.
 
 Hazırlık
 ========

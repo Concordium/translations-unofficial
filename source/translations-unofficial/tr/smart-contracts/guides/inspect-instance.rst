@@ -1,4 +1,4 @@
-.. _inspect-instance:
+.. _inspect-instancetr:
 
 ======================================
 Akıllı sözleşme örneğini inceleyin

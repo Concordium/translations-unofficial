@@ -40,7 +40,7 @@ Bu, Cargo_ yapilandirmasini kullanır, ancak sonuç üzerinde optimizasyonlar da
 
 .. seealso::
 
-   Akıllı sözleşme modülü için şema oluşturmak için, bazı :ref:`hazırlıklar gerekmektedir <build-schema>`.
+   Akıllı sözleşme modülü için şema oluşturmak için, bazı :ref:`hazırlıklar gerekmektedir <build-schematr>`.
 
 .. note::
 

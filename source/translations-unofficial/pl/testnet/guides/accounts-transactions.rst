@@ -224,7 +224,7 @@ wykonać przelew z harmonogramem wydań, możesz rzucić okiem the :ref:`concord
 .. image:: images/concordium-id/rel3.png
       :width: 32%
 
-Wsparcie i opinie
+Wsparcie i informacje zwrotne
 ==================
 
 Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub informacje zwrotne na Discord, lub Skontaktuj się z nami na testnet@concordium.com.

@@ -71,7 +71,7 @@ tipik olarak yalnızca kullanıcı tanımlı durumu kastediyoruz. GTU tutarını
 ayrı ele almanın nedeni, GTU'nun yalnızca ağın kurallarına göre harcanması ve
 alınabilmesidir, örneğin, sözleşmeler GTU jetonları yaratamaz veya yok edemez.
 
-.. _contract-instances-init-on-chain:
+.. _contract-instances-init-on-chaintr:
 
 Zincir üzerinde akıllı sözleşme örneği oluşturmak
 =======================================================

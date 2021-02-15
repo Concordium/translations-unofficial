@@ -9,7 +9,7 @@ Bu klavuz zincir üzerindeki (*on-chain*) bir akıllı sözleşmeyi nasıl dağ�
 ============
 
 :ref:`Concordium<downloads>` yazılımının son versiyonu ile :ref:`çalışan bir düğümün (node)<run-a-node>`
-ve dağıtıma hazır bir :ref:`akıllı sözleşme modülün<setup-tools>` olduğundan emin olunuz.
+ve dağıtıma hazır bir :ref:`akıllı sözleşme modülün<setup-toolstr>` olduğundan emin olunuz.
 
 Bir akıllı sözleşme dağıtımı, bir tür "işlem (transaction)" olması sebebiyle, bu işlemi yapmayı ödeyebilecek miktarda GTU'ya sahip bir hesap ile ``concordium-client`` kurulmuş olmalıdır.
 

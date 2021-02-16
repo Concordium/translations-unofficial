@@ -9,3 +9,4 @@ Contents
 
    smart-contracts/index
    testnet/index
+   translations-unofficial/uk/index

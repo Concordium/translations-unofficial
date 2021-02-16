@@ -42,7 +42,7 @@ sześciocyfrowy passcode. Jeśli wolisz używać pełnego hasła zawierającego 
 
 
 Wybierając zarówno za passcode lub pełne hasło, będziesz mógł również korzystać z biometrii jeśli twój telefon
-wspiera to, i.e. rozpoznawanie twarzy lub odcisk palca. Zalecamy użycie biometria jeśli masz taką możliwość it to.
+wspiera to, i.e. rozpoznawanie twarzy lub odcisk palca. Zalecamy użycie biometria jeśli masz taką możliwość to.
 
 .. image:: images/concordium-id/int3.png
       :width: 32%
@@ -52,7 +52,7 @@ Poproś o początkowe konto i tożsamość
 =========================================
 
 Dalej, będziesz miał wybór pomiędzy utworzeniem nowego konta początkowego a tożsamością, lub importowanie już istniejącego zestawu.
-Zakładając, że to pierwszy raz używasz Concordium ID, możesz wybrać **Chcę utworzyć moje początkowe konto** kontyntynuj.
+Zakładając, że to pierwszy raz używasz Concordium ID, możesz wybrać **Chcę utworzyć moje początkowe konto** kontynuować.
 
 .. image:: images/concordium-id/int4.png
       :width: 32%

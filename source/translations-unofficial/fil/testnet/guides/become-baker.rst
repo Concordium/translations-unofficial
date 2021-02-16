@@ -202,25 +202,27 @@ ay kasama sa isang block.
 
 .. note::
 
-   If the transaction for adding the baker was included in a block during epoch `E`, the
-   baker will be considered as part of the baking committee when epoch
-   `E+2` starts.
+   Kung ang transaksyon para sa pagdaragdag ng baker ay kasama sa isang block sa panahon 
+   ng epoch  `E`, ang baker ay isasaalang-alang bilang bahagi ng baking committee kapag 
+   nagsimula ang epoch `E+2`.
 
-Managing the baker
+Pamamahala sa baker
 ==================
 
-Checking the status of the baker and its lottery power
-------------------------------------------------------
+Sinusuri ang katayuan ng baker at ang lakas nito sa loterya
+-----------------------------------------------------------
 
-In order to see if the node is baking, you can check various sources that
-offer different degrees of precision in the information displayed.
+Upang makita kung ang node ay nagluluto sa hurno, maaari mong suriin 
+ang iba't ibang mga mapagkukunan na nag-aalok ng iba't ibang antas ng 
+katumpakan sa ipinakitang impormasyon.
 
-- In the `network dashboard <http://dashboard.testnet.concordium.com>`_, your
-  node will show its baker ID in the ``Baker`` column.
-- Using the ``concordium-client`` you can check the list of current bakers
-  and the relative staked amount that they hold, i.e. their lottery power.  The
-  lottery power will determine how likely it is that a given baker will win the
-  lottery and bake a block.
+- Sa `network dashboard <http://dashboard.testnet.concordium.com>`_, ipapakita 
+ng iyong node ang baker ID nito sa ``Baker`` kolum.
+- Gamit ang ``concordium-client`` maaari mong suriin ang listahan ng mga 
+kasalukuyang baker at ang kamag-anak na staked na halaga na hawak nila, ibig 
+sabihin ang kanilang lakas sa loterya. Matutukoy ng lakas ng lottery kung 
+gaano ito posibilidad na ang isang naibigay na baker ay mananalo sa lottery 
+at magluto ng isang block.
 
   .. code-block:: console
 
@@ -234,8 +236,8 @@ offer different degrees of precision in the information displayed.
          34: 4p2n8QQn5akq3XqAAJt2a5CsnGhDvUon6HExd2szrfkZCTD4FX   <0.0001
          ...
 
-- Using the ``concordium-client`` you can check that the account has
-  registered a baker and the current amount that is staked by that baker.
+- Gamit ang ``concordium-client`` maaari mong suriin kung mayroon ang account 
+nakarehistro ng isang baker at ang kasalukuyang halaga na natipon ng baker na iyon.
 
   .. code-block:: console
 
@@ -247,45 +249,45 @@ offer different degrees of precision in the information displayed.
       - Restake earnings: yes
      ...
 
-- If the staked amount is big enough and there is a node running with the baker
-  keys loaded, that baker should eventually produce blocks and you can see
-  in your mobile wallet that baking rewards are being received by the account,
-  as seen in this image:
+- Kung ang staked na halaga ay sapat na malaki at mayroong isang node na 
+tumatakbo kasama ang mga key ng baker na na-load, ang baker na iyon ay dapat 
+na gumawa ng mga block at maaari mong makita sa iyong mobile wallet na ang 
+mga gantimpala sa pagbe-bake ay natanggap ng account, tulad ng nakikita sa 
+imaheng ito:
 
   .. image:: images/bab-reward.png
      :align: center
      :width: 250px
 
-Updating the staked amount
---------------------------
+Ang pag-update sa staked amount
+-------------------------------
 
-To update the baker stake run
+Upang mai-update ang pagtakbo ng stake ng baker
 
 .. code-block:: console
 
    $concordium-client baker update-stake --stake <newAmount> --sender bakerAccount
 
-Modifying the staked amount modifies the probability that a baker gets elected
-to bake blocks.
+Binabago ng naka-stak na halaga ang posibilidad na mapili ang isang baker upang maghurno ng mga block.
 
-When a baker **adds stake for the first time or increases their stake**, that
-change is executed on the chain and becomes visible as soon as the transaction
-is included in a block (can be seen through ``concordium-client account show
-bakerAccount``) and takes effect 2 epochs after that.
+Kapag ang isang baker ay **adds stake for the first time or increases their stake**, ang 
+pagbabago na iyon ay isinasagawa sa kadena at nakikita kaagad na ang transaksyon ay isinasama 
+sa isang block (maaaring makita sa pamamagitan ng (can be seen through ``concordium-client account show
+bakerAccount``) at magkakabisa 2 epoch pagkatapos nito.
 
-.. table:: Timeline: increasing the stake
+.. table:: Timeline: pagdaragdag ng stake
 
-   +----------------------------------------+-----------------------------------------+----------------+
-   |                                        | When transaction is included in a block | After 2 epochs |
-   +========================================+=========================================+================+
-   | Change is visible by querying the node | ✓                                       |                |
-   +----------------------------------------+-----------------------------------------+----------------+
-   | Baker uses the new stake               |                                         | ✓              |
-   +----------------------------------------+-----------------------------------------+----------------+
+   +--------------------------------------------------------------+------------------------------------------------+----------------+
+   |                                                              | Kapag ang transaksyon ay kasama sa isang block | After 2 epochs |
+   +==============================================================+================================================+================+
+   | Makikita ang pagbabago sa pamamagitan ng pagtatanong sa node | ✓                                              |                |
+   +--------------------------------------------------------------+------------------------------------------------+----------------+
+   | Gumagamit si Baker ng bagong stake                           |                                                | ✓              |
+   +--------------------------------------------------------------+------------------------------------------------+----------------+
 
-When a baker **decreases the staked amount**, the change will need *2 +
-bakerCooldownEpochs* epochs to take effect. The change becomes visible on the
-chain as soon as the transaction is included in a block, it can be consulted through
+Kapag ang isang baker ay **decreases the staked amount**, kailangan ng pagbabago ng *2 +
+bakerCooldownEpochs* upang magkabisa. Ang pagbabago ay nakikita sa chain sa sandaling 
+ang transaksyon ay kasama sa isang block, maaari itong kumunsulta sa pamamagitan ng 
 ``concordium-client account show bakerAccount``:
 
 .. code-block:: console
@@ -299,23 +301,23 @@ chain as soon as the transaction is included in a block, it can be consulted thr
 
    ...
 
-.. table:: Timeline: decreasing the stake
+.. table:: Timeline: pagbawas ng stake
 
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                        | When transaction is included in a block | After *2 + bakerCooldownEpochs* epochs |
-   +========================================+=========================================+========================================+
-   | Change is visible by querying the node | ✓                                       |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker uses the new stake               |                                         | ✓                                      |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Stake can be decreased again or        | ✗                                       | ✓                                      |
-   | baker can be removed                   |                                         |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
+   +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
+   |                                                              | Kapag ang transaksyon ay kasama sa isang block | Pagkatapos ng *2 + bakerCooldownEpochs* epochs |
+   +==============================================================+================================================+================================================+
+   | Makikita ang pagbabago sa pamamagitan ng pagtatanong sa node | ✓                                              |                                                |
+   +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
+   | Gumagamit si Baker ng bagong stake                           |                                                | ✓                                              |
+   +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
+   | Maaaring mabawasan muli ang                                  | ✗                                              | ✓                                              |
+   | stake o matanggal ang baker                                  |                                                |                                                 |
+   +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 .. note::
 
-   In the testnet, ``bakerCooldownEpochs`` is set initially to 168 epochs. This
-   value can be checked as follows:
+   Sa testnet, ``bakerCooldownEpochs`` ay itinakda nang una sa 168 epochs. Maaaring suriin 
+   ang halagang ito tulad ng sumusunod:
 
    .. code-block:: console
 
@@ -326,33 +328,33 @@ chain as soon as the transaction is included in a block, it can be consulted thr
 
 .. warning::
 
-   As noted in the `Definitions`_ section, the staked amount is *locked*,
-   i.e. it cannot be transferred or used for payment. You should take this
-   into account and consider staking an amount that will not be needed in the
-   short term. In particular, to deregister a baker or to modify the staked
-   amount you need to own some non-staked GTU to cover the transaction
-   costs.
+   Tulad ng nabanggit sa `Mga Kahulugan`_ seksyon, ang naka-stak na halaga ay naka-*locked*,
+   ibig sabihin hindi ito maaaring ilipat o magamit para sa pagbabayad. Dapat mong isaalang-
+   alang ito at isaalang-alang ang pagtutuon ng isang halaga na hindi kakailanganin sa maikling 
+   panahon. Sa partikular, upang alisin ang pagpapatala ng isang baker o upang baguhin ang naipong 
+   halaga na kailangan mo upang pagmamay-ari ng ilang hindi naka-istak na GTU upang masakop ang mga 
+   gastos sa transaksyon.
 
-Restaking the earnings
+Restaking ng mga kita
 ----------------------
 
-When participating as a baker in the network and baking blocks, the account
-receives rewards on each baked block. These rewards are automatically added to
-the staked amount by default.
+Kapag nakikilahok bilang isang baker sa network at mga baking block, 
+tumatanggap ang account ng mga gantimpala sa bawat lutong block. Ang 
+mga gantimpala na ito ay awtomatikong idinagdag sa naka-stak na halaga bilang default.
 
-You can choose to modify this behavior and instead receive the rewards in
-the account balance without staking them automatically. This switch can be
-changed through ``concordium-client``:
+Maaari mong piliing baguhin ang pag-uugali na ito at sa halip ay makatanggap 
+ng mga gantimpala sa balanse ng account nang hindi awtomatiko nitong itinutuon. 
+Ang switch na ito ay maaaring mabago  ``concordium-client``:
 
 .. code-block:: console
 
    $concordium-client baker update-restake False --sender bakerAccount
    $concordium-client baker update-restake True --sender bakerAccount
 
-Changes to the restake flag will take effect immediately; however, the changes
-start affecting baking and finalizing power in the epoch after next. The current
-value of the switch can be seen in the account information which can be queried
-using ``concordium-client``:
+Ang mga pagbabago sa bandila ng muling ibalik ay magkakabisa kaagad; 
+gayunpaman, ang mga pagbabago ay nagsisimulang makaapekto sa baking at pagtatapos 
+ng kapangyarihan sa panahon pagkatapos ng susunod. Ang kasalukuyang halaga ng switch 
+ay maaaring makita sa impormasyon ng account na maaaring ma-query gamit  ``concordium-client``:
 
 .. code-block:: console
 
@@ -365,22 +367,22 @@ using ``concordium-client``:
 
    ...
 
-.. table:: Timeline: updating restake
+.. table:: Timeline: pag-update sa restake
 
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   |                                               | When transaction is included in a block | 2 epochs after being rewarded |
-   +===============================================+=========================================+===============================+
-   | Change is visible by querying the node        | ✓                                       |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | Earnings will [not] be restaked automatically | ✓                                       |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | If restaking automatically, the gained        |                                         | ✓                             |
-   | stake affects the lottery power               |                                         |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
+   +--------------------------------------------------------------+------------------------------------------------+-------------------------------+
+   |                                                              | Kapag ang transaksyon ay kasama sa isang block | 2 epoch matapos gantimpalaan  |
+   +==============================================================+================================================+===============================+
+   | Makikita ang pagbabago sa pamamagitan ng pagtatanong sa node | ✓                                              |                               |
+   +--------------------------------------------------------------+------------------------------------------------+-------------------------------+
+   | Ang mga kita ay [hindi] awtomatikong maibabalik muli         | ✓                                              |                               |
+   +--------------------------------------------------------------+------------------------------------------------+-------------------------------+
+   |Kung awtomatikong magpapatuloy, nakakaapekto                  |                                                | ✓                             |
+   | ang nakuhang stake sa lakas ng loterya                       |                                                |                               |
+   +--------------------------------------------------------------+------------------------------------------------+-------------------------------+
 
-When the baker is registered, it will automatically re-stake the earnings, but as
-mentioned above, this can be changed by providing the ``--no-restake`` flag to
-the ``baker add`` command as shown here:
+Kapag nakarehistro ang baker, awtomatiko nitong muling mai-stake ang mga kita, 
+ngunit tulad ng nabanggit sa itaas, maaari itong mabago sa pamamagitan ng pagbibigay ng ``--no-restake`` flag sa ``baker add`` command na tulad ng 
+ipinapakita dito:
 
 .. code-block:: console
 

@@ -14,16 +14,16 @@ Concordium ID: Zaczynaj z aplikacją
 Przed wykonaniem tego przewodnika powinieneś był skończyć instalacja Concordium ID, tak jak opisane w :ref:`the poprzedni rozdział<testnet-get-the-app>`.
 
 Skonfiguruj passcode i dane biometryczne
-================================
+========================================
 
 Kiedy otwierasz the Concordium ID app po raz pierwszy, zostaniesz powitany przez przepływ
-że pomoże Ci ustawić hasło i uwierzytelnienie biometryczne, stworzyć :ref:`glosariusz-początkowe-konto`,
-i to będzie poprowadzi Cię przez to uzyskiwanie :ref:`glosariusz-tożsamość`. The konto początkowe to specjalny rodzaj konta,
-że jest przedłożony the łańcuch przez :ref:`dostawca-tożsamości-glosariusza`, na kreacja z an tożsamość. Możesz robić
+że pomoże Ci ustawić hasło i uwierzytelnienie biometryczne, stworzyć :ref:`glossary-initial-account`,
+i to będzie poprowadzi Cię przez to uzyskiwanie :ref:`glossary-identity`. The konto początkowe to specjalny rodzaj konta,
+że jest przedłożony the łańcuch przez :ref:`glossary-identity-provider`, na kreacja z an tożsamość. Możesz robić
 to samo transakcje od na konto początkowe jak ze zwykłych kont, ale właściciel początkowego konta będzie znany
 przez dostawcę tożsamości. Po twoja tożsamość jest tworzona będziesz mógł Zatwierdź rachunki do łańcucha
-siebie, i te będą nieznane przez dostawcę tożsamości. Możesz dowiedzieć się więcej o kontach na :ref:`Tożsamości
-i rachunki<odniesienie-id-rachunki>`strona.
+siebie, i te będą nieznane przez dostawcę tożsamości. Możesz dowiedzieć się więcej o kontach na :ref:`Identities
+and accounts<reference-id-accounts>` strona.
 
 Pierwszy ekran Spotkacie się podczas otwierania Concordium ID jest ten. To będzie po prostu wyjaśnij że
 aby rozpocząć, musisz przejść przez ten proces.
@@ -97,7 +97,7 @@ Na razie możesz wybierać między:
       :width: 32%
       :align: center
 
-Przez wybór Notebene Rozwój, będziesz otrzymali testową tożsamość bez dalszych ceregieli. Jeśli wybierzesz Notabene zostaniesz przeniesiony 
+Przez wybór Notebene Rozwój, będziesz otrzymali testową tożsamość bez dalszych ceregieli. Jeśli wybierzesz Notabene zostaniesz przeniesiony
 do ich zewnętrznej tożsamości wydanie pływ,, który poprowadzi Cię przez proces weryfikacji obiektu tożsamości.
 Po zakończeniu tego przepływu zostaniesz zabrany z powrotem do Concordium ID.
 
@@ -124,6 +124,8 @@ który jeszcze tego nie skończył. Wszystko co musisz teraz zrobić, to czekać
 
 
 Wsparcie i informacje zwrotne
-==================
+==============================
 
-Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub informacje zwrotne na Discord, lub Skontaktuj się z nami na testnet@concordium.com.
+Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub informacje
+zwrotne na Discord, lub Skontaktuj się z nami na testnet@concordium.com.
+

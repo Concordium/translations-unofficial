@@ -391,41 +391,39 @@ ipinapakita dito:
 Finalization
 ------------
 
-Finalization is the voting process performed by nodes in the *finalization
-committee* that *finalizes* a block when a sufficiently big number of members of
-the committee have received the block and agree on its outcome. Newer blocks
-must have the finalized block as an ancestor to ensure the integrity of the
-chain. For more information about this process, see the
-:ref:`finalization<glossary-finalization>` section.
+Ang Finalization ay ang proseso ng pagboto na isinagawa ng mga node sa *finalization
+committee* na *nagtatapos* sa isang block kapag ang isang sapat na malaking bilang ng 
+mga miyembro ng komite ay nakatanggap ng block at sumang-ayon sa kinalabasan nito. Ang 
+mga mas bagong block ay dapat magkaroon ng finalized block bilang isang ninuno upang 
+matiyak ang integridad ng chain. Para sa karagdagang impormasyon tungkol sa prosesong ito, 
+tingnan ang seksyong: :ref:`finalization<glossary-finalization>` section.
 
-The finalization committee is formed by the bakers that have a certain staked
-amount. This specifically implies that in order to participate in the
-finalization committee you will probably have to modify the staked amount
-to reach said threshold. In the testnet, the staked amount needed to participate
-in the finalization committee is **0.1% of the total amount of existing GTU**.
+Ang finalization committee ay nabuo ng mga baker na mayroong isang tiyak na naitalagang halaga. 
+Partikular nitong ipinahihiwatig na upang lumahok sa komite ng finalization malamang na kailangan 
+mong baguhin ang staked na halaga upang maabot ang nasabing threshold. Sa testnet, ang staked na 
+halaga na kinakailangan upang lumahok sa finalization committee ay **0.1% of the total amount of existing GTU**.
 
-Participating in the finalization committee produces rewards on each block that
-is finalized. The rewards are paid to the baker account some time after the
-block is finalized.
+Ang pakikilahok sa finalization committee ay gumagawa ng mga gantimpala sa bawat block na natapos. 
+Ang mga gantimpala ay binabayaran sa account ng baker ilang oras matapos ang pag-block ay natapos na.
 
-Removing a baker
-================
+Pagtatanggal sa isang baker
+===========================
 
-The controlling account can choose to de-register its baker on the chain. To do
-so you have to execute the ``concordium-client``:
+Ang pagpipiliang account ay maaaring pumili upang i-de-rehistro ang baker nito 
+sa chain. Upang gawin ito kailangan mong isagawa ang  ``concordium-client``:
 
 .. code-block:: console
 
    $concordium-client baker remove --sender bakerAccount
 
-This will remove the baker from the baker list and unlock the staked amount on
-the baker so that it can be transferred or moved freely.
+Aalisin nito ang baker mula sa listahan ng baker at i-unlock ang naimbak na 
+halaga sa baker upang maaari itong ilipat o malayang ilipat.
 
-When removing the baker, the change has the same timeline as decreasing
-the staked amount. The change will need *2 + bakerCooldownEpochs* epochs to take effect.
-The change becomes visible on the chain as soon as the transaction is included in a block and you
-can check when this change will be take effect by querying the account information
-with ``concordium-client`` as usual:
+Kapag tinatanggal ang baker, ang pagbabago ay may parehong timeline tulad ng 
+pagbawas ng staked na halaga. Kailangan ng pagbabago ng  *2 + bakerCooldownEpochs* epochs 
+upang magkabisa. Ang pagbabago ay makikita sa chain sa sandaling ang transaksyon ay kasama 
+sa isang block at maaari mong suriin kung kailan magkakabisa ang pagbabagong ito sa 
+pamamagitan ng pagtatanong sa impormasyon ng account sa ``concordium-client`` tulad ng dati:
 
 .. code-block:: console
 
@@ -438,24 +436,25 @@ with ``concordium-client`` as usual:
 
    ...
 
-.. table:: Timeline: removing a baker
+.. table:: Timeline: Pagtatanggal sa isang baker
 
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                            | When transaction is included in a block | After *2 + bakerCooldownEpochs* epochs |
-   +============================================+=========================================+========================================+
-   | Change is visible by querying the node     | ✓                                       |                                        |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker is removed from the baking committee |                                         | ✓                                      |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
+   +------------------------------------------------------------------+------------------------------------------------+----------------------------------------+
+   |                                                                  | Kapag ang transaksyon ay kasama sa isang block | After *2 + bakerCooldownEpochs* epochs |
+   +==================================================================+================================================+========================================+
+   | Makikita ang pagbabago sa pamamagitan ng pagtatanong sa node     | ✓                                              |                                        |
+   +------------------------------------------------------------------+------------------------------------------------+----------------------------------------+
+   | Ang Baker ay tinanggal mula sa baking committee                  |                                                 | ✓                                     |
+   +------------------------------------------------------------------+------------------------------------------------+----------------------------------------+
 
 .. warning::
 
-   Decreasing the staked amount and removing the baker cannot be done
-   simultaneously. During the cooldown period produced by decreasing the staked
-   amount, the baker cannot be removed and vice versa.
+   Ang pagbawas ng staked na halaga at pag-aalis ng baker ay 
+   hindi maaaring gawin nang sabay-sabay. Sa panahon ng cooldown 
+   na ginawa sa pamamagitan ng pagbawas ng staked na halaga, 
+   ang baker ay hindi maaaring alisin at kabaligtaran.
 
-Support & Feedback
-==================
+Suporta at Katugunan
+====================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Kung nagkakaroon ka ng anumang mga isyu o may mga mungkahi, i-post ang 
+iyong katanungan o puna sa `Discord`_, o makipag-ugnayan sa amin sa testnet@concordium.com.

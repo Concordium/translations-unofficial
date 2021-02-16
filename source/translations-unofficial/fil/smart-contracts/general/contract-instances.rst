@@ -170,13 +170,13 @@ ng kontrata. Sa madalas na mga sitwasyon mas naayong mag tala lang ng kaunti upa
 
 .. _action-descriptions:
 
-Action descriptions
+Deskripsyon ng Aksyon
 ===================
 
-A receive function returns a *description of actions* to be executed by
-the host environment on the chain.
+Ang natanggap na function ay nag babali ng *description of actions*
+para patakbuhin ng host environment sa chain.
 
-The possible actions that a contract can produce are:
+Ang mga possibleng aksyon sa mga kontrata ay maaring mag likha ng:
 
 - **Accept** is a primitive action that always succeeds.
 - **Simple transfer** of GTU from the instance to the specified account.
@@ -184,15 +184,16 @@ The possible actions that a contract can produce are:
   and optionally transfer some GTU from the sending instance to the receiving
   instance.
 
-If an action fails to execute, the receive function is reverted, leaving
-the state and the balance of the instance unchanged. However,
+Kung ang aksyon ay di nag tagumapay na tumakbo, ang recieve function ay binalik ay ibabalik sa dati,
+at iiwan ang state at balanse na parehas. Pero,
 
 - the transaction that triggers the (unsuccessful) receive function is still added to the chain, and
-- the transaction cost, including the cost of executing the failed action,
-  is deducted from the sending account.
+- ang transaksyon na na natawag na hindi nag tagumpay ay idadagdag pa rin sa chain,
+- ang gastos ng transaksyon, kasama ang gastos sa pag takbo ng pumalyang transaksyon
+  ay ibabawas sa account ng nagpadala.
 
-Processing multiple action descriptions
----------------------------------------
+Pag proseso ng maramihang aksyon na deskripsyon
+-----------------------------------------------
 
 You can chain action descriptions using the **and** combinator.
 An action-description sequence ``A`` **and** ``B``

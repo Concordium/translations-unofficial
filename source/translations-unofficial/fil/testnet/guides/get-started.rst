@@ -69,45 +69,39 @@ Ang tatlong mga hakbang na nabanggit sa itaas ay:
 
 Matutugunan mo ang unang hakbang sa susunod na pahina, na mag-udyok sa iyo na magpasok ng isang pangalan para sa iyong paunang account. Ang patuloy na pagpindot ay dadalhin ka sa susunod na pahina, kung saan kailangan mong pangalanan ang iyong pagkakakilanlan. Ikaw lamang ang nakakaalam nito, pwede mo silang pangalanan ng kung ano man ang naisin mo (Mayroong ilang mga hadlang sa kung anong mga titik at simbolo na maaari mong gamitin).
 
-In the example below, we choose to call our initial account *Example Account 1* and our identity *Example Identity*. As
-mentioned, you can choose whichever names you want.
+Sa halimbawa sa ibaba, pinili naming tawagan ang aming paunang account *Halimbawa ng Account 1* at aming pagkakakilanlan *Halimbawa ng Pagkakakilanlan*. Katulad ng nabanggit, maaari kang pumili ng alinmang mga pangalan ang gusto mo.
 
 .. image:: images/concordium-id/int6.png
       :width: 32%
 .. image:: images/concordium-id/int7.png
       :width: 32%
 
-By pressing **Continue to identity providers**, you will be taken to a page where you have to choose between *identity providers*.
-An identity provider is an external entity who will verify who you are, before returning an identity object to be used on the chain.
-For now you can choose between:
+Sa pagpindot ng **Continue to identity providers**, dadalhin ka sa isang pahina kung saan kailangan mong pumili sa pagitan ng *identity providers*.
+Ang isang tagapagbigay ng pagkakakilanlan ay isang panlabas na nilalang na papatunayan kung sino ka, bago ibalik ang isang object ng pagkakakilanlan na gagamitin sa chain.
+Sa ngayon maaari kang pumili sa pagitan ng:
 
-* *Notabene Development* which will give you a test identity without real life identity verification.
-* *Notabene* via which your real life identity will be verified.
+* *Notabene Development* na magbibigay sa iyo ng isang pagpapatunay na ikaw ay totoong tao.
+* *Notabene* na kung saan ang iyong real life identity ay mabibirepika.
 
 .. image:: images/concordium-id/int8.png
       :width: 32%
       :align: center
 
-By choosing Notebene Development, you will be given a test identity without further ado. If you choose Notabene you will be taken
-to their external identity issuance flow, which will guide you through the process of getting verified for an identity object.
-After finishing this flow, you will be taken back to Concordium ID.
+Sa pamamagitan ng pagpili ng Notebene Development, bibigyan ka ng pagkakakilanlan ng direkta. Kung pipiliin mo ang Notabene dadalhin ka sa kanilang panlabas na serbisyo para sa identity verification, na gagabay sa iyo sa proseso ng pag-verify ng pagkakakilanlan iyong pagkakakilanlan.
+Pagkatapos matapos ng proseso na ito, ibabalik ka sa Concordium ID.
 
-After finishing either of the identity issuance flows, you will be met with the following screen. It will show you an overview
-of your identity and the initial account.
+Pagkatapos alin man sa mga identity issuance flows, matutugunan ka sa sumusunod na screen. Ipapakita nito sa iyo ang isang pangkalahatang ideya ng iyong pagkakakilanlan at ang paunang account.
 
 .. image:: images/concordium-id/int9.png
       :width: 32%
       :align: center
 
-Depending on the identity provider you have chosen, the layout of the identity card might differ slightly. You can see that the
-Example Account 1 is held by the identity Example Identity. The account created during this process will be marked with *(Initial)*
-in the app, so you know which account is the initial account submitted to the chain by the identity provider.
+Depende sa napili mong identity provider, ang layout ng identity card ay maaaring bahagyang magkakaiba. Maaari mong makita na ang
+Halimbawa ng Account 1 ay hawak ng identity Halimbawa ng Pagkakakilanlan. Ang account na nilikha sa panahon ng prosesong ito ay mamarkahan ng 
+*(Initial)* sa app, upang malaman mo kung aling account ang paunang account na isinumite sa chain ng identity provider.
 
-By pressing **Finish** you will be taken to the *Accounts screen*. On this screen you will be able to see your newly created initial
-account. It might be showing a *Pending icon*, which means the identity provider is still working on submitting and creating your
-initial account and identity. You can also navigate to the *Identities screen* by clicking on **Identities** at the bottom of the
-display. On this screen you can see your newly created identity, which might also still be pending in case the identity provider
-has not finished it yet. All you have to do now, is wait for them to finish.
+Sa pagpindot ng **Finish** ikaw ay mapupunta sa *Accounts screen*. Sa screen na ito makikita mo ang iyong bagong likhang paunang
+account. Pwedeng ipakita nito ang *Pending icon*, na nangangahulugang ang identity provider ay prinoproseso pa rin sa pagsusumite at paglikha ng iyong paunang account at pagkakakilanlan. Maaari ka ring mag-navigate sa *Identities screen* sa pamamagitan ng pagpindot sa **Identities** sa ilalim ng display. Sa screen na ito maaari mong makita ang iyong bagong gawang pagkakakilanlan, na maaring pending pa rin kung di pa natatapos ang identity provider sa pagproseso nito. Ang kailangan mo na lang gawin ay maghintay na matapos sila.
 
 .. image:: images/concordium-id/int10.png
       :width: 32%
@@ -115,8 +109,7 @@ has not finished it yet. All you have to do now, is wait for them to finish.
       :width: 32%
 
 
-Support & Feedback
-==================
+Suporta at Katugunan
+====================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Kung nagkakaroon ka ng anumang mga isyu o may mga mungkahi, i-post ang iyong katanungan o puna sa `Discord`_, o makipag-ugnay sa amin sa testnet@concordium.com.

@@ -46,7 +46,7 @@ Instalowanie the Concordium ID aplikacja na iOS wymaga instalacji z Apple’s Te
 
 
 Wsparcie i informacje zwrotne
-==================
+==============================
 
 Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub
 informacje zwrotne na `Discord`_, lub Skontaktuj się z nami na testnet@concordium.com.

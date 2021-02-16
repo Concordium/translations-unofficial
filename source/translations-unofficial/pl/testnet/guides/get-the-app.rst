@@ -23,7 +23,7 @@ Platforma ty używasz, sposób montażu aplikacja różni się nieznacznie.
 
 
 Instalacja na Androidzie
-=======================
+========================
 
 Wymagania instalacyjne: Android 8 lub nowsza.
 

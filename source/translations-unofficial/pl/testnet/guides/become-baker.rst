@@ -259,7 +259,7 @@ Aby zaktualizować piekarza bieg stake
 .. code-block:: console
 
    $concordium-client baker update-stake --stake <newAmount> --sender bakerAccount
-   
+
 Modyfikacja postawionej kwoty modyfikuje prawdopodobieństwo, że piekarz zostanie wybrany
 piec bloki.
 
@@ -271,7 +271,7 @@ bakerAccount``) i zaczyna obowiązywać 2 epoki po tym.
 .. table:: Oś czasu: zwiększenie stake
 
    +-------------------------------------------+--------------------------------------+----------------+
-   |                                           |  Gdy transakcja jest zawarta w bloku | Po 2 epochs    |                    
+   |                                           |  Gdy transakcja jest zawarta w bloku | Po 2 epochs    |
    +===========================================+======================================+================+
    | Zmiana jest widoczna przez querying węzeł | ✓                                    |                |
    +-------------------------------------------+--------------------------------------+----------------+

@@ -23,19 +23,14 @@ Ang smart contract schema ay isang paglalarawan kung paano kumatawan sa mga byte
    For instructions on how to build the schema for a smart contract module in
    Rust, see :ref:`build-schema`.
 
-Why use a contract schema
-=========================
+Bakit gagamitin ang contract schema
+===================================
 
-Data on the blockchain, such as the state of an instance and parameters passed
-to init and receive functions, is serialized as a sequence of bytes.
-The serialization is optimized for efficiency, rather than human readability.
+Ang data sa blockchain, tulad ng estado ng isang instance at mga parameter na naipasa sa init at makatanggap ng mga functions, ay naka-serialize bilang sequence ng mga bytes. Ang serialization ay na-optimize para sa kahusayan, sa halip na madaling mabasa ng tao.
 
 .. todo::
 
-   Consider rewriting this subsection as it can be somewhat difficult to
-   understand; in particular, possibly just say that for convenience, the user
-   can pass unserialized data into a function as long as they also provide a
-   schema that spells out how to (de)serialize the data.
+   Isaalang-alang ang muling pagsusulat ng subseksyon na ito dahil maaari itong maging medyo mahirap maunawaan; sa partikular, posibleng sabihin lamang na para sa kaginhawaan, ang gumagamit maaaring ipasa ang hindi naka-serialized na data sa isang function hangga't nagbibigay din sila ng isang schema na binabaybay kung paano ma-(de)serialize ang data.
 
 Usually these bytes have structure and this structure is known to the smart
 contract as part of the contract functions, but outside of these functions it

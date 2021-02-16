@@ -3,16 +3,16 @@
 
 .. _testnet-explore-more:
 
-=======================================
+=========================================
 Concordium ID: badać the *więcej* strona
-=======================================
+=========================================
 
 .. contents::
    :local:
    :backlinks: none
 
 Eksport
-======
+=======
 Korzystanie z aplikacji Concordium ID to jest możliwe aby wyeksportować swoje konta i tożsamości. zaczynać, Przeglądaj aby the *więcej* strona.
 W zależności od tego, czy korzystasz z wersji aplikacji na Androida czy iOS, the *więcej* strona będzie wyglądać nieco inaczej.
 W systemie Android zobaczysz trzy pozycje menu: *Książka adresowa*, *Eksport* and *przywóz*. Na iOS zobaczysz tylko *Książka adresowa* i *Eksport*.
@@ -37,7 +37,7 @@ chcesz robić z wyeksportowanym plikiem, za pomocą the postój z systemu operac
 Import
 ======
 Jak wspomniano w poprzedniej sekcji, funkcja importu działa nieco inaczej na iOS i Androidzie. Na Androidzie naciskasz the
-*Import* opcja na the *więcej* strona, co pozwoli ci przejść do pliku, który chcesz zaimportować. W zależności na Twoim telefonie 
+*Import* opcja na the *więcej* strona, co pozwoli ci przejść do pliku, który chcesz zaimportować. W zależności na Twoim telefonie
 i Wersja na Androida, to może Popatrz różne konkretny do systemu operacyjnego. Na iOS musisz przeglądać do pliku z zewnątrz
 Concordium ID, i następnie naciśnij go i wybierać the *Opcja Podziel się*. To pozwoli ci wybrać Concordium ID jako aplikacja do obsługi pliku.
 
@@ -52,10 +52,10 @@ z the *Konta*, *Tożsamości* i the *Książka adresowa* wpisy, które zaimporto
 
 
 Książka adresowa
-============
+=================
 Jak sama nazwa wskazuje, the *Książka adresowa* to miejsce do przechowywania adresów kont. Jeśli przejdziesz do *Książki adresowej*, zobaczysz to
 adresy twoich własnych kont są już tam zapisane. Oprócz widząc własne adresy, możesz także dodać więcej wpisów do
-*Książka adresowa*, zarówno przez naciskając the **Symbol kodu QR**, lub naciskając **znak plus** w prawym górnym rogu. Robiąc to 
+*Książka adresowa*, zarówno przez naciskając the **Symbol kodu QR**, lub naciskając **znak plus** w prawym górnym rogu. Robiąc to
 możesz wprowadzić nowy adres odbiorcy i nadaj mu pseudonim w swojej *książce adresowej*. Oczywiście wpisy w książce adresowej mogą być
 przeszukiwane, kiedy wykonujesz przelew.
 
@@ -65,6 +65,6 @@ przeszukiwane, kiedy wykonujesz przelew.
       :width: 32%
 
 Wsparcie i informacje zwrotne
-==================
+==============================
 
 Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub informacje zwrotne na Discord, lub Skontaktuj się z nami na testnet@concordium.com.

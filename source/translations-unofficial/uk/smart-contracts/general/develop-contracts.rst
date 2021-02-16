@@ -12,7 +12,7 @@
         - Don't panic
         - Avoid heavy calculations
 
-.. _writing-smart-contracts:
+.. _writing-smart-contracts-uk:
 
 ================================
 Розробка смарт-контрактів в Rust
@@ -23,16 +23,16 @@
 
 Смарт-контракти не обов'язково писати на Rust.
 Це просто перший SDK, який ми надаємо.
-Написаний вручну Wasm або Wasm, скомпільований з C, C ++, AssemblyScript_, і інших, однаково дійсний мережі, поки він відповідає :ref:`Wasm limitations we impose <wasm-limitations>`.
+Написаний вручну Wasm або Wasm, скомпільований з C, C ++, AssemblyScript_, і інших, однаково дійсний мережі, поки він відповідає :ref:`накладеним обмеженням Wasm <wasm-limitations-uk>`.
 
 .. seealso::
 
-   For more information on the functions described below, see the concordium_std_
-   API for writing smart contracts on the Concordium blockchain in Rust.
+   Для отримання додаткової інформації про функції, описаних нижче, дивіться concordium_std_
+   API для написання смарт-контрактів на блокчейні Concordium в Rust.
 
 .. seealso::
 
-   See :ref:`contract-module` for more information about smart contract modules.
+   Дивіться :ref:`contract-module-uk` для додаткової інформації по модулях смарт-контрактів.
 
 Модуль смарт-контракту розробляється в Rust як бібліотека, яка потім компілюється в Wasm.
 Щоб отримати правильний експорт, атрибут `crate-type` повинні бути встановлений в ``["cdylib", "rlib"]`` у файлі маніфест:
@@ -81,9 +81,8 @@
 
 .. todo::
 
-   - Write up the requirements in an easier to read way (e.g., split up paragraphs into sub-bullets).
-   - These requirements should be part of a specification that is written up somewhere,
-     i.e., not just as part of this example.
+   - Скласти вимоги в зручній для сприйняття формі (наприклад, розділяти абзаци на підпункти).
+   - Ці вимоги повинні бути частиною специфікації, яка десь описана (не тільки як частина цього прикладу).
 
 - Тип функцій:
   * init функція повинна мати тип ``&impl HasInitContext -> InitResult<MyState>`` де ``MyState`` - це тип, який реалізує ``Serialize`` ознака.
@@ -102,15 +101,16 @@
 
 .. todo::
 
-   - Describe low-level
-   - Introduce the concept of host functions before using them in the note above
+   - Описати низький рівень
+   - Ознайомити з концепцією функцій хоста перед їх використанням в примітці вище
 
 
 Серіалізовані стан і параметри
 ------------------------------
 
-.. todo:: Clarify what it means that the state is exposed similarly to ``File``;
-   preferably, without referring to ``File``.
+.. todo::
+   Уточнити, що означає, коли стан відображається аналогічно ``File``;
+   бажано без посилання на ``File``.
 
 У ланцюжку стан екземпляра представляється у вигляді масиву байтів і відображається в інтерфейсі, аналогічному інтерфейсу ``File`` стандартної бібліотеки Rust.
 
@@ -134,7 +134,7 @@
 
    Строго кажучи, нам потрібно тільки десеріалізовать байти в наш тип параметра, але зручно мати можливість серіалізовать типи при написанні модульних тестів.
 
-.. _working-with-parameters:
+.. _working-with-parameters-uk:
 
 Робота з параметрами
 --------------------
@@ -214,8 +214,7 @@
 
 .. seealso::
 
-   For instructions on how to build using ``cargo-concordium`` see
-   :ref:`compile-module`.
+   Інструкцію по збірці з використанням ``cargo-concordium`` дивіться :ref:`compile-module-uk`.
 
 
 Тестування смарт-контрактів
@@ -235,7 +234,7 @@ Don't panic
 
 .. todo::
 
-   Use trap instead.
+   Замість цього використовуйте пастку.
 
 Уникайте появи чорних дір
 -------------------------

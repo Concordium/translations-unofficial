@@ -19,7 +19,8 @@ sieć. Po wykonaniu tego przewodnika, będziesz w stanie
 
 -  uruchom węzeł(node) Concordium
 -  obserwuj to na panelu sieciowym i
--  zapytaj o stan łańcucha blokowego Concordium bezpośrednio z twojego maszyna.
+-  zapytaj o stan łańcucha blokowego Concordium bezpośrednio z twojego
+   maszyna.
 
 Nie potrzebujesz konta, aby bieg węzeł(node).
 
@@ -29,6 +30,7 @@ Zanim zaczniesz
 Przed uruchomieniem węzła Concordium musisz to zrobić
 
 1. Zainstaluj i uruchom Docker.
+
    -  Na *Linux*, zezwalaj na uruchamianie Dockera jako użytkownik inny niż root.
 
 2. Pobierz i wypakuj the :ref:`concordium-node-and-client-download` oprogramowanie.

@@ -2,103 +2,107 @@
 
 .. _guide-account-transactions:
 
-=========================================================
-Concordium ID: Get started with accounts and transactions
-=========================================================
+================================================================================
+Concordium ID: Makapagsimula ng gumawa ng sarili mong account at mga transaksyon
+================================================================================
 
 .. contents::
    :local:
    :backlinks: none
 
-Before following this guide you should have finished requesting your initial account and identity, as described in :ref:`the previous chapter<testnet-get-started>`.
+Bago sundin ang gabay na ito dapat ay natapos mo nang mahingi ang iyong inisyal na account at pagkakakilanlan, makikita mong nakatalaga dito :ref:`the previous chapter<testnet-get-started>`.
 
-Create a new account
-====================
-Before getting into how accounts, their balances and transactions work, let’s create a second account. Start by going
-to the *Accounts* page. In the upper right corner you should see a **plus sign**. Press that to continue. On the next screen
-you will be asked to name your new account. In this example we will choose the name *Example Account 2*, but you can
-choose whichever name you want.
+Pag gawa ng bagong account
+==========================
+Bago tayo pumunta sa kung pano gumana ang mga accounts, mga balanse at mga transaksyon, gumawa muna tayo ng pangalawang account.
+Magsimula tayo sa pag punta sa pahina ng *Accounts*. Sa itaas na kanang sulok makikita mo na may plus na sign. Pindutin mo ito para tumuloy.
+Sa susunod na screen ay tatanungin ka na pangalanan ang iyong bagong account. Sa ehemplo na ito ay pipiliin natin ang pangalang *Example Account 2*
+pero maaari ka din pumili ng kahit anong pangalan. 
 
 .. image:: images/concordium-id/acc1.png
       :width: 32%
 .. image:: images/concordium-id/acc2.png
       :width: 32%
 
-When pressing **Next**, you will be met with a screen on which you must decide which identity to use to open the new account.
-So far you probably only have one, but if you have more you can pick whichever identity you want from the list. By
-clicking on an identity, you will be taken to the next screen. When creating a non-initial account, i.e. an account
-that is not created upon identity creation, you can choose to reveal a number of :ref:`glossary-attribute`. This is not necessary,
-and if you do not have a specific reason to do so, we recommend not revealing any, as revealed attributes go on-chain and cannot be removed.
+Habang pinipindot mo yung **Next**, may lalabas na screen kung saan kailangan mo mag desisyon kung ang identity 
+na gagamitin mo para magbukas ng bagong account. Sa ngayon ay meron kang isa, pero kung mayroon ka pang iba maari 
+mong piliin ang kung ano mang identity na gusto mo sa listahan. Sa pag-click sa isang identity, ikaw ay dadalhin sa susunod
+na screen. Tuwing ika'y gagawa ng non-initial account, i.e. account ito na hindi ginawa sa identity creation, maari mong 
+ilabas ang bilang ng :ref:`glossary-attribute`. Ito ay hindi kinakailangan, at kung wala ka namang specific na rason para gawin ito, 
+nai-rerekomenda namin na hindi mo na ilabas ang kahit ano, dahil ang mga nailabas na attribute ay mapupunta sa on-chain at 
+hindi na ito matatanggal.
 
 .. image:: images/concordium-id/acc3.png
       :width: 32%
 .. image:: images/concordium-id/acc4.png
       :width: 32%
 
-If you do press the **Reveal account attributes button**, you will be taken to the following page. You can tick
-off the attributes you would like to reveal, and then press **Submit account**. Pressing **Submit account** on this or the previous
-page, will take you to the final account creation page, which will give you a short overview and tell you that the account
-has been submitted.
+Kung pipinduting mo ang **Reveal account attributes button**, ikaw ay madadali sa susunod na pahina. Maari mong i-tick off 
+ang mga attribute na gusto mo palabasin, matapos nito pindutin mo ang **Submit account**. Kapag pinindot mo ang  **Submit account** 
+dito o sa nakaraang pahina, dadalhin ka nito sa dulong pahina ng account creation, na magbibigay sayo ng maikling overview 
+at makakapag sabi na naisumite mo na ang iyong account.
 
 .. image:: images/concordium-id/acc5.png
       :width: 32%
 .. image:: images/concordium-id/acc6.png
       :width: 32%
 
-By pressing **Ok, thanks** on the submission overview, you will be taken back to the account page. You might see that your new
-account is still pending, as it can take a few minutes to finalize on chain. If you have not tried to do so yet, you can
-try pressing the downwards facing arrow on one of the account cards, to see that it will fold out the card. This reveals
-two new pieces of information, *at disposal* and *staked*. The at disposal field will tell you how much of the accounts balance is
-at available for use at the given moment, and the staked amount you can read more about on the :ref:`managing accounts<managing_accounts>` page.
+Sa pag pindot ng **Ok, thanks** sa submission overview, ikaw ay madadala pabalik sa iyong account page. Marahil makikita mo 
+na ang iyong bagong account ay pinoproceso pa din, dahil pwede itong umabot ng mga ilang minuto para mai-tala ito sa chain. 
+Kung hindi mo pa nasusubukan na gawin ito, maari mong subukan na pindutin yung arrow na nakaturo pababa na makikita mo sa mga account cards, 
+para makita kung ma-fofold out ang card. At ito ay maglalabas ng dalawang bagong impormasyon, *at disposal* at ang *staked*.
+Ang disposal field ay makakapagsabi sayo ng kung gaano karami ang balanse ng account mo ang available na pwede mo gamitin sa kahit anong oras, 
+at ang staked amount naman ay mas maiintindihan mo kapag binasa mo ito dito sa pahinang to :ref:`managing accounts<managing_accounts>`
 
 .. image:: images/concordium-id/acc7.png
       :width: 32%
 .. image:: images/concordium-id/acc8.png
       :width: 32%
 
+Pag gawa ng transaksyon
+=======================
 
-Make a transaction
-====================
-Next up, try pressing the **Balance** area of your newly created account. On this
-screen you can see the current balance of your account, and at this point, it will also let you request 100 GTU to use on
-the Testnet. The request for 100 GTU is a Testnet feature, and for Testnet 4 it will actually transfer 2000 GTU to the account,
-even though the button says 100. The GTU drop is only available on an account once. By pressing it, you will notice a transaction
-appearing. This will be pending for a bit, and after a while 2000 GTU will be added to your account.
+Susunod, subukan mong pinduting ang  **Balance** sa lugar ng iyong bagong gawa na account. Sa screen na ito ay makikita mo 
+ang iyong kasalukuyang balanse ng iyong account, at sa puntong ito, ikaw ay maaaring makapag-request ng 100 GTU na pwede mong gamitin sa Testnet.
+Ang iyong request para sa 100 GTU ay feature ng Testnet, at para sa Testnet 4 ito ay makakapag transfer ng 2000 GTU sa iyong account,
+kahit na ang nakalagay sa pindutan ay 100 lang. Ang GTU drop ay magiging available lang sa iyong account ng isang beses. Sa pagpindot nito, 
+ikaw ay makakapansin ng transaksyon na lalabas. Ito ay magiging pending ng saglit, at matapos ang ilang saglit 2000 GTU ang maidadagdag sa iyong account.
 
 .. image:: images/concordium-id/acc9.png
       :width: 32%
 .. image:: images/concordium-id/acc10.png
       :width: 32%
 
-Now that we have some GTU in our account, let’s try making a transaction. Press the **SEND** button to do that. On the next page
-you can input the amount you want to transfer, and select a recipient. In this example we will transfer 10 GTU.
+Ngayon na meron nang mga GTU sa iyong account, subukan nating gumawa ng tsansaksyon. Pindutin ang pindutan ng **SEND** para mangyari yun.
+Sa susunod na pahina maari mong i-lagay ang dami ng GTU na gusto mo ilipat, at piliin ang makakatanggap nito. Sa halimbawang ito mag papadala tayo ng 10 GTU.
 
 .. image:: images/concordium-id/acc11.png
       :width: 32%
 .. image:: images/concordium-id/acc12.png
       :width: 32%
 
-Having decided on an amount, we will now choose the recipient. To do this, press the Select **Recipient or shield amount** button.
-On this page you can search for recipients in your *address book* or add your recipient by scanning the receiving account’s QR code.
-As you can see in the screenshot, we only have one recipient saved, *Example Account 1*. Above that, we have the option to *Shield an
-amount*, but we will get back to that later. We will choose *Example Account 1* as our recipient in this example.
+Kapag nakapag desisyon ka na ng kung gaano kadami ang papadala mo, maari na tayong pumili ng papadalhan. Para magawa ito, 
+pinduting ang pindutan na nagsasabing **Recipient or shield amount**. Sa pahinang ito makakapag search ka ng mga papadalhan mo sa iyong 
+*address book* o makakapag dagdag ka ng iyong papadalhan sa pamamagitan ng pag i-scan ng QR code ng account ng papadalhan mo. 
+Makikita mo sa screenshot na ito, na meron lang tayong isang nakasave na papadalhan,  *Example Account 1*. Sa taas nun, makikita natin na pwede mong
+piliin ang *Shield an amount*, pero pwede natin pagusapan yun mamaya. Pipiliiin natin ang *Example Account 1* bilang papadalhan natin sa halimbawang ito. 
 
 .. image:: images/concordium-id/acc13.png
       :width: 32%
 .. image:: images/concordium-id/acc14.png
       :width: 32%
 
-With the amount and recipient chosen, we can press **Send Funds** to continue. By doing this we are met by a confirmation screen on
-which we can verify the amount, recipient and sending account.  By pressing **Yes, send funds**, we will verify ourselves using a passcode
-or biometrics, and then the transaction is submitted to the chain. It might take a bit for the transaction to finalize.
+Kapag napili na ang amount at papadalhan, maaari mo nang pindutin ang **Send Funds** para tumuloy. Sa paggawa nito may lalabas na confirmation screen 
+na kung saan kailangan natin ma verify ang halaga, papadalhan at account na gagamitin pangpadala. Sa pagpindot ng **Yes, send funds**, Makakapag verify tayo sa 
+pag gamit ng passcode o ng biometrics, at pagkatapos noon ay maipapadala na ang transaksyon sa chain. Medyo matatagalan ng konti ang transaksyo bago ito matapos. 
 
 .. image:: images/concordium-id/acc15.png
       :width: 32%
 .. image:: images/concordium-id/acc16.png
       :width: 32%
 
-We can now see that the *Example Account 2*’s *Transfers* log shows that the amount has been deducted, plus a *fee*. All transactions will
-cost a fee, and depending on the type of transaction the fee might differ. Pressing the transaction will let you see more details.
+Makikita natin ngayon na ang *Transfers* log* ng *Example Account 2* ay nagpapakita ng halaga na nabawas, kasama ang *fee*. Lahat ng transaksyon ay may karampatang bayad, 
+at maaring magiba-iba ang bayad depende sa tipo ng transaksyon. Kapag pinindot mo ang transaksyon ito ay magpapakita sayo ng karagdagang detalye.  
 
 .. image:: images/concordium-id/acc17.png
       :width: 32%
@@ -107,92 +111,95 @@ cost a fee, and depending on the type of transaction the fee might differ. Press
 
 .. _move-an-amount-to-the-shielded-balance:
 
-Move an amount to the shielded balance
-========================================
-If we go back to the *Accounts* screen, we can now see that the 10 GTU has been transferred to the *Balance* of *Example Account 1*. As you might
-have noticed before, the accounts also have a :ref:`glossary-shielded-balance`. In short, the shielded balance is for keeping shielded (encrypted) amounts
-of GTU on the account. Lets’ try adding some shielded GTU to our *Example Account 2*. Start by pressing the **Shielded Balance** area of the account card.
+Pagpapadala ng halaga sa shielded na balanse
+============================================
+Kung babalik tayo sa screen ng *Accounts*, makikita na natin ngayon na ang 10 GTU ay nai-padala na sa  *Balance* ng *Example Account 1*. 
+Maari mong mapansin dati na, ang accounts ay meron ding :ref:`glossary-shielded-balance`. Sa makatuwid, ang balanse na shielded ay para sa pagtatago ng 
+shielded o (encrypted) na halaga ng GTU sa account. Subukan nating magdagdag ng shielded na GTU sa ating *Example Account 2*. Simulan ito sa pagpindot ng 
+**Shielded Balance** sa lugar ng iyong account card. 
 
-.. image:: images/concordium-id/acc19.png
+ .. image:: images/concordium-id/acc19.png
       :width: 32%
 .. image:: images/concordium-id/acc20.png
       :width: 32%
 
-Next, press the **SEND** button again and enter an amount of GTU to *shield*, which is the action of adding some GTU to the *Shielded Balance*.
-After doing that, let’s press **Select Recipient or shield amount** again. Instead of choosing a recipient, this time we will press **Shield amount**.
+Susunod, pinduting ang pindutan ng **SEND** uli at ilagay ang halaga ng GTU na para ito ay ma-*shield*, Ito ay aksyong para makapagdagdag
+ng mangilan-ngilang GTU sa *Shielded Balance*. Matapos mong gawin yun, Pinduting natin ang **Select Recipient or shield amount** ulit. Sa halip ng pagpili ng 
+papadalhan, ngayon naman ay pipindutin natin ang **Shield amount**.
 
 .. image:: images/concordium-id/acc21.png
       :width: 32%
 .. image:: images/concordium-id/acc22.png
       :width: 32%
 
-We can now continue and confirm the transaction, just like we did before with the regular transfer. The transaction might take a moment
-to finalize on the chain.
+Maaari na tayong magtuloy at mag kumpirma ng transaksyon, tulad ng ginawa natin nung nakaraan sa normal nag pagpapadala. Ang transaksyon ay maaaaring magtagal bago
+ma-finalize ito sa chain.
 
 .. image:: images/concordium-id/acc23.png
       :width: 32%
 .. image:: images/concordium-id/acc24.png
       :width: 32%
 
-By going back to the *Accounts* page, it can now be seen that there is 10 GTU on the *Shielded Balance* of *Example Account 2*. If the *Shielded
-Balance* area of the account card is pressed, we can see that there is a *Shielded amount* transaction in the shielded balance transfers log.
-Making a shielding transaction will also cost a fee, but this fee will be deducted from the regular balance of the account. Try going
-back and have a look at the transfer log of the regular *Balance*.
+Sa pagbalik natin sa pahina ng *Accounts*, makikita na natin na merong 10 GTU sa *Shielded Balance* ng *Example Account 2*. Kapag ang lugar ng
+*Shielded Balance* ay napindot, makikita natin na merong *Shielded amount* na transaksyon sa shielded balance transfers log. 
+Ang pag gawa ng shielding transaksyon ay magkakaroon ng bayad, pero ang bayad na ito ay ibabawas sa regular na balanse ng account. Subukan mong bumalik at 
+tingnan ang transfers log para sa regular na *Balance*.
 
 .. image:: images/concordium-id/acc25.png
       :width: 32%
 .. image:: images/concordium-id/acc26.png
       :width: 32%
 
-Make a shielded transfer
-========================
-Having some shielded GTU available, we can now try making a *Shielded transfer*, which means that we can make a transfer with an encrypted
-amount of GTU. The first step is to browse to the *shielded balance* page of the account containing shielded GTU, if you are not already
-there. Then press the **SEND** button. You will now be able to enter an amount and choose a recipient. In this example we have chosen to
-transfer 2 GTU. When pressing the **Select Recipient or unshield amount** button, you will be able to choose a recipient. We will choose
-*Example Account 2* in this example.
+Pag gawa ng shielded transfer
+=============================
+
+Kapag merong shielded GTU na magagamit, maaari na nating subukang gumawa ng *Shielded transfer*, ibig sabihin nito ay makakapag padala
+na tayo ng halaga ng GTU na may encryption. Ang unang hakbang dito ay tingnan ang pahina ng *shielded balance* ng account na merong shielded na GTU,
+kung ikaw ay hindi pa nandon. Tapos pindutin mo ang pindutan ng **SEND**. Ngayon ikaw ay maaring maglagay ng amount at makakapili ka na papadalhan. 
+Sa halimbawang ito pinili natin na magpadala ng 2 GTU. Sa pagpindot ng pindutan na **Select Recipient or unshield amount**, ikaw ay maaaring makapili
+ng papadalhan. Pipiliin natin ang *Example Account 2* sa halimbawang ito.
 
 .. image:: images/concordium-id/acc27.png
       :width: 32%
 .. image:: images/concordium-id/acc28.png
       :width: 32%
 
-With the amount and recipient in place, you can now continue. Just like the other transactions you will now see a confirmation screen,
-and by continuing from that you will be able to verify yourself with a passcode or biometrics, and then submit the shielded transaction
-to the chain. Again, the transaction might take a moment to finalize on the chain.
+Kapag nailagay mo na sa lugas ang halaga at papadalhan, maari ka nang tumuloy. Tulad ng ibang transaksyon ikaw ay makakakita ng screen 
+kung saan ka makakapag kumpirma, at sa pagtuloy mo dito ikaw ay makakapag patunay ng iyong sarili sa pag gamit ng passcore o ng biometrics, at tapos noon
+mai-susumite mo na ang shielded transaksyon sa chain. Ulitin natin, ang transaksyon ay maaring magtagal ng sandali bago ma-finalize ito sa chain. 
 
 .. image:: images/concordium-id/acc29.png
       :width: 32%
 .. image:: images/concordium-id/acc30.png
       :width: 32%
 
-
-Now, if you go back to the *Accounts* screen, you should be able to see that a little shield has appeared beside the amount on the
-*Shielded Balance* of the receiving account. This indicates that there are newly received shielded transactions on the shielded balance.
-Try pressing the shielded balance, and notice that you have to enter a passcode or use your biometrics to enter it.
-This happens because you need to decrypt received shielded transactions, before you can see the amount.
+Ngayon, kung babalik ka na sa screen ng  *Accounts*, maaring mo nang makita na meron maliit na kalasag na lumabas katabi ng halaga na nasa *Shielded Balance*
+sa receiving account. Ito ay nag-iindika na merong mga bagong natanggap na shielded na transaksyon sa shielded na balanse.
+Kapag sinubukan mong pindutin ang shielded balance, mapapansin mo na kinakailangan mong mag pasok ng passcore o gamitin ang iyong biometrics upang makapasok dito. 
+Ito ay nangyayari dahil kinakailangan mong i-decrypt ang natanggap mong shielded na transaksyon, bago mo makita ang halaga dito. 
 
 .. image:: images/concordium-id/acc31.png
       :width: 32%
 .. image:: images/concordium-id/acc32.png
       :width: 32%
 
-Unshield an amount
-==================
-After the decryption, the amount is now visible in the *shielded balance* and on the account card on the *Accounts* screen. Now, what if we
-want to move some GTU from a shielded balance to a regular balance? Let’s try to move the 2 GTU to the regular balance via the action of
-*Unshielding* an amount. To do this, press the **SEND** button in the shielded balance. Enter 2 as the amount, and then press **Select Recipient
-or unshield amount**. **Choose Unshield amount**.
+Pag - Unshield ng amount
+========================
+
+Matapos ang pag-decrypt, Ngayon makikita mo na ang halaga sa *shielded balance* at sa account card na nasa screen ng *Accounts*
+Ngayon, paano kung gustuhin nating ilipat ang ilang GTU galing sa balanseng shielded  papunta sa regular na balanse? Subukan nating maglipat ng 2 GTU papunta 
+sa regular na balanse gamit ang aksyon ng *Unshielding* ng halaga. Para magawa ito, pinduting natin ang pindutan ng **SEND**  sa balanse ng shielded. 
+Ilagay ang 2 bilang halaga, at pinduting ang **Select Recipient or unshield amount**. **Choose Unshield amount**.
 
 .. image:: images/concordium-id/acc33.png
       :width: 32%
 .. image:: images/concordium-id/acc34.png
       :width: 32%
 
-Now finish the transaction like you did with the other ones, and try browsing to the regular balance of the account to see the unshielding.
-If the transaction has finalized on chain, you should now be able to see that an *Unshielded amount* has ticked in on the regular balance.
-Notice how it is not 2 GTU, even though the amount you just unshielded was 2. This is because the fee for making any transaction, including
-an unshielding, will be deducted from the regular balance of the account responsible for the transaction.
+Ngayon tapusing ang transaksyon tulad ng ginawa mo dun sa mga nauna, at subukang i-browse ang regular na balanse ng account para makita ang unshielding.
+Kung ang transaksyon ay natapos na sa chain, maari mo nang makita na ang *Unshielded amount* ay naka-tick na sa regular na balanse. 
+Mapapansin na hindi ito 2 GTU, kahit na ang halaga na iyong in-unshield ay 2. It ay dahil sa bayad sa pag gawa ng transaksyon, kasama ang unshielding, 
+ito ay ibabawa sa regular na balanse ng account na responsable sa pag gawa ng transaksyon. 
 
 .. image:: images/concordium-id/acc35.png
       :width: 32%
@@ -209,14 +216,15 @@ where you have multiple options of sharing the account address. Try pressing the
 .. image:: images/concordium-id/acc38.png
       :width: 32%
 
-Inspect a release schedule
-==========================
-On the Concordium blockchain it is possible to make a transaction that releases the transferred amount over time. This is called a
-*transfer with a schedule*. For now we will not get into how to make such a transfer as it cannot be done from Concordium ID,
-but let’s check out how a release schedule can be inspected. If you receive a transfer with a release schedule, you can press the
-**burger menu** in the upper right corner of the balance screen. This will allow you to press **Release schedule**, and by doing this you
-will be taken to a screen containing information on how much GTU will be released and when. If you want to learn more about how to
-make a transfer with a release schedule, you can have a look at the :ref:`concordium_client` and :ref:`transactions` pages.
+Pag-inspecta ng schedule kung kelan ilalabas
+============================================
+
+Sa blockchain ng concordium possible na makagawa ng transaksyon na makakapag palabas ng napadalang halaga sa paglipas ng panahon. Ito ay tinatatawag na
+*transfer with a schedule*. Sa ngayon hindi muna tayo pupunta sa kung paano gumawa ng ganung klaseng pagpapadala kasi hindi pa ito magagawa sa Concordium ID, 
+Pero tingnan natin kung paano makakapag inspect ng release schedule. Kapag nakatanggap ka ng padala na may release schedule, maaari mong pinduting ang
+**burger menu** sa may dakong taas na kanang bahagi ng balance screen. Sa pag gawa nito maaari mo nang pindutin ang **Release schedule**, at sa pag gawa nito 
+dadalhin ka sa screen na may laman ng impormasyon na kung gaano karami ang GTU na mailalabas at kung kailan ito mailalabas. Kung nais mong may mas matutunan tunkol 
+sa kung paano magpadala ng may release schedule, maari mo syang makita sa pahinang :ref:`concordium_client` and :ref:`transactions`.
 
 .. image:: images/concordium-id/rel1.png
       :width: 32%
@@ -225,8 +233,8 @@ make a transfer with a release schedule, you can have a look at the :ref:`concor
 .. image:: images/concordium-id/rel3.png
       :width: 32%
 
-Support & Feedback
-==================
+Mga Suporta at mga puna
+=======================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Kung sakaling maka enkwentro ka ng mga issue o kung mayroon kang mga suhestyon, 
+maaari mong ilagay ang iyong katanungan o puna sa `Discord`_, o ma-kontak kame sa testnet@concordium.com.

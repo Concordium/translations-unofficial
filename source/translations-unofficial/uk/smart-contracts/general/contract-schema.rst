@@ -10,7 +10,7 @@
 .. _`custom section`: https://webassembly.github.io/spec/core/appendix/custom.html
 .. _`implementation in Rust`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
 
-.. _contract-schema:
+.. _contract-schema-uk:
 
 ======================
 Схеми смарт-контрактів
@@ -21,8 +21,7 @@
 
 .. seealso::
 
-   For instructions on how to build the schema for a smart contract module in
-   Rust, see :ref:`build-schema`.
+   Для отримання інструкцій про те, як організувати схему для модуля смарт-контракту в Rust дивіться :ref:`build-schema-uk`.
 
 Навіщо використовувати схему контракту?
 =======================================
@@ -46,7 +45,7 @@
 Воно полягає в тому, щоб зафіксувати цю інформацію в *схемі смарт-контракту*, яка описує, як створювати структуру з байтів, і може використовуватися зовнішніми інструментами.
 
 .. note::
-   Інструмент ``concordium-client`` може використовувати схему для :ref:`serialize JSON parameters<init-passing-parameter-json>` і десеріалізацію стану примірників контракту на JSON.
+   Інструмент ``concordium-client`` може використовувати схему для :ref:`серіалізації параметрів в JSON форматі <init-passing-parameter-json-uk>` і десеріалізацію стану примірників контракту на JSON.
 
 Потім схема або вбудовується в модуль смарт-контракту, який розгортається в мережі, або записується в файл і передається поза мережею.
 
@@ -67,9 +66,8 @@
 
 .. todo::
 
-   Clarify whether we talk about *any* abstract schema that a user could implement,
-   or a specific schema supplied by Concordium. Then only talk about one or the other,
-   or at least clearly separate the discussion of those.
+   Уточнити, чи ми говоримо про *будь-яку* абстрактну схему, яку може реалізувати користувач, або про конкретну схему, що надається Concordium.
+   Тоді говорити тільки про одне або інше, або, принаймні, чітко розділяти їх обговорення.
 
 Схема може містити:
 
@@ -127,7 +125,7 @@
 
 Для інформації про те, як встановлений режим роботи серіалізуются в байти, ви можете ознайомитися в `implementation in Rust`_.
 
-.. _contract-schema-which-to-choose:
+.. _contract-schema-which-to-choose-uk:
 
 Вбудовування схем в мережу
 ==========================

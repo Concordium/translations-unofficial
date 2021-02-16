@@ -164,15 +164,16 @@ na tatakbo sa likod sa Docker. Sa ganung pagkakataon, gamitin ang
 ``concordium-node-stop`` binary sa katulad na paraan kung paano mo 
 binuksan ang ``concordium-node`` executable.
 
-Support & Feedback
-==================
+Suporta at Katugunan
+====================
 
-Logging information for your node can be retrieved using the
-``concordium-node-retrieve-logs`` tool. This will save logs from the
-running image to a file. Additionally, if given permission, it will
-retrieve information about the programs currently running on the system.
+Ang impormasyon sa pag-log para sa iyong node ay maaaring makuha gamit ang
+tool na ``concordium-node-retrieve-logs`` Magse-save ito ng mga logs mula 
+sa tumatakbong image sa isang file. Bilang karagdagan, kung bibigyan ng 
+pahintulot, gagawin nitong kunin ang impormasyon tungkol sa mga program na 
+kasalukuyang tumatakbo sa system.
 
-You can send your logs, system information, questions and feedback to
-testnet@concordium.com. You can also reach out at our `Discord`_, or
-check out our :ref:`troubleshooting page<troubleshooting-and-known-issues>`
+Pwede mong ipadala ang iyong mga logs, impormasyon ng iyong sistema, 
+mga katanungan at katugunan sa testnet@concordium.com. You can also reach out at our `Discord`_, 
+o makipag-ugnay sa amin sa  :ref:`troubleshooting page<troubleshooting-and-known-issues>`
 

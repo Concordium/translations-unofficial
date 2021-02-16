@@ -13,7 +13,8 @@ Zostań piekarzem (twórz bloki)
    :local:
    :backlinks: none
    
-Ta sekcja wyjaśnia, czym jest piekarz, jego rolę w sieci i jak nią zostać.
+Ta sekcja wyjaśnia, czym jest piekarz, jego rolę w sieci i jak nią
+zostać.
 
 Czytając tę sekcję, dowiesz się:
 
@@ -36,10 +37,10 @@ jest dodawany do łańcucha piekarz węzła(node) otrzyma nagrodę.
    konto które posłużą do zarejestrowania piekarza i zarządzania nim.
 
 Definicje
-===========
+==========
 
 Piekarz
------
+-------
 
 Węzeł(node) to *piekarz* (lub *pieczenie*) kiedy aktywnie uczestniczy w
 sieć tworząc nowe bloki, które są dodawane do łańcucha. Piekarz zbiera,
@@ -49,7 +50,7 @@ więc że blok można sprawdzić i wykonany przez resztę uczestników
 sieć.
 
 Piekarz Klucze
-----------
+--------------
 
 Każdy piekarz ma zestaw kluczy kryptograficznych nazywa *Piekarz Klucze*. Węzeł(node) używa
 te klucze podpisać bloki, które piecze. W celu wypieku bloków sygnowanych przez a
@@ -84,7 +85,7 @@ aby być wybranym do pieczenia bloku, piekarz musi uczestniczyć w
 proporcjonalny do postawionej kwoty.
 
 Ta sama stake jest używana przy obliczaniu, czy piekarz zostanie uwzględniony w finalizacji
-komitet albo nie. Widzieć Finalizaji_.
+komitet albo nie. Widzieć Finalizacja_.
 
 .. _epochs-and-slots-pl:
 
@@ -106,10 +107,10 @@ obecnych piekarzy i stake są ustalone. Epoki mieć czas Trwanie naprawione na
 Blok Genesis. w testnet, epoki mają czas trwania z **1 hour**.
 
 Rozpocznij pieczenie
-============
+====================
 
 Zarządzanie kontami
------------------
+-------------------
 
 Ta sekcja zapewnia krótkie podsumowanie odpowiednich kroków, dla Importowanie konto. 
 Aby uzyskać pełny opis, widzieć :ref:`managing_accounts`.
@@ -124,11 +125,12 @@ Aby zaimportować konto do łańcucha narzędzi uruchom
 
    $concordium-client config account import <path/to/exported/file> --name bakerAccount
 
-``concordium-client`` zapyta o hasło, aby odszyfrować wyeksportowany plik i zaimportować wszystkie konta.
-To samo hasło będzie używane do szyfrowania kluczy podpisywania transakcji i zaszyfrowanego klucza transferów.
+``concordium-client`` zapyta o hasło, aby odszyfrować wyeksportowany plik i
+zaimportować wszystkie konta. To samo hasło będzie używane do
+szyfrowania kluczy podpisywania transakcji i zaszyfrowanego klucza transferów.
 
 Tworzenie kluczy dla piekarza i rejestracyjny tego
---------------------------------------------
+--------------------------------------------------
 
 .. note::
 
@@ -167,7 +169,7 @@ będzie zastąpiony
 
 Zapewnij ``--no-restake`` flaga, której należy unikać automatyczne dodawanie
 nagrody do postawiona kwota na piekarzu. To zachowanie jest opisane w
-Sekcja `Restaking the earnings`_.
+Sekcja `Restaking zarobki`_.
 
 w celu uruchomić węzeł tym kluczem piekarzas i zacznij produkować bloki 
 najpierw musisz zamknąć aktualnie działający węzeł (albo naciskając
@@ -200,7 +202,7 @@ transakcja za dodanie piekarza był zawarty w bloku.
    `E+2` starts.
 
 Zarządzający piekarz
-==================
+====================
 
 Sprawdzanie statusu piekarza i jego moc loterii
 ------------------------------------------------------
@@ -250,7 +252,7 @@ oferują różne stopnie precyzja w wyświetlanych informacjach.
      :width: 250px
 
 Aktualizacja postawioną kwotę
---------------------------
+-----------------------------
 
 Aby zaktualizować piekarza bieg stake
 
@@ -296,18 +298,17 @@ bakerCooldownEpochs* epoki, aby odniosły skutek. Zmiana stanie się widoczna na
 
    +------------------------------------------+--------------------------------------+----------------------------------------+
    |                                          |  Gdy transakcja jest zawarta w bloku |   Po *2 + bakerCooldownEpochs* epochs  |
-   +========================================+========================================+========================================+
+   +==========================================+======================================+========================================+
    | Zmiana jest widoczna przez querying węzeł| ✓                                    |                                        |
    +------------------------------------------+--------------------------------------+----------------------------------------+
    | Baker korzysta z nowej stake             |                                      | ✓                                      |
    +------------------------------------------+--------------------------------------+----------------------------------------+
-   | Stake can be decreased again or          | ✗                                    | ✓                                     |
+   | Stake can be decreased again or          | ✗                                    | ✓                                      |
    | baker can be removed                     |                                      |                                        |
    +------------------------------------------+--------------------------------------+----------------------------------------+
 
 .. note::
-To
-   wartość można sprawdzić w następujący sposób:
+
    w testnet, ``bakerCooldownEpochs`` jest początkowo ustawiony na 168 epoki. To
    wartość można sprawdzić w następujący sposób:
 
@@ -320,7 +321,7 @@ To
 
 .. warning::
 
-   Jak zaznaczono w `Definitions`_ Sekcja, postawiona kwota wynosi *zablokowany*,
+   Jak zaznaczono w `Definicje`_ Sekcja, postawiona kwota wynosi *zablokowany*,
    i.e. nie można go przenieść ani wykorzystać do zapłaty. Powinieneś to wziąć
    na konto i rozważ postawienie kwoty, która nie będzie potrzebna w
    krótkoterminowe. W szczególności, aby wyrejestrować piekarza lub zmodyfikować postawioną piekarz
@@ -447,8 +448,7 @@ z ``concordium-client`` jak zwykle:
    kwota, piekarza nie można usunąć i odwrotnie.
 
 Wsparcie i informacje zwrotne
-==================
-
+==============================
 
 Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub
 informacje zwrotne na `Discord`_, lub Skontaktuj się z nami na testnet@concordium.com.

@@ -38,7 +38,6 @@ The documentation is split into four categories
    general/contract-module
    general/contract-instances
    general/contract-schema
-   general/resource-accounting
    general/develop-contracts
 
 .. toctree::

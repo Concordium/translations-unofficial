@@ -3,33 +3,29 @@
 
 .. _testnet-get-started:
 
-=======================================
-Concordium ID: Get started with the app
-=======================================
+================================
+Concordium ID: Magsimula sa app
+================================
 
 .. contents::
    :local:
    :backlinks: none
 
-Before following this guide you should have finished installing Concordium ID, as described in :ref:`the previous chapter<testnet-get-the-app>`.
+Bago sundin ang gabay na ito dapat mo nang natapos ang pag-install ng Concordium ID, tulad ng inilarawan sa :ref:`the previous chapter<testnet-get-the-app>`.
 
-Set up a passcode and biometrics
-================================
+Pag-setup ng passcode at biometrics
+===================================
 
-When you open the Concordium ID app for the first time, you will be greeted by a flow
-that will help you setup a passcode and biometric authentication, create an :ref:`glossary-initial-account`,
-and it will also guide you through getting an :ref:`glossary-identity`. The initial account is a special type of account,
-that is submitted to the chain by the :ref:`glossary-identity-provider`, upon creation of an identity. You can make the
-the same transactions from an initial account as from regular accounts, but the owner of the initial account will be
-known by the identity provider. After your identity is created you will be able to submit accounts to the chain
-yourself, and these will be unknown by the identity provider. You can learn more about accounts on the :ref:`Identities
-and accounts<reference-id-accounts>` page.
+Kapag binuksan mo ang app ng Concordium ID sa kauna-unahang pagkakataon, sasalubungin ka ng isang daloy na makakatulong sa iyo na mag-set up ng isang passcode at pagpapatotoo ng biometric, lumikha ng isang :ref:`glossary-initial-account`,
+at gagabayan ka rin nito sa pamamagitan ng pagkuha ng ng :ref:`glossary-identity`. Ang paunang account ay isang espesyal na uri ng account,
+na isinumite sa chain ng :ref:`glossary-identity-provider`, sa paglikha ng isang pagkakakilanlan. Maaari mong gawin ang
+ang parehong mga transaksyon mula sa isang paunang account bilang mula sa mga regular na account, ngunit ang may-ari ng paunang account ay
+kilala ng tagapagbigay ng pagkakakilanlan. Matapos malikha ang iyong pagkakakilanlan magagawa mong magsumite ng mga account sa chain
+ang iyong sarili, at ang mga ito ay hindi malalaman ng tagapagbigay ng pagkakakilanlan. Maaari kang matuto nang higit pa tungkol sa mga account sa :ref:`Identities and accounts<reference-id-accounts>` na pahina.
 
-The first screen you will meet when opening Concordium ID is this one. It will just explain that
-you have to go through this process to get started.
+Ang unang screen na matutugunan mo kapag binubuksan ang Concordium ID ay ang isang ito. Ipapaliwanag lang nito na kailangan mong dumaan sa prosesong ito upang makapagsimula.
 
-If you are ready to continue, you can press **Yes, let’s go!** The next screen will ask you to input
-a six-digit passcode. If you would rather use a full password including letters, you can also choose to do so here.
+Kung handa ka nang magpatuloy, maaari kang pindutin **Yes, let’s go!** Hihilingin sa iyo ng susunod na screen na mag-input ng anim na digit na passcode. Kung mas gugustuhin mong gumamit ng isang buong password kabilang ang mga titik, maaari mo ring piliing gawin ito dito.
 
 .. image:: images/concordium-id/int1.png
       :width: 32%

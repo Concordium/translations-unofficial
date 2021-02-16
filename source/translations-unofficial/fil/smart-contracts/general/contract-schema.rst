@@ -32,31 +32,22 @@ Ang data sa blockchain, tulad ng estado ng isang instance at mga parameter na na
 
    Isaalang-alang ang muling pagsusulat ng subseksyon na ito dahil maaari itong maging medyo mahirap maunawaan; sa partikular, posibleng sabihin lamang na para sa kaginhawaan, ang gumagamit maaaring ipasa ang hindi naka-serialized na data sa isang function hangga't nagbibigay din sila ng isang schema na binabaybay kung paano ma-(de)serialize ang data.
 
-Usually these bytes have structure and this structure is known to the smart
-contract as part of the contract functions, but outside of these functions it
-can be difficult to make sense of the bytes. This is especially the case when
-inspecting a complex state of a contract instance or when passing complex
-parameters to a smart contract function. In the latter case, the bytes should
-either be serialized from structured data or written manually.
+Karaniwan ang mga byte na ito ay may istraktura at ang istrakturang ito ay kilala ng smart contract bilang bahagi ng contract function, ngunit sa labas ng mga function na ito ay maaaring maging mahirap na magkaroon ng kahulugan ang byte. Lalo na ito ang kaso kung kailan inspeksyon ng isang kumplikadong estado ng isang contract instance o kapag pumasa sa kumplikadong mga parameter sa isang smart contract function. Sa huling kaso, dapat ang mga byte alinman ay ma-serialize mula sa nakabalangkas na data o manu-manong nakasulat.
 
-The solution for avoiding manual parsing of bytes is to capture this information
-in a *smart contract schema*, which describes how to make structure from the
-bytes, and can be used by external tools.
+Ang solusyon para sa pag-iwas sa manu-manong pag-parse ng mga byte ay upang makuha ang impormasyong ito sa isang *smart contract schema*, na naglalarawan kung paano gumawa ng istraktura mula sa bytes, at maaaring magamit ng mga panlabas na tool.
 
 .. note::
 
-   The ``concordium-client`` tool can use a schema to
+   Ang ``concordium-client`` tool ay pwedeng gumamit ng schema para sa
    :ref:`serialize JSON parameters<init-passing-parameter-json>`
-   and to deserialize the state of contract instances to JSON.
+   at i-deserialize ang stado ng contract instances sa JSON.
 
-The schema is then either embedded into a smart contract module that is deployed
-to the chain, or is written to a file and passed around off-chain.
+Ang schema ay maaaring naka-embed sa isang smart contract module na na-deploy sa chain, o nakasulat sa isang file at ipinasa sa off-chain.
 
-Should you embed or write to a file?
-====================================
+Dapat mo bang i-embed o sumulat sa isang file?
+=============================================
 
-Whether a contract schema should be embedded or written to a file depends on
-your situation.
+Kung ang isang contract schema ay dapat na naka-embed o nakasulat sa isang file ay nakasalalay sa sitwasyon.
 
 Embedding the schema into the smart contract module distributes the schema
 together with the contract ensuring the correct schema is being used and also

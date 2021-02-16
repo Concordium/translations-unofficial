@@ -14,35 +14,35 @@
 
 .. _writing-smart-contracts:
 
-==================================
-Developing smart contracts in Rust
-==================================
+======================================
+Pag-develop ng smart contracts sa Rust
+======================================
 
-On the concordium blockchain smart contracts are deployed as Wasm modules, but
-Wasm is designed primarily as a compilation target and is not convenient to
-write by hand.
-Instead we can write our smart contracts in the Rust_ programming language, which
-has good support for compiling to Wasm.
+Sa concordium blockchain smart contract ay naka-deploy bilang Wasm modules, ngunit
+pangunahing naka-disenyo ang Wasm bilang compilation target at hindi ito madali para
+isulat kamay.
+Sa halip maaring magsulat ng smart contracts sa Rust programming language, kung
+saan may maayos na suporta para sa pag-compile sa Wasm.
 
-Smart contracts do not have to be written in Rust.
-This is simply the first SDK we provide.
-Manually written Wasm, or Wasm compiled from C, C++, AssemblyScript_, and
-others, is equally valid on the chain, as long as it adheres to the :ref:`Wasm
+Ang smart contracts ay hindi kailangan isulat sa Rust.
+Ito lamang ang unang SDK na mabibigay namin.
+Ang mano-manong pagsulat sa Wasm, o compiled na Wasm sa C, C++, AssemblyScript_, at
+iba pa, ay parehas na pantay na wasto sa chain, hangga't ito ay sumusunod sa :ref:`Wasm
 limitations we impose <wasm-limitations>`.
 
 .. seealso::
 
-   For more information on the functions described below, see the concordium_std_
-   API for writing smart contracts on the Concordium blockchain in Rust.
+   Para sa karagdagang impormasyon sa functions na nakalarawan sa baba, tignan ang concordium_std_
+   API para sa pagsulat ng smart contracts sa Concordium blockchain sa Rust.
 
 .. seealso::
 
-   See :ref:`contract-module` for more information about smart contract modules.
+   Tignan ang :ref:`contract-module` para sa karagdagang impormasyon tungkol sa smart contract modules.
 
-A smart contract module is developed in Rust as a library crate, which is then
-compiled to Wasm.
-To obtain correct exports, the `crate-type` attribute must be set to
-``["cdylib", "rlib"]`` in the manifest file:
+Ang smart contract module ay gawa sa Rust bilang library crate, tapos
+na-compile sa Wasm.
+Para makuha ang tamang exports, ang `crate-type` attribute ay kailangan naka-set sa
+``["cdylib", "rlib"]`` sa loob ng manifest file:
 
 .. code-block:: text
 
@@ -51,17 +51,17 @@ To obtain correct exports, the `crate-type` attribute must be set to
    crate-type = ["cdylib", "rlib"]
    ...
 
-Writing a smart contract using ``concordium_std``
-=================================================
+Pagsulat sa smart contract gamit ang ``concordium_std``
+=======================================================
 
-It is recommended to use the ``concordium_std`` crate, which provides a
-more Rust-like experience for developing smart contract modules and calling
-host functions.
+Ito ay inirerekomenda na gamitin ang ``concordium_std`` crate, na nagbibigay
+dagdag karanasan sa Rust sa pag-develop ng smart contract modules at pagtawag
+sa host functions.
 
-The crate enables writing init and receive functions as simple Rust
-functions annotated with ``#[init(...)]`` and ``#[receive(...)]``, respectively.
+Ang crate ay nagpapagana sa pagsulat sa init at receive functions bilang simpleng Rust
+functions na anotado sa ``#[init(...)]`` at ``#[receive(...)]``.
 
-Here is an example of a smart contract that implements a counter:
+Ito ang mga halimbawa ng smart contract na nag-iimplement ng counter:
 
 .. code-block:: rust
 
@@ -87,61 +87,61 @@ Here is an example of a smart contract that implements a counter:
        Ok(A::accept())
    }
 
-There are a number of things to notice:
+Merong mga bagay na dapat bigyan pansin:
 
 .. todo::
 
-   - Write up the requirements in an easier to read way (e.g., split up paragraphs into sub-bullets).
-   - These requirements should be part of a specification that is written up somewhere,
-     i.e., not just as part of this example.
+   - Isulat ang requirements sa mas madaling paraang basahin (e.g., ipaghiwalay ang talaga sa sub-bullets).
+   - Itong mga kinakailangan ay dapat maging parte ng detaly na nakasulat sa kung saan,
+     i.e., hindi lang ito parte ng halimbawa.
 
-- The type of the functions:
+- Mga uri ng functions:
+  
+  * Ang init function ay dapat uri ng ``&impl HasInitContext -> InitResult<MyState>``
+    kung saan ``MyState`` ay uri na nagpapatupad ang ``Serialize`` trait.
+  * Ang receive function ay kailangan kumuha ng ``A: HasActions`` na uri ng parameter,
+    ang ``&impl HasReceiveContext`` at ang ``&mut MyState`` parameter, at ibalik
+    ang ``ReceiveResult<A>``.
 
-  * An init function must be of type ``&impl HasInitContext -> InitResult<MyState>``
-    where ``MyState`` is a type that implements the ``Serialize`` trait.
-  * A receive function must take a ``A: HasActions`` type parameter,
-    a ``&impl HasReceiveContext`` and a ``&mut MyState`` parameter, and return
-    a ``ReceiveResult<A>``.
+- Ang anotasyon ``#[init(contract = "counter")]`` ay nagmamarka ng function na
+  inilapat sa init function ng contract na ``counter``.
+  Ang ibig sabihin nito ay sa likod ng eksena ito ay bumubuo ng macro na-exported
+  function sa kailangan na signatura na ``init_counter``.
 
-- The annotation ``#[init(contract = "counter")]`` marks the function it is
-  applied to as the init function of the contract named ``counter``.
-  Concretely, this means that behind the scenes this macro generates an exported
-  function with the required signature and name ``init_counter``.
-
-- ``#[receive(contract = "counter", name = "increment")]`` deserializes and
-  supplies the state to be manipulated directly.
-  Behind the scenes this annotation also generates an exported function with name
-  ``counter.increment`` that has the required signature, and does all of the
-  boilerplate of deserializing the state into the required type ``State``.
+- ``#[receive(contract = "counter", name = "increment")]`` ay nag-deserialize at
+  mga gamit na estado na direktang minamanipula.
+  Sa likod ng eksena itong anotasyon ay nagbibigay ng exported function na may pangalan
+  ``counter.increment`` na may kailangang signaturo, at naggagawa sa lahat ng
+  boilerplate ng deserializing ng estado sa kinakailangang uri ``State``.
 
 .. note::
 
-   Note that deserialization is not without cost, and in some cases the
-   user might want more fine-grained control over the use of host functions.
-   For such use cases the annotations support a ``low_level`` option, which has
-   less overhead, but requires more from the user.
+   Tandaan na ang deserialization ay may gastos, at sa ibang kaso ang
+   user ay gusto ng mas malawak na kontrol sa paggamit ng host functions.
+   Sa gantong kaso ang anotasyon ay nagsusuporta sa ``low_level`` na pagpipilian, na
+   may mas kaunting overhead, ngunit marami ang kinakailangan galing sa user.
 
 .. todo::
 
-   - Describe low-level
-   - Introduce the concept of host functions before using them in the note above
+   - Tukuyin ang low-level
+   - Ipakilala ang konsepto ng host functions bago gamitin ito sa nakasulat sa taas
 
 
-Serializable state and parameters
----------------------------------
+Serializable na estado at parameters
+------------------------------------
 
-.. todo:: Clarify what it means that the state is exposed similarly to ``File``;
-   preferably, without referring to ``File``.
+.. todo:: Ilinaw ang ibig sabihin ng ang estado ay nakalabas katulad sa ``File``;
+   mas pabor na hindi tinutukoy ang ``File``.
 
-On-chain, the state of an instance is represented as a byte array and exposed
-in a similar interface as the ``File`` interface of the Rust standard library.
+On-chain, ang estado ng instance ay nirerepresenta biang byte array at nakalantad
+sa parehong interface bilang ``File`` interface ng Rust standard library.
 
-This can be done using the ``Serialize`` trait which contains (de-)serialization
+Ito ay maaring magawa gamit ang ``Serialize`` na trait na naglalaman ng (de-)serialization
 functions.
 
-The ``concordium_std`` crate includes this trait and implementations for
-most types in the Rust standard library.
-It also includes macros for deriving the trait for user-defined structs and
+Ang ``concordium_std`` crate ay kasama sa gantong trait at implementasyon para sa
+madalas ng uri ng Rust standard library.
+Ito rin ay naglalaman ng macros para sa pag-dervie ng trait para sa user-defined structs at
 enums.
 
 .. code-block:: rust
@@ -153,28 +153,28 @@ enums.
        ...
    }
 
-The same is necessary for parameters to init and receive functions.
+Parehas na kailangan ang parameters para sa init at receive functions.
 
 .. note::
 
-   Strictly speaking we only need to deserialize bytes to our parameter type,
-   but it is convenient to be able to serialize types when writing unit tests.
+   Ipinaghihigpit na kailangan lang na mag deserialize ng bytes sa paramater type,
+   ngunit mas madali na mag-serialize ng types kapag nagsusulat ng unit tests.
 
 .. _working-with-parameters:
 
-Working with parameters
------------------------
+Paggawa sa parameters
+---------------------
 
-Parameters to the init and receive functions are, like the instance
-state, represented as byte arrays.
-While the byte arrays can be used directly, they can also be deserialized into
+Ang parameters sa init at receive functions ay parang sa instance
+state, na nirerepresenta bilang byte arrays.
+Habang ang byte array ay nagagamit direkta, pwede rin ito ma-deserialized sa
 structured data.
 
-The simplest way to deserialize a parameter is through the `get()`_ function of
-the `Get`_ trait.
+Ang madaling paraan para mag-deserialize ng parameter ay sa pamamagitan ng `get()`_ function ng
+`Get`_ trait.
 
-As an example, see the following contract in which the parameter
-``ReceiveParameter`` is deserialized on the highlighted line:
+Bilang halimbawa, tignan ang sumusunod na contract kung saan ang parameter
+``ReceiveParameter`` ay deserialized sa naka-highlight na linya:
 
 .. code-block:: rust
    :emphasize-lines: 24
@@ -209,11 +209,11 @@ As an example, see the following contract in which the parameter
        Ok(A::accept())
    }
 
-The receive function above is inefficient in that it deserializes the
-``value`` even when it is not needed, i.e., when ``should_add`` is ``false``.
+Ang receive function sa taas ay hindi epektibo na nag-deserialize pa ng
+``value`` kahit hindi na kailangan, i.e. kapag ang ``should_add`` ay ``false``.
 
-To get more control, and in this case, more efficiency, we can deserialize the
-parameter using the `Read`_ trait:
+Para makakuha ng mas malawak na control, at sa gantong kaso, mas mabilis, maari nating i-deserialize ang
+parameter gamit ang `Read`_ trait:
 
 .. code-block:: rust
    :emphasize-lines: 7, 10
@@ -233,64 +233,63 @@ parameter using the `Read`_ trait:
        Ok(A::accept())
    }
 
-Notice that the ``value`` is only deserialized if ``should_add`` is
+Pansin na ang ``value`` ay deserialized lamang kung ang ``should_add`` ay
 ``true``.
-While the gain in efficiency is minimal in this example, it could have an
-substantial impact for more complex examples.
+Habang ang pagdagdag ng efficiency ay minimal sa gantong halimbawa, maaring magkaroon
+ng substantial impact para sa maraming mahirap na halimbawa.
 
 
-Building a smart contract module with ``cargo-concordium``
-==========================================================
+Pagbuo ng smart contract sa module gamit ang ``cargo-concordium``
+=================================================================
 
-The Rust compiler has good support for compiling to Wasm using the
+Ang Rust compiler ay may maayos na suporta sa pag-compile sa Wasm gamit ang
 ``wasm32-unknown-unknown`` target.
-However, even when compiling with ``--release`` the resulting build includes
-large sections of debug information in custom sections, which are not useful for
+Sapagkat, kahit nag-cocompile sa ``--release`` ang resulta ng pagbuo ay naglalaman ng
+malalaking bahagi ng debug information sa custom sections, na hindi napapakinabangan sa
 smart contracts on-chain.
 
-To optimize the build and allow for new features such as embedding schemas, we
-recommend using ``cargo-concordium`` to build smart contracts.
+Para mag-optimize ng build at payagan ang bagong features tulad ng embedding schemas, 
+nirerekomenda na gamitin ang ``cargo-concordium`` para magbuo ng smart contracts.
 
 .. seealso::
 
-   For instructions on how to build using ``cargo-concordium`` see
+   Para sa tagubilin kung paano magbuo gamit ang ``cargo-concordium`` tignan
    :ref:`compile-module`.
 
 
-Testing smart contracts
-=======================
+Pagsubok sa smart contracts
+===========================
 
-Unit tests with stubs
----------------------
+Unit test sa stubs
+------------------
 
-Simulate contract calls
------------------------
+Gayahin ang tawag ng contract
+-----------------------------
 
-Best practices
+Mainam na gawi
 ==============
 
-Don't panic
------------
+Wag mag-panik
+-------------
 
 .. todo::
 
-   Use trap instead.
+   Gumamit ng bitag nalang.
 
-Avoid creating black holes
---------------------------
-
-A smart contract is not required to use the amount of GTU send to it, and by
-default a smart contract does not define any behavior for emptying the balance
-of an instance, in case someone were to send some GTU.
-These GTU would then be forever *lost*, and there would be no way to recover
-them.
-
-Therefore it is good practice for smart contracts that are not dealing with GTU,
-to ensure the sent amount of GTU is zero and reject any invocations which are
-not.
-
-Move heavy calculations off-chain
+Iwasan ang paggawa ng black holes
 ---------------------------------
+
+Ang smart contract ay hindi kailangan gamitin ang amount ng GTU na pinadala nito, at 
+bilang default ang smart contract ay hindi nagtutukoy ng kahit anong ugali sa pag-ubos ng balanse
+ng isang instance, sa kaso na may nagpadala ng GTU.
+Itong GTU ay habang-buhay na *lost*, at wala paraan para masalba ito.
+
+Kung gayon magandang ensayo ang smart contracts na hindi nakatungo sa GTU,
+para masigurado na ang bingiay na amount ng GTU ay wala at hindi tanggapin ang kahit
+anong panawagan na hindi.
+
+Lumipat ng mabigat na kalkulasyon sa off-chain
+----------------------------------------------
 
 
 .. _Rust: https://www.rust-lang.org/

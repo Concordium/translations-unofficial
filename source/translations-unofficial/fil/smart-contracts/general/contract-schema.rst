@@ -16,10 +16,7 @@
 Smart contract schemas
 ======================
 
-A smart contract schema is a description of how to represent bytes in a more
-structured representation. It can be used by external tools when displaying the
-state of a smart contract instance and for specifying parameters using a
-structured representation, such as JSON.
+Ang smart contract schema ay isang paglalarawan kung paano kumatawan sa mga bytes sa isang mas structured representation. Maaari itong magamit ng mga panlabas na mga tools kapag ipinapakita ang estado ng isang smart contract instance at para sa pagtukoy ng mga parameters gamit ang structured representation, katulad ng JSON.
 
 .. seealso::
 

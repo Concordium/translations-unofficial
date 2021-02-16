@@ -12,7 +12,7 @@ Zostań piekarzem (twórz bloki)
 .. contents::
    :local:
    :backlinks: none
-   
+
 Ta sekcja wyjaśnia, czym jest piekarz, jego rolę w sieci i jak nią
 zostać.
 
@@ -45,7 +45,7 @@ Piekarz
 Węzeł(node) to *piekarz* (lub *pieczenie*) kiedy aktywnie uczestniczy w
 sieć tworząc nowe bloki, które są dodawane do łańcucha. Piekarz zbiera,
 Orders i uprawomocnić the transakcje które są zawarte w bloku utrzymać
-integralność łańcucha bloków. Piekarz podpisuje każdy blok że oni piec 
+integralność łańcucha bloków. Piekarz podpisuje każdy blok że oni piec
 więc że blok można sprawdzić i wykonany przez resztę uczestników
 sieć.
 
@@ -56,7 +56,7 @@ Każdy piekarz ma zestaw kluczy kryptograficznych nazywa *Piekarz Klucze*. Węze
 te klucze podpisać bloki, które piecze. W celu wypieku bloków sygnowanych przez a
 konkretnego piekarza węzeł(node) musi działać z załadowanym zestawem kluczy piekarza.
 
-Konto Piekarz 
+Konto Piekarz
 -------------
 
 Każde konto może używać zestawu kluczy piekarza do rejestracji piekarza.
@@ -65,14 +65,14 @@ Kiedy tylko Piekarz piecze prawidłowy blok, który zostanie włączony do łań
 czas nagroda jest wypłacana na powiązane konto.
 
 Stake i loteria
------------------
+----------------
 
 .. todo::
 
    - Link to release schedule.
 
 Konto może postawić część swojego salda GTU na *stake piekarza*, a później może ręcznie
-zwolnić całość lub część postawionej kwoty. Postawiona kwota nie może zostać przesunięta 
+zwolnić całość lub część postawionej kwoty. Postawiona kwota nie może zostać przesunięta
 ani przeniesiona, dopóki nie zostanie zwolniona przez piekarza.
 
 .. note::
@@ -93,7 +93,7 @@ Epochs i sloty
 ----------------
 
 W Concordium blockchain, czas jest podzielony na *sloty*.Sloty mieć czas
-czas trwania ustalony w bloku Genesis. na dowolnym oddziale, każdy slot może mieć 
+czas trwania ustalony w bloku Genesis. na dowolnym oddziale, każdy slot może mieć
 w najbardziej jeden blok, ale wiele bloków na różnych gałęziach można wytworzony w
 ten sam slot.
 
@@ -112,10 +112,10 @@ Rozpocznij pieczenie
 Zarządzanie kontami
 -------------------
 
-Ta sekcja zapewnia krótkie podsumowanie odpowiednich kroków, dla Importowanie konto. 
+Ta sekcja zapewnia krótkie podsumowanie odpowiednich kroków, dla Importowanie konto.
 Aby uzyskać pełny opis, widzieć :ref:`managing_accounts`.
 
-Konta są tworzone przy użyciu :ref:`concordium_id` aplikacja. Kiedyś konto 
+Konta są tworzone przy użyciu :ref:`concordium_id` aplikacja. Kiedyś konto
 pomyślnie utworzony, nawigacja do the **więcej** tab i wybór **Eksport**
 pozwala Ci aby uzyskać plik JSON zawierające informacje o koncie.
 
@@ -140,7 +140,7 @@ Tworzenie kluczy dla piekarza i rejestracyjny tego
 Każde konto ma unikalny identyfikator piekarza który jest używany podczas rejestracji piekarza. To
 Identyfikator musi zostać dostarczony przez sieć i obecnie nie można go wstępnie obliczyć.
 Ten identyfikator należy podać wewnątrz kluczy piekarza do węzła, aby mógł on używać kluczy
-piekarza do tworzenia bloków. The ``concordium-client`` automatycznie wypełni to 
+piekarza do tworzenia bloków. The ``concordium-client`` automatycznie wypełni to
 pole podczas wykonywania poniższych operacji.
 
 Aby utworzyć nowy zestaw kluczy, uruchom:
@@ -171,7 +171,7 @@ Zapewnij ``--no-restake`` flaga, której należy unikać automatyczne dodawanie
 nagrody do postawiona kwota na piekarzu. To zachowanie jest opisane w
 Sekcja `Restaking zarobki`_.
 
-w celu uruchomić węzeł tym kluczem piekarzas i zacznij produkować bloki 
+w celu uruchomić węzeł tym kluczem piekarzas i zacznij produkować bloki
 najpierw musisz zamknąć aktualnie działający węzeł (albo naciskając
 ``Ctrl + C`` na terminalu gdzie jest węzeł(node) bieganie lub używając
 ``concordium-node-stop`` wykonywalny).
@@ -384,8 +384,8 @@ the ``baker add`` polecenie, jak pokazano tutaj:
 Finalizacja
 ------------
 
-Finalizacja to proces głosowania wykonywany przez węzły w *Finalizacja komisja* 
-że *finalizuje* blok kiedy wystarczająco duża liczba członków 
+Finalizacja to proces głosowania wykonywany przez węzły w *Finalizacja komisja*
+że *finalizuje* blok kiedy wystarczająco duża liczba członków
 komisja otrzymałem the blok i uzgodnij jego wynik. Nowsze bloki
 musi mieć sfinalizowany blok jako przodek, aby zapewnić integralność
 łańcuch. Więcej informacji o tym procesie, zobacz
@@ -402,7 +402,7 @@ jest sfinalizowana. Nagrody są wypłacane na konto piekarza jakiś czas po
 blok jest sfinalizowane.
 
 Usunięcie piekarza
-================
+==================
 
 Konto kontrolujące może zdecydować o wyrejestrowaniu swojego piekarza jego piekarz na łańcuchu. do zrobienia
 więc musisz wykonać ``concordium-client``:
@@ -418,7 +418,7 @@ Podczas wyjmowania piekarza,zmiana ma tę samą oś czasu, co malejąca
 postawioną kwotę. Zmiana będzie potrzebować *2 + bakerCooldownEpochs* epoki odniosły skutek.
 Zmiana staje się widoczna w łańcuchu, gdy tylko transakcja zostanie włączona do bloku a ty
 można sprawdzić kiedy ta zmiana wejdzie w życie, sprawdzając informacje o koncie
-z ``concordium-client`` jak zwykle: 
+z ``concordium-client`` jak zwykle:
 
 .. code-block:: console
 

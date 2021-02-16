@@ -214,9 +214,9 @@ An action description ``A`` **or** ``B``
 
 .. graphviz::
    :align: center
-   :caption: Example of an action description, which tries to transfer to Alice
-             and then Bob, if any of these fails, it will try to transfer to
-             Charlie instead.
+   :caption: Halimbawa ng aksyon sa deskripsyon, na nag subok na ilipat sa Alice
+             at Bob, kung mayroong di nag tagumpay, ito ay ililipat kay 
+             Charlie sa halip.
 
    digraph G {
        node [color=transparent]
@@ -233,11 +233,11 @@ An action description ``A`` **or** ``B``
    }
 
 .. seealso::
+  
+   Tignan :ref:`host-functions-actions` ukol sa kaalaman kung paano gumawa ng
+   mga aksyon.
 
-   See :ref:`host-functions-actions` for a reference of how to create the
-   actions.
-
-The whole action tree is executed **atomically**, and either leads to updates
-to all the relevant instances and accounts, or, in case of rejection, to payment
-for execution, but no other changes. The account which sent the initiating
-transaction pays for the execution of the entire tree.
+Ang buong aksyon ay tinatawag  **atomically**, at alinman sa humantong sa mga pag-update
+sa lahat ng nauugnay na mga pagkakataon at account, o, sa kaso ng pagtanggi, sa pagbabayad
+para sa pagpapatupad, ngunit walang iba pang mga pagbabago. Ang account na nagpadala ng nagpapasimula
+binabayaran ng transaksyon ang pagpapatupad ng buong puno.

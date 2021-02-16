@@ -7,18 +7,18 @@ Smart contract instances
 .. todo::
 
    - Linawin kung pano nag uugnay ang mga instance at smart contracts sa modulo
-     (halimbawa, ngayon na sinabi na ang instance ay module at state pero ang 
+     (halimbawa, ngayon na sinabi na ang instance ay module at state pero ang
      litrato sa ibaba ay pinapakita na ang instances ay contracts +state).
    - Pumili kung papano dapat i talaga ang smart contract modules ( mula sa sarili neto concepto o
      kaya ay Wasm modules), o kung dapat ba natin silang isali.
-   - Pumili kung dapat ba mag karoon ng kong kretong halimbawa, at kung dapat ba 
+   - Pumili kung dapat ba mag karoon ng kong kretong halimbawa, at kung dapat ba
       ito maging Wasm o Rust o pseudocode.
-   - Isaisip at mag karoon ng ideya na nag papaliwanag ng relasyon ng modules at instances.  
-     
-Ang **smart contract instance** ay smart contract module kapareha ang 
+   - Isaisip at mag karoon ng ideya na nag papaliwanag ng relasyon ng modules at instances.
+
+Ang **smart contract instance** ay smart contract module kapareha ang
 tiyak na estado at tiyak na halaga ng GTU tokens.
 Madamihang smart contract instances ay pwede gawin sa parehong modulo.
-Sa halimbawang, ang :ref:`auction <auction>` contract, pwede na maramihang pagkakataon, na bawat isang 
+Sa halimbawang, ang :ref:`auction <auction>` contract, pwede na maramihang pagkakataon, na bawat isang
 nakatuon sa pag-bid para sa isang tukoy na bagay at sa sarili nitong mga kalahok.
 
 Ang Smart contract instances ay maaring gawin sa isang :ref:`smart contract
@@ -79,7 +79,7 @@ o sumira ng GTU tokens.
 Pag gawa ng instansya sa on-chaon ng smart contract
 ===================================================
 
-Ang bawat smart contract ay dapat mag talaga ng function para sa pag gawa ng smart contract 
+Ang bawat smart contract ay dapat mag talaga ng function para sa pag gawa ng smart contract
 na istansya. Ang function na ganoon ay tinatalaga bilang *init function*.
 
 Para makagawa ng smart contract instance, ang account ay nag papadala ng espesyal na
@@ -108,7 +108,7 @@ ay makikita sa on-chain.
 .. seealso::
 
   Tignan :ref:`initialize-contract` gabay sa mismong initial na pag gawa ng kontrata.
-   
+
 
 Instance state
 ==============
@@ -150,10 +150,10 @@ Pagtatala ng events
 ==============
 
 .. todo::
- 
+
    Ipaliwanag kung ano ang mga events at bakit sila mahalaga.
    Linawin ang  "monitor for events".
- 
+
 Ang events ay pwede itala mula sa pagpapatupad ng smart contract functions. Ito ay
 parehas na kaso sa init and recieve functions. Ang logs ay ginawa paara sa off-chain na
 gamit, para ang mga aktor sa labas ng smart contracts, o aktor sa labas ng chain.
@@ -177,12 +177,12 @@ Ang natanggap na function ay nag babali ng *description of actions*
 para patakbuhin ng host environment sa chain.
 
 Ang mga possibleng aksyon sa mga kontrata ay maaring mag likha ng:
- 
+
 - **Accept** is a primotibong aksyon na laging nag tatagumpay.
 - **Simple transfer** ng GTU galing sa instansya papunta sa binigay na account.
 - **Send**: tawagin ang receive function ng mismong smart contract instace,
     at opsyonal na ilipat ang ibang GTU galing sa nag papadalang instansya papunta
-    sa kukuhang instansya.  
+    sa kukuhang instansya.
 
 Kung ang aksyon ay di nag tagumapay na tumakbo, ang recieve function ay binalik ay ibabalik sa dati,
 at iiwan ang state at balanse na parehas. Pero,
@@ -213,7 +213,7 @@ ay hindi nag tagumpay. Ang aksyong deskripsyon ``A`` **or** ``B``
 .. graphviz::
    :align: center
    :caption: Halimbawa ng aksyon sa deskripsyon, na nag subok na ilipat sa Alice
-             at Bob, kung mayroong di nag tagumpay, ito ay ililipat kay 
+             at Bob, kung mayroong di nag tagumpay, ito ay ililipat kay
              Charlie sa halip.
 
    digraph G {
@@ -231,7 +231,7 @@ ay hindi nag tagumpay. Ang aksyong deskripsyon ``A`` **or** ``B``
    }
 
 .. seealso::
-  
+
    Tignan :ref:`host-functions-actions` ukol sa kaalaman kung paano gumawa ng
    mga aksyon.
 

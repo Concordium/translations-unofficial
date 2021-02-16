@@ -33,36 +33,34 @@ Przed uruchomieniem węzła Concordium musisz to zrobić
 
 2. Pobierz i wypakuj the :ref:`concordium-node-and-client-download` oprogramowanie.
 
-
-
 Uaktualnij z wcześniejszej wersji Open Testnet
 ===============================================
 
 Aby dokonać aktualizacji do aktualnego oprogramowania Concordium dla Open Testnet 4:
 
 -  Wykonaj powyższe kroki, aby :ref:`Download<downloads>` najnowsze 
-  oprogramowanie Concordium.
+   oprogramowanie Concordium.
 
--  Uruchom ``concordium-node-reset-data`` wykonywalny z rozpakowanego archiwum.
+-  Uruchom ``concordium-node-reset-data`` wykonywalny z rozpakowanego
+   archiwum.
 
    -  Dla *Mac* użytkowników: the pierwszy raz otwierasz narzędzie, kliknij prawym przyciskiem myszy
       ``concordium-node-reset-data`` plik i wyselekcjonować **otwarty**. 
       Pojawi się komunikat, że oprogramowanie pochodzi od niezidentyfikowanego programisty.
       wyselekcjonować **otwarty** jeszcze raz.
-  
-  -  Dla *Windows* użytkowników: the pierwszy raz otwierasz narzędzie,
+   -  Dla *Windows* użytkowników: the pierwszy raz otwierasz narzędzie,
       podwójne-kliknięcie the ``concordium-node-reset-data`` plik. 
       Pojawi się komunikat, że oprogramowanie pochodzi od niezidentyfikowanego programisty.
       wyselekcjonować **Więcej informacji** → **Biegnij mimo wszystko**.
 
 -  Narzędzie zapyta:
 
-      
       *Czy chcesz również usunąć zapisane klucze?*
 
    Konta utworzone dla wcześniejszych wersji nie są już ważne w Open Testnet 3. 
    W związku z tym, jeśli masz zapisane konta z poprzednich wersji
-   zalecamy wejście **y** co spowoduje usunięcie wszystkich kluczy kont.
+   zalecamy wejście **y** co spowoduje usunięcie wszystkich kluczy 
+   kont.
 
 .. _running-a-node:
 
@@ -71,9 +69,6 @@ Uruchomienie węzła
 
 Aby rozpocząć uruchamianie klienta, który dołączy do Open Testnet postępuj zgodnie z nimi
 kroki:
-
-
-
 
 1. Otwarte the ``concordium-node`` wykonywalny z rozpakowanego archiwum.
 
@@ -85,17 +80,20 @@ kroki:
    the ``concordium-node`` dwójkowy. Pojawi się komunikat, 
    że oprogramowanie pochodzi od niezidentyfikowanego programisty. wyselekcjonować **Więcej informacji** →
    **Biegnij mimo wszystko**.
-
 -  Gdy *ponowne uruchamianie* węzeł(node) rozważać używając
    ``--no-block-state-import`` opcja. Spowoduje to pobranie tylko aktualizacji
-   do łańcucha blokowego Concordium, który wystąpił, gdy węzeł(node) był nieaktywny i może przyspieszyć proces uruchamiania.
+   do łańcucha blokowego Concordium, który wystąpił, gdy węzeł(node) 
+   był nieaktywny i może przyspieszyć proces uruchamiania.
 
-2. Wpisz nazwę swojego węzła. Ta nazwa będzie wyświetlana na publicznym pulpicie nawigacyjnym.
+2. Wpisz nazwę swojego węzła. Ta nazwa będzie wyświetlana na publicznym pulpicie 
+   nawigacyjnym.
 
 3. Jeśli narzędzie zostało uruchomione wcześniej, przed rozpoczęciem zostaniesz zapytany, 
-   czy chcesz usunąć bazę danych węzłów lokalnych. pilny **y** usunie i później odtwarzać informacje o the Stan z
+   czy chcesz usunąć bazę danych węzłów lokalnych. pilny **y** 
+   usunie i później odtwarzać informacje o the Stan z
    Blockchain Concordium, który został zapisany na Twoim komputerze. **Zauważ, że
-   usunięcie bazy danych węzłów lokalnych oznacza, że zajmie to więcej czasu węzeł(node) do dogonienia sieci Concordium.**
+   usunięcie bazy danych węzłów lokalnych oznacza, 
+   że zajmie to więcej czasu węzeł(node) do dogonienia sieci Concordium.**
 
 Narzędzie pobierze teraz obraz klienta Concordium i załaduje go do
 Doker. Klient uruchomi się i zacznij wyświetlać informacje logowania
@@ -112,7 +110,6 @@ Po bieganiu ``concordium-node`` możesz
 Sieć deska rozdzielcza
 -----------------------
 
-
 Poprawienie stanu pliku zajmie klientowi trochę czasu
 Blockchain Concordium. wiąże, na przykład, Ściągnij
 informacje o wszystkich blokach w łańcuchu.
@@ -123,6 +120,7 @@ Za to możesz porównać węzeł(node) **Długość** wartość (Liczba
 Bloki twój węzeł(node) otrzymał) z the **Chain Len** wartość 
 (Liczba Bloki w najdłuższym łańcuchu w sieci) który jest wyświetlany
 w górnej części deski rozdzielczej.
+
 
 Włącz przychodzące połączenia
 ==============================
@@ -163,7 +161,6 @@ zezwalaj na połączenia publiczne na porcie 8888 (sieci peer-to-peer
 Port).Ktoś z dostępem do innych portówmoże być w stanie wziąć
 kontrola twojego węzła lub konta zapisane w węźle.
 
-
 .. _stop-a-node:
 
 Zatrzymywanie węzła
@@ -171,6 +168,7 @@ Zatrzymywanie węzła
 
 Aby zatrzymać węzeł(node), naciśnij **CTRL+c**, i poczekaj, aż węzeł(node) wyczyści
 zamknąć.
+
 Jeśli przypadkowo zamkniesz okno bez jawnego wyłączania
 Klient, będzie dalej działać w tle w Dockerze. kiedy to się dzieje, 
 Użyj ``concordium-node-stop`` binarny w ten sam sposób, w jaki otworzyłeś
@@ -187,3 +185,4 @@ uzyskać informację o programach aktualnie uruchomionych w systemie.
 Możesz wysłać swoje logi, informacje o systemie, pytania i informacje zwrotne aby
 testnet@concordium.com.Możesz również skontaktować się w nasz `Discord`_, lub
 sprawdź nasze :ref:`troubleshooting page<troubleshooting-and-known-issues>`
+

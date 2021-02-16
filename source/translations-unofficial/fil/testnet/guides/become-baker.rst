@@ -13,28 +13,27 @@ Maging isang Baker (lumikha ng mga blocks)
    :local:
    :backlinks: none
 
-This section explains what a baker is, its role in the network and how to become
-one.
+Ipinapaliwanag ng seksyong ito kung ano ang isang baker, ang papel nito sa network at kung paano maging isang baker.
 
-By reading this section you will learn:
+Sa pamamagitan ng pagbasa sa seksyong ito malalaman mo:
 
--  What is a baker and the concepts related to it.
--  How to upgrade your node to become a baker.
+-  Ano ang isang baker at ang mga konseptong nauugnay dito.
+-  Paano i-upgrade ang iyong node upang maging isang baker.
 
-The process of becoming a baker can be summarized in the following steps:
+Ang proseso ng pagiging isang baker ay maaaring ibuod sa mga sumusunod na hakbang:
 
-#. Get an account and some GTUs.
-#. Get a set of baker keys.
-#. Register the baker keys with the account.
-#. Start the node with the baker keys.
+#. Kumuha ng isang account at ilang mga GTU.
+#. Kumuha ng isang hanay ng mga key ng baker.
+#. Irehistro ang mga key ng baker sa account.
+#. Simulan ang node gamit ang mga key ng baker.
 
-After completing these steps, the baker node will bake blocks. If a baked block
-is added to the chain the node's baker will receive a reward.
+Matapos makumpleto ang mga hakbang na ito, ang baker node ay magluluto ng mga blocks. Kung 
+ang isang inihurnong blocks ay idinagdag sa chain ang baker ng node ay makakatanggap ng gantimpala.
 
-.. note::
+.. Tandaan::
 
-   In this section we will use the name ``bakerAccount`` as the name of the
-   account that will be used to register and manage a baker.
+   Sa seksyong ito gagamitin namin ang pangalang ``bakerAccount`` bilang pangalan ng account na gagamitin 
+   upang magparehistro at pamahalaan ang isang baker.
 
 Definitions
 ===========

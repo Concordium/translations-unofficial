@@ -5,9 +5,9 @@
 
 .. _become-a-baker:
 
-==================================
-Become a baker (create blocks)
-==================================
+==========================================
+Maging isang Baker (lumikha ng mga blocks)
+==========================================
 
 .. contents::
    :local:

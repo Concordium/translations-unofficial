@@ -37,7 +37,7 @@ hindi na ito matatanggal.
 .. image:: images/concordium-id/acc4.png
       :width: 32%
 
-Kung pipinduting mo ang **Reveal account attributes button**, ikaw ay madadali sa susunod na pahina. Maari mong i-tick off 
+Kung pipinduting mo ang **Reveal account attributes button**, ikaw ay madadala sa susunod na pahina. Maari mong i-tick off 
 ang mga attribute na gusto mo palabasin, matapos nito pindutin mo ang **Submit account**. Kapag pinindot mo ang  **Submit account** 
 dito o sa nakaraang pahina, dadalhin ka nito sa dulong pahina ng account creation, na magbibigay sayo ng maikling overview 
 at makakapag sabi na naisumite mo na ang iyong account.

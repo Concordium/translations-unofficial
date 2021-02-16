@@ -2,4 +2,3 @@
    :hidden:
 
    smart-contracts/index
-   

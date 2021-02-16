@@ -3,74 +3,70 @@
 
 .. _run-a-node:
 
-==========
-Run a Node
-==========
+====================
+Pagpapatakbo ng Node
+====================
 
 .. contents::
    :local:
    :backlinks: none
 
-In this guide, you learn how to run a node on your computer that
-participates in the Concordium network. This means that you receive
-blocks and transactions from other nodes, as well as propagate
-information about blocks and transactions to the nodes in the Concordium
-network. After following this guide, you will be able to
+Sa gabay na ito, matutunan mo kung paano magpatakbo ng isang node 
+sa iyong computer na makikilahok sa network ng Concordium. Nangangahulugan 
+ito na natanggap mo mga blocks at transaksyon mula sa iba pang mga node, 
+pati na rin magpalaganap impormasyon tungkol sa mga blocks at transaksyon 
+sa mga node sa Concordium Network. Matapos sundin ang gabay na ito, magagawa mong
 
--  run a Concordium node
--  observe it on the network dashboard and
--  query the state of the Concordium blockchain directly from your
-   machine.
+-  magpatakbo ng Concordium node
+-  maobserbahan ito sa network dashboard at
+-  mag-query ng estado ng Concordium blockchain direkta mula sa iyong compyuter.
 
-You do not need an account to run a node.
+Di mo kailangan ng account para magpatakbo ng node.
 
-Before you begin
+Bago ka magsimula
 ================
 
-Before running a Concordium node you will need to
+Bago ka magpatakbo ng Concordium node ay kakailanganin mong
 
-1. Install and run Docker.
+1. Mag-install at magpatakbo ng Docker.
 
-   -  On *Linux*, allow Docker to be run as a non-root user.
+   -  Sa *Linux*, payagan ang Docker na patakbuhin bilang isang non-root user.
 
-2. Download and extract the :ref:`concordium-node-and-client-download` software.
+2. Mag-download at i-extract ang :ref:`concordium-node-and-client-download` software.
 
-Upgrade from an earlier version of Open Testnet
-===============================================
+Mag-upgrade mula sa isang naunang bersyon ng Open Testnet
+=========================================================
 
-To upgrade to the current Concordium software for Open Testnet 4:
+Upang mag-upgrade sa kasalukuyang software ng Concordium para sa Open Testnet 4:
 
--  Follow the above steps to :ref:`download<downloads>` the most recent Concordium
+-  Sundin ang mga hakbang sa itaas upang :ref:`download<downloads>` ang pinakabagong Concordium
    software.
 
--  Run the ``concordium-node-reset-data`` executable from the unzipped
+-  Patakbuhin ang ``concordium-node-reset-data`` executable mula sa unzipped
    archive.
 
-   -  For *Mac* users: the first time you open the tool, right-click the
-      ``concordium-node-reset-data`` file and select **Open**. A message
-      will appear that the software is from an unidentified developer.
-      Select **Open** again.
-   -  For *Windows* users: the first time you open the tool,
-      double-click the ``concordium-node-reset-data`` file. A message
-      will appear that the software is from an unidentified developer.
-      Select **More info** → **Run anyway**.
+   -  Para sa *Mac* users: sa unang pagkakataon na buksan mo ang tool, right-click ang
+      ``concordium-node-reset-data`` file at piliin ang **Open**. Isang mensahe
+      lilitaw na ang software ay mula sa isang hindi kilalang developer.
+      Piliin ang **Open** uli.
+   -  Para sa *Windows* users: sa unang pagkakataon na buksan mo ang tool,
+      double-click ang ``concordium-node-reset-data`` file. Isang mensahe
+      lilitaw na ang software ay mula sa isang hindi kilalang developer.
+      Piliin ang **More info** → **Run anyway**.
 
--  The tool will ask:
+- Ang tool ay magtatanong ng:
 
       *Do you also want to remove saved keys?*
 
-   Accounts that were created for prior versions are no longer valid on
-   Open Testnet 3. Therefore, if you have stored accounts from prior
-   versions we recommend entering **y** which will delete all account
-   keys.
+   Ang mga account na nilikha para sa mga naunang bersyon ay hindi na wasto para sa Open Testnet 3. Samakatuwid, kung mayroon kang mga nakaimbak na account mula sa naunang mga bersyon ay inirerekumenda namin ang pag-tayp ng **y** na magbubura sa lahat ng mga accounts keys.
 
 .. _running-a-node:
 
-Running a node
-==============
+Pagpapatakbo ng node
+====================
 
-To start running a client that will join the Open Testnet follow these
-steps:
+Upang simulang patakbuhin ang isang client na sasali sa Open Testnet sundin ang mga ito
+mga hakbang:
 
 1. Open the ``concordium-node`` executable from the unzipped archive.
 

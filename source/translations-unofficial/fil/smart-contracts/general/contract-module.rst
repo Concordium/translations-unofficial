@@ -124,7 +124,7 @@ contracts, inuugnay namen ang functions gamit ang naming scheme:
 .. note::
 
    Kapag nag-develop ka ng smart contracts gamit ang Rust at ``concordium-std``, ang
-   procedural macros ``#[init(...)]`` at ``#[receive(...)] ay inaayos ang
+   procedural macros ``#[init(...)]`` at ``#[receive(...)]`` ay inaayos ang
    tamanag naming scheme.
 
 .. _Web Assembly: https://webassembly.org/

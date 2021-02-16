@@ -147,7 +147,7 @@ Upang buod, ang isang transaksyon para sa pakikipag-ugnay sa smart-contract ay m
 .. _contract-instance-actions:
 
 Pagtatala ng events
-==============
+===================
 
 .. todo::
 

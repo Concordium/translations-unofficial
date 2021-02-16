@@ -1,5 +1,5 @@
 .. _list of types implementing the SchemaType: https://docs.rs/concordium-contracts-common/latest/concordium_contracts_common/schema/trait.SchemaType.html#foreign-impls
-.. _build-schema:
+.. _build-schema-uk:
 
 ========================
 Побудова схеми контракту
@@ -10,7 +10,7 @@
 Підготовка
 ==========
 
-По-перше, переконайтеся, що у вас встановлений ``cargo-concordium`` а якщо ні, то :ref:`setup-tools` вам допоможе.
+По-перше, переконайтеся, що у вас встановлений ``cargo-concordium`` а якщо ні, то :ref:`setup-tools-uk` вам допоможе.
 
 Нам також знадобиться вихідний код смарт-контракту на Rust, для якого ви хочете побудувати схему.
 
@@ -35,8 +35,7 @@
 
 .. todo::
 
-   Create an example showing how to manually implement ``SchemaType`` and link
-   to it from here.
+   Створити приклад, який показує, як вручну реалізувати ``SchemaType`` і прикріпити сюди посилання.
 
 Включення стану контракту
 -------------------------
@@ -78,8 +77,7 @@
 
 .. seealso::
 
-   For more on which to choose see
-   :ref:`here<contract-schema-which-to-choose>`.
+   Детальніше про те, що вибрати, дивіться :ref:`тут <contract-schema-which-to-choose-uk>`.
 
 Вбудовувані схеми
 -----------------

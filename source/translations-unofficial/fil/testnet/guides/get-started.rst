@@ -37,42 +37,37 @@ Kung handa ka nang magpatuloy, maaari kang pindutin **Yes, let’s go!** Hihilin
    Write a directive to make two or more images side-by-side centered
 
 
-Having chosen either a passcode or a full password, you will get the option to also use biometrics if your phone
-supports it, i.e. facial recognition or fingerprint. We recommend using biometrics if you have the option to do so.
+Ang pagpili ng alinman sa isang passcode o isang buong password, makakakuha ka ng pagpipilian upang magamit din ang biometric kung ang iyong telepono ay sinusuportahan ito, ibig sabihin, pagkilala sa mukha o fingerprint. Inirerekumenda namin ang paggamit ng biometric kung mayroon kang pagpipilian na gawin ito.
 
 .. image:: images/concordium-id/int3.png
       :width: 32%
       :align: center
 
-Request your initial account and identity
-=========================================
 
-Next up, you will get a choice between making a new initial account and identity, or importing an already existing set.
-Assuming this is the first time you are using Concordium ID, you can choose **I want to create my initial account** to continue.
+Hilingin ang iyong paunang account at pagkakakilanlan
+=====================================================
+
+Susunod, makakakuha ka ng pagpipilian sa pagitan ng paggawa ng isang bagong paunang account at pagkakakilanlan, o pag-import ng isang mayroon nang hanay.
+Ipagpalagay na ito ang unang pagkakataon na gumagamit ka ng Concordium ID, maaari kang pumili **I want to create my initial account** para magpatuloy.
 
 .. image:: images/concordium-id/int4.png
       :width: 32%
       :align: center
 
 
-On the next screen you will see a description of what the initial account is and the three steps you have to finish to get it,
-along with your identity. In short, the initial account is an account submitted to the chain by the identity provider of your
-choice, which means they will know that you are the owner of the account. Later you will be able to submit accounts to the
-chain by yourself, which means the owner of these accounts will be only known by you.
+Sa susunod na screen makikita mo ang isang paglalarawan kung ano ang paunang account at ang tatlong mga hakbang na kailangan mong matapos upang makuha ito, kasama ang iyong pagkakakilanlan. Sa madaling salita, ang paunang account ay isang account na isinumite sa chain ng tagapagbigay ng pagkakakilanlan ng iyong pagpipilian, na nangangahulugang malalaman nila na ikaw ang may-ari ng account. Mamaya maaari kang magsumite ng mga account sa chain ng iyong sarili, na nangangahulugang ang may-ari ng mga account na ito ay makikilala mo lamang.
 
 .. image:: images/concordium-id/int5.png
       :width: 32%
       :align: center
 
-The three steps mentioned above are:
+Ang tatlong mga hakbang na nabanggit sa itaas ay:
 
-1. Naming of your initial account
-2. Naming your identity
-3. Requesting the initial account and identity from an :ref:`glossary-identity-provider` of your choice
+1. Pangalan ng iyong paunang account
+2. Pangalan ng iyong pagkakakilanlan
+3. Humihiling ng paunang account at pagkakakilanlan mula sa isang :ref:`glossary-identity-provider` na gusto mo
 
-You will meet the first step on the next page, which prompts you to enter a name for your initial account. Pressing continue
-will take you to the next page, on which you have to name your identity. Both of these names will only be known by yourself,
-so you can name them more or less whatever you want (There are a few constraints on what letters and signs you can use).
+Matutugunan mo ang unang hakbang sa susunod na pahina, na mag-udyok sa iyo na magpasok ng isang pangalan para sa iyong paunang account. Ang patuloy na pagpindot ay dadalhin ka sa susunod na pahina, kung saan kailangan mong pangalanan ang iyong pagkakakilanlan. Ikaw lamang ang nakakaalam nito, pwede mo silang pangalanan ng kung ano man ang naisin mo (Mayroong ilang mga hadlang sa kung anong mga titik at simbolo na maaari mong gamitin).
 
 In the example below, we choose to call our initial account *Example Account 1* and our identity *Example Identity*. As
 mentioned, you can choose whichever names you want.

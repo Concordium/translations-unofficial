@@ -36,7 +36,7 @@ jika Anda tidak memiliki alasan khusus untuk melakukannya, kami sarankan untuk t
       :width: 32%
 
 Jika Anda menekan tombol **Buka atribut akun**, Anda akan dibawa ke halaman berikutnya. Anda bisa mencentang
-dari atribut yang ingin Anda Buka, lalu tekan **Kirim akun**. Menekan **Kirim akun** ini atau halaman
+dari atribut yang ingin Anda Buka, lalu tekan **Kirim akun**. Menekan **Kirim akun** dihalaman ini atau halaman
 sebelumnya, akan membawa Anda ke halaman terakhir pembuatan akun, yang akan memberi Anda gambaran singkat dan memberitahu Anda bahwa akun tersebut
 telah dikirimkan.
 

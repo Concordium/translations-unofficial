@@ -2,7 +2,7 @@
 .. _Cargo: https://doc.rust-lang.org/cargo/
 .. _rust-analyzer: https://github.com/rust-analyzer/rust-analyzer
 
-.. _compile-module:
+.. _compile-module-uk:
 
 ========================================
 Компілювання Rust модуля смарт-контракту
@@ -17,13 +17,12 @@
 
 .. seealso::
 
-   For instructions on how to install the developer tools see
-   :ref:`setup-tools`.
+   Інструкції по установці інструментів розробника дивіться в розділі :ref:`setup-tools-uk`.
 
 Компіляція в Wasm
 =================
 
-Щоб допомогти в створенні модулів смарт-контрактів і скористатися перевагами таких функцій, як :ref:`contract schemas <contract-schema>`, ми рекомендуємо використовувати інструмент ``cargo-concordium`` для створення смарт-контрактів Rust_.
+Щоб допомогти в створенні модулів смарт-контрактів і скористатися перевагами таких функцій, як :ref:`схема смарт-контракту <contract-schema-uk>`, ми рекомендуємо використовувати інструмент ``cargo-concordium`` для створення смарт-контрактів Rust_.
 
 Для того щоб зібрати смарт-контракт, запустіть:
 
@@ -35,8 +34,7 @@
 
 .. seealso::
 
-   For building the schema for a smart contract module, some :ref:`further
-   preparation is required <build-schema>`.
+   Для побудови схеми модуля смарт-контракту :ref:`необхідна підготовка <build-schema-uk>`.
 
 .. note::
 
@@ -90,5 +88,4 @@
 
 .. seealso::
 
-   An issue reporting the problem with ``--remap-path-prefix`` and ``rust-src``
-   https://github.com/rust-lang/rust/issues/73167
+   Про проблеми з ``--remap-path-prefix`` та ``rust-src`` можна дізнатись більше за посиланням https://github.com/rust-lang/rust/issues/73167

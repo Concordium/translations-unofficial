@@ -1,4 +1,4 @@
-.. _deploy-module:
+.. _deploy-module-uk:
 
 ===================================
 Розгортання модуля смарт-контрактів
@@ -9,7 +9,7 @@
 Підготовка
 ==========
 
-Переконайтеся, що ви :ref:`running a node<run-a-node>` використовуєте останню версію :ref:`Concordium software<downloads>` і що у вас є :ref:`smart-contract module<setup-tools>`, готовий до розгортання.
+Переконайтеся, що ви :ref:`запустити ноду <run-a-node>` використовуєте останню версію :ref:`програмного забезпечення Concordium <downloads>` і що у вас є :ref:`модуль смарт-контракту <setup-tools-uk>`, готовий до розгортання.
 
 Оскільки розгортання модуля смарт-контракту здійснюється у формі транзакції, вам також буде потрібно налаштувати ``concordium-client`` з аккаунтом з достатньою кількістю GTU для оплати транзакції.
 
@@ -40,12 +40,11 @@
 
 .. seealso::
 
-   For a guide on how to initialize smart contracts from a deployed module see
-   :ref:`initialize-contract`.
+   Керівництво по ініціалізації смарт-контрактів з розгорнутого модуля дивіться у розділі :ref:`initialize-contract-uk`.
 
-   For more information about module references, see :ref:`references-on-chain`.
+   Додаткові відомості про посилання на модулі знаходяться у розділі :ref:`references-on-chain`.
 
-.. _naming-a-module:
+.. _naming-a-module-uk:
 
 Іменування модуля
 =================
@@ -55,8 +54,7 @@
 
 .. seealso::
 
-   For an explanation of how and where the names and other local settings are
-   stored, see :ref:`local-settings`.
+   Для пояснення того, як і де зберігаються імена та інші локальні налаштування, дивіться :ref:`local-settings`.
 
 Щоб додати ім'я під час розгортання, використовується параметр ``--name``.
 Тут ми називаємо модуль ``my_deployed_module``:

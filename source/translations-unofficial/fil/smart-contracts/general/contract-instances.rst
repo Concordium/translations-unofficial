@@ -171,18 +171,18 @@ ng kontrata. Sa madalas na mga sitwasyon mas naayong mag tala lang ng kaunti upa
 .. _action-descriptions:
 
 Deskripsyon ng Aksyon
-===================
+=====================
 
 Ang natanggap na function ay nag babali ng *description of actions*
 para patakbuhin ng host environment sa chain.
 
 Ang mga possibleng aksyon sa mga kontrata ay maaring mag likha ng:
-
-- **Accept** is a primitive action that always succeeds.
-- **Simple transfer** of GTU from the instance to the specified account.
-- **Send**: invoke receive function of the specified smart contract instance,
-  and optionally transfer some GTU from the sending instance to the receiving
-  instance.
+ 
+- **Accept** is a primotibong aksyon na laging nag tatagumpay.
+- **Simple transfer** ng GTU galing sa instansya papunta sa binigay na account.
+- **Send**: tawagin ang receive function ng mismong smart contract instace,
+    at opsyonal na ilipat ang ibang GTU galing sa nag papadalang instansya papunta
+    sa kukuhang instansya.  
 
 Kung ang aksyon ay di nag tagumapay na tumakbo, ang recieve function ay binalik ay ibabalik sa dati,
 at iiwan ang state at balanse na parehas. Pero,
@@ -193,23 +193,22 @@ at iiwan ang state at balanse na parehas. Pero,
 
 Pag proseso ng maramihang aksyon na deskripsyon
 -----------------------------------------------
+Maaring pag samahin ang mga aksyong deskripsyon gamit ang **and** combinator.
+Ang sekwensya ng aksyong deskripsyon ``A`` **and** ``B``
 
-You can chain action descriptions using the **and** combinator.
-An action-description sequence ``A`` **and** ``B``
+1) Patakbuhin ang ``A``.
+2) Kung ang ``A`` ay nagtagumpay, patakbuhin ang ``B``
+3) Kung bumagsak ang ``B`` ang buong aksyon ay papalya( at ang resulta ng ``A`` ay ibabalik sa dati).
 
-1) Executes ``A``.
-2) If ``A`` succeeds, executes ``B``.
-3) If ``B`` fails the whole action sequence fails (and the result of ``A`` is reverted).
+Pagsalo ng mga mali
+-------------------
 
-Handling errors
----------------
+Gamitin ang **or** combinator para ma patakbo ang aksyon, kung sakali na ang lumang aksyon
+ay hindi nag tagumpay. Ang aksyong deskripsyon ``A`` **or** ``B``
 
-Use the **or** combinator to execute an action in case that a previous action fails.
-An action description ``A`` **or** ``B``
-
-1) Executes ``A``.
-2) If ``A`` succeeds, stops executing.
-3) If ``A`` fails, executes ``B``.
+1) Patakbuhin ang ``A``.
+2) Kung mapagana ang ``A``, itigil ang pagtakbo
+3) Kung ang ``A`` ay pumalya, patakbuhin ang ``B``
 
 .. graphviz::
    :align: center

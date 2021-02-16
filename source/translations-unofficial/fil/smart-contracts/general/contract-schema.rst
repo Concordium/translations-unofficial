@@ -49,40 +49,29 @@ Dapat mo bang i-embed o sumulat sa isang file?
 
 Kung ang isang contract schema ay dapat na naka-embed o nakasulat sa isang file ay nakasalalay sa sitwasyon.
 
-Embedding the schema into the smart contract module distributes the schema
-together with the contract ensuring the correct schema is being used and also
-allows anyone to use it directly. The downside is that the smart contract module
-becomes bigger in size and therefore more expensive to deploy.
-But unless the smart contract uses very complex types for the state and
-parameters, the size of the schema is likely to be negligible compared to the
-size of the smart contract itself.
+Ang pag-embed sa iskema sa smart contract module ay namamahagi ng schema kasama ang contract na tinitiyak na ang tamang schema ay ginagamit at pinapayagan din ang sinuman na gamitin ito nang direkta. Ang downside ay ang smart contract module ay nagiging mas malaki at samakatuwid ay mas mahal na i-deploy. Ngunit maliban kung ang smart contract ay gumagamit ng mga kumplikadong uri para sa estado at mga parameter, ang laki ng schema ay malamang na bale-wala kumpara sa laki ng smart contract mismo.
 
-Having the schema in a separate file allows you to have the schema without
-paying for the extra bytes when deploying.
-The downside is that you instead have to distribute the schema file through some
-other channel and ensure that contract users are using the correct file with your
-smart contract.
+Ang pagkakaroon ng schema sa isang hiwalay na file ay nagbibigay-daan sa iyo upang magkaroon ng schema nang walang pagbabayad para sa labis na byte kapag nagde-deploy.
+Ang downside ay sa halip kailangan mong ipamahagi ang schema file sa ilan iba pang mga channel at tiyakin na ang mga gumagamit ng contract ay gumagamit ng tamang file sa iyong smart contract.
 
-The schema format
+Ang schema format
 =================
 
 .. todo::
 
-   Clarify whether we talk about *any* abstract schema that a user could implement,
-   or a specific schema supplied by Concordium. Then only talk about one or the other,
-   or at least clearly separate the discussion of those.
+   Linawin kung pinag-uusapan natin ay tungkol sa *kahit anong* na maaaring ipatupad ng isang gumagamit,
+   o isang spesipikong schema na ibinibigay ng Concordium. Pagkatapos ay pag-uusapan lamang ang tungkol sa isa o sa iba pa,
+   o kahit papaano malinaw na paghiwalayin ang talakayan ng mga iyon.
 
-A schema can contain
+Ang schema ay naglalaman
 
-- structure information for a smart contract module
-- description of smart-contract state
-- parameters for init and receive functions of a smart contract.
+- istraktura ng impormasyon para sa isang smart contract module
+- kahulugan ng smart-contract state
+- parameters para sa init at makatanggap ng functions ng smart contract.
 
-Each of these descriptions is referred to as a *schema type*. Schema types are always
-optional to include in a schema.
+Ang bawat isa sa mga paglalarawan na ito ay tinukoy bilang *schema type*. Ang mga Schema types palagi opsyonal na isama sa isang schema.
 
-Currently the supported schema types are inspired by what is commonly used in
-the Rust programming language:
+Sa kasalukuyan ang mga sinusuportahang uri na schema ay inspirasyon ng kung ano ang karaniwang ginagamit sa Rust programming language:
 
 .. code-block:: rust
 
@@ -118,8 +107,8 @@ the Rust programming language:
    }
 
 
-Here, ``SizeLength`` describes the number of bytes used to describe the length
-of a variable length type, such as ``List``.
+Dito, ang ``SizeLength`` naglalarawan ng bilang ng mga byte na ginamit upang ilarawan ang haba
+ng isang variable lenght type, tulad ng ``List``.
 
 .. code-block:: rust
 
@@ -130,20 +119,19 @@ of a variable length type, such as ``List``.
        Eight,
    }
 
-For a reference on how a schema type is serialized into bytes, we refer the
-reader to the `implementation in Rust`_.
+Para sa isang sanggunian kung paano naka-serialize ang isang uri ng schema sa mga byte, nire-refer namin ang mga mambabasa sa `implementation in Rust`_.
 
 .. _contract-schema-which-to-choose:
 
-Embedding schemas on-chain
-==========================
+Ang pang-embed ng mga schemas on-chain
+======================================
 
-Schemas are embedded into smart contract modules using the `custom
-section`_ feature of Wasm modules.
-This allows Wasm modules to include a named section of bytes, which does not
-affect the semantics of running the Wasm module.
+Ang mga scheme ay naka-embed sa mga smart contract module gamit ang `custom
+section`_ featuret ng Wasm modules.
+Pinapayagan nito ang Wasm modules na isama ang mga named section of bytes, na di naman nakakaapekto sa 
+semantics ng pagpapatakbo sa Wasm module.
 
-All schemas are collected and added in one custom section named
+Ang lahat ng schemas ay nakakolekta at dinadagdag sa isang custom section na pinangalanang
 ``concordium-schema-v1``.
-This collection is a list of pairs, containing the name of the contract encoded
-in UTF-8 and the contract schema bytes.
+Ang koleksyon na ito ay listahan ng mga pares, naglalaman ng mga pangalan ng mga contracte na encoded sa 
+UTF-8 at ang contract schema bytes.

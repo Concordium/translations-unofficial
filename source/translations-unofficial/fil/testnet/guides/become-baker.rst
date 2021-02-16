@@ -30,38 +30,39 @@ Ang proseso ng pagiging isang baker ay maaaring ibuod sa mga sumusunod na hakban
 Matapos makumpleto ang mga hakbang na ito, ang baker node ay magluluto ng mga blocks. Kung 
 ang isang inihurnong blocks ay idinagdag sa chain ang baker ng node ay makakatanggap ng gantimpala.
 
-.. Tandaan::
+.. Note::
 
    Sa seksyong ito gagamitin namin ang pangalang ``bakerAccount`` bilang pangalan ng account na gagamitin 
    upang magparehistro at pamahalaan ang isang baker.
 
-Definitions
+Mga kahulugan
 ===========
 
 Baker
 -----
 
-A node is a *baker* (or *is baking*) when it actively participates in the
-network by creating new blocks that are added to the chain. A baker collects,
-orders and validates the transactions that are included in a block to maintain
-the integrity of the blockchain. The baker signs each block that they bake so
-that the block can be checked and executed by the rest of the participants of
-the network.
+Ang isang node ay isang *baker* (o *nagbi-baking*) kapag aktibong lumahok sa network sa 
+pamamagitan ng paglikha ng mga bagong blocks na idinagdag sa chain. Kinokolekta, inuutos at 
+pinatutunayan ng isang baker ang mga transaksyon na kasama sa isang block upang mapanatili ang 
+integridad ng blockchain. Nilalagdaan ng baker ang bawat block na niluluto nila upang ang block ay 
+maaaring masuri at maipatupad ng natitirang mga kalahok ng network.
 
 Baker keys
 ----------
 
-Each baker has a set of cryptographic keys called *baker keys*. The node uses
-these keys to sign the blocks that it bakes. In order to bake blocks signed by a
-specific baker the node has to be running with its set of baker keys loaded.
+Ang bawat baker ay may isang hanay ng mga cryptographic key na tinatawag na  *baker keys*. 
+Ginagamit ng node ang mga key na ito upang lagdaan ang mga block na lutuin nito. Upang 
+makapaghurno ng mga block na nilagdaan ng isang tukoy na baker ang node ay dapat na tumatakbo 
+kasama ang hanay ng mga key ng baker na na-load
 
 Baker account
 -------------
 
-Each account can use a set of baker keys to register a baker.
+Ang bawat account ay maaaring gumamit ng isang hanay ng mga key ng baker upang 
+magrehistro ng isang baker.
 
-Whenever a baker bakes a valid block that gets included in the chain, after some
-time a reward is paid to the associated account.
+Tuwing ang isang baker ay “nagluluto” ng isang wastong block na kasama sa chain, 
+pagkatapos ng ilang oras ang isang gantimpala ay binabayaran sa nauugnay na account.
 
 Stake and lottery
 -----------------
@@ -70,129 +71,134 @@ Stake and lottery
 
    - Link to release schedule.
 
-The account can stake part of its GTU balance into the *baker stake* and can
-later manually release all or part of the staked amount. The staked amount
-cannot be moved or transferred until it is released by the baker.
+Maaaring i-stake ng account ang bahagi ng balanse ng GTU nito sa *baker stake* at sa paglaon ay 
+manu-manong mailabas ang lahat o bahagi ng naipong halaga. Ang staked na halaga ay hindi maaaring 
+ilipat o ilipat hanggang sa ito ay pinakawalan ng baker.
 
 .. note::
 
-   If an account owns an amount that was transferred with a release schedule,
-   the amount can be staked even if not released yet.
+   Kung nagmamay-ari ang isang account ng isang halaga na inilipat na may iskedyul 
+   ng paglabas, ang halaga ay maaaring mai-stoke kahit hindi pa inilabas.
 
-In order to be chosen for baking a block, the baker must participate in a
-*lottery* in which the probability of getting a winning ticket is roughly
-proportional to the staked amount.
+Upang mapili para sa pagluluto sa isang block, ang baker ay dapat lumahok sa isang
+*lottery* kung saan ang posibilidad na makakuha ng isang panalong tiket 
+ay halos katimbang sa naipong halaga.
 
-The same stake is used when calculating whether a baker is included in the finalization
-committee or not. See Finalization_.
+Ang parehong stake ay ginagamit kapag kinakalkula kung ang isang baker ay kasama sa 
+finalization committee o hindi.  Tingnan ang Finalization_.
 
 .. _epochs-and-slots:
 
 Epochs and slots
 ----------------
 
-In the Concordium blockchain, time is subdivided into *slots*. Slots have a time
-duration fixed at the Genesis block. On any given branch, each slot can have at
-most one block, but multiple blocks on different branches can be produced in the
-same slot.
+Sa Concordium blockchain, ang oras ay nahahati sa *slots*. May oras ang puwang
+tagal na naayos sa block ng Genesis. Sa anumang naibigay na sangay, ang bawat 
+puwang ay maaaring magkaroon ng karamihan sa isang block, ngunit maraming mga 
+block sa iba't ibang mga sangay ay maaaring gawin sa parehong puwang.
 
 .. todo::
 
    Let's add a picture.
 
-When considering the rewards and other baking-related concepts, we use the
-concept of an *epoch* as a unit of time that defines a period in which the set
-of current bakers and stakes are fixed. Epochs have a time duration fixed at the
-Genesis block. In the testnet, epochs have a duration of **1 hour**.
+Kapag isinasaalang-alang ang mga gantimpala at iba pang mga konsepto na nauugnay sa 
+pagluluto sa hurno, ginagamit namin ang konsepto ng isang *epoch* bilang isang yunit 
+ng oras na tumutukoy sa isang panahon kung saan ang set ng mga kasalukuyang baker at 
+stakes ay naayos na. Ang mga panahon ay may tagal ng oras na naayos sa Genesis block. 
+Sa testnet, ang mga epoch ay may tagal na **1 oras**.
 
-Start baking
+Pagsisimula ng baking
 ============
 
-Managing accounts
------------------
+Pamamahala ng mga account
+-------------------------
 
-This section provides a brief recap of the relevant steps for importing an
-account. For a complete description, see :ref:`managing_accounts`.
+Nagbibigay ang seksyong ito ng isang maikling recap ng mga nauugnay na hakbang para sa 
+pag-import ng isang account. Para sa isang kumpletong paglalarawan,  tignan :ref:`managing_accounts`.
 
-Accounts are created using the :ref:`concordium_id` app. Once an account has been
-successfully created, navigating to the **More** tab and selecting **Export**
-allows you to get a JSON file containing the account information.
+Ang mga account ay nilikha gamit ang: :ref:`concordium_id` app. Kapag matagumpay na nagawa ang 
+isang account, ang pag-navigate sa tab na **More** at pagpili sa **Export**
+ay nagbibigay-daan sa iyo upang makakuha ng isang JSON file na naglalaman ng impormasyon ng account.
 
-To import an account into the toolchain run
+Upang mag-import ng isang account sa toolchain run
 
 .. code-block:: console
 
    $concordium-client config account import <path/to/exported/file> --name bakerAccount
 
-``concordium-client`` will ask for a password to decrypt the exported file and
-import all accounts. The same password will be used for encrypting the
-transaction signing keys and the encrypted transfers key.
+``concordium-client`` hihingi ng isang password upang mai-decrypt ang 
+nai-export na file at mai-import ang lahat ng mga account. Gagamitin 
+ang parehong password para sa pag-encrypt ng mga susi sa pag-sign ng 
+transaksyon at ang naka-encrypt na mga transfer key.
 
-Creating keys for a baker and registering it
---------------------------------------------
+Paggawa ng mga keys para sa baker at pagrerehistro nito
+-------------------------------------------------------
 
 .. note::
 
-   For this process the account needs to own some GTU so make sure to request the
-   100 GTU drop for the account in the mobile app.
+   Para sa prosesong ito ang account ay kailangang pagmamay-ari ng ilang GTU kaya 
+   siguraduhing humiling ng drop ng 100 GTU para sa account sa mobile app.
 
-Each account has a unique baker ID that is used when registering its baker. This
-ID has to be provided by the network and currently cannot be precomputed. This
-ID must be given inside the baker keys file to the node so that it can use the
-baker keys to create blocks. The ``concordium-client`` will automatically fill
-this field when performing the following operations.
+Ang bawat account ay may natatanging baker ID na ginagamit kapag nagrerehistro ng 
+baker nito. Ang ID na ito ay dapat ibigay ng network at sa kasalukuyan ay hindi 
+maaring precompute. Ang ID na ito ay dapat ibigay sa loob ng file ng mga baker key 
+sa node upang magamit nito ang mga key ng baker upang lumikha ng mga block.  
+Ang ``concordium-client`` ay awtomatikong pupunan ang patlang na ito kapag 
+nagsasagawa ng mga sumusunod na operasyon.
 
-To create a fresh set of keys run:
+Upang lumikha ng isang sariwang hanay ng mga key na tatakbo:
 
 .. code-block:: console
 
    $concordium-client baker generate-keys <keys-file>.json
 
-where you can choose an arbitrary name for the keys file. To
-register the keys in the network you need to be :ref:`running a node <running-a-node>`
-and send a ``baker add`` transaction to the network:
+kung saan maaari kang pumili ng isang di-makatwirang pangalan para sa 
+mga key file. Upang irehistro ang mga susi sa network na kailangan mong 
+maging :ref:`running a node <running-a-node>`
+at magpadala ng isang  ``baker add`` ng transaksyon sa network:
 
 .. code-block:: console
 
    $concordium-client baker add <keys-file>.json --sender bakerAccount --stake <amountToStake> --out <concordium-data-dir>/baker-credentials.json
 
-replacing
+pagpapalit
 
-- ``<amountToStake>`` with the GTU amount for the baker's initial stake
-- ``<concordium-data-dir>`` with the following data directory:
+- ``<amountToStake>`` na may halagang GTU para sa paunang stake ng baker
+- ``<concordium-data-dir>`` kasama ang sumusunod na direktoryo ng data:
 
-  * on Linux and MacOS: ``~/.local/share/concordium``
-  * on Windows: ``%LOCALAPPDATA%\\concordium``.
+  * sa Linux at MacOS: ``~/.local/share/concordium``
+  * sa Windows: ``%LOCALAPPDATA%\\concordium``.
 
-(The output file name should remain ``baker-credentials.json``).
+(Ang pangalan ng file ng output ay dapat manatili ``baker-credentials.json``).
 
-Provide a ``--no-restake`` flag to avoid automatically adding the
-rewards to the staked amount on the baker. This behavior is described on the
-section `Restaking the earnings`_.
+Magbigay ng isang ``--no-restake`` na flag upang maiwasan ang awtomatikong 
+pagdaragdag ng mga gantimpala sa staked na halaga sa baker. Ang pag-uugali 
+na ito ay inilarawan sa seksyong  `Restaking the earnings`_.
 
-In order to start the node with these baker keys and start producing blocks you
-first need to shut down the current running node (either by pressing
-``Ctrl + C`` on the terminal where the node is running or using the
+Upang masimulan ang node gamit ang mga key ng baker at simulang gumawa 
+ng mga block kailangan mo munang i-shut down ang kasalukuyang running node 
+(alinman sa pamamagitan ng pagpindot sa 
+``Ctrl + C`` sa terminal kung saan tumatakbo ang node o gamit ang 
 ``concordium-node-stop`` executable).
 
-After placing the file in the appropriate directory (already done in the
-previous command when specifying the output file), start the node again using
-``concordium-node``. The node will automatically start baking when the baker
-gets included in the bakers for the current epoch.
+Matapos mailagay ang file sa naaangkop na direktoryo (tapos na sa nakaraang 
+utos kapag tumutukoy sa output file), simulang muli ang node gamit ang 
+``concordium-node``. . Ang node ay awtomatikong magsisimulang magbe-bake kapag 
+ang baker ay isinama sa mga baker para sa kasalukuyang  epoch.
 
-This change will be executed
-immediately and will take effect when finishing the epoch after the one in which
-the transaction for adding the baker was included in a block.
+Ang pagbabagong ito ay agad na naisasagawa at magkakabisa kapag natapos ang epoch
+pagkatapos ng isa kung saan ang transaksyon para sa pagdaragdag ng baker 
+ay kasama sa isang block.
 
-.. table:: Timeline: adding a baker
+.. table:: Timeline: pagdaragdag ng isang baker
 
-   +-------------------------------------------+-----------------------------------------+-----------------+
-   |                                           | When transaction is included in a block | After 2 epochs  |
-   +===========================================+=========================================+=================+
-   | Change is visible by querying the node    |  ✓                                      |                 |
-   +-------------------------------------------+-----------------------------------------+-----------------+
-   | Baker is included in the baking committee |                                         | ✓               |
-   +-------------------------------------------+-----------------------------------------+-----------------+
+   +----------------------------------------------------------------+------------------------------------------------+--------------------------+
+   |                                                                | Kapag ang transaksyon ay kasama sa isang block | Pagkatapos ng 2 epochs   |
+   +================================================================+=========================================+=================================+
+   | Makikita ang pagbabago sa pamamagitan ng pagtatanong sa node   |  ✓                                      |                                 |
+   +----------------------------------------------------------------+-----------------------------------------+---------------------------------+
+   | Ang Baker ay kasama sa baking committee                        |                                         | ✓                               |
+   +----------------------------------------------------------------+-----------------------------------------+---------------------------------+
 
 .. note::
 

@@ -124,47 +124,45 @@ Ito ay ok lang, at ang iyong node ay makakasali pa rin sa Concordium network.
 Pwede pa rin itong makapag-padala ng mga transaksyon at,
 :ref:`if so configured<become-a-baker>`, makapag-bake at makapag-finalize.
 
-However you can also make your node an even better network participant
-by enabling inbound connections. By default, ``concordium-node`` listens
-on port ``8888`` for inbound connections. Depending on your network and
-platform configuration you will either need to forward an external port
-to ``8888`` on your router, open it in your firewall, or both. The
-details of how this is done will depend on your configuration.
+Gayunpaman maaari mo ring gawing mas mahusay na kalahok sa network ang iyong node
+sa pamamagitan ng pagpapagana ng mga inbound connections. Bilang default, ``concordium-node`` 
+ay nakikinig sa port ``8888`` para sa inbound connections. Nakasalalay sa iyong network at
+pag-configure ng platform na kakailanganin mo upang ipasa ang isang external port
+sa ``8888`` sa iyong router, buksan mo ito sa iyong firewall, o pareho. Ang mga 
+detalye kung paano ito gawin ay nakadepende sa kung paano mo ito kinonfigure.
 
 Configuring ports
 -----------------
 
-The node listens on four ports, which can be configured by supplying the
-appropriate command line arguments when starting the node. The ports
-used by the node are as follows:
+Ang node ay nakikinig sa apat na mga ports, na maaaring mai-configure sa pamamagitan 
+ng pagbibigay ng naaangkop na mga command line arguments kapag sinisimulan ang node. 
+Ang mga ports na ginagamit ng node ay ang mga sumusunod:
 
--  8888, the port for peer-to-peer networking, which can be set with
+-  8888, ang port para sa peer-to-peer networking, na pwedeng i-set kasama ng
    ``--listen-node-port``
--  8082, the port used by middleware, which can be set with ``--listen-middleware-port``
--  10000, the gRPC port, which can be set with ``--listen-grpc-port``
+-  8082, ang port na ginagamit ng middleware, na pwedeng i-set kasama ng ``--listen-middleware-port``
+-  10000, ang gRPC port, na pwedeng i-set kasama ang ``--listen-grpc-port``
 
-When changing the mappings above the docker container must be
-stopped (:ref:`stop-a-node`), reset, and started again. To reset the container either use
-``concordium-node-reset-data`` or run ``docker rm concordium-client`` in
-a terminal.
+Kapag binabago ang mga mappings sa itaas ang docker container ay dapat itigil 
+(:ref:`stop-a-node`), i-reset, at simulan uli. Para i-reset ang container pwede kang gumamit ng
+``concordium-node-reset-data`` o patakbuhin mo ang ``docker rm concordium-client`` sa terminal.
 
-We *strongly recommend* that your firewall should be configured to only
-allow public connections on port 8888 (the peer-to-peer networking
-port). Someone with access to the other ports may be able to take
-control of your node or accounts you have saved on the node.
+*Lubos naming inirerekumenda* na ang iyong firewall ay dapat na-configure lamang
+para payagan ang mga koneksyon na publiko sa port 8888 (ang peer-to-peer networking
+port). Ang isang tao na may access sa iba pang mga ports ay maaaring makakuha
+kontrol ng iyong node o sa mga accounts na nai-save mo sa node.
 
 .. _stop-a-node:
 
-Stopping the node
-=================
+Pagpapatigil sa node
+====================
 
-To stop the node, press **CTRL+c**, and wait for the node to do a clean
-shutdown.
+Para mapatigil ang node, pindutin ang **CTRL+c**, at maghinty para sa node na gawin nya ang isang malinis na shutdown.
 
-If you accidentally close the window without explicitly shutting down
-the client, it will keep running in the background in Docker. In that
-case, use the ``concordium-node-stop`` binary in the same way you opened
-the ``concordium-node`` executable.
+Kung aksidente mong naisara ang window na hindi pa napapatay ang client, ito ay patuloy
+na tatakbo sa likod sa Docker. Sa ganung pagkakataon, gamitin ang 
+``concordium-node-stop`` binary sa katulad na paraan kung paano mo 
+binuksan ang ``concordium-node`` executable.
 
 Support & Feedback
 ==================

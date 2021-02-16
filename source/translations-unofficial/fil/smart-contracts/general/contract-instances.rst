@@ -187,7 +187,6 @@ Ang mga possibleng aksyon sa mga kontrata ay maaring mag likha ng:
 Kung ang aksyon ay di nag tagumapay na tumakbo, ang recieve function ay binalik ay ibabalik sa dati,
 at iiwan ang state at balanse na parehas. Pero,
 
-- the transaction that triggers the (unsuccessful) receive function is still added to the chain, and
 - ang transaksyon na na natawag na hindi nag tagumpay ay idadagdag pa rin sa chain,
 - ang gastos ng transaksyon, kasama ang gastos sa pag takbo ng pumalyang transaksyon
   ay ibabawas sa account ng nagpadala.

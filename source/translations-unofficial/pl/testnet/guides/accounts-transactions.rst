@@ -13,7 +13,7 @@ Concordium ID: otrzymać zaczął od kont i transakcje
 Przed następujący ten powinieneś był skończyć requesting Twoje początkowe konto i tożsamość, jak opisano w :ref:`w poprzednim rozdziale<testnet-Zaczynaj>`.
 
 Stwórz nowe konto
-====================
+==================
 Zanim przejdziemy do kont, ich salda i transakcje działają, stwórzmy drugie konto. zacznij od przeNa następnym ekranie
 zostaniesz poproszony o nazwanie swojego nowego konta.jścia na *Konta*. strona.
 W prawym górnym rogu powinieneś zobaczyć **znak plus**. Naciśnij, aby kontynuować. Na następnym ekranie.
@@ -25,7 +25,7 @@ W tym przykładzie wybierzemy nazwę *Przykładowe konto 2*, ale możesz wybrać
       :width: 32%
 
 po naciśnięciu **Kolejny**, spotkasz się z ekranem o których musisz się zdecydować jakiej tożsamości użyć aby otworzyć nowe konto.
-Jak dotąd prawdopodobnie masz tylko jeden, ale jeśli masz więcej, możesz wybrać z listy dowolną tożsamość. Klikając na swoją tożsamość, 
+Jak dotąd prawdopodobnie masz tylko jeden, ale jeśli masz więcej, możesz wybrać z listy dowolną tożsamość. Klikając na swoją tożsamość,
 zostaniesz przeniesiony do następnego ekranu. Podczas tworzenia konta innego niż początkowe, i.e. konto
 która nie jest stworzona podczas tworzenia tożsamości, Możesz wybrać aby odsłonić za Liczba na :ref:`atrybut-glosariusza`. To nie jest konieczne,
 a jeśli nie masz za konkretny powód, aby to zrobić, Polecamy nie ujawniając żadnych, jako ujawnione atrybuty iść na łańcuch i nie może być oddalony.
@@ -91,12 +91,13 @@ ale wrócimy do tego później. My wybierzemy *Przykładowe konto 1* jako nasz o
 Po wybraniu kwoty i odbiorcy możemy nacisnąć **Wyślij środki**, aby kontynuować. Robiąc to jesteśmy spotkani po wyświetleniu ekranu potwierdzenia
 którym możemy zweryfikować kwotę, odbiorcę i konto nadawcze. Naciskając **Tak, wyślij środki**, zweryfikujemy się za pomocą passcode
 lub biometria, i następnie transakcja został przesłany do łańcucha. Sfinalizowanie transakcji może chwilę potrwać.
+
 .. image:: images/concordium-id/acc15.png
       :width: 32%
 .. image:: images/concordium-id/acc16.png
       :width: 32%
 
-Teraz widzimy, że *Konto przykładowe 2* *Przelewy* log pokazuje, że kwota została odjęta, plus *opłata*.. Wszystkie transakcje będą płatne, 
+Teraz widzimy, że *Konto przykładowe 2* *Przelewy* log pokazuje, że kwota została odjęta, plus *opłata*.. Wszystkie transakcje będą płatne,
 iw zależności od rodzaju transakcji opłata może się różnić. Naciśnięcie transakcji pozwoli Ci zobaczyć więcej szczegółów.
 
 .. image:: images/concordium-id/acc17.png
@@ -135,7 +136,7 @@ zakończyć w łańcuchu.
 
 Wracając na stronę *Konta*, teraz widać, że tam jest 10 GTU na *Shielded saldo* z *Przykładowe konto 2*. Jeśli the *Shielded
 Saldo* obszar karty konta jest wciśnięty, widzimy to jest *Shielded saldo* transakcja w the shielded saldo transfery log.
-zrobienie za shielding transakcja będzie również kosztować opłatę, ale ta opłata zostanie potrącona ze zwykłego salda konta. Spróbuj iść z powrotem 
+zrobienie za shielding transakcja będzie również kosztować opłatę, ale ta opłata zostanie potrącona ze zwykłego salda konta. Spróbuj iść z powrotem
 i spójrz na dziennik transferów zwykłego *Salda*.
 
 .. image:: images/concordium-id/acc25.png
@@ -199,9 +200,9 @@ na unshielding, zostanie odjęta od zwykłego salda konta odpowiedzialnego za tr
       :width: 32%
 
 Udostępnij adres swojego konta
-==========================
+===============================
 Jeśli chcesz udostępnić adres swojego konta, można to łatwo zrobić, naciskając **Adres** przycisk. To przeniesie Cię do strony
-gdzie masz wiele opcji udostępniania adresu konta. Spróbuj nacisnąć **Dzielić**przycisk, i udostępnij komuś swój adres.
+gdzie masz wiele opcji udostępniania adresu konta. Spróbuj nacisnąć **Dzielić** przycisk, i udostępnij komuś swój adres.
 
 .. image:: images/concordium-id/acc37.png
       :width: 32%
@@ -209,11 +210,11 @@ gdzie masz wiele opcji udostępniania adresu konta. Spróbuj nacisnąć **Dzieli
       :width: 32%
 
 Sprawdzać harmonogram wydań
-==========================
+============================
 Na the Concordium blockchain to jest możliwe aby dokonać transakcji że wydaniathe przekazana kwota w czasie. Nazywa się to
 *transfer z harmonogramem*. Na razie nie będziemy się zastanawiać, jak wykonać taki przelew, ponieważ nie można tego zrobić z Concordium ID,
 ale zobaczmy, jak można sprawdzić harmonogram wydań. Jeśli otrzymasz przelew z harmonogramem wydań, możesz nacisnąć
-**menu burgera** w prawym górnym rogu z the ekran równowagi. Umożliwi to naciśnięcie **Harmonogram wydania**, i robiąc to 
+**menu burgera** w prawym górnym rogu z the ekran równowagi. Umożliwi to naciśnięcie **Harmonogram wydania**, i robiąc to
 ty zostanie przeniesione do ekranu zawierającego informacje o tym, ile GTU zostanie wydanych i kiedy. Jeśli chcesz dowiedzieć się więcej o tym, jak to zrobić
 wykonać przelew z harmonogramem wydań, możesz rzucić okiem the :ref:`concordium_client` i :ref:`transakcje` stron.
 
@@ -225,6 +226,6 @@ wykonać przelew z harmonogramem wydań, możesz rzucić okiem the :ref:`concord
       :width: 32%
 
 Wsparcie i informacje zwrotne
-==================
+=============================
 
 Jeśli napotkasz żadnych problemów lub mieć sugestie, opublikuj swoje pytanie lub informacje zwrotne na Discord, lub Skontaktuj się z nami na testnet@concordium.com.

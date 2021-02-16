@@ -42,12 +42,6 @@ The documentation is split into four categories
 
 .. toctree::
    :maxdepth: 1
-   :caption: Tutorials
-
-   tutorials/piggy-bank/index
-
-.. toctree::
-   :maxdepth: 1
    :caption: Contract development guides
 
    guides/setup-tools
@@ -66,18 +60,6 @@ The documentation is split into four categories
    guides/initialize-contract
    guides/interact-instance
    guides/inspect-instance
-
-.. toctree::
-   :maxdepth: 1
-   :caption: References
-
-   references/schema-json
-   references/simulate-context
-   references/host-fns
-   references/references-on-chain
-   references/local-settings
-   Rust contract examples (repo) <https://github.com/Concordium/concordium-rust-smart-contracts>
-   concordium-std <https://docs.rs/concordium-std/latest/concordium_std/>
 
 .. todo::
 

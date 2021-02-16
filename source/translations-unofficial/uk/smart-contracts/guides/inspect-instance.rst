@@ -1,4 +1,4 @@
-.. _inspect-instance:
+.. _inspect-instance-uk:
 
 =================================
 Перевірка об'єкту смарт-контракту
@@ -10,11 +10,11 @@
 Підготовка
 ==========
 
-Переконайтеся, що ви :ref:`running a node<run-a-node>` з використанням останньої версії :ref:`Concordium software<downloads>` і що у вас є екземпляр смарт-контракту в мережі для перевірки.
+Переконайтеся, що ви :ref:`запустили ноду <run-a-node>` з використанням останньої версії :ref:`програмного забезпечення Concordium <downloads>` і що у вас є екземпляр смарт-контракту в мережі для перевірки.
 
 .. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module` and for
-   how to create an instance :ref:`initialize-contract`.
+   Щоб дізнатися, як розгорнути модуль смарт-контракту дивіться :ref:`deploy-module-uk`.
+   Як створити об'єкт смарт-контракта :ref:`initialize-contract-uk`.
 
 Перевірка
 =========
@@ -44,10 +44,9 @@
 
 .. seealso::
 
-   For more information about contract instance addresses, see
-   :ref:`references-on-chain`.
+   Для отримання додаткової інформації про адреси об'єкту контракту, дивіться :ref:`references-on-chain`.
 
-Рівень деталізації перевірки залежить від того, чи має команда ``show`` доступ до :ref:`contract schema <contract-schema>`.
+Рівень деталізації перевірки залежить від того, чи має команда ``show`` доступ до :ref:`схеми смарт-контракта <contract-schema-uk>`.
 Якщо схема вбудована, вона буде використовуватися неявно. В іншому випадку схему можна надати за допомогою ``--schema /path/to/schema.bin`` параметра.
 
 .. note::
@@ -56,4 +55,4 @@
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>`.
+   :ref:`Дізнайтеся більше про те, чому і як використовувати схеми смарт-контрактів <contract-schema-uk>`.

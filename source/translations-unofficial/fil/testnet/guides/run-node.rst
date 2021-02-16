@@ -45,11 +45,11 @@ Upang mag-upgrade sa kasalukuyang software ng Concordium para sa Open Testnet 4:
 -  Patakbuhin ang ``concordium-node-reset-data`` executable mula sa unzipped
    archive.
 
-   -  Para sa *Mac* users: sa unang pagkakataon na buksan mo ang tool, right-click ang
+   -  Para sa mga *Mac* users: sa unang pagkakataon na buksan mo ang tool, right-click ang
       ``concordium-node-reset-data`` file at piliin ang **Open**. Isang mensahe
       lilitaw na ang software ay mula sa isang hindi kilalang developer.
       Piliin ang **Open** uli.
-   -  Para sa *Windows* users: sa unang pagkakataon na buksan mo ang tool,
+   -  Para sa mga *Windows* users: sa unang pagkakataon na buksan mo ang tool,
       double-click ang ``concordium-node-reset-data`` file. Isang mensahe
       lilitaw na ang software ay mula sa isang hindi kilalang developer.
       Piliin ang **More info** → **Run anyway**.
@@ -68,67 +68,61 @@ Pagpapatakbo ng node
 Upang simulang patakbuhin ang isang client na sasali sa Open Testnet sundin ang mga ito
 mga hakbang:
 
-1. Open the ``concordium-node`` executable from the unzipped archive.
+1. Buksan ang ``concordium-node`` executable mula sa unzipped archive.
 
--  For *Mac* users: the first time you open the tool, right-click the
-   ``concordium-node`` binary and select **Open**. A message will appear
-   that the software is from an unidentified developer. Select **Open**
-   again.
--  For *Windows* users: the first time you open the tool, double-click
-   the ``concordium-node`` binary. A message will appear that the
-   software is from an unidentified developer. Select **More info** →
+-  Para sa mga *Mac* users: sa unang pagkakataon na buksan mo ang tool, i-right-click ang
+   ``concordium-node`` binary at piliin ang **Open**. Isang mensahe
+      lilitaw na ang software ay mula sa isang hindi kilalang developer.
+      Piliin ang **Open** uli.
+-  Para sa mga *Windows* users: sa unang pagkakataon na buksan mo ang tool, i-double-click
+   ang ``concordium-node`` binary. Isang mensahe lilitaw na ang software ay mula sa isang hindi kilalang developer. Piliin ang **More info** →
    **Run anyway**.
--  When *restarting* a node consider using the
-   ``--no-block-state-import`` option. This will download just the
-   updates to the Concordium blockchain that occurred while the node was
-   inactive and might speed up the boot process.
+-  Kapag *restarting* ang isang node ay ikonsidera na gumamit ng
+   ``--no-block-state-import`` na opsyon. Ida-download lang nito ang mga updates sa Concordium blockchain
+   na naganap habang hindi aktibo ang iyong node at pwedeng mapabilis nito ang proseso ng pag-boot.
+   
 
-2. Enter a name for your node. This name will be displayed in the public
-   dashboard.
+2. Maglagay ng pangalan para sa iyong node. Itong pangalan na ito ay ang madi-display sa public dashboard.
 
-3. If the tool has been started before you will asked if you want to
-   delete the local node database before starting. Pressing **y** will
-   delete and subsequently recreate the information on the state of the
-   Concordium blockchain that was saved on your computer. **Note that
-   deleting the local node database means it will take longer for your
-   node to catch-up with the Concordium network.**
+3. Kung ang tool ay nasimulan dati tatanungin ka nito kung gusto mong burahin ang local node database bago magsimula. Ang pagpindot sa **y** ay ito ay matatanggal at pagkatapos ay muling gagawa ng impormasyon sa estado ng Concordium blockchain na na-save sa iyong computer. **Tandaan na
+   ang pagtanggal ng lokal na database ng node ay nangangahulugang mas magtatagal ito para sa iyo
+   node upang makahabol sa network ng Concordium.**
 
-The tool will now download the Concordium Client image and load it into
-Docker. The client will launch and start outputting logging information
-about the operation of the node.
+I-download na ngayon ng tool ang Concordium Client image at mai-load ito sa Docker. 
+Ang client ay ilulunsad at magsisimulang maglabas ng impormasyon ang pag-log ng client
+tungkol sa pagpapatakbo ng node.
 
-Seeing your node on the dashboard
-=================================
+Tignan ang iyong node sa dashboard
+==================================
 
-After running ``concordium-node`` you can
+Pagkatapos patakbuhin ang ``concordium-node`` pwede kang
 
--  see your node on the `Network Dashboard`_
--  :ref:`query<testnet-query-node>` information about blocks, transactions, and accounts
+-  pwede mong tignan ang iyong node sa `Network Dashboard`_
+-  :ref:`query<testnet-query-node>` imporasyon patungkol sa mga blocks, mga transakyon, at mga accounts.
 
 Network dashboard
 -----------------
 
-It will take the client a while to catch up with the state of the
-Concordium blockchain. This involves, for example, downloading
-information about all the blocks in the chain.
+Aabutin ng ilang sandali ang client upang abutin ang estado ng
+Concordium blockchain. Kasama ito, halimbawa, sa pag-download
+impormasyon tungkol sa lahat ng mga blocks sa chain.
 
-Among other information, on the `Network Dashboard`_ you can
-get an idea of how long it will take your node to catch up with the
-chain. For that you can compare the node's **Length** value (number of
-blocks your node received) with the **Chain Len** value (number of
-blocks in the longest chain in the network) which is displayed at the
-top of the dashboard.
+Kabilang sa iba pang impormasyon, sa `Network Dashboard`_ pwede ka magkaroon 
+ng ideya kung gaano katagal aabutin ang iyong node upang abutin ang chain. 
+Para dyan pwede mong ikumpara ang haba ng node sa pamamagitan ng **Length** value (number of
+blocks your node received) kasama ang **Chain Len** value (bilang ng
+mga blocks sa pinakamahabang chain sa network) na makikita sa pinakataas ng dashboard.
 
 
-Enabling inbound connections
-============================
+Pagpapagana ng mga papasok na koneksyon
+=======================================
 
-If you are running your node behind a firewall, or behind your home
-router, then you will probably only be able to connect to other nodes,
-but other nodes will not be able to initiate connections to your node.
-This is perfectly fine, and your node will fully participate in the
-Concordium network. It will be able to send transactions and,
-:ref:`if so configured<become-a-baker>`, to bake and finalize.
+Kung pinapatakbo mo ang iyong node sa likod ng isang firewall, o sa likod ng 
+iyong home router, kung gayon pwede ka lang kumonekta sa ibang mga nodes,
+pero ang ibang mga nodes ay hindi makakapagsimula ng koneksyon sa iyo.
+Ito ay ok lang, at ang iyong node ay makakasali pa rin sa Concordium network.
+Pwede pa rin itong makapag-padala ng mga transaksyon at,
+:ref:`if so configured<become-a-baker>`, makapag-bake at makapag-finalize.
 
 However you can also make your node an even better network participant
 by enabling inbound connections. By default, ``concordium-node`` listens

@@ -40,18 +40,18 @@ Uaktualnij z wcześniejszej wersji Open Testnet
 
 Aby dokonać aktualizacji do aktualnego oprogramowania Concordium dla Open Testnet 4:
 
--  Wykonaj powyższe kroki, aby :ref:`Download<downloads>` najnowsze 
+-  Wykonaj powyższe kroki, aby :ref:`Download<downloads>` najnowsze
    oprogramowanie Concordium.
 
 -  Uruchom ``concordium-node-reset-data`` wykonywalny z rozpakowanego
    archiwum.
 
    -  Dla *Mac* użytkowników: the pierwszy raz otwierasz narzędzie, kliknij prawym przyciskiem myszy
-      ``concordium-node-reset-data`` plik i wyselekcjonować **otwarty**. 
+      ``concordium-node-reset-data`` plik i wyselekcjonować **otwarty**.
       Pojawi się komunikat, że oprogramowanie pochodzi od niezidentyfikowanego programisty.
       wyselekcjonować **otwarty** jeszcze raz.
    -  Dla *Windows* użytkowników: the pierwszy raz otwierasz narzędzie,
-      podwójne-kliknięcie the ``concordium-node-reset-data`` plik. 
+      podwójne-kliknięcie the ``concordium-node-reset-data`` plik.
       Pojawi się komunikat, że oprogramowanie pochodzi od niezidentyfikowanego programisty.
       wyselekcjonować **Więcej informacji** → **Biegnij mimo wszystko**.
 
@@ -59,9 +59,9 @@ Aby dokonać aktualizacji do aktualnego oprogramowania Concordium dla Open Testn
 
       *Czy chcesz również usunąć zapisane klucze?*
 
-   Konta utworzone dla wcześniejszych wersji nie są już ważne w Open Testnet 3. 
+   Konta utworzone dla wcześniejszych wersji nie są już ważne w Open Testnet 3.
    W związku z tym, jeśli masz zapisane konta z poprzednich wersji
-   zalecamy wejście **y** co spowoduje usunięcie wszystkich kluczy 
+   zalecamy wejście **y** co spowoduje usunięcie wszystkich kluczy
    kont.
 
 .. _running-a-node:
@@ -75,26 +75,26 @@ kroki:
 1. Otwarte the ``concordium-node`` wykonywalny z rozpakowanego archiwum.
 
 -  Dla *Mac* użytkowników: the pierwszy raz otwórz narzędzie, kliknij prawym przyciskiem myszy
-   ``concordium-node`` binarny i wyselekcjonować **otwarty**. 
+   ``concordium-node`` binarny i wyselekcjonować **otwarty**.
    Pojawi się komunikat, że oprogramowanie pochodzi od niezidentyfikowanego programisty.
    wyselekcjonować **otwarty** jeszcze raz.
 -  Dla *Windows* użytkowników: the pierwszy raz otwórz narzędzie, podwójne kliknięcie
-   the ``concordium-node`` dwójkowy. Pojawi się komunikat, 
+   the ``concordium-node`` dwójkowy. Pojawi się komunikat,
    że oprogramowanie pochodzi od niezidentyfikowanego programisty. wyselekcjonować **Więcej informacji** →
    **Biegnij mimo wszystko**.
 -  Gdy *ponowne uruchamianie* węzeł(node) rozważać używając
    ``--no-block-state-import`` opcja. Spowoduje to pobranie tylko aktualizacji
-   do łańcucha blokowego Concordium, który wystąpił, gdy węzeł(node) 
+   do łańcucha blokowego Concordium, który wystąpił, gdy węzeł(node)
    był nieaktywny i może przyspieszyć proces uruchamiania.
 
-2. Wpisz nazwę swojego węzła. Ta nazwa będzie wyświetlana na publicznym pulpicie 
+2. Wpisz nazwę swojego węzła. Ta nazwa będzie wyświetlana na publicznym pulpicie
    nawigacyjnym.
 
-3. Jeśli narzędzie zostało uruchomione wcześniej, przed rozpoczęciem zostaniesz zapytany, 
-   czy chcesz usunąć bazę danych węzłów lokalnych. pilny **y** 
+3. Jeśli narzędzie zostało uruchomione wcześniej, przed rozpoczęciem zostaniesz zapytany,
+   czy chcesz usunąć bazę danych węzłów lokalnych. pilny **y**
    usunie i później odtwarzać informacje o the Stan z
    Blockchain Concordium, który został zapisany na Twoim komputerze. **Zauważ, że
-   usunięcie bazy danych węzłów lokalnych oznacza, 
+   usunięcie bazy danych węzłów lokalnych oznacza,
    że zajmie to więcej czasu węzeł(node) do dogonienia sieci Concordium.**
 
 Narzędzie pobierze teraz obraz klienta Concordium i załaduje go do
@@ -119,7 +119,7 @@ informacje o wszystkich blokach w łańcuchu.
 Między innymi, na `Network Dashboard`_ możesz
 otrzymać pomysł ile czasu zajmie węzłowi nadrobienie zaległości z łańcuch.
 Za to możesz porównać węzeł(node) **Długość** wartość (Liczba
-Bloki twój węzeł(node) otrzymał) z the **Chain Len** wartość 
+Bloki twój węzeł(node) otrzymał) z the **Chain Len** wartość
 (Liczba Bloki w najdłuższym łańcuchu w sieci) który jest wyświetlany
 w górnej części deski rozdzielczej.
 
@@ -172,7 +172,7 @@ Aby zatrzymać węzeł(node), naciśnij **CTRL+c**, i poczekaj, aż węzeł(node
 zamknąć.
 
 Jeśli przypadkowo zamkniesz okno bez jawnego wyłączania
-Klient, będzie dalej działać w tle w Dockerze. kiedy to się dzieje, 
+Klient, będzie dalej działać w tle w Dockerze. kiedy to się dzieje,
 Użyj ``concordium-node-stop`` binarny w ten sam sposób, w jaki otworzyłeś
 the ``concordium-node`` wykonywalny.
 

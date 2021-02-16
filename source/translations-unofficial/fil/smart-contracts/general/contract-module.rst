@@ -7,7 +7,7 @@ Smart contract module
 Ang smart contracts ay naka-deploy sa loob ng chain ng *smart contract modules*
 
 .. note::
-   
+
    Ang smart contact module ay kadalasan natutukoy sa madaling sabi ay *module*.
 
 Ang module ay maaring maglaman ng isa or maraming smart contracts, na nag papahintulot
@@ -54,7 +54,7 @@ Limitasyon
 -----------
 
 .. todo::
-   
+
    Dagdagan ng ibang limitasyon tulad ng start sections...
 
 Ang blockchain environment ay napaka-partikular na ang bawat node ay dapat
@@ -117,7 +117,7 @@ contracts, inuugnay namen ang functions gamit ang naming scheme:
   maaring magkaroon ng simbolo na ``.``.
 
 - ``<contract-name>.<receive-function-name>``: Functions para sa pag-interact sa
-  smart contract ay naka-paunang salita ng pangalan ng contract at sinusundan ng ``.`` at ang 
+  smart contract ay naka-paunang salita ng pangalan ng contract at sinusundan ng ``.`` at ang
   pangalan ng function. Ganoon rin para sa init functon, ang pangalan ng contract ay hindi pinapayagan
   na magkaroon ng ``.`` symbol.
 

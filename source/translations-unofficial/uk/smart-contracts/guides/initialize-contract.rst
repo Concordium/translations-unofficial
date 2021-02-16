@@ -1,4 +1,4 @@
-.. _initialize-contract:
+.. _initialize-contract-uk:
 
 =====================================
 Ініціалізація об'єкта смарт-контракту
@@ -10,7 +10,7 @@
 Підготовка
 ==========
 
-Переконайтеся, що ви :ref:`running a node<run-a-node>`, використовуючи останню версію :ref:`Concordium software<downloads>` і що у вас є смарт-контракт :ref:`deployed <deploy-module>` в якомусь модулі мережі.
+Переконайтеся, що ви :ref:`запустили ноду <run-a-node>`, використовуючи останню версію :ref:`програмного забезпечення Concordium <downloads>` і що у вас є смарт-контракт :ref:`розгорнутий <deploy-module-uk>` в якомусь модулі мережі.
 
 Оскільки ініціалізація смарт-контракту - це транзакція, ви також повинні переконатися, що у ``concordium-client`` є аккаунт з достатньою кількістю GTU для оплати транзакції.
 
@@ -35,8 +35,7 @@
 
 .. todo::
 
-   Update address format to ``<i, s>`` from ``{"index": i, "subindex": s}``
-   (throughout the documentation).
+   Оновити формат адреси до ``<i, s>`` з ``{"index": i, "subindex": s}`` (по усій документації).
 
 .. code-block:: console
 
@@ -46,28 +45,25 @@
 
 .. seealso::
 
-   To get a deeper understanding of contract initialization, see
-   :ref:`contract-instances-init-on-chain`.
+   Щоб отримати більш повне уявлення про ініціалізації контракту, дивіться :ref:`contract-instances-init-on-chain-uk`.
 
-   For more information about module references and instance addresses,
-   see :ref:`references-on-chain`.
+   FДля отримання додаткової інформації про посилання на модулі і адресах об'єктів, дивіться :ref:`references-on-chain`.
 
-   Using module references directly can be inconvenient; to name them, see
-   :ref:`naming-a-module`.
+   Використання посилань на модулі безпосередньо може бути незручним; для їх найменування дивіться :ref:`naming-a-module`.
 
-.. _init-passing-parameter-json:
+.. _init-passing-parameter-json-uk:
 
 Передача параметрів в JSON форматі
 ----------------------------------
 
-Параметр в JSON форматі може бути переданий, якщо вказана :ref:`smart contract schema<contract-schema>` або у вигляді файлу, або вбудована в модуль.
+Параметр в JSON форматі може бути переданий, якщо вказана :ref:`схема смарт-контракта <contract-schema-uk>` або у вигляді файлу, або вбудована в модуль.
 Схема використовується для сериализации JSON в бінарний файл.
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas <contract-schema>`.
+   :ref:`Детальніше про те, навіщо і як використовувати схеми смарт-контрактів <contract-schema-uk>`.
 
-   :ref:`Parameters can be also passed in binary format <init-passing-parameter-bin>`.
+   :ref:`Параметри також можна передавати у бінарному форматі <init-passing-parameter-bin-uk>`.
 
 Для ініціалізації примірника смарт-контракту ``my_parameter_contract`` з з модуля з посиланням ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` з файлом параметрів ``my_parameter.json`` в JSON форматі, виконайте наступну команду:
 
@@ -111,12 +107,12 @@
 
    GTU також може бути переданий примірнику контракту під час ініціалізації за допомогою параметра ``--amount AMOUNT``.
 
-.. _init-passing-parameter-bin:
+.. _init-passing-parameter-bin-uk:
 
 Передача параметрів в бінарному форматі
 ---------------------------------------
 
-При передачі параметрів в бінарному форматі :ref:`contract schema<contract-schema>` не потребується.
+При передачі параметрів в бінарному форматі, :ref:`схема смарт-контракта <contract-schema-uk>` не потребується.
 
 Для ініціалізації примірника смарт-контракту ``my_parameter_contract`` з модуля з посиланням ``9eb82a01d96453dbf793acebca0ce25c617f6176bf7a564846240c9a68b15fd2`` з файлом параметрів ``my_parameter.bin`` в бінарному форматі, виконайте наступну команду:
 
@@ -137,10 +133,9 @@
 
 .. seealso::
 
-   For information on how to work with parameters in smart contracts, see
-   :ref:`working-with-parameters`.
+   Для отримання інформації про те, як працювати з параметрами в смарт-контрактах, дивіться :ref:`working-with-parameters-uk`.
 
-.. _naming-an-instance:
+.. _naming-an-instance-uk:
 
 Іменування об'єкту контракту
 ============================
@@ -149,8 +144,7 @@
 
 .. seealso::
 
-   For an explanation of how and where the names and other local settings are
-   stored, see :ref:`local-settings`.
+   Для пояснення того, як і де зберігаються імена та інші локальні налаштування, дивіться :ref:`local-settings`.
 
 Щоб додати ім'я під час ініціалізації, використовується параметр ``--name``.
 
@@ -185,8 +179,7 @@
 
 .. seealso::
 
-   For more information about contract instance addresses, see
-   :ref:`references-on-chain`.
+   Для отримання додаткової інформації про адреси обє'кту контракту, дивіться :ref:`references-on-chain`.
 
 .. _parameter_cursor():
    https://docs.rs/concordium-std/latest/concordium_std/trait.HasInitContext.html#tymethod.parameter_cursor

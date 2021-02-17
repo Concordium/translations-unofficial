@@ -110,8 +110,8 @@ ay makikita sa on-chain.
   Tignan :ref:`initialize-contract` gabay sa mismong initial na pag gawa ng kontrata.
 
 
-Instance state
-==============
+Estado ng instansya
+===================
 Ang bawat smart contract instance ay may karagdagang estado na kung saan ito ay ni rerepresenta
 sa isang chain sa pamamagitan ng anyo ng isang hanay ng mga byte. Ang instansya ay gumagamit ng functions
 na bigay ng host environment upang basahin, isulat at palitan ang laki ng estado.

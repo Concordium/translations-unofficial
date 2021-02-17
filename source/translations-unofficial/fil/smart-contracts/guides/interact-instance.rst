@@ -1,38 +1,38 @@
 .. _interact-instance-fil:
 
 =======================================
-Interact with a smart contract instance
+Pag-interact sa smart contract instance
 =======================================
 
-This guide will show you, how to interact with a smart contract instance, which
-means triggering a receive function that, possibly, updates the state of the
+Itong gabay ay magpapakita kung paano mag-interact sa smart contract instance, na
+ibig sabihin ang pag-trigger ng receive function na maaring mag-update ang estado ng
 instance.
 
-Preparation
-===========
+Paghahanda
+==========
 
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a
-smart-contract instance on-chain to inspect.
+Siguraduhin na ikaw nagawa mo ito :ref:`running a node<run-a-node>` gamit ang pinakabagong :ref:`Concordium software<downloads>` at mayroon kang
+smart-contract instance on-chain para suriin.
 
 .. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module` and for
-   how to create an instance :ref:`initialize-contract`.
+   Para sa kung paano mag-deploy ng smart contract module tignan ang :ref:`deploy-module` at para sa
+   kung paano mag-create ng instance :ref:`initialize-contract`.
 
-Since interactions with a smart contract are transactions, you should also make
-sure to have ``concordium-client`` set up with an account with enough GTU to pay
-for the transactions.
+Dahil sa ang interaksyon sa smart contract ay mga transaksyon, dapat siguraduhin
+mayroon kang ``concordium-client`` na naka-setup kasama ang account na may sapat na GTU na ipangbabayad
+para sa mga transakyon.
 
 .. note::
 
-   The cost of this transaction depends on the size of the parameters sent to
-   the receive function and the complexity of the function itself.
+   Ang gastusin para sa transaksyon na ito ay nakadepende sa laki ng parameters na pinadala sa
+   receive function at ang kumplikado ng sariling function.
 
-Interaction
+Interaksyon
 ===========
 
-To update an instance with address index ``0`` using the parameterless
-receive function ``my_receive`` while allowing up to 1000 energy to be used,
-run the following command:
+Para mag-update ng instance na may address index na ``0`` gamit ang paramaterless
+receive function ``my_receive`` habang pinapahintulutan ang higit sa 1000 na enerhiya na maaring magamit,
+para patakbuhin ang sumusunod na command:
 
 .. code-block:: console
 
@@ -44,21 +44,21 @@ If successful, the output should be similar to the following:
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_receive'.
 
-Passing parameters in JSON format
----------------------------------
+Pagpasa ng parameters sa JSON format
+------------------------------------
 
-A parameter in JSON format can be passed if a :ref:`smart contract schema
-<contract-schema>` is supplied, either as a file or embedded in the module.
-The schema is used to serialize the JSON into binary.
+Ang parameter sa JSON format ay maaring mapasa kung ang :ref:`smart contract schema
+<contract-schema>` ay binigay, bilang file or embedded sa loob ng module.
+Ang schema ay ginagamit para mag-serialize ng JSON sa binary.
 
 .. seealso::
 
    :ref:`Read more about why and how to use smart contract schemas
    <contract-schema>`.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.json`` in JSON
-format, run the following command:
+Para mag-update ng instance na may address index ``0`` gamit ang receive function
+``my_parameter_receive`` na may parameter file na ``my_parameter.json`` sa JSON
+format, patakbuhin ang sumusunod na command:
 
 .. code-block:: console
 
@@ -66,24 +66,24 @@ format, run the following command:
             --energy 1000 \
             --parameter-json my_parameter.json
 
-If successful, the output should be similar to the following:
+Kung gumana, ang kakalabasan dapat ay katulad ng sumusunod:
 
 .. code-block:: console
 
    Successfully updated contract instance {"index":0,"subindex":0} using the function 'my_parameter_receive'.
 
-Otherwise, an error describing the problem is displayed.
-Common errors are described in the next section.
+Kung hindi, may error na pinapakita ang problema.
+Madalas na errors ay ang nakadetalye sa susunod na seksyon.
 
 .. seealso::
 
-   For more information about contract instance addresses, see
+   Para sa karagdagang impormasyon tungkol sa contract instance addresses, tignan ang
    :ref:`references-on-chain`.
 
 .. note::
 
-   If the parameter provided in JSON format does not conform to the type
-   specified in the schema, an error message will be displayed. For example:
+   Kung ang parameter na binigay sa JSON format ay hindi sumunod sa uri
+   ng sinasabing schema, ang mensahe ng error ay mapapakita. Halimbawa:
 
     .. code-block:: console
 
@@ -97,23 +97,23 @@ Common errors are described in the next section.
 
 .. note::
 
-   If a given module does not contain an embedded schema, it can be supplied
-   using the ``--schema /path/to/schema.bin`` parameter.
+   Kung ang binigay na module ay walang embedded schema, maari itong makuha
+   gamit ang ``--schema /path/to/schema.bin`` parameter.
 
 .. note::
 
-   GTU can also be transferred to a contract during updates using the
+   Ang GTU ay maari ding ilipat sa contract habang updates gamit ang
    ``--amount AMOUNT`` parameter.
 
-Passing parameters in binary format
------------------------------------
+Pagpasa ng parameters sa binaray format
+---------------------------------------
 
-When passing parameters in binary format, a
-:ref:`contract schema <contract-schema>` is not needed.
+Kapag magpapasa ng parameters sa binary formay, ang
+:ref:`contract schema <contract-schema>` ay hindi kinakailangan.
 
-To update an instance with address index ``0`` using the receive function
-``my_parameter_receive`` with a parameter file ``my_parameter.bin`` in binary
-format, run the following command:
+Para mag-update ng instance na may address index ``0`` gamit ang receive function
+``my_parameter_receive`` na may parameter file ``my_parameter.bin`` sa binary
+format, patakbuhin ang sumusunod na command:
 
 .. code-block:: console
 
@@ -121,7 +121,7 @@ format, run the following command:
             --energy 1000 \
             --parameter-bin my_parameter.bin
 
-If successful, the output should be similar to the following:
+Kung gumana, ang kakalabasan dapat ay parehas sa sumusunod:
 
 .. code-block:: console
 
@@ -129,7 +129,7 @@ If successful, the output should be similar to the following:
 
 .. seealso::
 
-   For information on how to work with parameters in smart contracts, see
+   Para sa karagdagang impormasyon kung paano ito gumanaga na may parameters sa smart contract, tignan ang
    :ref:`working-with-parameters`.
 
 .. _parameter_cursor():

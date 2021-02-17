@@ -1,4 +1,4 @@
-.. _contract-instances:
+.. _contract-instancess:
 
 ===========================
 Instansya ng Smart Contract

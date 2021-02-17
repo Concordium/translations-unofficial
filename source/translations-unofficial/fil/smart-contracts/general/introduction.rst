@@ -4,86 +4,84 @@
     - What are the use cases
     - What are not the use cases
 
-.. _introduction-fil:
+.. _introduction:
 
-===============================
-Introduction to smart contracts
-===============================
-
-A smart contract is a user-supplied piece of code submitted to the Concordium
-blockchain, used to define behavior that is not directly part of the core
-protocol. Smart contracts are executed by nodes in the Concordium network
-according to predefined rules. Their execution is fully transparent, and all
-nodes must agree on what the outcome of execution is based on only publicly
-available information.
-
-A smart contract can receive, hold and send GTU, it is able to observe some
-aspects of the chain, and maintain its own state. Smart contracts are always
-executed as a response to **external** actions, e.g., an account sending a
-message. In practice smart contracts will often be a small part of a larger
-system, combining on and off-chain functionality. An example of off-chain
-functionality could be a server that invokes the smart contract based on
-data from the real-world, such as prices of stocks, or weather information.
-
-What are smart contracts for?
-=============================
-
-Smart contracts can reduce the needed amount of trust in third-parties, in some cases
-removing the need for a trusted third-party, in other cases reducing their
-capabilities and thus reducing the amount of trust needed in them.
-
-Because smart contracts are executed completely transparently, in a way that
-anybody with access to a node can verify, they can be very useful for ensuring
-agreement between parties.
-
-.. _auction-fil:
-
-Auction smart contract example
-------------------------------
-
-A use case for smart contracts could be for holding an auction; here we program
-the smart contract to accept different bids from anyone and have it keep track
-of the highest bidder.
-When the auction is over, the smart contract sends the winner bid GTU to the seller and all other bids back. The seller then should send the item to the winner.
-
-The smart contract replaces the main role of the auctioneer. The contract itself
-only governs the bidding part, and the on-chain distribution of GTUs. It will
-likely also need some logic for reimbursing the highest bidder if the seller
-does not fulfil their obligations. This will most likely mean that the contract
-needs to support some notion of proof that the seller has indeed fulfilled their
-obligation, or some way for the highest bidder to file a complaint. Smart
-contracts cannot resolve these real-world issues automatically, and the best
-solution is likely going to depend on the specifics of the auction.
-
-What are smart contracts *not* for?
+===================================
+Introduksyon sa mga smart contracts
 ===================================
 
-Smart contracts are a very exciting technology and people are still finding new
-ways to take advantage of them.
-However, there are some cases where smart contracts are not a good solution.
+Ang smart contract ay pirase ng code na user-supplied na isinumite sa Concordium blockchain, 
+ito ay ginagamit upang matukoy ang ugali na hindi direktang parte ng core na protocol. 
+Ang mga smart contracts ay ineexecute ng mga node sa Concordium network ayon sa paunang natukoy na mga patakaran. 
+Ang pagsasagawa nito ay ganap na malinaw, at lahat ng nodes ay dapat sumangayon sa kung ano ang kakalabasan ng eksekusyon
+at magbabase lang sa kung ano ang impormasyon na bukas sa publiko. 
 
-One of the key advantages of smart contracts are the trust in the code
-execution, and to achieve this a large number of nodes in the blockchain network
-have to execute the same code and ensure agreement of the result.
-Naturally, this becomes expensive compared to running the same code on one node
-in some cloud service.
+Ang smart contract ay maaaring makatanggap, maghawak at magpadala ng GTU, maaari din itong makapag obserba ng ibang aspeto ng chain, 
+at ma-maintain ang kanyang sariling estado. Ang mga smart contract ay laging napapatupad bilang pagresponde sa mga **external** na mga aksyon,
+halimbawa, ang account na nagpapadala ng mensahe. Sa pagsasagawa, ang mga smart contract ay madalas na magiging maliit na parte ng mas malaking sistema, 
+na pinagsama sama ang functionality ng on at off chain. Ang halimbawa ng off-chain functionality ay pwedeng server na nakakapag invoke ng smart contract
+na base sa data na galing sa tunay na mundo, tulad ng mga presyo ng mga stock, o impormasyon galing sa panahon.
 
-In cases where a smart contract depends on heavy calculations, it might be
-possible moving this calculation out of the smart contract and have the smart
-contract execute only some key parts of the computation, using cryptographic
-techniques to ensure the other parts are executed correctly.
 
-Finally, it is important to remember that smart contracts have no privacy and
-**everything** the smart contract has access to is accessible to everybody else
-on the Concordium network, meaning it is difficult to handle sensitive data in a
-smart contract. In some cases it might be possible to use cryptographic tools to
-not work with the data directly, but rather have the smart contracts work with
-derived notions such as encryptions and commitments, which hide the actual data.
+Para saan ba ang mga smart contract?
+====================================
 
-Life cycle of a smart contract
-==============================
+Ang mga smart contract ay nakakabawas ng kinakailangan tiwala sa mga third-party, sa ibang mga kaso pwedeng tanggalin na ang pangangailangan ng pinagkakatiwalaang third-party, sa ibang mga kaso mababawasan ang kanilang kapabilidad at dahil dun mababawasan ang tiwala na kailangan para sa kanila.
 
-A smart contract is first deployed to the chain as part of a :ref:`contract
-module <contract-module>`. After this a smart contract can be *initialized* to
-obtain a :ref:`smart contract instance <contract-instances>`. Finally a smart
-contract instance can be repeatedly updated according to its own logic.
+Dahil ang mga smart contract ay napapatupad ng buo at maliwanag, sa pamamaraan na kahit sino na may access sa node ay maaaring magberipika, maaari din silang maging napaka mainam sa pangsigurado ng mga kasunduan sa gitna ng mga partido. 
+
+.. _auction:
+
+Halimbawa ng smart contract na pang subasta
+-------------------------------------------
+
+Ang isang pwedeng pag gamitan ng mga smart contract ay ang paggawa ng subastahan; Dito pinoprogram
+ang smart contract para tumanggap ng ibat-ibang mga bid sa kahit na sino at mai-track ang pinaka 
+mataas na taga pusta. 
+Kapag tapos na ang subasta, ang smart contract ay magpapadala ng GTU sa tagabenta na galing sa may panalong pusta
+at yung mga ibang pusta ay ibabalik. Dapat ipadala ng tagabenta ang item sa nanalo. 
+
+Ang smart contract ay papalit sa pangunahing papel ng auctioneer. Ang kontrata ang tanging 
+nag gogovern sa bidding part, at sa on-chain na pagpapamahagi ng GTUs. Ito ay mangangailangan din ng 
+konting lohika para sa pagsauli ng taya kung sakaling hindi magampanan ng pinaka mataas na pumusta 
+ang kanyang mga tunkulin. Ito ay nangangahulugan na ang kontrata ay kailangang magkaroon ng karampatang
+suporta na pagkakapatunayan na ang tagabenta ay tunay na nagampanan ang kanyang tunkulin, o paraan para ang 
+pinaka mataas na pumusta ay makapag hain ng reklamo kung sakali. Ang mga smart contract ay hindi nakakalutas
+ng mga real-world na isyu ng kusa, at ang pinaka mainam na solusyon at nakadepende malamang sa mga specifics 
+ng subusta.
+
+
+Para saan *hindi na-aangkop* ang mga smart contract?
+====================================================
+
+Ang mga smart contract ay sobrang nakaka-excite na teklolohiya at ang mga tao ay 
+nakakahanap pa ng mga bagong paraan kung papaano ito sasamantalahin. 
+Kaso, may mga kaso din na ang mga smart contract ay hindi mainam na solusyon. 
+
+Isa sa mga kalamangan ng mga smart contract ay ang tiwala sa pagpapatupad ng code, 
+at para magampanan ito may malaking bilang ng mga node sa loob ng network ng blockchain 
+ang kailangang magpatupad ng kaparehong code para masigurado ang kasunduan para sa resulta. 
+Natural, ito ay magiging mas mahal, kumpara sa pagtakbo ng parehong code ng isang node na 
+tumatakbo sa ibang cloud service.
+
+
+Sa mga kaso na ang mga smart contract ay dumedepende sa mabibigat na mga kalkulasyon, 
+maaaring posible na ilipat ang mga kalkulasyon sa labas ng smart contract at ipatupad lang
+sa smart contract ang ibang mahalagang bahagi ng komputasyon, gamit ang mga teknik na cryptographic 
+para masigurado ang ibang parte ay mapatupad ng tama. 
+
+Sawakas, important na matandaan na ang smart contract ay hindi pribado at
+**lahat** ng smart contract ay na may-access ay maaring ma-access din ng iba sa
+Concordium network, ibig sabihin mahirap hawakan ang sensitibong data sa
+smart contract. Sa iilang kaso posibleng gumamit ng cryptographic tools para
+hindi direktang makikita ang data, ngunit naayon na ang smart contracts ang gumagawa sa
+derived notions tulad ng encryptions at commitments, na natatago ang aktwal na data.
+
+
+Siklo ng buhay ng smart contract
+================================
+
+Ang smart contract ay unang na-ideploy sa chain bilang parte ng :ref:`contract
+module <contract-module>`. Pagkatapos nito ang smart contract ay maaring mag *initialized* para
+makuha ang :ref:`smart contract instance <contract-instances>`. Sawakas ang smart
+contract instance ay maaring paulit-ulit na ma-update ayon sa sariling lohika.

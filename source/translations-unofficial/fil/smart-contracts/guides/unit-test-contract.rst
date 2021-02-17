@@ -202,7 +202,9 @@ for ``concordium-std`` and uses the test runner from ``cargo-concordium``.
    ``assert!``,  ay *not* shown kapag nag cocompile sa Wasm.
    
    Sa halip gumamit ng ``fail!`` at ``claim!`` variants para sa mga pahayag
-   kapag nag tetest, 
+   kapag nag tetest,  ang mga report na to ay sumasalo sa mga maling mensahe
+   patungo sa test runner  *before* pumalya ang test.
+   Parehas silang parte ng  ``concordium-std``.
 
    Instead use ``fail!`` and the ``claim!`` variants to do assertions when
    testing, as these reports back the error messages to the test runner *before*
@@ -212,3 +214,4 @@ for ``concordium-std`` and uses the test runner from ``cargo-concordium``.
 .. todo::
 
    Use link concordium-std: docs.rs/concordium-std when crate is published.
+   Gamitin ang link na concordium-std: docs.rs/concordium-std kung ang crate ay natala.

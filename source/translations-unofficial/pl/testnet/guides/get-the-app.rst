@@ -25,7 +25,7 @@ Platforma ty używasz, sposób montażu aplikacja różni się nieznacznie.
 Instalacja na Androidzie
 ========================
 
-Wymagania instalacyjne: Android 8 lub nowsza.
+Wymagania instalacyjne: Android 8 lub Ostatnia wersja.
 
 1. Ściągnij the `Concordium ID APK`_ do telefonu.
 2. Możesz zobaczyć ostrzeżenie o ściąganie the .apk-plik. Jeśli zostaniesz zapytany czy chcesz zachować the .apk-plik, naciśnij **OK**.
@@ -36,7 +36,7 @@ Wymagania instalacyjne: Android 8 lub nowsza.
 Instalacja na iOS
 ====================
 
-Wymagania instalacyjne: iOS 13 lub nowsza.
+Wymagania instalacyjne: iOS 13 lub Ostatnia wersja.
 
 Instalowanie the Concordium ID aplikacja na iOS wymaga instalacji z Apple’s TestFlight aplikacja, który jest używany do dystrybucji beta wersje z iOS aplikacje.
 

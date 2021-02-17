@@ -96,7 +96,7 @@ Merong mga bagay na dapat bigyan pansin:
      i.e., hindi lang ito parte ng halimbawa.
 
 - Mga uri ng functions:
-  
+
   * Ang init function ay dapat uri ng ``&impl HasInitContext -> InitResult<MyState>``
     kung saan ``MyState`` ay uri na nagpapatupad ang ``Serialize`` trait.
   * Ang receive function ay kailangan kumuha ng ``A: HasActions`` na uri ng parameter,
@@ -248,7 +248,7 @@ Sapagkat, kahit nag-cocompile sa ``--release`` ang resulta ng pagbuo ay naglalam
 malalaking bahagi ng debug information sa custom sections, na hindi napapakinabangan sa
 smart contracts on-chain.
 
-Para mag-optimize ng build at payagan ang bagong features tulad ng embedding schemas, 
+Para mag-optimize ng build at payagan ang bagong features tulad ng embedding schemas,
 nirerekomenda na gamitin ang ``cargo-concordium`` para magbuo ng smart contracts.
 
 .. seealso::
@@ -279,7 +279,7 @@ Wag mag-panik
 Iwasan ang paggawa ng black holes
 ---------------------------------
 
-Ang smart contract ay hindi kailangan gamitin ang amount ng GTU na pinadala nito, at 
+Ang smart contract ay hindi kailangan gamitin ang amount ng GTU na pinadala nito, at
 bilang default ang smart contract ay hindi nagtutukoy ng kahit anong ugali sa pag-ubos ng balanse
 ng isang instance, sa kaso na may nagpadala ng GTU.
 Itong GTU ay habang-buhay na *lost*, at wala paraan para masalba ito.

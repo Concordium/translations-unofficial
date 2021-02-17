@@ -97,7 +97,7 @@ Pagkatapos alin man sa mga identity issuance flows, matutugunan ka sa sumusunod 
       :align: center
 
 Depende sa napili mong identity provider, ang layout ng identity card ay maaaring bahagyang magkakaiba. Maaari mong makita na ang
-Halimbawa ng Account 1 ay hawak ng identity Halimbawa ng Pagkakakilanlan. Ang account na nilikha sa panahon ng prosesong ito ay mamarkahan ng 
+Halimbawa ng Account 1 ay hawak ng identity Halimbawa ng Pagkakakilanlan. Ang account na nilikha sa panahon ng prosesong ito ay mamarkahan ng
 *(Initial)* sa app, upang malaman mo kung aling account ang paunang account na isinumite sa chain ng identity provider.
 
 Sa pagpindot ng **Finish** ikaw ay mapupunta sa *Accounts screen*. Sa screen na ito makikita mo ang iyong bagong likhang paunang

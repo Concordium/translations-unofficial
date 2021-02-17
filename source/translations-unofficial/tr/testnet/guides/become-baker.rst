@@ -3,7 +3,7 @@
 .. _node-dashboard: http://localhost:8099
 .. _Discord: https://discord.com/invite/xWmQ5tp
 
-.. _become-a-baker:
+.. _become-a-baker-tr:
 
 =============================================
 Bloklar oluşturmak için Fırıncı (Baker) olmak

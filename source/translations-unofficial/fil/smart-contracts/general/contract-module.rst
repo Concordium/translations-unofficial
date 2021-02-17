@@ -1,4 +1,4 @@
-.. _contract-module:
+.. _contract-module-fil:
 
 ======================
 Smart contract module

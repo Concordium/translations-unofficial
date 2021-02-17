@@ -1,8 +1,8 @@
 .. _contract-instances:
 
-========================
-Smart contract instances
-========================
+===========================
+Instances ng Smart contract
+===========================
 
 .. todo::
 

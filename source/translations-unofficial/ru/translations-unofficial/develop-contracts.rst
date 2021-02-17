@@ -12,8 +12,6 @@
         - Don't panic
         - Avoid heavy calculations
 
-.. _writing-smart-contracts:
-
 =====================================
 Разработка смарт-контрактов в  Rust
 =====================================

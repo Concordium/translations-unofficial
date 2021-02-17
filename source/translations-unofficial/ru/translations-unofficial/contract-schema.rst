@@ -10,8 +10,6 @@
 .. _`custom section`: https://webassembly.github.io/spec/core/appendix/custom.html
 .. _`implementation in Rust`: https://github.com/Concordium/concordium-contracts-common/blob/main/src/schema.rs
 
-.. _contract-schema:
-
 ======================
 Схемы смарт-контрактов
 ======================

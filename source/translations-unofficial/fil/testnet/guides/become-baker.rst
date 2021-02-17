@@ -173,7 +173,7 @@ pagpapalit
 
 Magbigay ng isang ``--no-restake`` na flag upang maiwasan ang awtomatikong
 pagdaragdag ng mga gantimpala sa staked na halaga sa baker. Ang pag-uugali
-na ito ay inilarawan sa seksyong  `Restaking ng mga kita`.
+na ito ay inilarawan sa seksyong  `Restaking ng mga kita`_.
 
 Upang masimulan ang node gamit ang mga key ng baker at simulang gumawa
 ng mga block kailangan mo munang i-shut down ang kasalukuyang running node

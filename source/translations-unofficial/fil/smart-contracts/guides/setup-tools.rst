@@ -43,7 +43,7 @@ Para sa detalye kung paano gamitin ang Cargo Concordium patakbuhin ito:
 Concordium software
 ===================
 
-Ang tool para mag-deploy at mag-interact sa smart contract ay 
+Ang tool para mag-deploy at mag-interact sa smart contract ay
 :ref:`concordium-client<concordium_client>`. Ito ay ipinamamahagi bilang parte ng
 :ref:`Concordium software<downloads>` package.
 

@@ -5,7 +5,7 @@ I-simulate ang mga contract functions sa local
 ==============================================
 
 Ang gabay na ito ay patungkol sa kung paano mag-simulate sa local ang invocation ng ibang init o
-ng receive function mula sa Wasm smart contract module sa binigay na kontexto at 
+ng receive function mula sa Wasm smart contract module sa binigay na kontexto at
 estado.
 Itong simulation na ito ay mahalaga sa pag-inspect ng isang smart contract at ang kinalabasan nito
 sa partikular na mga pagkakataon.
@@ -41,7 +41,7 @@ Para i-simulate ang instantiation ng isang smart contract instance gamit ang
                                --out-bin state.bin
 
 ``init-context.json`` (used with the ``--context`` parameter) ay isang file na
-naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang 
+naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang
 tagapagpadala ng transaksyon, at anong account ang i-invoke para sa function na ito.
 Ang halimbawa nito ay pweding:
 

@@ -1,15 +1,15 @@
 .. _unit-test-contract-fil:
 
-============================
-Unit test a contract in Rust
-============================
+=============================
+Unit test ng kontrata sa Rust
+=============================
 
 Ang gabay na eto ay mag papakita kung paano mag sulat ng unit tests para sa smart contract
 sa Rust.
 Para sa pag test ang smart contract Wasm modulo, tignan ang :ref:`local-simulate`.
 
 Ang smart contract sa Rust ay sinulat bilang library at makakapag unit test tayo dito
-katulad ng isang library sa pagdagdag ng function na mayroong ``#[test]``attribute.
+katulad ng isang library sa pagdagdag ng function na mayroong ``#[test]`` attribute.
 
 .. code-block:: rust
 

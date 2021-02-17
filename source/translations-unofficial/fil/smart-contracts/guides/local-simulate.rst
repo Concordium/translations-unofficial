@@ -110,4 +110,4 @@ An example of this context could be:
 
 .. seealso::
 
-   For a reference of the context see :ref:`simulate-context`.
+   Para sa reference ng kontexto tignan ang :ref:`simulate-context`.

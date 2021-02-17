@@ -54,16 +54,16 @@ Ito ay gumagamit ng Cargo_ para sa pagbuo, pero nagpapatakbo rin ng mga optimiza
    Tandaan na kahit merong ``--release`` set, ang maproproduce na Wasm module ay may kasamang
    impormasyon sa debug.
 
-Removing host information from build
-====================================
+Pagtatanggal ng host information mula sa build
+==============================================
 
-The compiled Wasm module can contain information from the host machine building
-the binary; information such as the absolute path of the ``.cargo`` directory.
+Ang na-compile na Wasm module ay naglalaman ng inpormasyon mula sa host machine na bumuo
+ng binary; inpormasyon tulad ng absolute path ng ``.cargo`` directory.
 
-For most people this is not sensitive information, but it is important to be
-aware of it.
+Para sa maraming tao ito ay hindi sensitibong inpormasyon, pero importante rin na maging
+alam mo ang patungkol dito.
 
-On Linux the paths can be inspected by running:
+Sa Linux ang mga paths ay pwedeng ma-inspeksyon sa pamamagitan ng pagpapatakbo ng:
 
 .. code-block:: console
 
@@ -71,40 +71,40 @@ On Linux the paths can be inspected by running:
 
 .. rubric:: The solution
 
-The ideal solution would be to remove this path entirely, but that is
-unfortunately not a trivial task in general.
+Ang ideyal na solusyon ay tanggalin ang buong path na ito, pero sa
+kasamaang palad di ito madaling gawin.
 
-It is possible to work around the issue by using the ``--remap-path-prefix``
-flag when compiling the contract.
-On Unix-like systems the flag can be passed directly to the ``cargo concordium``
-invocation using the ``RUSTFLAGS`` environment variable:
+Pwedeng magkaroon ng remedyo sa isyu sa paggamit ng ``--remap-path-prefix``
+i-flag ito kapag nagco-compile na ng contract.
+Sa mga Unix-like na mga sistema ang flag ay pwedeng ipasa ng deretso sa ``cargo concordium``
+invocation gamit ang ``RUSTFLAGS`` environment variable:
 
 .. code-block:: console
 
    $RUSTFLAGS="--remap-path-prefix=$HOME=" cargo concordium build
 
-Which will replace the users home path with the empty string. Other paths could
-be mapped in a similar way. In general using ``--remap-path-prefix=from=to``
-will map ``from`` to ``to`` at the beginning of any embedded path.
+Na kung saan ay papalitan nito ang home path ng users ng empty string. Ang ibang mga paths ay pwedeng
+ma-mapa sa parehong pamamaraan. Sa pangkalahatang gamit ``--remap-path-prefix=from=to``
+ay mama-mapa ``from`` to ``to`` sa simula ng kahit anong embedded path.
 
-The flag can also be set permanently in the ``.cargo/config`` file in your
-crate, under the build section:
+Ang flag ay pwedeng i-set ng permanente sa ``.cargo/config`` file sa iyong
+crate, sa ilalim ng build section:
 
 .. code-block:: toml
 
    [build]
    rustflags = ["--remap-path-prefix=/home/<user>="]
 
-where `<user>` should be replaced with the user building the wasm module.
+kung saan `<user>` ay dapat palitan ng user na bumubuo ng wasm module.
 
-Caveats
--------
+mga pag-iingat
+--------------
 
-The above will likely not fix the issue if the ``rust-src`` component is
-installed for the Rust toolchain. This component is needed by some Rust tools
-such as the rust-analyzer_.
+Ang nakasaad sa itaas ay hindi mareresolba ang isyu kung ang ``rust-src`` na component ay
+naka-install para sa Rust toolchain. Ang component na ito ay kailangan ng ibang Rust tools
+tulad ng rust-analyzer_.
 
 .. seealso::
 
-   An issue reporting the problem with ``--remap-path-prefix`` and ``rust-src``
+   Isang isyu na inirereport ang problema kasama ang ``--remap-path-prefix`` and ``rust-src``
    https://github.com/rust-lang/rust/issues/73167

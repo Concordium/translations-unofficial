@@ -6,7 +6,7 @@ Gumawa ng contract schema
 =========================
 
 Itong guide na ito ay ipapakita sa iyo kung paano gumawa ng smart contract schema, paano i-export ito
-sa isang file, at/o i-embed ant schema sa smart contract moduel, gamit ang 
+sa isang file, at/o i-embed ant schema sa smart contract moduel, gamit ang
 ``cargo-concordium``.
 
 Paghahanda
@@ -97,7 +97,7 @@ merong pagpipilian na i-embed ang schema at/o isulat ang schema sa isang file.
 Ang pag-embed sa schema
 -----------------------
 
-Para ma-embed natin ang schema sa smart contract module, magdadagdag tayo ng 
+Para ma-embed natin ang schema sa smart contract module, magdadagdag tayo ng
 ``--schema-embed`` para buoin ang command
 
 .. code-block:: console

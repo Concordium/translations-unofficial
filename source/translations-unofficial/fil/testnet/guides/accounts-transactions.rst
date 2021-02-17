@@ -118,7 +118,7 @@ Maari mong mapansin dati na, ang accounts ay meron ding :ref:`glossary-shielded-
 shielded o (encrypted) na halaga ng GTU sa account. Subukan nating magdagdag ng shielded na GTU sa ating *Example Account 2*. Simulan ito sa pagpindot ng
 **Shielded Balance** sa lugar ng iyong account card.
 
- .. image:: images/concordium-id/acc19.png
+.. image:: images/concordium-id/acc19.png
       :width: 32%
 .. image:: images/concordium-id/acc20.png
       :width: 32%

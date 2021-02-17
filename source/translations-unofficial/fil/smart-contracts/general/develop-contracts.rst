@@ -12,7 +12,7 @@
         - Don't panic
         - Avoid heavy calculations
 
-.. _writing-smart-contracts:
+.. _writing-smart-contracts-fil:
 
 ======================================
 Pag-develop ng smart contracts sa Rust

@@ -24,7 +24,7 @@ sa mga node sa Concordium Network. Matapos sundin ang gabay na ito, magagawa mon
 Di mo kailangan ng account para magpatakbo ng node.
 
 Bago ka magsimula
-================
+=================
 
 Bago ka magpatakbo ng Concordium node ay kakailanganin mong
 
@@ -72,8 +72,8 @@ mga hakbang:
 
 -  Para sa mga *Mac* users: sa unang pagkakataon na buksan mo ang tool, i-right-click ang
    ``concordium-node`` binary at piliin ang **Open**. Isang mensahe
-      lilitaw na ang software ay mula sa isang hindi kilalang developer.
-      Piliin ang **Open** uli.
+   lilitaw na ang software ay mula sa isang hindi kilalang developer.
+   Piliin ang **Open** uli.
 -  Para sa mga *Windows* users: sa unang pagkakataon na buksan mo ang tool, i-double-click
    ang ``concordium-node`` binary. Isang mensahe lilitaw na ang software ay mula sa isang hindi kilalang developer. Piliin ang **More info** →
    **Run anyway**.

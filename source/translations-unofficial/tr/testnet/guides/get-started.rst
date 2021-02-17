@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-get-started:
+.. _testnet-get-started-tr:
 
 ===============================================
 Concordium ID: Uygulama kurulumları ile başlama

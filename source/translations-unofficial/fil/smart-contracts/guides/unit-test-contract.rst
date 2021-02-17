@@ -33,20 +33,16 @@ Pagtakbo ng test ay magagawa gamit ang ``cargo``:
    $cargo test
 
 
-
-By default, this command compiles the contract and tests to machine code for
-your local target (most likely ``x86_64``), and runs them.
-This kind of testing can be useful in initial development and for testing
-functional correctness.
-For comprehensive testing, it is important to involve the target platform, i.e.,
+Bilang default, iniuugnay ng utos na ito ang kontrata at mga pagsubok sa machine code para sa
+ang iyong lokal na target (madalas "x86_64"), at pinapatakbo ang mga ito.
+Ang ganitong uri ng testing ay maaaring maging kapaki-pakinabang sa paunang pag-unlad at para sa pagsubok
+pagwawasto ng pag-andar.
+Para sa komprehensibong pagsubok, mahalagang isama ang target na platform, ibig sabihin,
 `Wasm32`.
-There are a number of subtle differences between platforms, which can change the
-behaviour of a contract.
-One difference is regarding the size of pointers, where `Wasm32` uses four bytes
-as opposed to eight, which is common for most platforms.
-
-
-
+Mayroong isang bilang ng mga banayad na pagkakaiba sa pagitan ng mga platform, na maaaring baguhin ang
+pag-uugali ng isang contract.
+Ang isang pagkakaiba ay tungkol sa laki ng mga pointers, kung saan ang `Wasm32` ay gumagamit ng apat na byte
+taliwas sa walong, na karaniwan para sa karamihan ng mga platform.
 
 
 Pagsusulat unit tests
@@ -83,7 +79,7 @@ Pag tetest ng stubs para sa function arguments ay makikita sa submodule na
 
 .. seealso::
 
-   Para sa iba pang impormasyon at halimbawa tignan ang pag gawa ng 
+   Para sa iba pang impormasyon at halimbawa tignan ang pag gawa ng
    dokyumento ng  concordium-std.
 
 .. todo::
@@ -106,7 +102,7 @@ pinadalang Concordium nodes.
 .. seealso::
 
    Para sa gabay kung pano iinstall ang ``cargo-concordium``, tignan ang :ref:`setup-tools`.
-   
+
 Ang unit test ay kailangan lagyan ng ``#[concordium_test]`` imbis na
 ``#[test]``, at gumagamit ng ``#[concordium_cfg_test]`` imbis na ``#[cfg(test)]``:
 
@@ -124,9 +120,9 @@ Ang unit test ay kailangan lagyan ng ``#[concordium_test]`` imbis na
        #[concordium_test]
        fn another_test() { ... }
    }
-   
+
 Ang   ``#[concordium_test]`` macro ay nag tatalaga ng ating test na tumakbo
-sa Wasm, kung ang ``concordium-std`` ay na compile gamit ang ``wasm-test`` 
+sa Wasm, kung ang ``concordium-std`` ay na compile gamit ang ``wasm-test``
 na feature, kung hindi man bumabalik eto upang kumilos tulad ng ``#[test]``,
 nangangahulugang posible pa ring tumakbo ang unit tests papunta sa native code
 gamit ang ``cargo test``.
@@ -140,15 +136,15 @@ Ang Tests ay mabubuo gamit ang:
 .. code-block:: console
 
    $cargo concordium test
-   
+
 Ang command na eto ay nag cocompile sa tests para sa Wasm kasama ang ``wasm-test``
 na pinagana para sa ``concordium-std``at gamit ang test runner mula sa  ``cargo-concordium``.
 
 .. warning::
-  
+
    Ang mga error messages mula sa  ``panic!``, at ang iba pang variations ng
    ``assert!``,  ay *not* shown kapag nag cocompile sa Wasm.
-   
+
    Sa halip gumamit ng ``fail!`` at ``claim!`` variants para sa mga pahayag
    kapag nag tetest,  ang mga report na to ay sumasalo sa mga maling mensahe
    patungo sa test runner  *before* pumalya ang test.

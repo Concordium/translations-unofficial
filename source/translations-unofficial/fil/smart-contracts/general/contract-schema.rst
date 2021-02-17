@@ -45,7 +45,7 @@ Ang solusyon para sa pag-iwas sa manu-manong pag-parse ng mga byte ay upang maku
 Ang schema ay maaaring naka-embed sa isang smart contract module na na-deploy sa chain, o nakasulat sa isang file at ipinasa sa off-chain.
 
 Dapat mo bang i-embed o sumulat sa isang file?
-=============================================
+==============================================
 
 Kung ang isang contract schema ay dapat na naka-embed o nakasulat sa isang file ay nakasalalay sa sitwasyon.
 
@@ -128,10 +128,10 @@ Ang pang-embed ng mga schemas on-chain
 
 Ang mga scheme ay naka-embed sa mga smart contract module gamit ang `custom
 section`_ featuret ng Wasm modules.
-Pinapayagan nito ang Wasm modules na isama ang mga named section of bytes, na di naman nakakaapekto sa 
+Pinapayagan nito ang Wasm modules na isama ang mga named section of bytes, na di naman nakakaapekto sa
 semantics ng pagpapatakbo sa Wasm module.
 
 Ang lahat ng schemas ay nakakolekta at dinadagdag sa isang custom section na pinangalanang
 ``concordium-schema-v1``.
-Ang koleksyon na ito ay listahan ng mga pares, naglalaman ng mga pangalan ng mga contracte na encoded sa 
+Ang koleksyon na ito ay listahan ng mga pares, naglalaman ng mga pangalan ng mga contracte na encoded sa
 UTF-8 at ang contract schema bytes.

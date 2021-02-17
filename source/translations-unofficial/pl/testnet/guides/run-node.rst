@@ -18,7 +18,7 @@ Informacja o blokach i transakcjach do węzłów w Concordium
 sieć. Po wykonaniu tego przewodnika, będziesz w stanie
 
 -  uruchom węzeł(node) Concordium
--  obserwuj to na panelu sieciowym i
+-  obserwuj to w Sieć deska rozdzielcza i
 -  zapytaj o stan łańcucha blokowego Concordium bezpośrednio z twojego
    maszyna.
 
@@ -124,8 +124,8 @@ Bloki twój węzeł(node) otrzymał) z the **Chain Len** wartość
 w górnej części deski rozdzielczej.
 
 
-Włącz przychodzące połączenia
-==============================
+Włączanie przychodzący połączeń
+=================================
 
 Jeśli jesteś bieganie Twój węzeł(node) za firewallem, lub za domem
 router, wtedy prawdopodobnie będziesz mógł łączyć się tylko z innymi węzłami,

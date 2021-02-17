@@ -36,7 +36,7 @@ ang isang inihurnong blocks ay idinagdag sa chain ang baker ng node ay makakatan
    upang magparehistro at pamahalaan ang isang baker.
 
 Mga kahulugan
-===========
+=============
 
 Baker
 -----
@@ -108,7 +108,7 @@ stakes ay naayos na. Ang mga panahon ay may tagal ng oras na naayos sa Genesis b
 Sa testnet, ang mga epoch ay may tagal na **1 oras**.
 
 Pagsisimula ng baking
-============
+=====================
 
 Pamamahala ng mga account
 -------------------------
@@ -207,7 +207,7 @@ ay kasama sa isang block.
    nagsimula ang epoch `E+2`.
 
 Pamamahala sa baker
-==================
+===================
 
 Sinusuri ang katayuan ng baker at ang lakas nito sa loterya
 -----------------------------------------------------------
@@ -217,12 +217,12 @@ ang iba't ibang mga mapagkukunan na nag-aalok ng iba't ibang antas ng
 katumpakan sa ipinakitang impormasyon.
 
 - Sa `network dashboard <http://dashboard.testnet.concordium.com>`_, ipapakita
-ng iyong node ang baker ID nito sa ``Baker`` kolum.
+  ng iyong node ang baker ID nito sa ``Baker`` kolum.
 - Gamit ang ``concordium-client`` maaari mong suriin ang listahan ng mga
-kasalukuyang baker at ang kamag-anak na staked na halaga na hawak nila, ibig
-sabihin ang kanilang lakas sa loterya. Matutukoy ng lakas ng lottery kung
-gaano ito posibilidad na ang isang naibigay na baker ay mananalo sa lottery
-at magluto ng isang block.
+  kasalukuyang baker at ang kamag-anak na staked na halaga na hawak nila, ibig
+  sabihin ang kanilang lakas sa loterya. Matutukoy ng lakas ng lottery kung
+  gaano ito posibilidad na ang isang naibigay na baker ay mananalo sa lottery
+  at magluto ng isang block.
 
   .. code-block:: console
 
@@ -237,7 +237,7 @@ at magluto ng isang block.
          ...
 
 - Gamit ang ``concordium-client`` maaari mong suriin kung mayroon ang account
-nakarehistro ng isang baker at ang kasalukuyang halaga na natipon ng baker na iyon.
+  nakarehistro ng isang baker at ang kasalukuyang halaga na natipon ng baker na iyon.
 
   .. code-block:: console
 
@@ -250,10 +250,10 @@ nakarehistro ng isang baker at ang kasalukuyang halaga na natipon ng baker na iy
      ...
 
 - Kung ang staked na halaga ay sapat na malaki at mayroong isang node na
-tumatakbo kasama ang mga key ng baker na na-load, ang baker na iyon ay dapat
-na gumawa ng mga block at maaari mong makita sa iyong mobile wallet na ang
-mga gantimpala sa pagbe-bake ay natanggap ng account, tulad ng nakikita sa
-imaheng ito:
+  tumatakbo kasama ang mga key ng baker na na-load, ang baker na iyon ay dapat
+  na gumawa ng mga block at maaari mong makita sa iyong mobile wallet na ang
+  mga gantimpala sa pagbe-bake ay natanggap ng account, tulad ng nakikita sa
+  imaheng ito:
 
   .. image:: images/bab-reward.png
      :align: center
@@ -311,7 +311,7 @@ ang transaksyon ay kasama sa isang block, maaari itong kumunsulta sa pamamagitan
    | Gumagamit si Baker ng bagong stake                           |                                                | ✓                                              |
    +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
    | Maaaring mabawasan muli ang                                  | ✗                                              | ✓                                              |
-   | stake o matanggal ang baker                                  |                                                |                                                 |
+   | stake o matanggal ang baker                                  |                                                |                                                |
    +--------------------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 .. note::

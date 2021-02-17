@@ -1,6 +1,6 @@
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _guide-account-transactions:
+.. _guide-account-transactionstr:
 
 ===========================================
 Concordium ID:Hesaplar ve İşlemler Hakkında

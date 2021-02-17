@@ -60,7 +60,7 @@ Upang mag-upgrade sa kasalukuyang software ng Concordium para sa Open Testnet 4:
 
    Ang mga account na nilikha para sa mga naunang bersyon ay hindi na wasto para sa Open Testnet 3. Samakatuwid, kung mayroon kang mga nakaimbak na account mula sa naunang mga bersyon ay inirerekumenda namin ang pag-tayp ng **y** na magbubura sa lahat ng mga accounts keys.
 
-.. _running-a-node:
+.. _running-a-node-fil:
 
 Pagpapatakbo ng node
 ====================

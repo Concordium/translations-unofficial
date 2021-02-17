@@ -8,7 +8,7 @@
 Mag-compile ng Rust smart contract module
 =========================================
 
-Itong guide na ito ay ipapakita sa iyo kung paano mag-compile ng smart contract module na isinulat sa Rust papunta sa 
+Itong guide na ito ay ipapakita sa iyo kung paano mag-compile ng smart contract module na isinulat sa Rust papunta sa
 Wasm module.
 
 Paghahanda

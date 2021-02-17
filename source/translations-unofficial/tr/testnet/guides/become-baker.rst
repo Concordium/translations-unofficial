@@ -70,7 +70,7 @@ Bir blok pişirmek için seçilecek bir fırıncının, kazanma olasılığı ka
 
 Aynı stake tutarı bulunan bloğun zincire dahil edilmesiyle ilgili sonladırmanın başarılı olması yada olmaması hesaplarında da kullanılır. Detaylarını görmek için See Kesinleştirme_.
 
-.. _epochs-and-slots:
+.. _epochs-and-slots-tr:
 
 Çağlar ve yuvalar (Epochs and slots)
 ------------------------------------

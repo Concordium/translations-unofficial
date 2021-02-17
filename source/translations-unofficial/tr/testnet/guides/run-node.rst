@@ -53,7 +53,7 @@ Open Testnet 4 için mevcut en güncel Concordium yazılına yükseltim:
    Önceki sürümler için yaratılan hesaplar Open Testnet'in güncel sürümünde artık geçerli değildir. Bu nedenle eğer daha önceki sürümde bilgisayarınızda saklanmış hesaplar varsa bu adımda *Y* seçeneğiyle devam ederek tüm hesap anahtarlarını silmenizi tavsiye ederiz.
 
 
-.. _running-a-node:
+.. _running-a-node-tr:
 
 Düğüm çalıştırmak
 =================
@@ -116,7 +116,7 @@ Konteyneri sıfırlamak için ``concordium-node-reset-data`` veya terminal ekran
 Güvenlik duvarınızı yalnızca 8888 (peer-to-peer bağlantı portu) portundan genel bağlantılara izin verecek şekilde yapılandırmanızı *şiddetle tavsiye ederiz*. Diğer portlara erişimi olan bir başkası düğğümünüzün kontrolünü ele geçirebilir, üzerindeki hesaplara ve düğümde kayıtlı bilgilerinize ulaşabilir.
 
 
-.. _stop-a-node:
+.. _stop-a-node-tr:
 
 Düğümü durdurmak
 ================

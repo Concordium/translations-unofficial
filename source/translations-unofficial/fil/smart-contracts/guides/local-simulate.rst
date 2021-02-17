@@ -1,35 +1,35 @@
 .. _local-simulate-fil:
 
-===================================
-Locally simulate contract functions
-===================================
+==============================================
+I-simulate ang mga contract functions sa local
+==============================================
 
-This guide is about how to locally simulate an invocation of some init or
-receive function from a Wasm smart contract module in a given context and
-state.
-This simulation is useful for inspecting a smart contract and the outcome in
-specific scenarios.
+Ang gabay na ito ay patungkol sa kung paano mag-simulate sa local ang invocation ng ibang init o
+ng receive function mula sa Wasm smart contract module sa binigay na kontexto at 
+estado.
+Itong simulation na ito ay mahalaga sa pag-inspect ng isang smart contract at ang kinalabasan nito
+sa partikular na mga pagkakataon.
 
 .. seealso::
 
-   For a guide on automated unit tests, see :ref:`unit-test-contract`.
+   Para sa gabay sa awtomatikong unit tests, tignan ang :ref:`unit-test-contract`.
 
-Preparation
-===========
+Paghahanda
+==========
 
-Make sure you have ``cargo-concordium`` installed, if not follow the guide
+Siguraduhin na meron kang naka-install na ``cargo-concordium``, kung wala sundan mo ang gabay na
 :ref:`setup-tools`.
-You will also need a smart contract module in Wasm to simulate.
+Kakailanganin mo rin ang isang smart contract module sa Wasm para i-simulate.
 
 .. todo::
 
-   Write the rest, when the schema stuff is in place.
+   Isulat ang mga sumusunod, kapag ang schema stuff ay nakapwesto na.
 
-Simulating instantiation
-========================
+Pag-simulate ng instantiation
+=============================
 
-To simulate the instantiation of a smart contract instance using
-``cargo-concordium``, run the following command:
+Para i-simulate ang instantiation ng isang smart contract instance gamit ang
+``cargo-concordium``, patakbuhin ang sumusunod na command:
 
 .. code-block:: console
 
@@ -40,10 +40,10 @@ To simulate the instantiation of a smart contract instance using
                                --parameter-bin parameter.bin \
                                --out-bin state.bin
 
-``init-context.json`` (used with the ``--context`` parameter) is a file that
-contains context information such as the current state of the chain, the
-sender of the transaction, and which account invoked this function.
-An example of this context could be:
+``init-context.json`` (used with the ``--context`` parameter) ay isang file na
+naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang 
+tagapagpadala ng transaksyon, at anong account ang i-invoke para sa function na ito.
+Ang halimbawa nito ay pweding:
 
 .. code-block:: json
 
@@ -61,13 +61,13 @@ An example of this context could be:
 
 .. seealso::
 
-   For a reference of the context see :ref:`simulate-context`.
+   Para sa reference ng context tignan ang :ref:`simulate-context`.
 
 
-Simulating updates
-==================
+Pag-simulate ng mga updates
+===========================
 
-To simulate an update to a contract smart contract instance using
+Para ma-simulate ang update sa isang contract smart contract instance using
 ``cargo-concordium``, run:
 
 .. code-block:: console

@@ -1,7 +1,5 @@
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _guide-account-transactions:
-
 ================================================================
 Concordium ID: Начало работы с учетными записями и транзакциями
 ================================================================
@@ -110,8 +108,6 @@ Concordium ID: Начало работы с учетными записями и
 .. image:: images/concordium-id/acc18.png
       :width: 32%
       :align: center
-
-.. _move-an-amount-to-the-shielded-balance:
 
 Перенос суммы на защищенный баланс
 ========================================

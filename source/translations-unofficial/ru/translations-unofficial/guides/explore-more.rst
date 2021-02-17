@@ -1,8 +1,6 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-explore-more:
-
 ==========================================
 Concordium ID: исследуйте страницу *More*
 ==========================================

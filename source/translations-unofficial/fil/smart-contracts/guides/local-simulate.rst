@@ -82,7 +82,7 @@ Para ma-simulate ang update sa isang contract smart contract instance using
                                  --out-bin state-out.bin
 
 ``receive-context.json`` (ginagamit kasama ang ``--context`` parameter) ay isang file na
-naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang 
+naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang
 tagapagpadala ng transaksyon, at anong account ang i-invoke para sa function na ito.
 Ang halimbawa nito ay pwedeng:
 

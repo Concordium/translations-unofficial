@@ -92,13 +92,13 @@ ng smart contract. Para mag-patupad, ang user ay dapat gumawa ng *instance* ng c
 
    Tignan ang :ref:`contract-instances` para sa iba pang impormasyon.
 
-.. _smart-contracts-on-chain:
+.. _smart-contracts-on-chain-fil:
 
-.. _smart-contracts-on-the-chain:
+.. _smart-contracts-on-the-chain-fil:
 
-.. _contract-on-chain:
+.. _contract-on-chain-fil:
 
-.. _contract-on-the-chain:
+.. _contract-on-the-chain-fil:
 
 Smart contract sa loob ng chain
 ===============================

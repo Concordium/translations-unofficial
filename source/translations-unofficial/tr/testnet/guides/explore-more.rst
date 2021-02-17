@@ -1,7 +1,7 @@
 
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-explore-more:
+.. _testnet-explore-more-tr:
 
 ========================================
 Concordium ID: Diğer işlemleri incelemek

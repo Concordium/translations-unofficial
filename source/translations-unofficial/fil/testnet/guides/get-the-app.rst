@@ -14,7 +14,7 @@ Concordium ID: Pag install ng app
    :local:
    :backlinks: none
 
-Sa pagbasa ng seksyon na ito at sa mga sumusunod na seksyon ng *Concordium* ID, ikaw ay makakakuha ng 
+Sa pagbasa ng seksyon na ito at sa mga sumusunod na seksyon ng *Concordium* ID, ikaw ay makakakuha ng
 pangkalahatang ideya ng basic na pag papapaandar ng app na ito. Kung hindi mo pa nagagamit ang Concordium ID
 o mga katulad nitong mga app, ito ay isang magandang lugar upang makapagsimula.
 
@@ -26,7 +26,7 @@ Pag install sa Android
 
 Mga requirement sa pag install: Android 8 o mas bago.
 
-1. i-download ang `Concordium ID APK`_ sa iyong telepono
+1. i-download ang `Concordium ID APK`_ sa iyong telepono.
 2. Makikita mo na may babala sa pagdownload ng .apk-file. Kung sakaling tanungin ka kung gusto mo itago ang .apk-file, pinduting ang **OK**.
 3. Matapos buksan ang .apk-file, maaari mong makita ang babala na nagsasabi na ang iyong telepono ay hindi pumapayag na mag-install ng apps galing sa source na ito.
 Pinduting ang **Settings**, paki-toggle ang **Allow from this source** at saka bumalik.

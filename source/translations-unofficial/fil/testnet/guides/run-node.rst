@@ -152,7 +152,7 @@ para payagan ang mga koneksyon na publiko sa port 8888 (ang peer-to-peer network
 port). Ang isang tao na may access sa iba pang mga ports ay maaaring makakuha
 kontrol ng iyong node o sa mga accounts na nai-save mo sa node.
 
-.. _stop-a-node:
+.. _stop-a-node-fil:
 
 Pagpapatigil sa node
 ====================

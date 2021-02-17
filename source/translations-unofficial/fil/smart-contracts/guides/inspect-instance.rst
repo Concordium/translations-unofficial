@@ -1,28 +1,28 @@
 .. _inspect-instance-fil:
 
-=================================
-Inspect a smart contract instance
-=================================
+==================================
+Suriin ang smart contract instance
+==================================
 
-This guide will show you how to inspect a smart contract instance.
-Inspecting an instance will show you its name, owner, module reference, balance,
-state and receive-functions:
+Itong gabay ay magpapakita kung paano suriin ang smart contract instance.
+Sa pagsuri ng instance ay makikita ang pangalan, may-ari, module reference, balanse,
+estado, at receive-functions:
 
-Preparation
-===========
-
-Make sure that you are :ref:`running a node<run-a-node>` using the latest :ref:`Concordium software<downloads>` and that you have a
-smart-contract instance on-chain to inspect.
-
-.. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module` and for
-   how to create an instance :ref:`initialize-contract`.
-
-Inspection
+Paghahanda
 ==========
 
-To inspect, or show, information about a smart contract instance with the
-address index ``0``, run the following command:
+Siguraduhin na ikaw ay :ref:`running a node<run-a-node>` gamit ang pinakabagong :ref:`Concordium software<downloads>` at mayroon kang
+smart-contract instance on-chain para magsuri.
+
+.. seealso::
+   Para sa kung paano mag-deploy ng smart contract module tignan ang :ref:`deploy-module` at para sa
+   kung paano gumawa ng instance :ref:`initialize-contract`.
+
+Inspeksyon
+==========
+
+Para mag-inspeksyon o ipakit ang impormasyon tungkol sa smart contract instance na mayroong
+address index na ``0``, patakbuhin ang sumusunod na command:
 
 .. code-block:: console
 
@@ -47,19 +47,19 @@ The output should be similar to the following:
 
 .. seealso::
 
-   For more information about contract instance addresses, see
+   Para sa karagradang impormasyon tungkol sa contract instance address, tignan ang
    :ref:`references-on-chain`.
 
-The level of detail of an inspection depends on whether the ``show`` command has
-access to a :ref:`contract schema <contract-schema>`.
-If the schema is embedded, it will be used implicitly.
-Otherwise, a schema can be provided using ``--schema /path/to/schema.bin``
+Ang lebel ng detalye ng inspeksyon ay nakadepende kung ang ``show`` commnad ay may
+access sa :ref:`contract schema <contract-schema>`.
+Kung ang schema ay naka-embed, ito ay magagamit ng hindi direkta.
+Kung hindi man, ang schema ay maaring maibigay gamit ang ``--schema /path/to/schema.bin``
 parameter.
 
 .. note::
 
-   A schema file provided using the ``--schema`` parameter will take precedence
-   over an embedded schema.
+   Ang schema file na binigay gamit ang ``--schema`` parameter ay may karapatan sa pangunguna
+   sa embedded schema.
 
 .. seealso::
 

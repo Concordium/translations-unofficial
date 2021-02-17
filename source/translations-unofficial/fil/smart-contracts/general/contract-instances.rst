@@ -1,7 +1,7 @@
 .. _contract-instances:
 
 ===========================
-Instances ng Smart contract
+Instansya ng Smart Contract
 ===========================
 
 .. todo::

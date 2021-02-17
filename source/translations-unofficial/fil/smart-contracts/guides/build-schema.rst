@@ -1,36 +1,36 @@
 .. _list of types implementing the SchemaType: https://docs.rs/concordium-contracts-common/latest/concordium_contracts_common/schema/trait.SchemaType.html#foreign-impls
 .. _build-schema:
 
-=======================
-Build a contract schema
-=======================
+=========================
+Gumawa ng contract schema
+=========================
 
-This guide will show you how to build a smart contract schema, how to export it
-to a file, and/or embed the schema into the smart contract module, all using
+Itong guide na ito ay ipapakita sa iyo kung paano gumawa ng smart contract schema, paano i-export ito
+sa isang file, at/o i-embed ant schema sa smart contract moduel, gamit ang 
 ``cargo-concordium``.
 
-Preparation
-===========
+Paghahanda
+==========
 
-First, ensure you have ``cargo-concordium`` installed and if not the guide
-:ref:`setup-tools` will help you.
+Una, siguraduhin na meron kang naka-install na ``cargo-concordium`` at kung wala naman ang guide na
+:ref:`setup-tools` ang tutulong sayo.
 
-We also need the Rust source code of the smart contract you wish to build a
-schema for.
+Kailangan rin natin ng Rust source code ng smart contract na gusto mong gawan
+ng schema.
 
-Setup the contract for a schema
-===============================
+Mag-setup ng contract para sa schema
+====================================
 
-In order to build a contract schema, we first have to prepare our smart
-contract for building the schema.
+Para makagawa ng contract schema, kailangan muna nating ihanda ang ating smart
+contract para sa paggawa ng schema.
 
-We can choose which parts of our smart contract to included in the schema.
-The options are to include a schema for the contract state, and/or for each of
-the parameters of init and receive functions.
+Pwede nating piliin kung anong mga parte ng ating smart contract ang isasama sa schema.
+Ang mga pagpipilian ay ang isama ang schema para sa contract state, at/o para sa bawat
+parameters ng init at receive funtions.
 
-Every type we want to include in the schema must implement the ``SchemaType``
-trait. This is already done for all base types and some other types (see `list of types implementing the SchemaType`_).
-For most other cases, it can also be achieved automatically, using
+Ang bawat type na gusto nating isama sa schema ay dapat gawin ang ``SchemaType``
+na katangian. Ito ay gawa na para sa lahat ng klase ng base types at iba pang mga types (see `list of types implementing the SchemaType`_).
+Para sa karamihan ng iba pang mga kaso, maaari din itong awtomatiko na makamit, gamit ang
 ``#[derive(SchemaType)]``::
 
    #[derive(SchemaType)]
@@ -38,20 +38,20 @@ For most other cases, it can also be achieved automatically, using
        ...
    }
 
-Implementing the ``SchemaType`` trait manually only requires specifying one
-function, which is a getter for a ``schema::Type``, which essentially describes
-how this type is represented as bytes and how to represent it.
+Ang pagsasagawa ng ``SchemaType`` trait ng mano-mano ay nangangailangan lamang ng pagtukoy ng isang
+function, at ayun ay ang getter para sa ``schema::Type``, na mahalagang naglalarawan
+kung paano ang uri na ito ay kinakatawan bilang mga byte at kung paano ito kinakatawan.
 
 .. todo::
 
-   Create an example showing how to manually implement ``SchemaType`` and link
-   to it from here.
+   Gumawa ng halimbawa kung paanong mano-manong isinasagawa ang ``SchemaType`` at i-link
+   ito mula dito.
 
-Including contract state
-------------------------
+Pagsasama ng contract state
+---------------------------
 
-To generate and include the schema for the contract state, we annotate the type
-with the ``#[contract_state(contract = ...)]`` macro::
+Upang makabuo at magsama ng schema para sa contract state, isinalaysay namin ang uri
+kasama ang ``#[contract_state(contract = ...)]`` macro::
 
    #[contract_state(contract = "my_contract")]
    #[derive(SchemaType)]
@@ -59,16 +59,16 @@ with the ``#[contract_state(contract = ...)]`` macro::
        ...
    }
 
-Or even simpler if the contract state is of a type that already implements ``SchemaType``, e.g., u32::
+O para mas simple kung ang contract state ay tipo ng naisagawa na ``SchemaType``, e.g., u32::
 
    #[contract_state(contract = "my_contract")]
    type State = u32;
 
-Including function parameters
------------------------------
+Pagsasama ng function parameters
+--------------------------------
 
-To generate and include the schema for parameters for init  and
-receive functions, we set the optional ``parameter`` attribute for the
+Upang makabuo at isama ang schema para sa mga parameter para sa init at
+receive functions, itinakda namin ang opsyonal ``parameter`` katangian para sa
 ``#[init(..)]``- and ``#[receive(..)]``-macro::
 
    #[derive(SchemaType)]
@@ -83,35 +83,35 @@ receive functions, we set the optional ``parameter`` attribute for the
    #[receive(contract = "my_contract", name = "my_receive", parameter = "ReceiveParameter")]
    fn contract_receive<...> (...){ ... }
 
-Building the schema
-===================
+Pagbuo ng schema
+================
 
-Now, we are ready to build the actual schema using ``cargo-concordium``, and we
-have the options to embed the schema and/or write the schema to a file.
+Ngayon, tayo ay handa na bumuo ng akwal na schema gamit ang ``cargo-concordium``, at tayo ay
+merong pagpipilian na i-embed ang schema at/o isulat ang schema sa isang file.
 
 .. seealso::
 
-   For more on which to choose see
+   Para sa marami pang pagpipilian, tignan ang
    :ref:`here<contract-schema-which-to-choose>`.
 
-Embedding the schema
---------------------
+Ang pag-embed sa schema
+-----------------------
 
-In order to embed the schema into the smart contract module, we add
-``--schema-embed`` to the build command
+Para ma-embed natin ang schema sa smart contract module, magdadagdag tayo ng 
+``--schema-embed`` para buoin ang command
 
 .. code-block:: console
 
    $cargo concordium build --schema-embed
 
-If successful the output of the command will tell you the total size of the
-schema in bytes.
+Kung matagumpay ang kinalabasan ng command, sasabihan ka nito ng kabuoang laki ng
+schema sa bytes.
 
-Outputting a schema file
-------------------------
+Pagpapalabas sa schema file
+---------------------------
 
-To output the schema into a file, we can use the ``--schema-out=FILE``
-where ``FILE`` is a path of the file to create:
+Para ipalabas ang schema sa isang file, pwede nating gamitin ang ``--schema-out=FILE``
+kung saan ang ``FILE`` ay isang path na kung saan gagawa:
 
 .. code-block:: console
 

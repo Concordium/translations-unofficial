@@ -1,6 +1,6 @@
 .. highlight:: toml
 
-.. _setup-contract:
+.. _setup-contract-fil:
 
 ===================================
 Setting up a smart contract project

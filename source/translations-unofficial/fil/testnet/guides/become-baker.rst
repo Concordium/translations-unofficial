@@ -3,7 +3,7 @@
 .. _node-dashboard: http://localhost:8099
 .. _Discord: https://discord.com/invite/xWmQ5tp
 
-.. _become-a-baker:
+.. _become-a-baker-fil:
 
 ==========================================
 Maging isang Baker (lumikha ng mga blocks)
@@ -87,7 +87,7 @@ ay halos katimbang sa naipong halaga.
 Ang parehong stake ay ginagamit kapag kinakalkula kung ang isang baker ay kasama sa
 finalization committee o hindi.  Tingnan ang Finalization_.
 
-.. _epochs-and-slots:
+.. _epochs-and-slots-fil:
 
 Epochs and slots
 ----------------

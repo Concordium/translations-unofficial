@@ -1,7 +1,7 @@
 .. _`Network Dashboard`: https://dashboard.testnet.concordium.com/
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _run-a-node:
+.. _run-a-node-fil:
 
 ====================
 Pagpapatakbo ng Node

@@ -1,4 +1,4 @@
-.. _deploy-module:
+.. _deploy-module-fil:
 
 ==============================
 Deploy a smart contract module
@@ -53,7 +53,7 @@ instances.
 
    For more information about module references, see :ref:`references-on-chain`.
 
-.. _naming-a-module:
+.. _naming-a-module-fil:
 
 Naming a module
 ===============

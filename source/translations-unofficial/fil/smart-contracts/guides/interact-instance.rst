@@ -1,4 +1,4 @@
-.. _interact-instance:
+.. _interact-instance-fil:
 
 =======================================
 Interact with a smart contract instance

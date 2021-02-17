@@ -1,4 +1,4 @@
-.. _inspect-instance:
+.. _inspect-instance-fil:
 
 =================================
 Inspect a smart contract instance

@@ -74,7 +74,7 @@ ihiwalay ang GTU amount ay dahil ang GTU ay maari lamang gastusin at makuha
 sa pamamagitan ng panununtunan ng network, halimbawa ang mga kontrata ay di makakagawa
 o sumira ng GTU tokens.
 
-.. _contract-instances-init-on-chain:
+.. _contract-instances-init-on-chain-fil:
 
 Pag gawa ng instansya sa on-chaon ng smart contract
 ===================================================
@@ -144,7 +144,7 @@ Upang buod, ang isang transaksyon para sa pakikipag-ugnay sa smart-contract ay m
 - Parametro para matanggap ang function
 - Halaga ng GTU ng instansya.
 
-.. _contract-instance-actions:
+.. _contract-instance-actions-fil:
 
 Pagtatala ng events
 ===================
@@ -168,7 +168,7 @@ Ang mga event logs na to ay pinanatili ng bakers at kasama sa mga buod ng transa
 Ang pag tatala ng event ay nakadugtong sa gastos, kaparehas sa gastos sa pagsusulat ng estado
 ng kontrata. Sa madalas na mga sitwasyon mas naayong mag tala lang ng kaunti upang makatipid sa gastos.
 
-.. _action-descriptions:
+.. _action-descriptions-fil:
 
 Deskripsyon ng Aksyon
 =====================

@@ -121,7 +121,7 @@ ng isang variable lenght type, tulad ng ``List``.
 
 Para sa isang sanggunian kung paano naka-serialize ang isang uri ng schema sa mga byte, nire-refer namin ang mga mambabasa sa `implementation in Rust`_.
 
-.. _contract-schema-which-to-choose:
+.. _contract-schema-which-to-choose-fil:
 
 Ang pang-embed ng mga schemas on-chain
 ======================================

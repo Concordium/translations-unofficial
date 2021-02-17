@@ -1,6 +1,6 @@
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _guide-account-transactions:
+.. _guide-account-transactions-fil:
 
 ================================================================================
 Concordium ID: Makapagsimula ng gumawa ng sarili mong account at mga transaksyon

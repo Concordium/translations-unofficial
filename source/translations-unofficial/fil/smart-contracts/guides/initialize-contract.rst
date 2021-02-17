@@ -1,4 +1,4 @@
-.. _initialize-contract:
+.. _initialize-contract-fil:
 
 ====================================
 Initialize a smart contract instance
@@ -65,7 +65,7 @@ with the address shown.
    Using module references directly can be inconvenient; to name them, see
    :ref:`naming-a-module`.
 
-.. _init-passing-parameter-json:
+.. _init-passing-parameter-json-fil:
 
 Passing parameters in JSON format
 ---------------------------------
@@ -128,7 +128,7 @@ Common errors are described in the next section.
    using the ``--amount AMOUNT`` parameter.
 
 
-.. _init-passing-parameter-bin:
+.. _init-passing-parameter-bin-fil:
 
 Passing parameters in binary format
 -----------------------------------
@@ -161,7 +161,7 @@ If successful, the output should be similar to the following:
    For information on how to work with parameters in smart contracts, see
    :ref:`working-with-parameters`.
 
-.. _naming-an-instance:
+.. _naming-an-instance-fil:
 
 Naming a contract instance
 ==========================

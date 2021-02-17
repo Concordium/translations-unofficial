@@ -4,7 +4,7 @@
 .. _`TestFlight beta program`: https://testflight.apple.com/join/5LgqqrJ4
 .. _Discord: https://discord.gg/xWmQ5tp
 
-.. _testnet-get-the-app:
+.. _testnet-get-the-app-fil:
 
 =================================
 Concordium ID: Pag install ng app

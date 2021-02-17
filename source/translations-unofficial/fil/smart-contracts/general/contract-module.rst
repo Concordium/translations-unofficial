@@ -48,7 +48,7 @@ Wasm ay isang low-level language at ito ay impractical para isulat ng kamay. Sa 
 ito ay kayang mag-sulat ng smart contracts na mas high-level language tapos
 i-cocompile sa Wasm.
 
-.. _wasm-limitations:
+.. _wasm-limitations-fil:
 
 Limitasyon
 -----------

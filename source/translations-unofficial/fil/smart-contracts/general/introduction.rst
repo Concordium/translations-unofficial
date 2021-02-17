@@ -36,7 +36,7 @@ Because smart contracts are executed completely transparently, in a way that
 anybody with access to a node can verify, they can be very useful for ensuring
 agreement between parties.
 
-.. _auction:
+.. _auction-fil:
 
 Auction smart contract example
 ------------------------------

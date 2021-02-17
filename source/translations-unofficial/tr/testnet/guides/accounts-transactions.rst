@@ -104,7 +104,7 @@ kullanarak kendimizi doğrulayacağız ve ardından işlem zincire gönderilecek
 .. image:: images/concordium-id/acc18.png
       :width: 32%
 
-.. _move-an-amount-to-the-shielded-balance:
+.. _move-an-amount-to-the-shielded-balance-tr:
 
 Bakiyeyi koruma altındaki bakiyeye taşıma
 =========================================

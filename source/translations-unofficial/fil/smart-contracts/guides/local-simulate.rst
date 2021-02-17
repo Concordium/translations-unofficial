@@ -1,7 +1,7 @@
 .. _local-simulate-fil:
 
 ==============================================
-I-simulate ang mga contract functions sa local
+I-simulate ang mga contract functions sa lokal
 ==============================================
 
 Ang gabay na ito ay patungkol sa kung paano mag-simulate sa local ang invocation ng ibang init o
@@ -43,7 +43,7 @@ Para i-simulate ang instantiation ng isang smart contract instance gamit ang
 ``init-context.json`` (used with the ``--context`` parameter) ay isang file na
 naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang
 tagapagpadala ng transaksyon, at anong account ang i-invoke para sa function na ito.
-Ang halimbawa nito ay pweding:
+Ang halimbawa nito ay pwedeng:
 
 .. code-block:: json
 
@@ -81,11 +81,10 @@ Para ma-simulate ang update sa isang contract smart contract instance using
                                  --state-bin state-in.bin \
                                  --out-bin state-out.bin
 
-``receive-context.json`` (used with the ``--context`` parameter) is a file that
-contains context information such as the current state of the chain, the
-sender of the transaction, which account invoked this function, and which
-account or address that sent the current message.
-An example of this context could be:
+``receive-context.json`` (ginagamit kasama ang ``--context`` parameter) ay isang file na
+naglalaman ng context information tulad ng ano ang kasalukuyang kalagayan ng chain, ang 
+tagapagpadala ng transaksyon, at anong account ang i-invoke para sa function na ito.
+Ang halimbawa nito ay pwedeng:
 
 .. code-block:: json
 

@@ -109,7 +109,7 @@ at maaring magiba-iba ang bayad depende sa tipo ng transaksyon. Kapag pinindot m
 .. image:: images/concordium-id/acc18.png
       :width: 32%
 
-.. _move-an-amount-to-the-shielded-balance:
+.. _move-an-amount-to-the-shielded-balance-fil:
 
 Pagpapadala ng halaga sa shielded na balanse
 ============================================

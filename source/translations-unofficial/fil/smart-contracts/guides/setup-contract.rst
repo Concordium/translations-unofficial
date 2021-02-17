@@ -2,54 +2,54 @@
 
 .. _setup-contract-fil:
 
-===================================
-Setting up a smart contract project
-===================================
+=====================================
+Pagse-setup ng smart contract project
+=====================================
 
-A smart contract in Rust is written as an ordinary Rust library crate.
-The library is then compiled to Wasm using the Rust target
-``wasm32-unknown-unknown`` and, since it is just a Rust library, we can use
-Cargo_ for dependency management.
+Ang smart contract sa Rust ay nakasulat sa ordinaryong Rust library crate.
+Ang library ay kino-compiled sa Wasm gamit ang Rust target
+``wasm32-unknown-unknown`` at, dahil ito ay isa lamang Rust library, pwede nating gamitin ang
+Cargo_ para sa dependency management.
 
-To set up a new smart contract project, first create a project directory. Inside
-the project directory run the following in a terminal:
+Para i-setup ang bagong new smart contract project, una gumawa ka muna ng project directory. Sa loob
+ng project directory ay patakbuhin ang sumusunod sa isang terminal:
 
 .. code-block:: console
 
    $cargo init --lib
 
-This will set up a default Rust library project by creating a few files and
+Ito ay magse-setup ng isang default Rust library project sa pamamagitan ng paggawa ng ilang mga files at
 directories.
-Your directory should now contain a ``Cargo.toml`` file and a ``src``
-directory and some hidden files.
+Ang iyong directory ay dapat naglalaman ng ``Cargo.toml`` file at ng ``src``
+directory at iba pang mga nakatagong files.
 
-To be able to build Wasm we need to tell cargo the right ``crate-type``.
-This is done by adding the following in the file ``Cargo.toml``::
+Para maka-build sa Wasm kailangan nating sabihan ang cargo ng tamang ``crate-type``.
+Ito ay nagagawa sa pamamagitan ng pagdagdag ng sumusunod na file sa ``Cargo.toml``::
 
    [lib]
    crate-type = ["cdylib", "rlib"]
 
-Adding the smart contract standard library
-==========================================
+Pagdagdag ng smart contract standard library
+============================================
 
-The next step is to add ``concordium-std`` as a dependency.
-It is a library for Rust containing procedural macros and functions for
-writing small and efficient smart contracts.
+Ang susunod na step ay magdagdag ng ``concordium-std`` bilang dependency.
+Ito ay isang library para sa Rust na naglalaman ng procedural macros at functions para sa
+pagsusulat ng maliliit at mahuhusay na mga smart contracts.
 
-The library is added by opening ``Cargo.toml`` and adding the line
-``concordium-std = "*"`` (preferably, replace the `*` with the latest version of `concordium-std`_) in
-the ``[dependencies]`` section::
+Ang library ay dinadagdag sa pagbubukas ng ``Cargo.toml`` at pag-dagdag sa linya
+``concordium-std = "*"`` (hanggang maari, palitan ang `*` kasama ng pinakabagong bersyon ng `concordium-std`_) sa
+``[dependencies]`` seksyon::
 
    [dependencies]
    concordium-std = "0.4"
 
-The crate documentation can be found on docs.rs_.
+Ang crate documentation ay makikita sa docs.rs_.
 
 .. note::
 
-   If you wish to use a modified version of this crate, you will have to clone
-   the repository with ``concordium-std`` and have the dependency point at the
-   directory instead, by adding the following to ``Cargo.toml``::
+   Kung gusto mong mabago ang bersyon ng crate na ito, kailangan mong i-clone
+   ang repository kasama ng ``concordium-std`` at magkaroon ng dependency point sa
+   directory, sa pamamagitan ng pagdagdag ng mga sumusunod ``Cargo.toml``::
 
       [dependencies]
       concordium-std = { path = "./path/to/concordium-std" }
@@ -61,4 +61,4 @@ The crate documentation can be found on docs.rs_.
 .. _docs.rs: https://docs.rs/crate/concordium-std/
 .. _`concordium-std`: https://docs.rs/crate/concordium-std/
 
-That is it! You are now ready to develop your own smart contract.
+Ganun lang! Ikaw ay nakahanda na para mag-debelop ng sarili mong smart contract.

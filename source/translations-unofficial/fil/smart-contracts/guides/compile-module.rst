@@ -4,55 +4,55 @@
 
 .. _compile-module:
 
-====================================
-Compile a Rust smart contract module
-====================================
+=========================================
+Mag-compile ng Rust smart contract module
+=========================================
 
-This guide will show you how to compile smart contract module written in Rust to
-a Wasm module.
+Itong guide na ito ay ipapakita sa iyo kung paano mag-compile ng smart contract module na isinulat sa Rust papunta sa 
+Wasm module.
 
-Preparation
-===========
+Paghahanda
+==========
 
-Make sure to have Rust and Cargo installed and the ``wasm32-unknown-unknown``
-target, together with ``cargo-concordium`` and the Rust source code for a smart
-contract module, you wish to compile.
+Siguraduhing merong Rust at Cargo na naka-install at ang ``wasm32-unknown-unknown``
+target, kasama ang ``cargo-concordium`` at ang Rust source code para sa smart
+contract module, na gusto mong i-compile.
 
 .. seealso::
 
-   For instructions on how to install the developer tools see
+  Para sa mga tagubilin sa kung paano i-install ang mga tool ng developer tingnan ang
    :ref:`setup-tools`.
 
-Compiling to Wasm
-=================
+Pagco-compile sa Wasm
+=====================
 
-To help building smart contract modules and to take advantage of features
-such as :ref:`contract schemas <contract-schema>`, we recommend using the
-``cargo-concordium`` tool for building Rust_ smart contracts.
+Para makatulong makabuo ng smart contract modules at upang samantalahin ang mga features
+tulad ng :ref:`contract schemas <contract-schema>`, irinirekumenda namin na gumamit ng
+``cargo-concordium`` tool para sa pagbuo ng Rust_ smart contracts.
 
-In order to build a smart contract, run:
+Para makabuo ng smart contract, patakbuhin ang:
 
 .. code-block:: console
 
    $cargo concordium build
 
-This uses Cargo_ for building, but runs further optimizations on the result.
+Ito ay gumagamit ng Cargo_ para sa pagbuo, pero nagpapatakbo rin ng mga optimizations sa mga resulta.
 
 .. seealso::
 
-   For building the schema for a smart contract module, some :ref:`further
+   Para sa pagbuo ng schema para sa isang smart contract module, ang ilang :ref:`further
    preparation is required <build-schema>`.
 
 .. note::
 
-   It is also possible to compile using Cargo_ directly by running:
+   Posible ring mag-compile gamit ang Cargo_ direkta sa pamamagitan ng pagpapatakbo ng:
 
    .. code-block:: console
 
       $cargo build --target=wasm32-unknown-unknown [--release]
 
-   Note that even with ``--release`` set, the produced Wasm module includes
-   debug information.
+   Tandaan na kahit merong ``--release`` set, ang maproproduce na Wasm module ay may kasamang
+   impormasyon sa debug.
 
 Removing host information from build
 ====================================

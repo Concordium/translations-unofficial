@@ -69,7 +69,7 @@ na pinapakita ang address.
 .. _init-passing-parameter-json-fil:
 
 Pag-pasa ng mga parameters sa JSON format
----------------------------------
+-----------------------------------------
 
 Ang isang parameter sa JSON format ay pwedeng pumasa kung ang isang :ref:`smart contract schema
 <contract-schema>` ay sinuplayan, pwedeng file o pwedeng naka-embed sa module.
@@ -165,7 +165,7 @@ Kapag matagumpay, ang kinalabasan ay dapat katulad nito:
 .. _naming-an-instance-fil:
 
 Pagpapangalan sa contract instance
-==========================
+==================================
 
 Ang isang module ay pwedeng bigyan ng isang lokal na alyas, o *name*, para makilala ito ng mas
 madali.

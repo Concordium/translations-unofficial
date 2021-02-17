@@ -20,7 +20,7 @@ nightly toolchain, na maaring ma-install gamit ang ``rustup``:
 Pag-setup ng module para sa ``no_std``
 ======================================
 
-Ang ``concordium-std`` library ay nagpapakita ng ``std`` feature, na nagpapaganda sa paggamit ng 
+Ang ``concordium-std`` library ay nagpapakita ng ``std`` feature, na nagpapaganda sa paggamit ng
 rust standard library.
 Itong feature ay gumagana by default.
 

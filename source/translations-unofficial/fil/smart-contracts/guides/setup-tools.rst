@@ -1,18 +1,18 @@
 .. _setup-tools-fil:
 
-=============================
-Install tools for development
-=============================
+===================================
+Pag-install ng gamit sa development
+===================================
 
-Before we can start developing smart contracts, we need to setup the
+Bago tayo magsimula sa pag-develop ng smart contracts, dapat nating i-setup ang
 environment.
 
-Rust and Cargo
+Rust at Cargo
 ==============
 
-First, `install rustup`_, which will install both Rust_ and Cargo_ on your
+Una, `install rustup`_, na mag-iinstall ng Rust at Cargo sa iyong
 machine.
-Then use ``rustup`` to install the Wasm target, which is used for compilation:
+Tapos gamitin ang ``rustup`` para mag-install ng Wasm target, na gagamitin para sa compilation:
 
 .. code-block:: console
 
@@ -21,20 +21,20 @@ Then use ``rustup`` to install the Wasm target, which is used for compilation:
 Cargo Concordium
 ================
 
-Cargo Concordium is the tool for developing smart contracts for the Concordium
+Cargo Concordium ay ang ginagamit para sa pag-develop ng smart contracts para sa Concordium
 blockchain.
-It can be used for :ref:`compiling<compile-module>` and
-:ref:`testing<unit-test-contract>` smart contracts, and enables features such as
+Maari din magamit para sa :ref:`compiling<compile-module>` at
+:ref:`testing<unit-test-contract>` smart contracts, at nagpapagana ng features tulad ng
 :ref:`building contract schemas<build-schema>`.
 
 .. todo::
 
-   Add links for testing and schemas.
+   Magdagdag ng links para sa testing at schemas.
 
-Cargo Concordium is distributed as part of the :ref:`Concordium software<downloads>` package.
-The tool should be placed in your PATH.
+Cargo Concordium ay ipinamamahagi bilang parte ng :ref:`Concordium software<downloads>` package.
+Ang tool ay dapat nakalagay sa iyong PATH.
 
-For a description of how to use the Cargo Concordium run:
+Para sa detalye kung paano gamitin ang Cargo Concordium patakbuhin ito:
 
 .. code-block:: console
 
@@ -43,14 +43,14 @@ For a description of how to use the Cargo Concordium run:
 Concordium software
 ===================
 
-The tool to deploy and interact with smart contracts is
-:ref:`concordium-client<concordium_client>`. It is distributed as part of the
+Ang tool para mag-deploy at mag-interact sa smart contract ay 
+:ref:`concordium-client<concordium_client>`. Ito ay ipinamamahagi bilang parte ng
 :ref:`Concordium software<downloads>` package.
 
 .. note::
 
-   To deploy smart contract modules and interact with the chain, make sure
-   that you are :ref:`running a node<run-a-node>`.
+   Para mag-deploy ng smart contract modules at mag-interact sa chain, siguraduhin
+   na nagawa mo to :ref:`running a node<run-a-node>`.
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/

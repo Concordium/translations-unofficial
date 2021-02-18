@@ -24,7 +24,7 @@ Cargo Concordium це інструмент для розробки смарт-к
 
 .. todo::
 
-   Add links for testing and schemas.
+   Додайте посилання на тестування та схеми.
 
 Cargo Concordium поставляється як частина пакета :ref:`Concordium software<downloads>`.
 Інструмент повинен бути доданий в PATH.

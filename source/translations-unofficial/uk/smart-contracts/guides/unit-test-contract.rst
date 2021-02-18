@@ -66,12 +66,11 @@
 
 .. seealso::
 
-   For more information and examples see the crate documentation of
-   concordium-std.
+   Для отримання додаткової інформації та прикладів по контекст, дивіться **concordium-std**.
 
 .. todo::
 
-   Show more of how to write the unit test
+   Покажіть як створювати модульні тести.
 
 Запуск тестів в Wasm
 ====================
@@ -83,7 +82,7 @@
 
 .. seealso::
 
-   For a guide of how to install ``cargo-concordium``, see :ref:`setup-tools`.
+   Для отримання додаткової інформації про те, як встановити ``cargo-concordium``, дивіться :ref:`setup-tools`.
 
 Модульний тест повинен бути анотований з ``#[concordium_test]`` замість ``#[test]``, і ми використовуємо ``#[concordium_cfg_test]`` замість ``#[cfg(test)]``:
 
@@ -123,4 +122,4 @@
 
 .. todo::
 
-   Use link concordium-std: docs.rs/concordium-std when crate is published.
+   Використати посилання concordium-std: docs.rs/concordium-std при опублікуванні.

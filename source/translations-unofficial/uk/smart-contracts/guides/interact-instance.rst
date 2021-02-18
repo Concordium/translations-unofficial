@@ -9,11 +9,10 @@
 Підготовка
 ==========
 
-Переконайтеся, що ви :ref:`running a node<run-a-node>`, використовуючи останню версію :ref:`Concordium software<downloads>` і що у вас є об'єкт смарт-контракту в мережі для перевірки.
+Переконайтеся, що ви :ref:`нода запущена <run-a-node>`, використовуючи останню версію :ref:`програмне забезпечення Concordium<downloads>` і що у вас є об'єкт смарт-контракту в мережі для перевірки.
 
 .. seealso::
-   For how to deploy a smart contract module see :ref:`deploy-module` and for
-   how to create an instance :ref:`initialize-contract`.
+   Більше про налаштування смарт-контракта можна дізнатись за посиланням :ref:`deploy-module`, а також про створення об'єктів - :ref:`initialize-contract`.
 
 Оскільки взаємодія зі смарт-контрактом є транзакцією, ви також повинні переконатися, що у ``concordium-client`` встановлено аккаунт з достатньою кількістю GTU для оплати транзакцій.
 
@@ -44,8 +43,7 @@
 
 .. seealso::
 
-   :ref:`Read more about why and how to use smart contract schemas
-   <contract-schema>`.
+   :ref:`Більше про те як і коли використовувати схему смарт-контракта <contract-schema>`.
 
 Щоб оновити екземпляр з індексом адреси ``0`` за допомогою receive-функції ``my_parameter_receive`` з файлом параметрів ``my_parameter.json`` в JSON форматі, виконайте наступну команду:
 
@@ -66,8 +64,7 @@
 
 .. seealso::
 
-   For more information about contract instance addresses, see
-   :ref:`references-on-chain`.
+   Для отримання додаткової інформації про адреси об'єкта контракту, дивіться :ref:`references-on-chain`.
 
 .. note::
 
@@ -112,8 +109,7 @@
 
 .. seealso::
 
-   For information on how to work with parameters in smart contracts, see
-   :ref:`working-with-parameters`.
+   Для отримання додаткової інформації про роботу з параметрами у смарт-контракті, дивіться :ref:`working-with-parameters`.
 
 .. _parameter_cursor():
    https://docs.rs/concordium-std/latest/concordium_std/trait.HasInitContext.html#tymethod.parameter_cursor

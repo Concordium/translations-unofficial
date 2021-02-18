@@ -9,7 +9,7 @@
 
 .. seealso::
 
-   For a guide on automated unit tests, see :ref:`unit-test-contract`.
+   Для отримання додаткової інформації про автоматизовані модульні тести, дивіться :ref:`unit-test-contract`.
 
 Підготовка
 ==========
@@ -19,7 +19,7 @@
 
 .. todo::
 
-   Write the rest, when the schema stuff is in place.
+   Написати тест для перевірки схеми
 
 Моделювання створення об'єкту
 =============================
@@ -54,7 +54,7 @@
 
 .. seealso::
 
-   For a reference of the context see :ref:`simulate-context`.
+   Для отримання додаткової інформації про контекст, дивіться :ref:`simulate-context`.
 
 
 Моделювання оновлень
@@ -98,4 +98,4 @@
 
 .. seealso::
 
-   For a reference of the context see :ref:`simulate-context`.
+   Для отримання додаткової інформації про контекст, дивіться :ref:`simulate-context`.

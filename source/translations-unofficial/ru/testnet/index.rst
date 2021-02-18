@@ -33,7 +33,8 @@ Testnet
    see-also/release-notes
    see-also/third-party-licenses
 
-Support & Feedback
+
+Служба поддержки и обратная связь
 ==================
 
 Если у вас возникли какие-либо проблемы или появились предложения, присылайте

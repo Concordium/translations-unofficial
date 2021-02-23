@@ -20,7 +20,7 @@ Concordium ID: 앱을 설치합니다.
 
 
 Android에 설치합니다.
-====================
+======================
 
 설치 요구 사항: Android 8 이상입니다.
 
@@ -37,12 +37,12 @@ iOS에 설치합니다.
 
 iOS에 Concordium ID 앱을 설치하려면 iOS 앱 베타 버전을 배포하는 데 사용되는 Apple의 Test Flight 앱을 설치해야 합니다.
 
-1. App Store를 통해 `Test Flight`_ 를 설치합니다.
-2. iPhone을 통해 `Test Flight 베타 프로그램`에 가입하고(iPhone에서 직접 링크를 클릭하는 것이 가장 효과적임) 표시된 단계에 따라 Concordium ID를 Test Flight에 추가합니다.
+1. App Store를 통해 `TestFlight`_ 를 설치합니다.
+2. iPhone을 통해 `Test Flight 베타 프로그램` 에 가입하고(iPhone에서 직접 링크를 클릭하는 것이 가장 효과적임) 표시된 단계에 따라 Concordium ID를 Test Flight에 추가합니다.
 3. iPhone에서 Test Flight 앱을 열고 Concordium ID를 설치합니다.
 
 
 지원 및 피드백을 제공합니다.
-==================
+============================
 
 문제가 있거나 제안이 있을 경우 질문이나 의견을 `Discord` 에 게시하거나 testnet@concordium.com으로 문의하십시오.

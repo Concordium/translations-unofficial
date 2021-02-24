@@ -1,6 +1,6 @@
 .. _deploy-module-ko:
 
-================================
+==============================
 스마트 계약 모듈을 배포
 ==============================
 
@@ -9,8 +9,8 @@
 준비
 ===========
 
-최신 :ref:`Concordium 소프트웨어 <downloads>` 를 사용하여 :ref:`노드 실행 <run-a-node>`인지 확인하고
-배포 할 준비가 된 :ref:`smart-contract 모듈 <setup-tools-ko>`가 있습니다.
+최신 :ref:`Concordium 소프트웨어 <downloads>` 를 사용하여 :ref:`노드 실행 <run-a-node>` 인지 확인하고
+배포 할 준비가 된 :ref:`smart-contract 모듈 <setup-tools-ko>` 가 있습니다.
 
 스마트 컨트랙트 모듈 구축은 거래 형태로 이루어지기 때문에,
 또한 GTU가 충분한 계좌로 거래대금을 지불할 수 있는 ``cordium-clien`` 설정이 필요합니다.

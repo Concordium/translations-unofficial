@@ -21,7 +21,7 @@ This is because the Import feature works in two different ways depending on the 
 .. image:: images/concordium-id/exp1.png
       :width: 32%
 .. image:: images/concordium-id/exp2.png
-      :width: 32%ref
+      :width: 32%
 
 To start an export, press the **Export** option. Doing that will take you to a new page, that briefly explains what an export means.
 We recommend reading this carefully. Pressing **Continue** will take you to a page on which you will be asked to enter a password for

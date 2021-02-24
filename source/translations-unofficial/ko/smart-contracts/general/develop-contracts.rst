@@ -147,7 +147,7 @@ Concordium 블록 체인에서 스마트 계약은 Wasm 모듈로 배포됩니�
 
 매개 변수를 역 직렬화하는 가장 간단한 방법은 `Get`_ 트레이 트의 `get()`_ 함수를 사용하는 것입니다.
 
-예를 들어, 강조 표시된 줄에서 ``ReceiveParameter`` 매개 변수가 역 직렬화되는 다음 계약을 참조하십시오:
+예를 들어, 강조 표시된 줄에서 ``ReceiveParameter`` 매개 변수가 역 직렬화되는 다음 계약을 참조하십시오::
 
 .. code-block:: rust
    :emphasize-lines: 24

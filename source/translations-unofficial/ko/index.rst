@@ -8,3 +8,4 @@ Contents
    :hidden:
 
    testnet/index
+   testnet/smart-contarct

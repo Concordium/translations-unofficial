@@ -13,8 +13,8 @@ Rust 스마트 계약 모듈 컴파일
 준비
 ===========
 
-Rust와 Cargo가 설치되어 있고``wasm32-unknown-unknown ''타겟이 있는지 확인하세요,
-``cargo-concordium ''및 스마트 계약 모듈 용 Rust 소스 코드와 함께 컴파일하고 싶습니다.
+Rust와 Cargo가 설치되어 있고 ``wasm32-unknown-unknown`` 타겟이 있는지 확인하세요,
+``cargo-concordium`` 및 스마트 계약 모듈 용 Rust 소스 코드와 함께 컴파일하고 싶습니다.
 
 .. seealso::
 
@@ -23,8 +23,8 @@ Rust와 Cargo가 설치되어 있고``wasm32-unknown-unknown ''타겟이 있는�
 Wasm에 컴파일
 =================
 
-스마트 계약 모듈 구축을 돕고 :ref:`계약 스키마 <contract-schema-ko>`와 같은 기능을 활용하려면,
-Rust_ 스마트 계약을 구축하기 위해``cargo-concordium ''도구를 사용하는 것이 좋습니다.
+스마트 계약 모듈 구축을 돕고 :ref:`계약 스키마 <contract-schema-ko>` 와 같은 기능을 활용하려면,
+Rust_ 스마트 계약을 구축하기 위해 ``cargo-concordium`` 도구를 사용하는 것이 좋습니다.
 
 스마트 계약을 작성하려면 다음을 실행하십시오.
 
@@ -85,7 +85,7 @@ Linux에서는 다음을 실행하여 경로를 검사 할 수 있습니다:
 여기서 `<user>` 는 wasm 모듈을 빌드하는 사용자로 대체되어야합니다.
 
 소송 절차 정지 통고
---------------
+---------------------
 
 위의 방법은 Rust 도구 모음에 ``rust-src`` 구성 요소가 설치된 경우 문제를 해결하지 못할 가능성이 높습니다.
 이 구성 요소는 rust-analyzer_ 와 같은 일부 Rust 도구에 필요합니다.

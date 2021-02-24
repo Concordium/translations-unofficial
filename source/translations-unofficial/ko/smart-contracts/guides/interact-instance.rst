@@ -9,7 +9,7 @@
 준비
 ===========
 
-최신 :ref:`Concordium 소프트웨어 <다운로드>` 를 사용하여 :ref:`노드 실행 <run-a-node>` 를 확인하고 검사 할 스마트 계약 인스턴스가 체인에 있는지 확인합니다.
+최신 :ref:`Concordium 소프트웨어 <downloads>` 를 사용하여 :ref:`노드 실행 <run-a-node>` 를 확인하고 검사 할 스마트 계약 인스턴스가 체인에 있는지 확인합니다.
 
 .. seealso::
    스마트 계약 모듈을 배포하는 방법은 :ref:`deploy-module-ko` 및 인스턴스를 만드는 방법 :ref:`initialize-contract-ko` 를 참조하십시오.

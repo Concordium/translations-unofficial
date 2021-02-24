@@ -43,7 +43,7 @@
 
 .. note::
 
-   ``concordium-client`` 도구는 스키마를 사용하여 :ref:`JSON 매개 변수를 직렬화<init-passing-parameter-json-ko>`하고 계약 인스턴스의 상태를 JSON으로 역 직렬화 할 수 있습니다.
+   ``concordium-client`` 도구는 스키마를 사용하여 :ref:`JSON 매개 변수를 직렬화<init-passing-parameter-json-ko>` 하고 계약 인스턴스의 상태를 JSON으로 역 직렬화 할 수 있습니다.
 
 그런 다음 스키마는 체인에 배포되는 스마트 계약 모듈에 포함되거나 파일에 기록되고 오프 체인을 통해 전달됩니다.
 

@@ -11,9 +11,9 @@
 ===========
 
 최신 :ref:`Concordium software<downloads>` 를 사용하여 :ref:`노드 실행 <run-a-node>`
-이고 스마트 계약이 있는지 확인하십시오 :ref:`deployed <deploy-module- ko>` 일부 모듈 온 체인에서.
+이고 스마트 계약이 있는지 확인하십시오 :ref:`deployed <deploy-module-ko>` 일부 모듈 온 체인에서.
 
-스마트 계약을 초기화하는 것은 거래이기 때문에 거래 비용을 지불하기에 충분한 GTU가있는 계정으로``concordium-client`` 를 설정해야합니다.
+스마트 계약을 초기화하는 것은 거래이기 때문에 거래 비용을 지불하기에 충분한 GTU가있는 계정으로 ``concordium-client`` 를 설정해야합니다.
 
 .. note::
 

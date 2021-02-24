@@ -55,7 +55,7 @@
 
 .. seealso::
 
-   컨텍스트에 대한 참조는 :ref:`simulate-context`를 참조하십시오.
+   컨텍스트에 대한 참조는 :ref:`simulate-context` 를 참조하십시오.
 
 
 업데이트 시뮬레이션

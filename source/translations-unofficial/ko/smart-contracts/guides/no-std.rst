@@ -51,4 +51,3 @@ std를 사용하거나 사용하지 않고 전환 할 수 있으려면 ``concord
 .. code-block:: console
 
    $cargo +nightly concordium build -- --no-default-features
-   

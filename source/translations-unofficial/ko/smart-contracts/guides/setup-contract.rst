@@ -32,8 +32,8 @@ Wasm을 만들려면화물에 올바른 ``크레이트 유형`` 을 알려야합
 다음 단계는 ``concordium-std`` 를 종속성으로 추가하는 것입니다.
 작고 효율적인 스마트 계약을 작성하기위한 절차 적 매크로와 함수를 포함하는 Rust 용 라이브러리입니다.
 
-라이브러리는 ``Cargo.toml`` 을 열고 ``concordium-std= "*"`` 줄을 추가하여 추가됩니다 (바람직하게는`*` 를 `concordium-std`_ 의 최신 버전으로 대체)
-``[dependencies]``섹션 ::
+라이브러리는 ``Cargo.toml`` 을 열고 ``concordium-std= "*"`` 줄을 추가하여 추가됩니다 (바람직하게는 `*` 를 `concordium-std`_ 의 최신 버전으로 대체)
+``[dependencies]`` 섹션 ::
 
    [dependencies]
    concordium-std = "0.4"

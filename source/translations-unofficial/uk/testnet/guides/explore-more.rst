@@ -55,18 +55,19 @@ Concordium ID: Вивчаємо сторінку *More*
 
 Address Book
 ============
-Як випливає з назви, *Адресна книга* - це місце для зберігання адрес облікових записів (рахунків).
-Якщо ви перейдете до *адресній книзі*, ви побачите, що адреси ваших рахунків вже зберігаються там.
-Крім перегляду власних адрес, ви також можете додати більше записів в *Адресну книгу*, натиснувши на **символ QR-коду** або на **плюсик** в правому верхньому куті.
-Зробивши це, ви можете ввести нову адресу одержувача і привласнити йому псевдонім у своїй * адресній книзі *.
-Записи у вашій адресній книзі, звичайно, будуть доступні для пошуку і вибору під час виконання перерахунку.
+As the name suggests, the *Address Book* is a place to keep account addresses. If you browse to the *Address Book* you will see that
+the addresses of your own accounts are already stored there. Besides seeing your own addresses, you can also add more entries to
+the *Address Book*, either by pressing the **QR code symbol**, or pressing the **plus sign** in the upper right corner. By doing that you
+can enter a new recipient address and give it a nickname in your *Address Book*. The entries in your address book can of course be
+searched, when you make a transfer.
 
 .. image:: images/concordium-id/add1.png
       :width: 32%
 .. image:: images/concordium-id/add2.png
       :width: 32%
 
-Підтримка і зворотний зв'язок
-=============================
+Support & Feedback
+==================
 
-Якщо ви зіткнулися з проблемами або у вас виникли питання, зв'яжіться з нами в `Discord`_, або по електронній пошті testnet@concordium.com.
+If you run into any issues or have suggestions, post your question or
+feedback on `Discord`_, or contact us at testnet@concordium.com.

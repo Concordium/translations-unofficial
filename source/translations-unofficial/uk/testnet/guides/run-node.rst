@@ -132,7 +132,7 @@ router, then you will probably only be able to connect to other nodes,
 but other nodes will not be able to initiate connections to your node.
 This is perfectly fine, and your node will fully participate in the
 Concordium network. It will be able to send transactions and,
-:ref:`if so configured<become-a-baker>`, to bake and finalize.
+:ref:`if so configured<become-a-baker-uk>`, to bake and finalize.
 
 However you can also make your node an even better network participant
 by enabling inbound connections. By default, ``concordium-node`` listens
@@ -154,7 +154,7 @@ used by the node are as follows:
 -  10000, the gRPC port, which can be set with ``--listen-grpc-port``
 
 When changing the mappings above the docker container must be
-stopped (:ref:`stop-a-node`), reset, and started again. To reset the container either use
+stopped (:ref:`stop-a-node-uk`), reset, and started again. To reset the container either use
 ``concordium-node-reset-data`` or run ``docker rm concordium-client`` in
 a terminal.
 

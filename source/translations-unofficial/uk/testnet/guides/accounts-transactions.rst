@@ -2,54 +2,56 @@
 
 .. _guide-account-transactions-uk:
 
-=========================================================
-Concordium ID: Get started with accounts and transactions
-=========================================================
+===================================================
+Concordium ID: Початок роботи: акаунти і транзакції
+===================================================
 
 .. contents::
    :local:
    :backlinks: none
 
-Before following this guide you should have finished requesting your initial account and identity, as described in :ref:`the previous chapter<testnet-get-started>`.
+Перш ніж приступити до цієї довідки, ви повинні створити свій початковий рахунок і ідентифікатор (посвідчення), як описано в :ref:`попередній частині <testnet-get-started-uk>`.
 
-Create a new account
-====================
-Before getting into how accounts, their balances and transactions work, let’s create a second account. Start by going
-to the *Accounts* page. In the upper right corner you should see a **plus sign**. Press that to continue. On the next screen
-you will be asked to name your new account. In this example we will choose the name *Example Account 2*, but you can
-choose whichever name you want.
+Створення нового рахунку
+========================
+Перш ніж приступити до вивчення роботи з рахунками, балансами і транзакціями, давайте створимо другий рахунок.
+Перейдіть на вкладку *Accounts*.
+У верхньому правому куті ви побачите **плюсик**, натисніть його.
+На наступному екрані вам преждложат ввести ім'я нового рахунку.
+У цьому прикладі ми назвемо його *Example Account 2*, але ви можете назвати його як завгодно. 
 
 .. image:: images/concordium-id/acc1.png
       :width: 32%
 .. image:: images/concordium-id/acc2.png
       :width: 32%
 
-When pressing **Next**, you will be met with a screen on which you must decide which identity to use to open the new account.
-So far you probably only have one, but if you have more you can pick whichever identity you want from the list. By
-clicking on an identity, you will be taken to the next screen. When creating a non-initial account, i.e. an account
-that is not created upon identity creation, you can choose to reveal a number of :ref:`glossary-attribute`. This is not necessary,
-and if you do not have a specific reason to do so, we recommend not revealing any, as revealed attributes go on-chain and cannot be removed.
+Після того як ви натиснули **Next**, вам буде запропоновано вибрати ідентифікатор до якого буде прив'язаний новий рахунок.
+На даний момент у вас, швидше за все, вже є один, але навіть якщо у вас їх декілька, можете вибрати будь-який зі списку.
+Після вибору зони, ви перейдете до наступного екрану. Якщо ви вибрали не вашпервий ідентифікатор,
+тобто рахунок який не був створений з початковим ідентифікатором, ви можете вибрати деякі властивості для показу :ref:`glossary-attribute`.
+Це не обов'язково, і якщо у вас немає для цього особливої ​​причини, ми рекомендуємо пропустити цей крок і не показувати їх,
+так як вони будуть вписані в ланцюжок і не можуть бути видалені. 
 
 .. image:: images/concordium-id/acc3.png
       :width: 32%
 .. image:: images/concordium-id/acc4.png
       :width: 32%
 
-If you do press the **Reveal account attributes button**, you will be taken to the following page. You can tick
-off the attributes you would like to reveal, and then press **Submit account**. Pressing **Submit account** on this or the previous
-page, will take you to the final account creation page, which will give you a short overview and tell you that the account
-has been submitted.
+Якщо ви натиснули кнопку **Reveal account attributes**, відкриється екран, де ви можете відключити атрибути які хочете показувати, потім натиснути **Submit account**.
+Після натискання на кнопку **Submit account** на цій або на попередній сторінці, ви будете перенаправлені на фінальну сторінку створення облікового запису,
+на якій буде коротка узагальнююча інформація та підтвердження що рахунок був створений.
 
 .. image:: images/concordium-id/acc5.png
       :width: 32%
 .. image:: images/concordium-id/acc6.png
       :width: 32%
 
-By pressing **Ok, thanks** on the submission overview, you will be taken back to the account page. You might see that your new
-account is still pending, as it can take a few minutes to finalize on chain. If you have not tried to do so yet, you can
-try pressing the downwards facing arrow on one of the account cards, to see that it will fold out the card. This reveals
-two new pieces of information, *at disposal* and *staked*. The at disposal field will tell you how much of the accounts balance is
-at available for use at the given moment, and the staked amount you can read more about on the :ref:`managing accounts<managing_accounts>` page.
+Після натискання на кнопку **Ok, thanks** на цьому екрані, ви повернетеся на екран зі списком рахунків.
+Ви можете побачити, що ваш новий рахунок все ще в обробці, так як для для цього може знадобитися кілька хвилин.
+Якщо ви ще не пробували це зробити, ви можете натиснути *стрілку вниз*, на одній з карток рахунків, щоб побачити деталі.
+Там містяться два нових розділу інформації: *at disposal* і *staked*.
+Поруч буде вказано доступний залишок на відповідній частині рахунку.
+Більше деталей ви можете знайти на сторінці :ref:`управління рахунками <managing_accounts>`
 
 .. image:: images/concordium-id/acc7.png
       :width: 32%
@@ -57,48 +59,51 @@ at available for use at the given moment, and the staked amount you can read mor
       :width: 32%
 
 
-Make a transaction
+Cтворення транзакції
 ====================
-Next up, try pressing the **Balance** area of your newly created account. On this
-screen you can see the current balance of your account, and at this point, it will also let you request 100 GTU to use on
-the Testnet. The request for 100 GTU is a Testnet feature, and for Testnet 4 it will actually transfer 2000 GTU to the account,
-even though the button says 100. The GTU drop is only available on an account once. By pressing it, you will notice a transaction
-appearing. This will be pending for a bit, and after a while 2000 GTU will be added to your account.
+Далі, спробуйте натиснути на розділ **Balance** на картці, щойно створеного рахунку.
+На цьому екрані ви побачите поточний баланас, також тут ви зможете запросити 100 GTU для використання в рамках тестнета.
+Запит 100 GTU - опція доступна для тестнетов і зокрема для тестнета 4 на рахунок буде перераховано 2000 GTU, не дивлячись на те що на кнопці написано 100.
+Такий переклад доступний лише один раз.
+Після натискання на кнопку запиту ви побачите що з'явилися повідомлення про транзакції, після чого, через деякий час, 2000. GTU будуть додані на ваш рахунок.
 
 .. image:: images/concordium-id/acc9.png
       :width: 32%
 .. image:: images/concordium-id/acc10.png
       :width: 32%
 
-Now that we have some GTU in our account, let’s try making a transaction. Press the **SEND** button to do that. On the next page
-you can input the amount you want to transfer, and select a recipient. In this example we will transfer 10 GTU.
+Тепер у нас є трохи токенов GTU на нашому рахунку давайте приступимо до транзакції.
+Для цього натисніть на кнопку **SEND**.
+На наступному екрані вам буде запропоновано ввести кількість токенов, яке ви хочете відправити. У цьому прикладі ми відправимо 10 GTU.
 
 .. image:: images/concordium-id/acc11.png
       :width: 32%
 .. image:: images/concordium-id/acc12.png
       :width: 32%
 
-Having decided on an amount, we will now choose the recipient. To do this, press the Select **Recipient or shield amount** button.
-On this page you can search for recipients in your *address book* or add your recipient by scanning the receiving account’s QR code.
-As you can see in the screenshot, we only have one recipient saved, *Example Account 1*. Above that, we have the option to *Shield an
-amount*, but we will get back to that later. We will choose *Example Account 1* as our recipient in this example.
+
+Визначившись з сумою, ми повинні вибрати одержувача. Для цього Намжил кнопку **Recipient or shield amount**.
+На цьому екрані ви можете виконати пошук одержувача у вашій *адресній книзі* або сканувати QR код одержувача.
+Як ви бачите на скрішоте, у нас є лише один збережений одержувач - *Example Account 1*.
+Також тут є опція *Shield an amount*, до неї ми повернемося пізніше. Виберемо одержувача *Example Account 1* для прикладу.
 
 .. image:: images/concordium-id/acc13.png
       :width: 32%
 .. image:: images/concordium-id/acc14.png
       :width: 32%
 
-With the amount and recipient chosen, we can press **Send Funds** to continue. By doing this we are met by a confirmation screen on
-which we can verify the amount, recipient and sending account.  By pressing **Yes, send funds**, we will verify ourselves using a passcode
-or biometrics, and then the transaction is submitted to the chain. It might take a bit for the transaction to finalize.
+Коли сума і одержувач обрані, натискаємо **Send Funds**, після чого побачимо екран підтвердження операції з сумою, адресою рахунку одержувача і відправника.
+Після натискання на кнопку **Yes, send funds**, необхідно буде підтвердити свою особу паролем або біометричної ідентифікацією, після чого транзакція буде збережена в ланцюжок.
+Завершення транзакції може зажадати декількох хвилин.
 
 .. image:: images/concordium-id/acc15.png
       :width: 32%
 .. image:: images/concordium-id/acc16.png
       :width: 32%
 
-We can now see that the *Example Account 2*’s *Transfers* log shows that the amount has been deducted, plus a *fee*. All transactions will
-cost a fee, and depending on the type of transaction the fee might differ. Pressing the transaction will let you see more details.
+Тепер ми можемо бачити в списку *Transfers* рахунку *Example Account 2* що була знята сума і *комісія*.
+Усі транзакції обкладаються комісією, яка залежить від типу транзаціі.
+Натиснувши на транзакцію ви побачите додаткову інформацію.
 
 .. image:: images/concordium-id/acc17.png
       :width: 32%
@@ -107,116 +112,116 @@ cost a fee, and depending on the type of transaction the fee might differ. Press
 
 .. _move-an-amount-to-the-shielded-balance-uk:
 
-Move an amount to the shielded balance
-========================================
-If we go back to the *Accounts* screen, we can now see that the 10 GTU has been transferred to the *Balance* of *Example Account 1*. As you might
-have noticed before, the accounts also have a :ref:`glossary-shielded-balance`. In short, the shielded balance is for keeping shielded (encrypted) amounts
-of GTU on the account. Lets’ try adding some shielded GTU to our *Example Account 2*. Start by pressing the **Shielded Balance** area of the account card.
+Переміщення коштів на захищений баланс
+======================================
+Якщо ми повернемося назад, на екран *Accounts* (список рахунків), ми побачимо що 10 GTU були перераховані на *баланс* рахунку *Example Account 1*.
+Як ви могли помітити раніше, кожен рахунок містить :ref:`glossary-shielded-balance`.
+Якщо коротко, захищений баланс служить для зберігання зашифрованого залишку GTU на балансі рахунку.
+Давайте спробуємо *захистити* деяку суму GTU на наш рахунок *Example Account 2*.
+Для цього натиснемо на область **Shielded Balance** картки рахунку.
 
 .. image:: images/concordium-id/acc19.png
       :width: 32%
 .. image:: images/concordium-id/acc20.png
       :width: 32%
 
-Next, press the **SEND** button again and enter an amount of GTU to *shield*, which is the action of adding some GTU to the *Shielded Balance*.
-After doing that, let’s press **Select Recipient or shield amount** again. Instead of choosing a recipient, this time we will press **Shield amount**.
+Далі, натискаємо на кнопку **SEND** знову і вводимо суму GTU для для додавання цих токенов на *Захищений баланс*.
+Після чого тиснемо на **Select Recipient or shield amount**. Замість вибору одержувача, на цей раз тиснемо **Shield amount**.
 
 .. image:: images/concordium-id/acc21.png
       :width: 32%
 .. image:: images/concordium-id/acc22.png
       :width: 32%
 
-We can now continue and confirm the transaction, just like we did before with the regular transfer. The transaction might take a moment
-to finalize on the chain.
+Транзакція має бути підтверджена так само, як ми робили це раніше для звичайного перекладу.
+Виконання транзакції може зайняти певний час.
 
 .. image:: images/concordium-id/acc23.png
       :width: 32%
 .. image:: images/concordium-id/acc24.png
       :width: 32%
 
-By going back to the *Accounts* page, it can now be seen that there is 10 GTU on the *Shielded Balance* of *Example Account 2*. If the *Shielded
-Balance* area of the account card is pressed, we can see that there is a *Shielded amount* transaction in the shielded balance transfers log.
-Making a shielding transaction will also cost a fee, but this fee will be deducted from the regular balance of the account. Try going
-back and have a look at the transfer log of the regular *Balance*.
+Повернемося назад на екран *Accounts*, де тепер бачимо що 10 GTU знаходяться на *захищеності балансі* *Example Account 2*.
+Якщо натиснути на область *Захищений баланс* картки рахунку, ви можете побачити що з'явилася тразакція *Shielded amount* в списку логів перекладів.
+Створення захищає транзакції також обкладається комісією, але ця комісія буде знята з звичайного балансу рахунку.
+Давайте спробуємо повернутися назад і поглянути на список перекладів звичайного *Балансу*.
 
 .. image:: images/concordium-id/acc25.png
       :width: 32%
 .. image:: images/concordium-id/acc26.png
       :width: 32%
 
-Make a shielded transfer
-========================
-Having some shielded GTU available, we can now try making a *Shielded transfer*, which means that we can make a transfer with an encrypted
-amount of GTU. The first step is to browse to the *shielded balance* page of the account containing shielded GTU, if you are not already
-there. Then press the **SEND** button. You will now be able to enter an amount and choose a recipient. In this example we have chosen to
-transfer 2 GTU. When pressing the **Select Recipient or unshield amount** button, you will be able to choose a recipient. We will choose
-*Example Account 2* in this example.
+Створення захищеної транзакції
+==============================
+Маючи захищені GTU, ми тепер можемо спробувати виконати *захищену транзакцію* (*Shielded transfer*), що має на увазі транзакцію захищених GTU.
+Для початку перейдіть на екран *захищеного балансу* рахунку, який містить захищені GTU.
+Потім натисніть кнопку **SEND**. Тепер ви можете ввести кількість і вибрати одержувача.
+В даному прикладі ми вибрали 2 GTU. Після натискання **Select Recipient or unshield amount**, ви можете вибрати одержувача.
+Для прикладу виберемо *Example Account 2*.
 
 .. image:: images/concordium-id/acc27.png
       :width: 32%
 .. image:: images/concordium-id/acc28.png
       :width: 32%
 
-With the amount and recipient in place, you can now continue. Just like the other transactions you will now see a confirmation screen,
-and by continuing from that you will be able to verify yourself with a passcode or biometrics, and then submit the shielded transaction
-to the chain. Again, the transaction might take a moment to finalize on the chain.
+Після того як сума і одержувач обрані, можна продовжувати.
+Так само як і в інших транзакціях, ви побачите вікно підтвердження, після чого повинні будете підтвердити свою особистість пінкод або біометричними даними,
+після чого відправити захищену транзакцію в ланцюжок. Знову ж, завершення транзакції може зайняти певний час.
 
 .. image:: images/concordium-id/acc29.png
       :width: 32%
 .. image:: images/concordium-id/acc30.png
       :width: 32%
 
-
-Now, if you go back to the *Accounts* screen, you should be able to see that a little shield has appeared beside the amount on the
-*Shielded Balance* of the receiving account. This indicates that there are newly received shielded transactions on the shielded balance.
-Try pressing the shielded balance, and notice that you have to enter a passcode or use your biometrics to enter it.
-This happens because you need to decrypt received shielded transactions, before you can see the amount.
+Тепер, якщо ви повернетеся на екран рахунків (*Accounts*), ви побачите невелику іконку щита, біля суми *Захищений баланс* рахунку одержувача.
+Це означає що була отримана захищена транзакція.
+Спробуйте натиснути на захищений баланс і переконайтеся, що для того щоб увійти вам необхідно використовувати пінкод або біометрії.
+Це відбувається тому що ви повинні розшифрувати отриману захищену транзакцію, щоб побачити суму.
 
 .. image:: images/concordium-id/acc31.png
       :width: 32%
 .. image:: images/concordium-id/acc32.png
       :width: 32%
 
-Unshield an amount
-==================
-After the decryption, the amount is now visible in the *shielded balance* and on the account card on the *Accounts* screen. Now, what if we
-want to move some GTU from a shielded balance to a regular balance? Let’s try to move the 2 GTU to the regular balance via the action of
-*Unshielding* an amount. To do this, press the **SEND** button in the shielded balance. Enter 2 as the amount, and then press **Select Recipient
-or unshield amount**. **Choose Unshield amount**.
+Зняття захисту з балансу
+========================
+Після розшифровки, сума стане видимою в *захищеному балансі* картки рахунку на екрані рахунків (*Accounts*).
+Тепер, що якщо ми хочемо перемістити GTU з захищеного балансу на звичайний?
+Давайте спробуємо перемістити 2 GTU на звичайний баланс за допомогою функції зняття захисту з суми.
+Для цього, натисніть на кнопку **SEND** в захищеному балансі, введіть суму, потім натисніть **Select Recipient or unshield amount**, після чого виберіть **Unshield amount**.
 
 .. image:: images/concordium-id/acc33.png
       :width: 32%
 .. image:: images/concordium-id/acc34.png
       :width: 32%
 
-Now finish the transaction like you did with the other ones, and try browsing to the regular balance of the account to see the unshielding.
-If the transaction has finalized on chain, you should now be able to see that an *Unshielded amount* has ticked in on the regular balance.
-Notice how it is not 2 GTU, even though the amount you just unshielded was 2. This is because the fee for making any transaction, including
-an unshielding, will be deducted from the regular balance of the account responsible for the transaction.
+Тепер завершите транзакцію так само, як ви робили в попередніх прикладах і подивіться на звичайний балас рахунку, щоб переконатися що захист була знята.
+Якщо транзакція до цього часу була виконана, ви повинні побачити що сума перерахована на звичайний баланс.
+Зверніть увагу, що це не 2 GTU, незважаючи на те що раніше ми вибрали цю суму для зняття захисту.
+Вся справа в комісії, яка віднімається, в тому числі, за зняття захисту і списання відбувається з основного рахунку, що відповідає за транзакцію.
 
 .. image:: images/concordium-id/acc35.png
       :width: 32%
 .. image:: images/concordium-id/acc36.png
       :width: 32%
 
-Share your account address
+Поділитися адресою рахунку
 ==========================
-If you want to share the address of your account, this can be easily done by pressing the **Address** button. This will take you to a page
-where you have multiple options of sharing the account address. Try pressing the **Share** button, and share your address with someone.
+Якщо хочете поділитися адресою вашого рахунку, натисніть на кнопку **Address**.
+Відкриється сторінка, де будуть різні опції. Натиснувши кнопку **Share** ви зможете поділитися з ким-небудь своєю адресою.
 
 .. image:: images/concordium-id/acc37.png
       :width: 32%
 .. image:: images/concordium-id/acc38.png
       :width: 32%
 
-Inspect a release schedule
-==========================
-On the Concordium blockchain it is possible to make a transaction that releases the transferred amount over time. This is called a
-*transfer with a schedule*. For now we will not get into how to make such a transfer as it cannot be done from Concordium ID,
-but let’s check out how a release schedule can be inspected. If you receive a transfer with a release schedule, you can press the
-**burger menu** in the upper right corner of the balance screen. This will allow you to press **Release schedule**, and by doing this you
-will be taken to a screen containing information on how much GTU will be released and when. If you want to learn more about how to
-make a transfer with a release schedule, you can have a look at the :ref:`concordium_client` and :ref:`transactions` pages.
+Перерахунок за розкладом
+========================
+У блокчейні Concordium є можливість здійснювати транзакції через певні проміжки часу, це має назву *перерахунок за розкладом*.
+Зараз ми не будемо заглиблюватися в подробиці створення подібного перекладу, поскільки це не може бути виконано в додатку Concordium ID, однак, в пріложніі ми можемо перевірити розклад.
+Якщо у вас налаштований подібний переклад за розкладом, можете натиснути на кнопку **меню** в верхньому правому куті екрану з балансом.
+Після чого відобразиться пункт **Release schedule** (розклад перекладів), натиснувши на який ви перейдете на екран, який містить інформацію про те, скільки GTU буде відправлено і коли.
+Якщо хочете дізнатися більше про перекази за розкладом, можете знайти це на сторінках :ref:`concordium_client` і :ref:`transactions`.
 
 .. image:: images/concordium-id/rel1.png
       :width: 32%
@@ -225,8 +230,7 @@ make a transfer with a release schedule, you can have a look at the :ref:`concor
 .. image:: images/concordium-id/rel3.png
       :width: 32%
 
-Support & Feedback
-==================
+Підтримка і зворотний зв'язок
+=============================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Якщо ви зіткнулися з проблемами або у вас виникли питання, зв'яжіться з нами в `Discord`_, або по електронній пошті testnet@concordium.com.

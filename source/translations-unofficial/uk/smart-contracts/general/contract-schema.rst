@@ -31,10 +31,8 @@
 
 .. todo::
 
-   Consider rewriting this subsection as it can be somewhat difficult to
-   understand; in particular, possibly just say that for convenience, the user
-   can pass unserialized data into a function as long as they also provide a
-   schema that spells out how to (de)serialize the data.
+   Подумати про те, щоб переписати цей підрозділ, оскільки це може бути складно для розуміння;
+   зокрема, можна просто сказати, що для зручності користувач може передавати несеріалізованні дані в функцію, якщо вони також надають схему, яка описує, як (де)серіалізувати ці дані.
 
 Зазвичай ці байти мають структуру, і ця структура відома смарт-контракту як частина функцій контракту.
 Але за межами цих функцій може бути важко розібратися в байтах.

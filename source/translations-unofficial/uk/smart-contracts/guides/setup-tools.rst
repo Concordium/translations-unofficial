@@ -20,13 +20,13 @@ Cargo Concordium
 ================
 
 Cargo Concordium це інструмент для розробки смарт-контрактів для блокчейна Concordium.
-Він може бути використаний для :ref:`compiling<compile-module>` і :ref:`testing<unit-test-contract>` смарт-контрактів, і включає такі функції, як :ref:`building contract schemas<build-schema>`.
+Він може бути використаний для :ref:`компіляції <compile-module-uk>` і :ref:`тестування <unit-test-contract-uk>` смарт-контрактів, і включає такі функції, як :ref:`побудова схем смарт-контрактів <build-schema-uk>`.
 
 .. todo::
 
    Додайте посилання на тестування та схеми.
 
-Cargo Concordium поставляється як частина пакета :ref:`Concordium software<downloads>`.
+Cargo Concordium поставляється як частина пакета :ref:`програмне забезпечення Concordium <downloads>`.
 Інструмент повинен бути доданий в PATH.
 
 Для опису того, як використовувати Cargo Concordium, виконайте:
@@ -38,12 +38,12 @@ Cargo Concordium поставляється як частина пакета :re
 Програмне забезпечення Concordium
 =================================
 
-Інструмент для розгортання та взаємодії зі смарт-контрактами :ref:`concordium-client<concordium_client>`.
-Він поширюється як частина пакету :ref:`Concordium software<downloads>`.
+Інструмент для розгортання та взаємодії зі смарт-контрактами :ref:`concordium-client <concordium_client>`.
+Він поширюється як частина пакету :ref:`програмне забезпечення Concordium <downloads>`.
 
 .. note::
 
-   Щоб розгорнути модулі смарт-контрактів і взаємодіяти з мережею, переконайтеся, що ви :ref:`running a node<run-a-node>`.
+   Щоб розгорнути модулі смарт-контрактів і взаємодіяти з мережею, переконайтеся, що ви :ref:`запустили ноду <run-a-node-uk>`.
 
 .. _Rust: https://www.rust-lang.org/
 .. _Cargo: https://doc.rust-lang.org/cargo/

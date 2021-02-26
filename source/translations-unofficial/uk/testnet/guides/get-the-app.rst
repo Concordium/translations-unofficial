@@ -6,47 +6,45 @@
 
 .. _testnet-get-the-app-uk:
 
-=======================================
-Concordium ID: Install the app
-=======================================
+=================================
+Concordium ID: Встановити додаток
+=================================
 
 .. contents::
    :local:
    :backlinks: none
 
-By reading this section and the following *Concordium* ID sections, you will get an
-overview of the basic functionality of the app. If you have never used Concordium
-ID or similar apps, this is a good place to get started.
+Вивчивши цей і наступні розділи *Concordium ID*, ви отримаєте уявлення про основні функції програми.
+Якщо ви ніколи не використовували Concordium ID або схожі програми, то це гарна стаття для початку. 
 
-The ConcordiumID app is available for Android and iOS phones. Depending on what
-platform you are using, the way of installing the app differs slightly.
-
-
-Installation on Android
-=======================
-
-Installation requirements: Android 8 or newer.
-
-1. Download the `Concordium ID APK`_ to your phone.
-2. You may see a warning about downloading the .apk-file. If you are asked whether you want to keep the .apk-file, press **OK**.
-3. After opening the .apk-file, you may see a warning saying that your phone is not allowed to install apps from this source. Press **Settings**, toggle **Allow from this source** and go back.
-4. You are now asked if you want to install the application. Press **Install**.
+Додаток Concordium ID доступно для телефонів Android і iOS.
+Залежно від того, яку платформу ви використовуєте, спосіб установки програми буде трохи відрізнятися.
 
 
-Installation on iOS
+Установка на Android
 ====================
 
-Installation requirements: iOS 13 or newer.
+Вимоги: Android 8 і вище.
 
-Installing the Concordium ID app on iOS requires installation of Apple’s TestFlight app, which is used to distribute beta versions of iOS apps.
+1. Завантажте `Concordium ID APK`_ на ваш смартфон.
+2. Ви можете побачити попередження, при завантаженні .apk-файлу. Якщо система запитає вас, чи хочете ви зберегти .apk-файл, натисніть **Так**.
+3. Після відкриття .apk-файлу, ви можете побачити попередження, що ваш телефон не дозволяє встановлювати додатки з цього джерела. Натисніть **Налаштування**, і виберіть **Дозволити установку з цього джерела** після чого поверніться до установки.
+4. Після цього система запитає чи хочете ви встановити цей додаток. Натисніть **Встановити**.
 
-1. Install `TestFlight`_ via App Store.
-2. Join our `TestFlight beta program`_ via your iPhone (it works best if you click the link directly on your iPhone), and follow the steps shown in there, to add Concordium ID to TestFlight.
-3. Open the TestFlight app on your iPhone and install Concordium ID.
+
+Установка на iOS
+================
+
+Вимоги: iOS 13 і вище.
+
+Щоб встановити програму Concordium ID на iOS необхідно встановити додаток Apple TestFlight, яке використовується для поширення бета-версій додатків на iOS.
+
+1. Встановіть `TestFlight`_ через App Store.
+2. Приєднайтеся до `TestFlight beta program`_ через ваш iPhone (найкраще, якщо ви перейдете по посиланню прямо зі свого iPhone), дотримуйтесь інструкцій по додаванню Concordium ID в TestFlight.
+3. Відкрийте додаток TestFlight на своєму iPhone і встановіть Concordium ID.
 
 
-Support & Feedback
-==================
+Підтримка і зворотний зв'язок
+=============================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Якщо ви зіткнулися з проблемами або у вас виникли питання, зв'яжіться з нами в `Discord`_, або по електронній пошті testnet@concordium.com.

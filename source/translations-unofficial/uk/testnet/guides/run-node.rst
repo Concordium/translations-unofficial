@@ -140,5 +140,5 @@
 Інформацію про логах вашої ноди можна отримати за допомогою інструмента ``concordium-node-retrieve-logs``.
 Ця утиліта збереже логи з запущеного образу в файл. Крім того, при наявності відповідного дозволу, вона може записати інформацію про програми, запущених в даний час в системі.
 
-You can send your logs, system information, questions and feedback to testnet@concordium.com.
-You can also reach out at our `Discord`_, or check out our :ref:`troubleshooting page<troubleshooting-and-known-issues>`
+Ви можете відправити логи, системну інформацію, питання, коментарі та побажання на електронну пошту testnet@concordium.com.
+Також ви можете знайти нас в `Discord`_, або звернутися на сторінку :ref:`усунення несправностей <troubleshooting-and-known-issues>`

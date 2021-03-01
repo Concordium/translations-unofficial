@@ -5,217 +5,188 @@
 
 .. _become-a-baker-uk:
 
-==================================
-Become a baker (create blocks)
-==================================
+===================================
+Як стати пекарем (створення блоків)
+===================================
 
 .. contents::
    :local:
    :backlinks: none
 
-This section explains what a baker is, its role in the network and how to become
-one.
+У цій секції пояснюється що таке пекар, його роль в мережі і як їм стати.
 
-By reading this section you will learn:
+Після прочитання цієї секції ви дізнаєтеся:
 
--  What is a baker and the concepts related to it.
--  How to upgrade your node to become a baker.
+-  Що таке пекар які концепції з ним пов'язані
+-  Як оновити вашу ноду, щоб стати пекарем
 
-The process of becoming a baker can be summarized in the following steps:
+Щоб стати пекарем, вам необхідно виконати наступні кроки:
 
-#. Get an account and some GTUs.
-#. Get a set of baker keys.
-#. Register the baker keys with the account.
-#. Start the node with the baker keys.
+#. Отримати на рахунок деяку кількість токенов GTU.
+#. Отримати набір ключів пекаря.
+#. Прив'язати ключі пекаря до облікового запису (рахунку).
+#. Запустити ноду з ключами пекаря.
 
-After completing these steps, the baker node will bake blocks. If a baked block
-is added to the chain the node's baker will receive a reward.
+Після виконання цих кроків, нода-пекар почне * готувати * блоки.
+Якщо приготовлений блок буде додано до ланцюжок, нода пекаря отримає винагороду.
 
 .. note::
 
-   In this section we will use the name ``bakerAccount`` as the name of the
-   account that will be used to register and manage a baker.
+   У цій секції ми буде використовувати термін ``bakerAccount`` - це той же рахунок (обліковий запис),
+   який використовується для реєстрації та управління пекарем.
 
-Definitions
-===========
+Визначення
+==========
 
-Baker
+Пекар
 -----
 
-A node is a *baker* (or *is baking*) when it actively participates in the
-network by creating new blocks that are added to the chain. A baker collects,
-orders and validates the transactions that are included in a block to maintain
-the integrity of the blockchain. The baker signs each block that they bake so
-that the block can be checked and executed by the rest of the participants of
-the network.
+Нода є *пекарем*, якщо активно бере участь в мережі для створення нових блоків і додавання їх ланцюжок.
+Пекар збирає, сортує і перевіряє транзакції які включені в блок для управління цілісності блокчейна.
+Пекар підписує кожен блок, який готує, також кожен блок може бути перевірений і виконаний іншими учасниками мережі.
 
-Baker keys
-----------
+Ключі пекаря
+------------
 
-Each baker has a set of cryptographic keys called *baker keys*. The node uses
-these keys to sign the blocks that it bakes. In order to bake blocks signed by a
-specific baker the node has to be running with its set of baker keys loaded.
+Кожен пекар володіє набором криптографічних ключів, які називається *ключі пекаря*.
+Нода використовує ці ключі для підписування блоків які готує.
+Щоб готувати блоки підписані певним пекарем, в ноду повинні бути завантажені ці ключі.
 
-Baker account
+Акаунт пекаря
 -------------
 
-Each account can use a set of baker keys to register a baker.
+Кожен рахунок (обліковий запис) може використовувати набір ключів пекаря для реєстрації пекаря.
 
-Whenever a baker bakes a valid block that gets included in the chain, after some
-time a reward is paid to the associated account.
+Какждий раз, коли пекар випікає дійсний блок, який включається в ланцюжок, через деякий час на прив'язаний рахунок перераховується нагорода.
 
-Stake and lottery
------------------
+Частка і лотерея
+----------------
 
 .. todo::
 
-   - Link to release schedule.
+   - Посилання на графік випуску.
 
-The account can stake part of its GTU balance into the *baker stake* and can
-later manually release all or part of the staked amount. The staked amount
-cannot be moved or transferred until it is released by the baker.
+На рахунку може міститися частина балансу GTU на *частці пекаря*.
+Сума вказується при створенні але пізніше її можна скорегувати.
+Ця частка не може бути використана для перекладів, поки заблокована пекарем.
 
 .. note::
 
-   If an account owns an amount that was transferred with a release schedule,
-   the amount can be staked even if not released yet.
+   Якщо на рахунку є кошти, які призначені для перекладу за розкладом, ця сума не може стати часткою пекаря, навіть якщо ще не переведена.
 
-In order to be chosen for baking a block, the baker must participate in a
-*lottery* in which the probability of getting a winning ticket is roughly
-proportional to the staked amount.
+Щоб бути обраним для приготування блоку, пекар повинен брати участь в *лотереї*, в якій шанс отримати виграшний квиток пропорційно відповідає величині його частки. 
 
-The same stake is used when calculating whether a baker is included in the finalization
-committee or not. See Finalization_.
+Ця ж доля використовується при визначенні, чи буде включений пекар в комісії фіналізації чи ні. Для детальнішої інформації дивись Фіналізація_.
 
 .. _epochs-and-slots-uk:
 
-Epochs and slots
-----------------
+Епохи і слоти
+-------------
 
-In the Concordium blockchain, time is subdivided into *slots*. Slots have a time
-duration fixed at the Genesis block. On any given branch, each slot can have at
-most one block, but multiple blocks on different branches can be produced in the
-same slot.
+У блокчейне Concordium час розділено на слоти.
+Слоти мають фіксовану тривалість в блоці Genesis.
+У будь-якій даній галузі кожен слот може мати не більше одного блоку, але кілька блоків в різних гілках можуть бути створені в одному слоті.
 
 .. todo::
 
-   Let's add a picture.
+   Спробуйте додати картинку.
 
-When considering the rewards and other baking-related concepts, we use the
-concept of an *epoch* as a unit of time that defines a period in which the set
-of current bakers and stakes are fixed. Epochs have a time duration fixed at the
-Genesis block. In the testnet, epochs have a duration of **1 hour**.
+При розгляді винагород та інших концепцій, пов'язаних з випічкою, ми використовуємо концепцію епохи як одиниці часу, яка визначає період, протягом якого набір поточних пекарів і ставок фіксується.
+Епохи мають фіксовану тривалість в блоці Genesis. У тестовій мережі епохи мають тривалість **1 годину**.
 
-Start baking
-============
+Початок випікання
+=================
 
-Managing accounts
------------------
+Управління рахунками
+--------------------
 
-This section provides a brief recap of the relevant steps for importing an
-account. For a complete description, see :ref:`managing_accounts`.
+У цьому розділі дається короткий опис відповідних кроків для імпорту рахунку.
+Повний опис див. :ref:`managing_accounts`.
 
-Accounts are created using the :ref:`concordium_id` app. Once an account has been
-successfully created, navigating to the **More** tab and selecting **Export**
-allows you to get a JSON file containing the account information.
+Рахунки створюються програмою :ref:`concordium_id`.
+Після того як рахунок був створений, необхідно перейти на вкладку **More** і вибрати **Export**, це створить JSON файл, який містить інформацію про рахунки.
 
-To import an account into the toolchain run
+Для імпорту рахунку в ноду, виконайте
 
 .. code-block:: console
 
    $concordium-client config account import <path/to/exported/file> --name bakerAccount
 
-``concordium-client`` will ask for a password to decrypt the exported file and
-import all accounts. The same password will be used for encrypting the
-transaction signing keys and the encrypted transfers key.
+``concordium-client`` запросить пароль, щоб розшифрувати експортований файл і імпортувати рахунок.
+Той же пароль буде використовуватися для шифрування ключів транзакцій і зашифрованих ключів перекладів.
 
-Creating keys for a baker and registering it
---------------------------------------------
+Створення ключів пекаря і їх реєстрація
+---------------------------------------
 
 .. note::
 
-   For this process the account needs to own some GTU so make sure to request the
-   100 GTU drop for the account in the mobile app.
+   Для такої процедури вам необхідно мати GTU на рахунку.
+   Переконайтеся що ви зробили зпрос 100 GTU на рахунок в мобільному додатку.
 
-Each account has a unique baker ID that is used when registering its baker. This
-ID has to be provided by the network and currently cannot be precomputed. This
-ID must be given inside the baker keys file to the node so that it can use the
-baker keys to create blocks. The ``concordium-client`` will automatically fill
-this field when performing the following operations.
+Кожен рахунок має унікальний ідентифікатор пекаря (baker ID), який використовується під час реєстрації.
+Цей ID видається мережею і не може бути попередньо обчислений.
+Цей ID повинен бути зазначений усередині файлу ключів пекаря для Ноди, щоб він міг використовувати ключі пекаря для створення блоків.
+``concordium-client`` буде автоматично підставляти його значення для подальших операцій.
 
-To create a fresh set of keys run:
+Щоб створити новий ключ, виконайте:
 
 .. code-block:: console
 
    $concordium-client baker generate-keys <keys-file>.json
 
-where you can choose an arbitrary name for the keys file. To
-register the keys in the network you need to be :ref:`running a node <running-a-node-uk>`
-and send a ``baker add`` transaction to the network:
+тут ви можете вибрати ім'я файлу з ключами.
+Щоб зареєструвати ключі в мережі, нода повинна бути запущена (див. :ref:`запуск ноди <running-a-node>`) необхідно відправити в мережу транзакцію ``baker add``:
 
 .. code-block:: console
 
    $concordium-client baker add <keys-file>.json --sender bakerAccount --stake <amountToStake> --out <concordium-data-dir>/baker-credentials.json
 
-replacing
+замінивши
 
-- ``<amountToStake>`` with the GTU amount for the baker's initial stake
-- ``<concordium-data-dir>`` with the following data directory:
+- ``<amountToStake>`` на кількість GTU, яке ви хочете використовувати для частки пекаря
+- ``<concordium-data-dir>`` на шлях до поточної папки:
 
-  * on Linux and MacOS: ``~/.local/share/concordium``
-  * on Windows: ``%LOCALAPPDATA%\\concordium``.
+  * для Linux або MacOS: ``~/.local/share/concordium``
+  * для Windows: ``%LOCALAPPDATA%\\concordium``.
 
-(The output file name should remain ``baker-credentials.json``).
+(Назва файлу повинна залишитися ``baker-credentials.json``).
 
-Provide a ``--no-restake`` flag to avoid automatically adding the
-rewards to the staked amount on the baker. This behavior is described on the
-section `Restaking the earnings`_.
+Ви можете добавіть ``--no-restake`` опцію щоб уникнути автоматичного зарахування нагород на частку пекаря.
+Це детальніше описано в розділі `Restaking the earnings`_.
 
-In order to start the node with these baker keys and start producing blocks you
-first need to shut down the current running node (either by pressing
-``Ctrl + C`` on the terminal where the node is running or using the
-``concordium-node-stop`` executable).
+Щоб запустити ноду з ключами пекаря і почати виробляти блоки, вам спочатку необхідно вимкнути працюючу ноду (або натиснувши ``Ctrl + C`` в терміналі,
+в якому запущена нода, або скориставшись виконуваним файлом ``concordium-node-stop``).
 
-After placing the file in the appropriate directory (already done in the
-previous command when specifying the output file), start the node again using
-``concordium-node``. The node will automatically start baking when the baker
-gets included in the bakers for the current epoch.
+Після розміщення файлу у відповідному каталозі (вже було зроблено після виконання попередньої команди при вказівці вихідного файлу), знову запустіть ноду, використовуючи ``concordium-node``.
+Нода автоматично почне приготування, коли пекар потрапить в список пекарів на поточну епоху.
 
-This change will be executed
-immediately and will take effect when finishing the epoch after the one in which
-the transaction for adding the baker was included in a block.
+Ця зміна буде прийнято негайно, але вступить в силу через одну епоху, після тієї, в якій транзакція на додавання пекаря була включена в блок.
 
-.. table:: Timeline: adding a baker
+.. table:: Хронологія: додавання пекаря
 
-   +-------------------------------------------+-----------------------------------------+-----------------+
-   |                                           | When transaction is included in a block | After 2 epochs  |
-   +===========================================+=========================================+=================+
-   | Change is visible by querying the node    |  ✓                                      |                 |
-   +-------------------------------------------+-----------------------------------------+-----------------+
-   | Baker is included in the baking committee |                                         | ✓               |
-   +-------------------------------------------+-----------------------------------------+-----------------+
+   +----------------------------------+----------------------------+---------------+
+   |                                  | Транзакція включена в блок | Через 2 епохи |
+   +==================================+============================+===============+
+   | Змінм видно в ноді за запитом    |  ✓                         |               |
+   +----------------------------------+----------------------------+---------------+
+   | Пекар включений в список пекарів |                            | ✓             |
+   +----------------------------------+----------------------------+---------------+
 
 .. note::
 
-   If the transaction for adding the baker was included in a block during epoch `E`, the
-   baker will be considered as part of the baking committee when epoch
-   `E+2` starts.
+   Якщо транзакція на додавання пекаря була включена в блок під час епохи `E`, пекар буде вважатися частиною списку пекарів коли почнеться епоха `E+2`.
 
-Managing the baker
+Управління пекарем
 ==================
 
-Checking the status of the baker and its lottery power
-------------------------------------------------------
+Перевірка статусу пекаря і шансів виграти лотерею
+-------------------------------------------------
 
-In order to see if the node is baking, you can check various sources that
-offer different degrees of precision in the information displayed.
+Щоб побачити, чи випікає нода, ви можете перевірити кілька джерел, які пропонують інформацію з різним ступенем точності. 
 
-- In the `network dashboard <http://dashboard.testnet.concordium.com>`_, your
-  node will show its baker ID in the ``Baker`` column.
-- Using the ``concordium-client`` you can check the list of current bakers
-  and the relative staked amount that they hold, i.e. their lottery power.  The
-  lottery power will determine how likely it is that a given baker will win the
-  lottery and bake a block.
+- В `network dashboard <http://dashboard.testnet.concordium.com>`_, ваша нода містить поле baker ID в стовпці ``Baker``.
+- Використовуючи ``concordium-client`` ви можете перевірити поточний список пекарів і відповідні суми часткою на їхньому рахунку, це і є їх шанс виграти лотерею.
+  Це значення означає, наскільки ймовірно пекар отримає шанс приготувати блок.
 
   .. code-block:: console
 
@@ -229,8 +200,7 @@ offer different degrees of precision in the information displayed.
          34: 4p2n8QQn5akq3XqAAJt2a5CsnGhDvUon6HExd2szrfkZCTD4FX   <0.0001
          ...
 
-- Using the ``concordium-client`` you can check that the account has
-  registered a baker and the current amount that is staked by that baker.
+- Використовуючи ``concordium-client`` ви можете перевірити що рахунок був зареєстрований в якості пекаря і побачити розмір його частки.
 
   .. code-block:: console
 
@@ -242,46 +212,40 @@ offer different degrees of precision in the information displayed.
       - Restake earnings: yes
      ...
 
-- If the staked amount is big enough and there is a node running with the baker
-  keys loaded, that baker should eventually produce blocks and you can see
-  in your mobile wallet that baking rewards are being received by the account,
-  as seen in this image:
+- Якщо поле "staked amount" досить велике, і нода запущена з завантаженими ключами пекаря,
+  пекар повинен час від часу проводити блоки і ви можете побачити в мобільному гаманці,
+  що на рахунок перераховуються нагороди пекареві, наприклад як на скріншоті:
 
   .. image:: images/bab-reward.png
      :align: center
      :width: 250px
 
-Updating the staked amount
---------------------------
+Поновлення частки пекаря
+------------------------
 
-To update the baker stake run
+Для поновлення частки пекаря, виконайте
 
 .. code-block:: console
 
    $concordium-client baker update-stake --stake <newAmount> --sender bakerAccount
 
-Modifying the staked amount modifies the probability that a baker gets elected
-to bake blocks.
+Зміна цієї суми впливає на можливість пекаря бути обраним для приготування блоку.
 
-When a baker **adds stake for the first time or increases their stake**, that
-change is executed on the chain and becomes visible as soon as the transaction
-is included in a block (can be seen through ``concordium-client account show
-bakerAccount``) and takes effect 2 epochs after that.
+Коли пекар **додає частку в перший раз або збільшує свою частку**,
+ця зміна виконується в ланцюжку і стає видимим як тільки транзакція включена в блок (можна побачити за допомогою ``concordium-client account show bakerAccount``) і вступає в силу через 2 епохи.
 
-.. table:: Timeline: increasing the stake
+.. table:: Хронологія: збільшення частки
 
-   +----------------------------------------+-----------------------------------------+----------------+
-   |                                        | When transaction is included in a block | After 2 epochs |
-   +========================================+=========================================+================+
-   | Change is visible by querying the node | ✓                                       |                |
-   +----------------------------------------+-----------------------------------------+----------------+
-   | Baker uses the new stake               |                                         | ✓              |
-   +----------------------------------------+-----------------------------------------+----------------+
+   +--------------------------------+----------------------------+---------------+
+   |                                | Транзакція включена в блок | Через 2 епохи |
+   +================================+============================+===============+
+   | Зміни видно в ноді за запитом  | ✓                          |               |
+   +--------------------------------+----------------------------+---------------+
+   | Пекар використовує нову частку |                            | ✓             |
+   +--------------------------------+----------------------------+---------------+
 
-When a baker **decreases the staked amount**, the change will need *2 +
-bakerCooldownEpochs* epochs to take effect. The change becomes visible on the
-chain as soon as the transaction is included in a block, it can be consulted through
-``concordium-client account show bakerAccount``:
+Коли пекар **зменшує свою частку**, змінам необхідно *2 + bakerCooldownEpochs* епох щоб вступити в силу.
+Зміна стає видимим в ланцюжку як тільки транзакція включена в блок, це можна переглянути виконавши ``concordium-client account show bakerAccount``:
 
 .. code-block:: console
 
@@ -294,23 +258,23 @@ chain as soon as the transaction is included in a block, it can be consulted thr
 
    ...
 
-.. table:: Timeline: decreasing the stake
+.. table:: Хронологія: зменшення частки
 
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                        | When transaction is included in a block | After *2 + bakerCooldownEpochs* epochs |
-   +========================================+=========================================+========================================+
-   | Change is visible by querying the node | ✓                                       |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker uses the new stake               |                                         | ✓                                      |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Stake can be decreased again or        | ✗                                       | ✓                                      |
-   | baker can be removed                   |                                         |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
+   +---------------------------------+----------------------------+--------------------------------------+
+   |                                 | Транзакція включена в блок | Через *2 + bakerCooldownEpochs* епох |
+   +=================================+============================+======================================+
+   | Зміни видно в ноді за запитом   | ✓                          |                                      |
+   +---------------------------------+----------------------------+--------------------------------------+
+   | Пекар використовує нову частку  |                            | ✓                                    |
+   +---------------------------------+----------------------------+--------------------------------------+
+   | Частка може бути зменшена знову | ✗                          | ✓                                    |
+   | або пекар може бути видалений   |                            |                                      |
+   +---------------------------------+----------------------------+--------------------------------------+
 
 .. note::
 
-   In the testnet, ``bakerCooldownEpochs`` is set initially to 168 epochs. This
-   value can be checked as follows:
+   У тестнете, ``bakerCooldownEpochs`` встановлено в розмірі 168 епох.
+   Це значення може бути перевірено за допомогою команди: 
 
    .. code-block:: console
 
@@ -321,33 +285,26 @@ chain as soon as the transaction is included in a block, it can be consulted thr
 
 .. warning::
 
-   As noted in the `Definitions`_ section, the staked amount is *locked*,
-   i.e. it cannot be transferred or used for payment. You should take this
-   into account and consider staking an amount that will not be needed in the
-   short term. In particular, to deregister a baker or to modify the staked
-   amount you need to own some non-staked GTU to cover the transaction
-   costs.
+   Як говорилося в розділі `Визначення`_, сума частки є *заблокованої*, тобто вона не може бути відправлена на інший рахунок або використана для оплати.
+   Ви повинні розраховувати, що ця сума не знадобиться найближчим временя.
+   Наприклад, для видалення пекаря або для зміни його частки вам буде потрібно деяка сума GTU на основному рахунку, щоб оплатити вартість транзакцій.
 
-Restaking the earnings
-----------------------
+Повернення прибутку
+-------------------
 
-When participating as a baker in the network and baking blocks, the account
-receives rewards on each baked block. These rewards are automatically added to
-the staked amount by default.
+Коли пекар працює в мережі і готує блоки, на його рахунок перераховуються нагороди за кожен приготований блок.
+Ці нагороди за замовчуванням автоматично додаються на частку пекаря.
 
-You can choose to modify this behavior and instead receive the rewards in
-the account balance without staking them automatically. This switch can be
-changed through ``concordium-client``:
+Ви можете змінити цю поведінку і натомість отримувати нагороди на основний баланс рахунку.
+Ця зміна здійснюється за допомогою ``concordium-client``:
 
 .. code-block:: console
 
    $concordium-client baker update-restake False --sender bakerAccount
    $concordium-client baker update-restake True --sender bakerAccount
 
-Changes to the restake flag will take effect immediately; however, the changes
-start affecting baking and finalizing power in the epoch after next. The current
-value of the switch can be seen in the account information which can be queried
-using ``concordium-client``:
+Ці зміни виконуватися негайно, проте, почнуть діяти на пекаря через 2 епохи.
+Поточне значення це опції можна дізнатися за допомогою команди `` concordium-client``: 
 
 .. code-block:: console
 
@@ -360,65 +317,56 @@ using ``concordium-client``:
 
    ...
 
-.. table:: Timeline: updating restake
+.. table:: Хронологія: зміна опції повернення
 
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   |                                               | When transaction is included in a block | 2 epochs after being rewarded |
-   +===============================================+=========================================+===============================+
-   | Change is visible by querying the node        | ✓                                       |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | Earnings will [not] be restaked automatically | ✓                                       |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
-   | If restaking automatically, the gained        |                                         | ✓                             |
-   | stake affects the lottery power               |                                         |                               |
-   +-----------------------------------------------+-----------------------------------------+-------------------------------+
+   +---------------------------------------------------+----------------------------+----------------------------+
+   |                                                   | Транзакція включена в блок | 2 епохи після нагородження |
+   +===================================================+============================+============================+
+   | Зміни видно в ноді за запитом                     | ✓                          |                            |
+   +---------------------------------------------------+----------------------------+----------------------------+
+   | Нагороди (не) будуть накопичуватися автоматично   | ✓                          |                            |
+   +---------------------------------------------------+----------------------------+----------------------------+
+   | При автоматичному перерахунку,                    |                            | ✓                          |
+   | отримана частка впливає на шанс виграшу в лотереї |                            |                            |
+   +---------------------------------------------------+----------------------------+----------------------------+
 
-When the baker is registered, it will automatically re-stake the earnings, but as
-mentioned above, this can be changed by providing the ``--no-restake`` flag to
-the ``baker add`` command as shown here:
+Коли пекар зареєстрований, він автоматично буде перераховувати свою частку при отриманні прибутку,
+але як зазначено вище це може бути змінено за допомогою опції ``--no-restake`` під час виконання команди ``baker add``: 
 
 .. code-block:: console
 
    $concordium-client baker add baker-keys.json --sender bakerAccount --stake <amountToStake> --out baker-credentials.json --no-restake
 
-Finalization
-------------
+Фіналізація
+-----------
 
-Finalization is the voting process performed by nodes in the *finalization
-committee* that *finalizes* a block when a sufficiently big number of members of
-the committee have received the block and agree on its outcome. Newer blocks
-must have the finalized block as an ancestor to ensure the integrity of the
-chain. For more information about this process, see the
-:ref:`finalization<glossary-finalization>` section.
+Фіналізація - це процес голосування, що виконується нодамі в *фіналізаціонной комісії*, який *завершує* блок,
+в процесі досить велика кількість членів комісії отримали блок, узгоджують його результат.
+Нові блоки повинні містити завершений блок як батько, щоб гарантувати цілісність ланцюжка.
+Для отримання додаткової інформації про цей процес див. секцію :ref:`фіналізація <glossary-finalization>`.
 
-The finalization committee is formed by the bakers that have a certain staked
-amount. This specifically implies that in order to participate in the
-finalization committee you will probably have to modify the staked amount
-to reach said threshold. In the testnet, the staked amount needed to participate
-in the finalization committee is **0.1% of the total amount of existing GTU**.
+Комісія з фіналізації формується з пекарів, що мають певну частку.
+Це, зокрема, означає, що для участі в процесі фіналізації вам, ймовірно, доведеться змінити суму ставки, об досягти зазначеного порога.
+У тестовій мережі сума ставки, необхідна для участі в комісії дорівнює **0,1% від загальної кількості існуючих GTU**.
 
-Participating in the finalization committee produces rewards on each block that
-is finalized. The rewards are paid to the baker account some time after the
-block is finalized.
+Участь в комісії фіналізації передбачає нагороди за кожен блок, який був фіналізовано.
+Нагороди перераховуються на рахунок пекаря через деякий час після того як блок був фіналізовано.
 
-Removing a baker
+Видалення пекаря
 ================
 
-The controlling account can choose to de-register its baker on the chain. To do
-so you have to execute the ``concordium-client``:
+Власник рахунку може скасувати реєстрацію свого пекаря в ланцюжку.
+Для цього скористайтеся командою ``concordium-client``:
 
 .. code-block:: console
 
    $concordium-client baker remove --sender bakerAccount
 
-This will remove the baker from the baker list and unlock the staked amount on
-the baker so that it can be transferred or moved freely.
+Це видалить пекаря зі списку пекарів і розблокує його частку на рахунку, після чого ця сума вільно може ісползовать.
 
-When removing the baker, the change has the same timeline as decreasing
-the staked amount. The change will need *2 + bakerCooldownEpochs* epochs to take effect.
-The change becomes visible on the chain as soon as the transaction is included in a block and you
-can check when this change will be take effect by querying the account information
-with ``concordium-client`` as usual:
+Дана процедура займає стільки ж часу в епохах, скільки і зменшення частки пекаря.
+Зміні потрібно *2 + bakerCooldownEpochs* епох щоб вступити в силу.
+Зміна стає видимим в ланцюжку як тільки транзакція включена в блок, як зазвичай, ви можете перевірити це виконавши команду ``concordium-client``:
 
 .. code-block:: console
 
@@ -431,24 +379,22 @@ with ``concordium-client`` as usual:
 
    ...
 
-.. table:: Timeline: removing a baker
+.. table:: Хронологія: видалення пекаря
 
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   |                                            | When transaction is included in a block | After *2 + bakerCooldownEpochs* epochs |
-   +============================================+=========================================+========================================+
-   | Change is visible by querying the node     | ✓                                       |                                        |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
-   | Baker is removed from the baking committee |                                         | ✓                                      |
-   +--------------------------------------------+-----------------------------------------+----------------------------------------+
+   +-------------------------------------+----------------------------+--------------------------------------+
+   |                                     | Транзакція включена в блок | Через *2 + bakerCooldownEpochs* епох |
+   +=====================================+============================+======================================+
+   | Зміни видно в ноді за запитом       | ✓                          |                                      |
+   +-------------------------------------+----------------------------+--------------------------------------+
+   | Пекар виключений з комітету пекарів |                            | ✓                                    |
+   +-------------------------------------+----------------------------+--------------------------------------+
 
 .. warning::
 
-   Decreasing the staked amount and removing the baker cannot be done
-   simultaneously. During the cooldown period produced by decreasing the staked
-   amount, the baker cannot be removed and vice versa.
+   Зменшення частки пекаря і його видалення не може бути виконано одночасно.
+   Протягом всього процесу зменшення частки пекаря ви не можете починати процедуру видалення і навпаки. 
 
-Support & Feedback
-==================
+Підтримка і зворотний зв'язок
+=============================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Якщо ви зіткнулися з проблемами або у вас виникли питання, зв'яжіться з нами в `Discord`_, або по електронній пошті testnet@concordium.com.

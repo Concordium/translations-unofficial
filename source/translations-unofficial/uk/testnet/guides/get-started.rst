@@ -3,33 +3,31 @@
 
 .. _testnet-get-started-uk:
 
-=======================================
-Concordium ID: Get started with the app
-=======================================
+========================================
+Concordium ID: Початок роботи з додатком
+========================================
 
 .. contents::
    :local:
    :backlinks: none
 
-Before following this guide you should have finished installing Concordium ID, as described in :ref:`the previous chapter<testnet-get-the-app>`.
+Перед тим, як приступити до цієї довідки, ви повинні завершити установку Concordium ID, як описано в :ref:`попередній частині <testnet-get-the-app>`.
 
-Set up a passcode and biometrics
-================================
+Установка пароля і біометрії
+============================
 
-When you open the Concordium ID app for the first time, you will be greeted by a flow
-that will help you setup a passcode and biometric authentication, create an :ref:`glossary-initial-account`,
-and it will also guide you through getting an :ref:`glossary-identity`. The initial account is a special type of account,
-that is submitted to the chain by the :ref:`glossary-identity-provider`, upon creation of an identity. You can make the
-the same transactions from an initial account as from regular accounts, but the owner of the initial account will be
-known by the identity provider. After your identity is created you will be able to submit accounts to the chain
-yourself, and these will be unknown by the identity provider. You can learn more about accounts on the :ref:`Identities
-and accounts<reference-id-accounts>` page.
+Коли ви вперше відкриєте додаток Concordium ID, вас зустріне помічник, який допоможе вам налаштувати пароль і біометричну аутентифікацію,
+створити :ref:`glossary-initial-account`, також допоможе вам отримати :ref:` glossary-identity`.
+Початковий рахунок - це особливий тип рахунку, який передається в ланцюжок :ref:`glossary-identity-provider` при створенні ідентифікатора.
+Ви можете виконувати ті ж транзакції з початковим рахунком, що і з звичайними рахунками, але власник вихідного рахунку буде відомий постачальнику посвідчень.
+Після того, як ваш ідентифікатор буде створена, ви зможете додавати рахунки в вашу ланцюжок і постачальник посвідчень не дізнається про це.
+Можете дізнатися більше про рахунки на сторінці :ref:`Рахунки і ідентифікатори <reference-id-accounts>`.
 
-The first screen you will meet when opening Concordium ID is this one. It will just explain that
-you have to go through this process to get started.
+Це перший екран, який ви побачите при відкритті Concordium ID. Він пояснює як виконати початкову настройку, щоб почати роботу.
 
-If you are ready to continue, you can press **Yes, let’s go!** The next screen will ask you to input
-a six-digit passcode. If you would rather use a full password including letters, you can also choose to do so here.
+Якщо ви готові продовжити, просто натисніть **Yes, let's go!**.
+На наступному екрані вам буде запропоновано ввести 6-значний пінкод.
+Якщо ви віддаєте перевагу використовувати більш надійний пароль, що включає символи, така опція також доступна.
 
 .. image:: images/concordium-id/int1.png
       :width: 32%
@@ -38,85 +36,85 @@ a six-digit passcode. If you would rather use a full password including letters,
 
 .. todo::
 
-   Write a directive to make two or more images side-by-side centered
+   Напишіть директиву, щоб зробити два або більше зображень по центру
 
 
-Having chosen either a passcode or a full password, you will get the option to also use biometrics if your phone
-supports it, i.e. facial recognition or fingerprint. We recommend using biometrics if you have the option to do so.
+Вибравши пінкод або надійний пароль, ви також маєте можливість прив'язати біометричні дані, якщо ваш телефон підтримує роботу з ними.
+Це може бути розпізнавання особи або відбитків пальців. Ми рекомендуємо використовувати біометричні дані, якщо у вас є така можливість.
 
 .. image:: images/concordium-id/int3.png
       :width: 32%
       :align: center
 
-Request your initial account and identity
-=========================================
+Запит початкового рахунку і ідентифікатора
+==========================================
 
-Next up, you will get a choice between making a new initial account and identity, or importing an already existing set.
-Assuming this is the first time you are using Concordium ID, you can choose **I want to create my initial account** to continue.
+Далі у вас буде вибір між створенням нового початкового рахунку і ідентифікатора або імпортом вже існуючого набору.
+Якщо ви вперше використовуєте Concordium ID, вибирайте **I want to create my initial account**, щоб продовжити.
 
 .. image:: images/concordium-id/int4.png
       :width: 32%
       :align: center
 
 
-On the next screen you will see a description of what the initial account is and the three steps you have to finish to get it,
-along with your identity. In short, the initial account is an account submitted to the chain by the identity provider of your
-choice, which means they will know that you are the owner of the account. Later you will be able to submit accounts to the
-chain by yourself, which means the owner of these accounts will be only known by you.
+На наступному екрані ви побачите опис того, що таке початковий рахунок, і три простих кроки, які ви повинні виконати, щоб отримати його і ідентифікатор.
+Початковий рахунок - це обліковий запис, збережена в ланцюжок постачальником посвідчень, якого ви вибрали. Це означає, що постачальник буде знати, що ви є власником цього рахунку.
+Пізніше ви зможете додавати рахунки в ланцюжок самостійно, а значить власник цих рахунків буде відомий тільки вам.
 
 .. image:: images/concordium-id/int5.png
       :width: 32%
       :align: center
 
-The three steps mentioned above are:
+Три кроки, згадані вище:
 
-1. Naming of your initial account
-2. Naming your identity
-3. Requesting the initial account and identity from an :ref:`glossary-identity-provider` of your choice
+1. Створення імені початкового рахунку
+2. Створення імені ідентифікатора
+3. Запит початкового рахунку і ідентифікатора у постачальника посвідчень (:ref:`glossary-identity-provider`), якого ви вибрали.
 
-You will meet the first step on the next page, which prompts you to enter a name for your initial account. Pressing continue
-will take you to the next page, on which you have to name your identity. Both of these names will only be known by yourself,
-so you can name them more or less whatever you want (There are a few constraints on what letters and signs you can use).
+Перший крок ви побачите на наступній сторінці - вам буде запропоновано ввести ім'я для вашого початкового рахунку.
+Після чого ви потрапите на наступну сторінку, на якій ви повинні придумати собі ідентифікатор.
+Обидва ці значення будуть відомі тільки вам, так що ви можете називати як хочете (проте є деякі обмеження на те, які букви і символи ви можете використовувати).
 
-In the example below, we choose to call our initial account *Example Account 1* and our identity *Example Identity*. As
-mentioned, you can choose whichever names you want.
+У прикладі нижче ми вибрали ім'я рахунку *Example Account 1* і ідентифікатор *Example Identity*.
+Як було згадано, ви можете вибрати будь-яке значення, яке хочете.
 
 .. image:: images/concordium-id/int6.png
       :width: 32%
 .. image:: images/concordium-id/int7.png
       :width: 32%
 
-By pressing **Continue to identity providers**, you will be taken to a page where you have to choose between *identity providers*.
-An identity provider is an external entity who will verify who you are, before returning an identity object to be used on the chain.
-For now you can choose between:
+Натиснувши **Continue to identity providers**, ви потрапите на сторінку, де вам потрібно буде вибрати *постачальника посвідчень*.
+Постачальник посвідчень - це зовнішня служба, яка перевіряє, хто ви, перед тим, як повернути об'єкт посвідчення, який буде використовуватися в ланцюжку.
+На даний момент ви можете вибрати один з:
 
-* *Notabene Development* which will give you a test identity without real life identity verification.
-* *Notabene* via which your real life identity will be verified.
+* *Notabene Development* який дасть вам тестовий ідентифікатор без реальної перевірки особистості.
+* *Notabene* за допомогою якого буде перевірена ваша справжня особистість.
 
 .. image:: images/concordium-id/int8.png
       :width: 32%
       :align: center
 
-By choosing Notebene Development, you will be given a test identity without further ado. If you choose Notabene you will be taken
-to their external identity issuance flow, which will guide you through the process of getting verified for an identity object.
-After finishing this flow, you will be taken back to Concordium ID.
+Вибравши Notebene Development, ви без зайвих слів отримаєте тестовий ідентифікатор.
+Якщо ви виберете Notabene, ви ініціюєте зовнішню процедуру перевірки, яка проведе вас через весь процес отримання посвідчення.
+Після завершення цього процесу ви повернетеся в Concordium ID.
 
-After finishing either of the identity issuance flows, you will be met with the following screen. It will show you an overview
-of your identity and the initial account.
+Після завершення будь-якого з процесів видачі посвідчень ви побачите наступний екран.
+На ньому ви побачите інформацію про вашому ідентифікатор особистості і початковому рахунку.
 
 .. image:: images/concordium-id/int9.png
       :width: 32%
       :align: center
 
-Depending on the identity provider you have chosen, the layout of the identity card might differ slightly. You can see that the
-Example Account 1 is held by the identity Example Identity. The account created during this process will be marked with *(Initial)*
-in the app, so you know which account is the initial account submitted to the chain by the identity provider.
+Залежно від обраного вами постачальника посвідчень зовнішній вигляд посвідчення особи може незначно відрізнятися.
+Ви можете бачити, що *Example Account 1* належить ідентифікатором *Example Identity*.
+Рахунок, створений під час цього процесу, буде відзначений в додатку як *(Initial)*, щоб ви бачили, який рахунок є початковим, відправленим в ланцюжок постачальником посвідчень.
 
-By pressing **Finish** you will be taken to the *Accounts screen*. On this screen you will be able to see your newly created initial
-account. It might be showing a *Pending icon*, which means the identity provider is still working on submitting and creating your
-initial account and identity. You can also navigate to the *Identities screen* by clicking on **Identities** at the bottom of the
-display. On this screen you can see your newly created identity, which might also still be pending in case the identity provider
-has not finished it yet. All you have to do now, is wait for them to finish.
+Натиснувши **Finish**, ви потрапите на екран *Accounts*.
+На цьому екрані ви зможете побачити недавно створений, початковий рахунок.
+Також може відображатися значок *Pending*, що означає, що постачальник посвідчень все ще працює над створенням вашого початкового рахунку і ідентифікатора.
+Перейдемо до екрану *Ідентифікатори*, натиснувши **Identities** в нижній частині екрана.
+На цьому екрані ви побачите тільки що створений ідентифікатор, який також може бути в змозі обробки, якщо постачальник посвідчень ще не закінчив процес створення.
+Все що вам залишається, це дочекатися його завершення.
 
 .. image:: images/concordium-id/int10.png
       :width: 32%
@@ -124,8 +122,7 @@ has not finished it yet. All you have to do now, is wait for them to finish.
       :width: 32%
 
 
-Support & Feedback
-==================
+Підтримка і зворотний зв'язок
+=============================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Якщо ви зіткнулися з проблемами або у вас виникли питання, зв'яжіться з нами в `Discord`_, або по електронній пошті testnet@concordium.com.

@@ -3,188 +3,142 @@
 
 .. _run-a-node-uk:
 
-==========
-Run a Node
-==========
+===========
+Запуск ноди
+===========
 
 .. contents::
    :local:
    :backlinks: none
 
-In this guide, you learn how to run a node on your computer that
-participates in the Concordium network. This means that you receive
-blocks and transactions from other nodes, as well as propagate
-information about blocks and transactions to the nodes in the Concordium
-network. After following this guide, you will be able to
+У цьому керівництві ви дізнаєтеся, як запустити на своєму комп'ютері ноду для участі в мережі Concordium.
+Це означає, що ви будете отримувати блоки і транзакції від інших нод (вузлів), а також ділитися інформацією про блоках і транзакціях з нодамі в Concordium мережі.
+Слідуючи цьому керівництву, ви зможете
 
--  run a Concordium node
--  observe it on the network dashboard and
--  query the state of the Concordium blockchain directly from your
-   machine.
+-  запустити ноду Concordium
+-  знайти її на мережевий панелі
+-  виконувати запити стану блокчейна Concordium безпосередньо з вашого комп'ютера 
 
-You do not need an account to run a node.
+Вам не потрібен рахунок щоб запустити ноду.
 
-Before you begin
-================
+Перед початком
+==============
 
-Before running a Concordium node you will need to
+Перш ніж запустити ноду Concordium вам необхідно
 
-1. Install and run Docker.
+1. Інсталювати та запустити Docker.
 
-   -  On *Linux*, allow Docker to be run as a non-root user.
+   -  на *Linux*, дати доступ програмі Docker запускатися як non-root користувач.
 
-2. Download and extract the :ref:`concordium-node-and-client-download` software.
+2. Завантажити і розархівувати програмне забезпечення :ref:`concordium-node-and-client-download`.
 
-Upgrade from an earlier version of Open Testnet
-===============================================
+Оновлення з попередньої версії Open Testnet
+===========================================
 
-To upgrade to the current Concordium software for Open Testnet 4:
+Для оновлення до поточної версії програмного забезпечення Concordium для Open Testnet 4:
 
--  Follow the above steps to :ref:`download<downloads>` the most recent Concordium
-   software.
+-  Наступні дії по :ref:`завантаженню <downloads>` останньої версії програмного забезпечення Concordium.
 
--  Run the ``concordium-node-reset-data`` executable from the unzipped
-   archive.
+-  Запустіть виконуваний файл ``concordium-node-reset-data`` з завантаженого архіву.
 
-   -  For *Mac* users: the first time you open the tool, right-click the
-      ``concordium-node-reset-data`` file and select **Open**. A message
-      will appear that the software is from an unidentified developer.
-      Select **Open** again.
-   -  For *Windows* users: the first time you open the tool,
-      double-click the ``concordium-node-reset-data`` file. A message
-      will appear that the software is from an unidentified developer.
-      Select **More info** → **Run anyway**.
+   -  Для користувачів *Mac*: коли в перший раз відкриваєте програму, правою кнопкою миші по файлу ``concordium-node-reset-data`` і виберете **Відкрити**.
+      З'явиться повідомлення, що це програмне забезпечення від невідомого розробника. Виберіть **Відкрити** знову.
+   -  Для користувачів *Windows*: коли в перший раз відкриваєте програму, двічі клікніть на ``concordium-node-reset-data``.
+      З'явиться повідомлення, що це програмне беспеченіе від невідомого розробника. Виберіть **Деталі** → **Запустити все одно**.
 
--  The tool will ask:
+-  Програма запитає:
 
       *Do you also want to remove saved keys?*
 
-   Accounts that were created for prior versions are no longer valid on
-   Open Testnet 3. Therefore, if you have stored accounts from prior
-   versions we recommend entering **y** which will delete all account
-   keys.
+   Рахунки які були створені для попередніх версій тестнета більш не дійсні.
+   Отже, якщо у вас є збережені рахунки, ми рекомендуємо вибрати опцію **y**, яка видалить всі старі записи.
 
 .. _running-a-node-uk:
 
-Running a node
+Запуск ноди
 ==============
 
-To start running a client that will join the Open Testnet follow these
-steps:
+Щоб запустити клієнт, який приєднається до відкритої тестової мережі, виконайте наступні дії:
 
-1. Open the ``concordium-node`` executable from the unzipped archive.
+1. Запустіть ``concordium-node`` з завантаженого архіву.
 
--  For *Mac* users: the first time you open the tool, right-click the
-   ``concordium-node`` binary and select **Open**. A message will appear
-   that the software is from an unidentified developer. Select **Open**
-   again.
--  For *Windows* users: the first time you open the tool, double-click
-   the ``concordium-node`` binary. A message will appear that the
-   software is from an unidentified developer. Select **More info** →
-   **Run anyway**.
--  When *restarting* a node consider using the
-   ``--no-block-state-import`` option. This will download just the
-   updates to the Concordium blockchain that occurred while the node was
-   inactive and might speed up the boot process.
+-  Для користувачів *Mac*: коли в перший раз відкриваєте програму, правою кнопкою миші по файлу ``concordium-node-reset-data`` і виберете **Відкрити**.
+   З'явиться повідомлення, що це програмне забезпечення від невідомого розробника. Виберіть **Відкрити** знову. 
+-  Для користувачів *Windows*: коли в перший раз відкриваєте програму, двічі клікніть на ``concordium-node-reset-data``.
+   З'явиться повідомлення, що це програмне беспеченіе від невідомого розробника. Виберіть **Деталі** → **Запустити все одно**.
+-  Під час *перезавантаження* ноди рекомендується використовувати опцію ``--no-block-state-import``.
+   Це дозволить завантажити тільки ті поновлення блокчейна Concordium, які повяла поки нода була неактивна і прискорить процес завантаження ноди.
 
-2. Enter a name for your node. This name will be displayed in the public
-   dashboard.
+2. Введіть ім'я вашої Ноди. Це ім'я буде відображатися на загальній панелі.
 
-3. If the tool has been started before you will asked if you want to
-   delete the local node database before starting. Pressing **y** will
-   delete and subsequently recreate the information on the state of the
-   Concordium blockchain that was saved on your computer. **Note that
-   deleting the local node database means it will take longer for your
-   node to catch-up with the Concordium network.**
+3. Якщо інструмент був запущений раніше, вас запитають, чи хочете ви перед запуском видалити локальну базу даних Ноди.
+   Якщо ви натиснете **y**, будуть видалені, а потім завантажені заново і відновлені всі дані про стан блокчейна Concordium, після чого збережені вам на комп'ютер.
+   **Майте на увазі, що видалення локальної бази даних призведе до того, що ваша нода буде довше синхронізуватися з мережею Concordium**
 
-The tool will now download the Concordium Client image and load it into
-Docker. The client will launch and start outputting logging information
-about the operation of the node.
+Після цього програма завантажить образ Concordium Client і завантажить його в Docker.
+Клієнт запуститься і почне виведення інформації про роботу ноди.
 
-Seeing your node on the dashboard
-=================================
+Знаходимо свою ноду на загальній панелі
+=======================================
 
-After running ``concordium-node`` you can
+Після того, як ви ззапустите ``concordium-node``, ви зможете:
 
--  see your node on the `Network Dashboard`_
--  :ref:`query<testnet-query-node>` information about blocks, transactions, and accounts
+-  побачити вашу ноду у `Network Dashboard`_
+-  :ref:`виконувати запити <testnet-query-node>` для отримання інформації про блоки, транзакції та рахунки
 
-Network dashboard
------------------
+Мережева панель
+---------------
 
-It will take the client a while to catch up with the state of the
-Concordium blockchain. This involves, for example, downloading
-information about all the blocks in the chain.
+Клієнту знадобиться час, щоб синхронізуватися з поточним станом блокчейна Concordium.
+Синхронізація включає, наприклад, завантаження інформації про всі блоках в ланцюжку.
 
-Among other information, on the `Network Dashboard`_ you can
-get an idea of how long it will take your node to catch up with the
-chain. For that you can compare the node's **Length** value (number of
-blocks your node received) with the **Chain Len** value (number of
-blocks in the longest chain in the network) which is displayed at the
-top of the dashboard.
+Крім іншої інформації, на панелі `Network Dashboard`_ ви можете отримати уявлення про те, як довго вашої ноді необхідно синхронізуватися.
+Для цього вам необхідно порівняти значення Ноди **Length** (кількість блоків, які отримала ваша нода) зі значенням **Chain Len** (кількість блоків в самій довгому ланцюжку в мережі),
+яке ви можете знайти зверху сторінки панелі.
 
-
-Enabling inbound connections
+Включення вхідних підключень
 ============================
 
-If you are running your node behind a firewall, or behind your home
-router, then you will probably only be able to connect to other nodes,
-but other nodes will not be able to initiate connections to your node.
-This is perfectly fine, and your node will fully participate in the
-Concordium network. It will be able to send transactions and,
-:ref:`if so configured<become-a-baker-uk>`, to bake and finalize.
+Якщо ви використовуєте свій вузол за брандмауером або за домашнім роутером,
+то ви, мабуть, зможете підключитися до інших нод, але інші ноди не зможуть ініціювати підключення до вашої.
+Це нормально, і ваша нода буде повністю брати участь в мережі Concordium.
+Буде можливість відправляти транзакції і :ref:`якщо буде налаштоване <become-a-baker-uk>`, готувати блоки і фіналізувати.
 
-However you can also make your node an even better network participant
-by enabling inbound connections. By default, ``concordium-node`` listens
-on port ``8888`` for inbound connections. Depending on your network and
-platform configuration you will either need to forward an external port
-to ``8888`` on your router, open it in your firewall, or both. The
-details of how this is done will depend on your configuration.
+Однак, ви також можете зробити свою ноду більш корисним учасником мережі, якщо дозволите вхідні підключення.
+За замовчуванням ``concordium-node`` слухає ``8888`` порт для вхідних запитів.
+Залежно від вашої мережі і конфігурації платформи, вам необхідно увімкнути зовнішній порт ``8888`` на вашому роутері або відкрити його в брандамуері.
+Деталі настройки сильно залежать від конфігурації вашої мережі.
 
-Configuring ports
------------------
+Налаштування портів
+-------------------
 
-The node listens on four ports, which can be configured by supplying the
-appropriate command line arguments when starting the node. The ports
-used by the node are as follows:
+Нода слухає 4 порти, які можуть бути налаштовані шляхом передачі відповідних параметрів команд при запуску ноди. Порти, використовувані нодою:
 
--  8888, the port for peer-to-peer networking, which can be set with
-   ``--listen-node-port``
--  8082, the port used by middleware, which can be set with ``--listen-middleware-port``
--  10000, the gRPC port, which can be set with ``--listen-grpc-port``
+-  8888, порт для peer-to-peer мережевої взаємодії, може бути змінений параметром ``--listen-node-port``
+-  8082, порт, який використовується для middleware, може бути змінений параметром ``--listen-middleware-port``
+-  10000, порт gRPC, може бути змінений параметром ``--listen-grpc-port``
 
-When changing the mappings above the docker container must be
-stopped (:ref:`stop-a-node-uk`), reset, and started again. To reset the container either use
-``concordium-node-reset-data`` or run ``docker rm concordium-client`` in
-a terminal.
+При зміні портів, docker контейнер повинен бути зупинений (:ref:`stop-a-node-uk`), скинутий, і запущений заново.
+Для скидання контейнера можна використовувати ``concordium-node-reset-data`` або команду ``docker rm concordium-client`` в терміналі.
 
-We *strongly recommend* that your firewall should be configured to only
-allow public connections on port 8888 (the peer-to-peer networking
-port). Someone with access to the other ports may be able to take
-control of your node or accounts you have saved on the node.
+Ми *наполегливо рекомендуємо* щоб ваш брандамуер був відкритий тільки на підключення по порту 8888 (peer-to-peer підключення).
+Відкритий доступ до інших портів може призвести до того, що зловмисник отримає доступ до вашої ноді або рахунками, які в ній зберігаються.
 
 .. _stop-a-node-uk:
 
-Stopping the node
-=================
+Зупинити ноду
+=============
 
-To stop the node, press **CTRL+c**, and wait for the node to do a clean
-shutdown.
+Щоб зупинити ноду, натисніть в терміналі **CTRL+c**, і дочекайтеся поки нода виконає очищення і припинить роботу.
 
-If you accidentally close the window without explicitly shutting down
-the client, it will keep running in the background in Docker. In that
-case, use the ``concordium-node-stop`` binary in the same way you opened
-the ``concordium-node`` executable.
+Якщо ви випадково закриєте вікно без явного завершення роботи ноди, вона буде продовжувати працювати у фоновому режимі в Docker.
+У цьому випадку використовуйте файл ``concordium-node-stop`` таким же чином, як і ``concordium-node``.
 
-Support & Feedback
-==================
+Підтримка і зворотний зв'язок
+=============================
 
-Logging information for your node can be retrieved using the
-``concordium-node-retrieve-logs`` tool. This will save logs from the
-running image to a file. Additionally, if given permission, it will
-retrieve information about the programs currently running on the system.
+Інформацію про логах вашої ноди можна отримати за допомогою інструмента ``concordium-node-retrieve-logs``.
+Ця утиліта збереже логи з запущеного образу в файл. Крім того, при наявності відповідного дозволу, вона може записати інформацію про програми, запущених в даний час в системі.
 
-You can send your logs, system information, questions and feedback to
-testnet@concordium.com. You can also reach out at our `Discord`_, or
-check out our :ref:`troubleshooting page<troubleshooting-and-known-issues>`
-
+Ви можете відправити логи, системну інформацію, питання, коментарі та побажання на електронну пошту testnet@concordium.com.
+Також ви можете знайти нас в `Discord`_, або звернутися на сторінку :ref:`<troubleshooting-and-known-issues>`

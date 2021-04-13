@@ -1,6 +1,8 @@
 
 # Unofficial Translations for Concordium Documentation
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://github.com/Concordium/.github/blob/main/.github/CODE_OF_CONDUCT.md)
+
 This repository contains _**unofficial**_ translations for the [Official Concordium Documentation](https://developers.concordium.com/).
 
 These are community contributed translations that have not been vetted and may not be completely accurate.

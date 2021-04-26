@@ -45,6 +45,8 @@ extensions = [
     "sphinx_rtd_theme",
     "sphinx.ext.todo",
     "sphinx.ext.graphviz",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autodoc",
     # "sphinx.ext.imgconverter", # To support svg when targeting LaTeX
     "multidoc"
 ]
@@ -237,3 +239,4 @@ linkcheck_request_headers = {
         "Accept-Encoding": "utf-8",
     }
 }
+

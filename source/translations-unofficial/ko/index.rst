@@ -7,6 +7,5 @@ Contents
 .. toctree::
    :hidden:
 
-   smart-contracts/index
    testnet/index
-   translations-unofficial/ko/index
+   smart-contracts/index

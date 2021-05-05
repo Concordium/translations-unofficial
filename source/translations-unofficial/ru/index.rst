@@ -8,5 +8,3 @@ Contents
    :hidden:
 
    smart-contracts/index
-   testnet/index
-   translations-unofficial/ru/index

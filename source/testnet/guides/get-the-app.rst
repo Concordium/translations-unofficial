@@ -7,46 +7,47 @@
 .. _testnet-get-the-app:
 
 =======================================
-Concordium ID: Install the app
+Concordium ID: I-install Ang App
 =======================================
 
 .. contents::
    :local:
    :backlinks: none
 
-By reading this section and the following *Concordium* ID sections, you will get an
-overview of the basic functionality of the app. If you have never used Concordium
-ID or similar apps, this is a good place to get started.
+Sa pamamagitan ng pagbabasa ng seksyong ito at ang mga sumusunod na seksyon ng *Concordium* ID, makakakuha ka ng isang
+pangkalahatang ideya ng pangunahing functionalidad ng app. Kung hindi mo pa nagamit ang Concordium
+ID o mga katulad na app, ito ay isang magandang lugar upang magsimula.
 
-The ConcordiumID app is available for Android and iOS phones. Depending on what
-platform you are using, the way of installing the app differs slightly.
+Magagamit ang ConcordiumID app para sa mga teleponong Android at iOS. Nakasalalay sa kung anong platform ang iyong ginagamit, 
+ang paraan ng pag-install ng app ay bahagyang naiiba.
 
 
-Installation on Android
+Installation sa Android
 =======================
 
-Installation requirements: Android 8 or newer.
+Mga kinakailangan sa pag-install: Android 8 o mas bago.
 
-1. Download the `Concordium ID APK`_ to your phone.
-2. You may see a warning about downloading the .apk-file. If you are asked whether you want to keep the .apk-file, press **OK**.
-3. After opening the .apk-file, you may see a warning saying that your phone is not allowed to install apps from this source. Press **Settings**, toggle **Allow from this source** and go back.
-4. You are now asked if you want to install the application. Press **Install**.
+1. I-Download ang `Concordium ID APK`_ sa iyong phone.
+2. Maaari kang makakita ng isang babala tungkol sa pag-download ng .apk-file. Kung tatanungin ka kung nais mong panatilihin ang .apk-file, pindutin ang **OK**.
+3. Pagkatapos buksan .apk-file, may  makikita kang isang babala na nagsasabing hindi pinapayagan ang iyong telepono na mag-install ng mga app mula sa mapagkukunang ito. 
+   Pindutin ang **Settings**, toggle **Allow from this source** at bumalik.
+4. Tatanungin ka ngayon kung nais mong i-install ang application. Pindutin **Install**.
 
 
-Installation on iOS
+Installation sa iOS
 ====================
 
-Installation requirements: iOS 13 or newer.
+Mga kinakailangan sa pag-install: iOS 13 o mas bago.
 
-Installing the Concordium ID app on iOS requires installation of Apple’s TestFlight app, which is used to distribute beta versions of iOS apps.
+Ang pag-install ng Concordium ID app sa iOS ay nangangailangan ng pag-install ng TestFlight app ng Apple, na ginagamit upang ipamahagi ang mga beta na bersyon ng mga iOS app.
 
-1. Install `TestFlight`_ via App Store.
-2. Join our `TestFlight beta program`_ via your iPhone (it works best if you click the link directly on your iPhone), and follow the steps shown in there, to add Concordium ID to TestFlight.
-3. Open the TestFlight app on your iPhone and install Concordium ID.
+1. I-install `TestFlight`_ sa App Store.
+2. Sumali sa `TestFlight beta program`_ sa iyong iPhone (mas gagana ito kung direktang na-click mo ang link sa iyong iPhone), at sundin mo ang mga hakbang na nakalagay, upang ma-idagdag sa Concordium ID to TestFlight.
+3. Buksan ang TestFlight app sa iyong iPhone at i-install ang Concordium ID.
 
 
-Support & Feedback
+Suporta at Puna
 ==================
 
-If you run into any issues or have suggestions, post your question or
-feedback on `Discord`_, or contact us at testnet@concordium.com.
+Kung nagkakaroon ka ng anumang mga isyu o may mga mungkahi, i-post ang iyong katanungan o
+puna sa `Discord`_, or I-contact kami sa testnet@concordium.com.

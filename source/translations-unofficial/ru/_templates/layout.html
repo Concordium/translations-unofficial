@@ -1,0 +1,17 @@
+{# Allows a page to override the template using :template:<file-in-_template-dir> #}
+
+{% extends meta.template|default('!layout.html') if meta is defined else "!layout.html" %}
+
+{# Adds extra headers to the template, such as custom styling #}
+{% block extrahead %}
+<link href="{{ pathto("_static/style.css", True) }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block sidebartitle %}
+{{super()}}
+<nav class="sidebar-top-menu">
+    <a href="{{ pathto('testnet/index') }}" class="{{ 'active' if entry is defined and entry == 'testnet/index' else '' }}" ><i class="icon fa fa-connectdevelop"></i> Тестовая сеть</a>
+    <a href="{{ pathto('smart-contracts/index') }}" class="{{ 'active' if entry is defined and entry == 'smart-contracts/index' }}"> <i class="icon fa fa-file-o"></i> Смарт-контракты </a>
+</nav>
+{% endblock %}
+
